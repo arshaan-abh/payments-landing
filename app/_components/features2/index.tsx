@@ -1,25 +1,25 @@
 import Image from "next/image";
 import React, { useRef } from "react";
-import Payment from "../../../public/Payment 7 1.svg";
-import Flexible from "../../../public/Frame 26085949 (2).svg";
-import POS from "../../../public/Frame 26085950.svg";
-import Phone from "../../../public/Frame 26085950 (1).svg";
-import Qr from "../../../public/Frame 26085950 (2).svg";
+import Payment from "../../../public/WhatsApp Image 2023-10-20 at 14.03 1.webp";
+import Flexible from "../../../public/hands-using-phone-credit-card-online-payment 2 1.webp";
+import POS from "../../../public/Frame 26085950.webp";
+import Phone from "../../../public/Frame 26085950 (1).webp";
+import Qr from "../../../public/Frame 26085950 (2).webp";
 
 function Feature2() {
 	return (
-		<div className="grid grid-cols-12" id="section3">
+		<div className="grid grid-cols-12 xl:mx-[120px]">
 			<div className="col-span-12 grid grid-cols-12 py-20">
 				<div className="col-span-6">
 					<h2 className="text-primery font-mono font-extrabold text-[40px]">
 						ePOS All-In-One Solutions
 					</h2>
 					<div className="flex">
-						<h3 className="text-gray_1 text-xl font-bold">Integrated</h3>
+						<h3 className="text-gray_1 text-xl font-bold">INTEGRATED</h3>
 						<h3 className="text-gray_1 text-xl font-bold mx-10">
-							Mobile Friendly
+							MOBILE FRIENDLY
 						</h3>
-						<h3 className="text-gray_1 text-xl font-bold">Mobile Friendly</h3>
+						<h3 className="text-gray_1 text-xl font-bold">MOBILE FRIENDLY</h3>
 					</div>
 				</div>
 				<div className="col-span-6">
@@ -27,8 +27,7 @@ function Feature2() {
 						Unlock the potential of retail with our ePOS All-In-One Solutions.
 						Tailor your in-store payments, simplify transactions without extra
 						hardware, enable on-the-go mobile payments, and embrace secure,
-						contactless QR payments. Improve your business operations with our
-						versatile ePOS solutions.
+						contactless QR payments.
 					</p>
 				</div>
 			</div>
@@ -44,8 +43,9 @@ function Feature2() {
 						<h3 className="text-2xl text-primery font-black">
 							Flexible in-store payments
 						</h3>
-						<p className="font-medium text-base text-gray_2">
-							Customise your payment method for ultimate convenience.
+						<p className="font-normal text-base text-gray_2">
+							Customise your payment method for the ultimate convenience and
+							experience a new level of financial flexibility.
 						</p>
 					</div>
 				</div>
@@ -57,8 +57,9 @@ function Feature2() {
 						<h3 className="text-2xl text-primery font-black">
 							POS Payments without device
 						</h3>
-						<p className="font-medium text-base text-gray_2">
-							Streamlined transactions without hardware hassle.
+						<p className="font-normal text-base text-gray_2">
+							Witness optimised transactions without the need for any hardware,
+							making your point-of-sale payments straightforward
 						</p>
 					</div>
 				</div>
@@ -70,8 +71,9 @@ function Feature2() {
 						<h3 className="text-2xl text-primery font-black">
 							Phone payments using MO/TO
 						</h3>
-						<p className="font-medium text-base text-gray_2">
-							Empower mobile transactions for on-the-go ease.
+						<p className="font-normal text-base text-gray_2">
+							Empower mobile transactions for on-the-go ease and elevate your
+							payment experience with the convenience of MO/TO payments.
 						</p>
 					</div>
 				</div>
@@ -83,8 +85,9 @@ function Feature2() {
 						<h3 className="text-2xl text-primery font-black">
 							QR payment codes
 						</h3>
-						<p className="font-medium text-base text-gray_2">
-							Quick, secure, and contactless payments with a scan.
+						<p className="font-normal text-base text-gray_2">
+							Enjoy quick, secure, and contactless payments with a simple scan,
+							providing you with a seamless and efficient way to pay.
 						</p>
 					</div>
 				</div>

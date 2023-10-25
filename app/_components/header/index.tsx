@@ -5,8 +5,8 @@ import Link from "next/link";
 
 function Header() {
 	return (
-		<div className="grid grid-cols-12 pt-5 my-12 lg:my-0 sticky">
-			<div className="col-span-12 col-start-4 lg:col-span-2">
+		<div className="grid grid-cols-12 pt-5 my-12 lg:my-0">
+			{/* <div className="col-span-12 col-start-4 lg:col-span-2">
 				<Image src={Logo} alt="logo" />
 			</div>
 			<div className="col-end-13 col-span-2 justify-end  hidden lg:flex">
@@ -16,7 +16,7 @@ function Header() {
 				>
 					Contact us
 				</Link>
-			</div>
+			</div> */}
 		</div>
 	);
 }

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const mono = Mono({
 	subsets: ["latin"],
 	variable: "--font-mono",
-	weight: ["500", "800", "900"],
+	weight: ["500", "600", "800", "900"],
 });
 const lato = Lato({
 	subsets: ["latin"],

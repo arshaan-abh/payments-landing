@@ -15,7 +15,7 @@ export default function Home() {
 	return (
 		<>
 			<header></header>
-			<main className="min-h-screen mx-5 lg:mx-[80px] xl:px-[120px] max-w-[1440px] flex flex-col justify-center bg-secondary">
+			<main className="min-h-screen flex flex-col  max-w-[1440px] bg-secondary">
 				<Header />
 
 				<motion.section

@@ -145,3 +145,8 @@ section {
 	scroll-snap-align: center;
 	height: 100vh;
 }
+.custom-bg {
+	background-image: url("../public/Grow Sales BG.svg");
+
+	/* Add other background properties as needed */
+}
