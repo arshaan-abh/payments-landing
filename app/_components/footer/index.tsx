@@ -8,14 +8,19 @@ import Twitter from "../../../public/twitter-x-fill.svg";
 import Youtube from "../../../public/youtube-line.svg";
 import Linkdin from "../../../public/linkedin-fill.svg";
 import InstagramIcon from "../../../public/instagram-fill.svg";
+import Phone from "../../../public/phone.svg";
+import Email from "../../../public/email.svg";
+import Location from "../../../public/location.svg";
+import Link from "next/link";
+
 function Footer() {
 	return (
-		<div className="h-screen flex items-end">
-			<div className="grid grid-cols-12 bg-primery mt-10 pl-5 lg:pl-5 lg:px-[80px]">
+		<div className="h-screen flex justify-end flex-col">
+			<div className="grid grid-cols-12 bg-primery mt-10 w-full px-[120px]">
 				<div className="col-span-12 py-[50px]">
 					<Image src={FooterLogo} alt="selected-payment" />
 				</div>
-				<div className="col-span-12 grid grid-cols-12">
+				<div className="col-span-12 grid grid-cols-12 border-b-2">
 					<div className="col-span-12 lg:col-span-4 mt-10 lg:mt-0">
 						{LeftSideFooter.map((l, index) => {
 							return (
@@ -56,7 +61,7 @@ function Footer() {
 							);
 						})}
 					</div>
-					<div className="col-span-12 lg:col-span-4 mb-5 mt-10 lg:mt-0 pr-5">
+					<div className="col-span-12 lg:col-span-4 mb-5 mt-10 lg:mt-0">
 						<h3 className="text-secondary font-extrabold text-base mb-5">
 							Were social
 						</h3>
@@ -100,6 +105,57 @@ function Footer() {
 							<button className="h-16 w-full  rounded-md bg-secondary px-3">
 								Sign up
 							</button>
+						</div>
+					</div>
+				</div>
+				<div className="col-span-12 grid grid-cols-12 py-10 border-b-2">
+					<div className="col-span-5">
+						<span className="text-sm font-normal text-[#FAFAFA]">
+							At Selected Payments, We&apos;re More Than Just a Payment Solution
+							– We&apos;re Your Trustworthy Partner. Our Innovative Approach
+							Combines with Dedication to Ensure Your Payments Are Effortless
+							and Secure, Paving the Way for a Smooth Financial Future.
+						</span>
+					</div>
+					<div className="col-span-4 col-end-13">
+						<div className="flex justify-end">
+							<span className="text-sm font-normal text-secondary">
+								+44 1273 705050
+							</span>
+							<Image src={Phone} alt="Phone" />
+						</div>
+						<div className="flex justify-end">
+							<span className="text-sm font-normal text-secondary">
+								hello@selectedgeeks.com
+							</span>
+							<Image src={Email} alt="Email" />
+						</div>
+						<div className="flex justify-end">
+							<span className="text-sm font-normal text-secondary">
+								4 Gordon Mews, Gordon Close, BN41 1HU, Brighton
+							</span>
+							<Image src={Location} alt="Location" />
+						</div>
+					</div>
+				</div>
+				<div className="col-span-12 grid grid-cols-12 py-10">
+					<div className="col-span-2 flex">
+						<span className="text-xs font-normal text-gray_4">
+							Copyright © 2023 Powered by
+						</span>
+						<span className="text-xs font-bold text-secondary ml-1">
+							Selected
+						</span>
+					</div>
+					<div className="col-span-2 col-end-13">
+						<div className="w-full justify-end flex">
+							<Link href="#" className="text-xs text-secondary font-bold">
+								Privacy Policy
+							</Link>
+							<span className="text-xs text-secondary font-bold mx-1">|</span>
+							<Link href="#" className="text-xs text-secondary font-bold">
+								Terms of Use
+							</Link>
 						</div>
 					</div>
 				</div>

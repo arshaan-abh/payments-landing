@@ -4,11 +4,12 @@ import Calc from "../../../public/vardan-papikyan-3Q4H1BQAvVo-unsplash1 2.svg";
 import Cache from "../../../public/euro-banknotes-white-one-hundred-background-monetary-denominationa 1.svg";
 import Coin from "../../../public/decreasing-piles-coin-money-with-arrow44 2.svg";
 import Image from "next/image";
+import ImageSlider from "../image-slider";
 
 function Feature4() {
 	return (
-		<div>
-			<div className="xl:mx-[120px]">
+		<div className="w-full flex flex-col items-center justify-between h-full">
+			<div className="max-w-[1440px] px-[120px] flex-1 flex items-center">
 				<div className="grid grid-cols-12 ">
 					<div className="col-span-6 grid grid-cols-12">
 						<div className="col-span-6 space-y-[76px]">
@@ -60,38 +61,8 @@ function Feature4() {
 					</div>
 				</div>
 			</div>
-			<div className="col-span-12 flex justify-between border-y-2 border-y-primery py-2 mt-10">
-				<div className="flex items-center">
-					<Image src={Calc} alt="calc" />
-					<span className="text-xl font-mono font-semibold px-1">
-						Marketing Banner
-					</span>
-				</div>
-				<div className="flex items-center">
-					<Image src={Cache} alt="calc" />
-					<span className="text-xl font-mono font-semibold px-1">
-						Marketing Banner
-					</span>
-				</div>
-				<div className="flex items-center">
-					<Image src={Coin} alt="calc" />
-					<span className="text-xl font-mono font-semibold px-1">
-						Marketing Banner
-					</span>
-				</div>
-				<div className="flex items-center">
-					<Image src={Calc} alt="calc" />
-					<span className="text-xl font-mono font-semibold px-1">
-						Marketing Banner
-					</span>
-				</div>
-				<div></div>
-				<div className="flex items-center">
-					<Image src={Cache} alt="calc" />
-					<span className="text-xl font-mono font-semibold px-1">
-						Marketing Banner
-					</span>
-				</div>
+			<div className="col-span-12 flex justify-between border-y-2 border-y-primery py-2 mt-10 w-full">
+				<ImageSlider />
 			</div>
 		</div>
 	);

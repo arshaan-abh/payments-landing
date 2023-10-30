@@ -13,6 +13,7 @@ import Coin from "../../../public/decreasing-piles-coin-money-with-arrow44 2.svg
 import Image from "next/image";
 import Modal from "react-modal";
 import ModalSection from "./modal";
+import ImageSlider from "../image-slider";
 const terminals = [
 	{
 		image: Mobile1,
@@ -66,73 +67,45 @@ function Feature7() {
 	};
 
 	return (
-		<div className="flex flex-col h-screen justify-between">
-			<div className="xl:mx-[120px] flex flex-col flex-1">
-				<div className="flex flex-col">
-					<h2 className="text-[32px] font-black text-primery">Terminals</h2>
-					<span className="font-normal text-gray_2 text-base mt-3">
-						Here you can see our terminals and order anyone do you want.
-					</span>
-				</div>
-				<div className="h-full flex flex-col justify-center">
-					<Slider {...sliderSettings}>
-						{terminals.map((t, index) => (
-							<div
-								key={index}
-								className="space-y-5 px-5 flex items-center"
-								onClick={() => openModal(index)}
-								style={{ cursor: "pointer" }}
-							>
-								<div>
-									<Image src={t.image} alt={t.title} />
+		<div className="flex flex-col justify-between h-full">
+			<div className="flex justify-center items-center flex-1">
+				<div className="flex flex-col flex-1 xl:px-[120px] max-w-[1440px] h-full">
+					<div className="flex flex-col">
+						<h2 className="text-[32px] font-black text-primery">Terminals</h2>
+						<span className="font-normal text-gray_2 text-base mt-3">
+							Here you can see our terminals and order anyone do you want.
+						</span>
+					</div>
+					<div className="h-full flex flex-col justify-center">
+						<Slider {...sliderSettings}>
+							{terminals.map((t, index) => (
+								<div
+									key={index}
+									className="space-y-5 px-5 flex items-center"
+									onClick={() => openModal(index)}
+									style={{ cursor: "pointer" }}
+								>
+									<div>
+										<Image src={t.image} alt={t.title} />
+									</div>
+									<div>
+										<h3 className="text-2xl text-primery font-black">
+											{t.title}
+										</h3>
+									</div>
+									<div>
+										<span className="text-lg text-gray_2 font-normal">
+											{t.subtitle}
+										</span>
+									</div>
 								</div>
-								<div>
-									<h3 className="text-2xl text-primery font-black">
-										{t.title}
-									</h3>
-								</div>
-								<div>
-									<span className="text-lg text-gray_2 font-normal">
-										{t.subtitle}
-									</span>
-								</div>
-							</div>
-						))}
-					</Slider>
+							))}
+						</Slider>
+					</div>
 				</div>
 			</div>
 			<div className="col-span-12 flex justify-between border-y-2 border-y-primery py-2 mt-10">
-				<div className="flex items-center">
-					<Image src={Calc} alt="calc" />
-					<span className="text-xl font-mono font-semibold px-1">
-						Marketing Banner
-					</span>
-				</div>
-				<div className="flex items-center">
-					<Image src={Cache} alt="calc" />
-					<span className="text-xl font-mono font-semibold px-1">
-						Marketing Banner
-					</span>
-				</div>
-				<div className="flex items-center">
-					<Image src={Coin} alt="calc" />
-					<span className="text-xl font-mono font-semibold px-1">
-						Marketing Banner
-					</span>
-				</div>
-				<div className="flex items-center">
-					<Image src={Calc} alt="calc" />
-					<span className="text-xl font-mono font-semibold px-1">
-						Marketing Banner
-					</span>
-				</div>
-				<div></div>
-				<div className="flex items-center">
-					<Image src={Cache} alt="calc" />
-					<span className="text-xl font-mono font-semibold px-1">
-						Marketing Banner
-					</span>
-				</div>
+				<ImageSlider />
 			</div>
 			{/* <Modal
 				isOpen={modalIsOpen}

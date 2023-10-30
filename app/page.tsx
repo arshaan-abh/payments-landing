@@ -17,105 +17,105 @@ export default function Home() {
 	return (
 		<>
 			<header></header>
-			<main className="min-h-screen flex flex-col  max-w-[1440px] bg-secondary">
+			<main className="min-h-screen flex flex-col w-full items-center">
 				<Header />
 
 				<motion.section
-					className="h-screen mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					className="h-screen mb-5 w-full"
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<Hero />
 				</motion.section>
 				<motion.section
-					className="mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					className="mb-5 w-full flex flex-col"
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<Feature1 />
 				</motion.section>
 				<motion.section
-					className="mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					className="mb-5 w-full flex flex-col"
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<Feature2 />
 				</motion.section>
 				<motion.section
-					className="mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					className="mb-5 w-full flex flex-col"
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<Feature3 />
 				</motion.section>
 				<motion.section
-					className="mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					className="mb-5 w-full flex flex-col"
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<Feature4 />
 				</motion.section>
 				<motion.section
 					className="mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<Feature5 />
 				</motion.section>
 				<motion.section
 					className="mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<Feature6 />
 				</motion.section>
 				<motion.section
-					className="mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					className="mb-5 w-full flex flex-col"
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<Feature7 />
 				</motion.section>
 				<motion.section
 					className="mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<FaqSection />
 				</motion.section>
 				<motion.section
-					className="mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					className="my-5 w-full h-full"
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<Form />
 				</motion.section>
 				<motion.section
-					className="mb-5"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 6 }}
-					viewport={{ once: true }}
+					className="mb-5 w-full"
+					// initial={{ opacity: 0 }}
+					// whileInView={{ opacity: 1 }}
+					// transition={{ duration: 6 }}
+					// viewport={{ once: true }}
 				>
 					<Footer />
 				</motion.section>

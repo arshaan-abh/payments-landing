@@ -4,11 +4,12 @@ import React from "react";
 import HeroSection from "../../../public/Hero section SVG.webp";
 import Cookie from "../../../public/Cookie.svg";
 import Logo from "../../../public/Frame 26085919.svg";
+import ImageSlider from "../image-slider";
 
 function Hero() {
 	return (
-		<div className="h-screen flex flex-col items-center justify-center">
-			<div className="grid grid-cols-12 xl:mx-[120px]  space-y-8">
+		<div className="h-screen flex flex-col items-center justify-center w-full">
+			<div className="grid grid-cols-12 xl:px-[120px] max-w-[1440px] mt-8">
 				<div className="grid grid-cols-12 col-span-12 lg:col-span-12">
 					<div className="col-span-12 lg:col-span-2">
 						<Image src={Logo} alt="logo" />
@@ -22,7 +23,7 @@ function Hero() {
 						</Link>
 					</div>
 				</div>
-				<div className="col-span-12 lg:col-span-6 flex flex-col h-full justify-center space-y-8 ">
+				<div className="col-span-12 lg:col-span-6 flex flex-col h-full justify-center space-y-8">
 					<div>
 						<div className="flex">
 							<h1 className="custom-bg bg-no-repeat text-6xl font-mono text-secondary font-extrabold pl-2">
@@ -66,9 +67,9 @@ function Hero() {
 					<Image src={HeroSection} alt="hero-section" />
 				</div>
 			</div>
-			<div className="grid grid-cols-12 w-full">
+			<div className="grid grid-cols-12 w-full max-w-[1440px] mb-5">
 				<div className="col-span-3 w-full">
-					<div className="w-full flex mb-5 pl-16 justify-between">
+					<div className="w-full flex mb-5 justify-between">
 						<div className="flex items-end">
 							<h3 className="text-2xl font-mono font-bold text-primery">
 								Cookies
@@ -76,12 +77,12 @@ function Hero() {
 						</div>
 						<Image src={Cookie} alt="Cookie" />
 					</div>
-					<div className="flex pl-16 mb-5">
+					<div className="flex  mb-5">
 						<span className="text-sm font-normal text-primery">
 							We use cookies to make your experience better!
 						</span>
 					</div>
-					<div className="flex items-center pl-16 mt-5">
+					<div className="flex items-center mt-5">
 						<Link href="#" className="text-sm text-primery pr-12">
 							Privacy Policy
 						</Link>
@@ -90,6 +91,10 @@ function Hero() {
 						</button>
 					</div>
 				</div>
+			</div>
+
+			<div className="col-span-12 border-y-2 border-y-primery py-2 w-full ">
+				<ImageSlider />
 			</div>
 		</div>
 	);

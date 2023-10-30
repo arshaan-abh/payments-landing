@@ -77,32 +77,37 @@ function Form() {
 	};
 
 	return (
-		<div className="grid grid-cols-12 bg-primery rounded-xl xl:mx-[120px]">
-			<div className="col-span-12 flex flex-col items-center justify-center my-14 lg:my-20 px-5 lg:px-0">
-				<h2 className="text-secondary text-2xl lg:text-[40px] font-mono font-extrabold text-center lg:text-start">
-					Begin Your Next Chapter Now!
-				</h2>
-				<p className="text-base lg:text-lg font-normal lg:font-medium text-gray_4 text-center lg:text-start mt-3 lg:mt-0">
-					Elevate your business with our convenient in-app payment solutions.
-				</p>
-			</div>
-			<div className="col-span-12 lg:col-span-6">
-				<Options
-					checkedList={checkedList}
-					handleCheckBox={handleCheckBox}
-					labels={labels}
-				/>
-			</div>
-			<div className="col-span-10 col-start-2 col-end-12 lg:col-span-5 lg:col-end-13 lg:pr-5">
-				<FormSection control={control} errors={errors} />
-			</div>
-			<div className="col-span-12 grid grid-cols-12">
-				<button
-					className="col-span-10 col-start-2 lg:col-span-4 lg:col-start-5 bg-secondary my-10 rounded-md p-4"
-					onClick={handleFormSubmit}
-				>
-					Enquire Now
-				</button>
+		<div className="w-full flex justify-center">
+			<div className="max-w-[1440px] w-full flex justify-center px-[120px]">
+				<div className="grid grid-cols-12 bg-primery rounded-xl w-full">
+					<div className="col-span-12 flex flex-col items-center justify-center lg:mt-16 px-5 lg:px-0">
+						<h2 className="text-secondary text-2xl lg:text-[40px] font-mono font-extrabold text-center lg:text-start">
+							Begin Your Next Chapter Now!
+						</h2>
+						<p className="text-base lg:text-lg font-normal lg:font-medium text-gray_4 text-center lg:text-start mt-6 mb-5">
+							Elevate your business with our convenient in-app payment
+							solutions.
+						</p>
+					</div>
+					<div className="col-span-12 lg:col-span-6">
+						<Options
+							checkedList={checkedList}
+							handleCheckBox={handleCheckBox}
+							labels={labels}
+						/>
+					</div>
+					<div className="col-span-10 col-start-2 col-end-12 lg:col-span-5 lg:col-end-13 lg:pr-5">
+						<FormSection control={control} errors={errors} />
+					</div>
+					<div className="col-span-12 grid grid-cols-12">
+						<button
+							className="col-span-10 col-start-2 lg:col-span-4 lg:col-start-5 bg-secondary my-10 rounded-md p-4"
+							onClick={handleFormSubmit}
+						>
+							Enquire Now
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

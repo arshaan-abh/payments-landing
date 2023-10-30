@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function Feature5() {
 	return (
-		<div className="grid grid-cols-12 space-y-24 xl:mx-[120px]">
+		<div className="grid grid-cols-12 space-y-24 xl:px-[120px] max-w-[1440px] h-full">
 			<div className="col-span-12 grid grid-cols-12 mt-10">
 				<div className="col-span-5">
 					<Image src={Pre} alt="Pre" />
