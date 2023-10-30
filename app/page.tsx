@@ -7,9 +7,11 @@ import Footer from "./_components/footer";
 import Feature2 from "./_components/features2";
 import Feature3 from "./_components/features3";
 import Feature4 from "./_components/features4";
-import Feature5 from "./_components/featurs5";
+import Feature5 from "./_components/features5";
 import Feature6 from "./_components/features6";
 import { motion } from "framer-motion";
+import Feature7 from "./_components/features7";
+import FaqSection from "./_components/faq";
 
 export default function Home() {
 	return (
@@ -88,7 +90,34 @@ export default function Home() {
 					transition={{ duration: 6 }}
 					viewport={{ once: true }}
 				>
+					<Feature7 />
+				</motion.section>
+				<motion.section
+					className="mb-5"
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 6 }}
+					viewport={{ once: true }}
+				>
+					<FaqSection />
+				</motion.section>
+				<motion.section
+					className="mb-5"
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 6 }}
+					viewport={{ once: true }}
+				>
 					<Form />
+				</motion.section>
+				<motion.section
+					className="mb-5"
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 6 }}
+					viewport={{ once: true }}
+				>
+					<Footer />
 				</motion.section>
 			</main>
 		</>

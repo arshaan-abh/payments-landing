@@ -77,7 +77,7 @@ function Form() {
 	};
 
 	return (
-		<div className="grid grid-cols-12 bg-primery rounded-xl">
+		<div className="grid grid-cols-12 bg-primery rounded-xl xl:mx-[120px]">
 			<div className="col-span-12 flex flex-col items-center justify-center my-14 lg:my-20 px-5 lg:px-0">
 				<h2 className="text-secondary text-2xl lg:text-[40px] font-mono font-extrabold text-center lg:text-start">
 					Begin Your Next Chapter Now!

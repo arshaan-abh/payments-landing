@@ -54,7 +54,7 @@ function Feature1() {
 						<p className="font-normal text-base text-gray_2">
 							In a rapidly evolving marketplace, staying ahead means embracing
 							efficient solutions. Our Streamlined Customer Payment Processing
-							is your gateway to a new era in payment convenience. We've
+							is your gateway to a new era in payment convenience. Weve
 							reimagined the payment journey to be effortless and user-friendly.
 						</p>
 					</div>
