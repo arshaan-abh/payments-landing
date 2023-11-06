@@ -138,6 +138,11 @@ code {
 }
 
 html {
+	-webkit-scroll-snap-type: mandatory;
+	-ms-scroll-snap-type: mandatory;
+	scroll-snap-type: mandatory;
+	-webkit-scroll-snap-type: y mandatory;
+	-ms-scroll-snap-type: y mandatory;
 	scroll-snap-type: y mandatory;
 }
 
