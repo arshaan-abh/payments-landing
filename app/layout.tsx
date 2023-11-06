@@ -24,9 +24,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body
-				className={`${mono.variable} ${lato.variable} flex justify-center items-center flex-col bg-secondary`}
-			>
+			<body className={`${mono.variable} ${lato.variable}  bg-secondary`}>
 				{children}
 			</body>
 		</html>

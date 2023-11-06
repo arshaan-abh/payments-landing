@@ -67,7 +67,7 @@ function Feature7() {
 	};
 
 	return (
-		<div className="flex flex-col justify-between h-full">
+		<div className=" flex-col justify-between h-full hidden xl:flex">
 			<div className="flex justify-center items-center flex-1">
 				<div className="flex flex-col flex-1 xl:px-[120px] max-w-[1440px] h-full">
 					<div className="flex flex-col">

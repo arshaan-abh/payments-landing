@@ -16,8 +16,7 @@ import FaqSection from "./_components/faq";
 export default function Home() {
 	return (
 		<>
-			<header></header>
-			<main className="min-h-screen flex flex-col w-full items-center">
+			<main className="min-h-screen flex flex-col items-center">
 				<Header />
 
 				<motion.section
