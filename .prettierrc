@@ -1,1 +1,1 @@
-{ "trailingComma": "all", "useTabs": true }
+{ "trailingComma": "es5", "useTabs": true, "endOfLine": "crlf" }
