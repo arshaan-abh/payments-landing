@@ -71,7 +71,7 @@ function Feature7() {
 			<div className="flex justify-center items-center flex-1">
 				<div className="flex flex-col flex-1 xl:px-[120px] max-w-[1440px] h-full">
 					<div className="flex flex-col">
-						<h2 className="text-[32px] font-black text-primery">Terminals</h2>
+						<h2 className="text-[32px] font-black text-primary">Terminals</h2>
 						<span className="font-normal text-gray_2 text-base mt-3">
 							Here you can see our terminals and order anyone do you want.
 						</span>
@@ -89,7 +89,7 @@ function Feature7() {
 										<Image src={t.image} alt={t.title} />
 									</div>
 									<div>
-										<h3 className="text-2xl text-primery font-black">
+										<h3 className="text-2xl text-primary font-black">
 											{t.title}
 										</h3>
 									</div>
@@ -104,7 +104,7 @@ function Feature7() {
 					</div>
 				</div>
 			</div>
-			<div className="col-span-12 flex justify-between border-y-2 border-y-primery py-2 mt-10">
+			<div className="col-span-12 flex justify-between border-y-2 border-y-primary py-2 mt-10">
 				<ImageSlider />
 			</div>
 			{/* <Modal

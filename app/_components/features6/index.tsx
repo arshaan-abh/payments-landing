@@ -12,7 +12,7 @@ function Feature5() {
 					<Image src={Advance} alt="Pre" />
 				</div>
 				<div className="col-span-6 col-end-13 flex flex-col justify-center">
-					<h3 className="text-[32px] font-black text-primery pr-24">
+					<h3 className="text-[32px] font-black text-primary pr-24">
 						Advanced Terminal Services
 					</h3>
 					<span className="text-base font-normal text-gray_2 mt-5">
@@ -32,7 +32,7 @@ function Feature5() {
 			</div>
 			<div className="col-span-12 grid grid-cols-12">
 				<div className="col-span-6 flex flex-col justify-center">
-					<h3 className="text-[32px] font-black text-primery">
+					<h3 className="text-[32px] font-black text-primary">
 						Billing & Invoicing
 					</h3>
 					<span className="text-base font-normal text-gray_2 mt-5">

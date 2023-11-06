@@ -17,7 +17,7 @@ function Hero() {
 					<div className="col-span-3 lg:col-span-2 col-end-13 justify-end flex">
 						<Link
 							href="#"
-							className="w-2/3 h-10 text-white bg-primery rounded-md text-base font-normal flex items-center justify-center"
+							className="w-2/3 h-10 text-white bg-primary rounded-md text-base font-normal flex items-center justify-center"
 						>
 							Contact us
 						</Link>
@@ -36,11 +36,11 @@ function Hero() {
 						<h1 className="custom-bg bg-no-repeat text-6xl font-mono text-secondary font-extrabold pl-2">
 							Grow Sales
 						</h1>
-						<h1 className="text-6xl font-mono font-medium text-primery ml-1">
+						<h1 className="text-6xl font-mono font-medium text-primary ml-1">
 							with a
 						</h1>
 					</div>
-					<h1 className="text-6xl font-mono font-medium text-primery md:px-10 lg:px-0 md:text-center lg:text-start">
+					<h1 className="text-6xl font-mono font-medium text-primary md:px-10 lg:px-0 md:text-center lg:text-start">
 						better payment solution
 					</h1>
 
@@ -58,13 +58,13 @@ function Hero() {
 					<div className="flex justify-center lg:justify-normal mt-10 lg:mt-0">
 						<Link
 							href="#"
-							className="bg-primery text-secondary rounded-md w-1/3 py-3 text-center text-base"
+							className="bg-primary text-secondary rounded-md w-1/3 py-3 text-center text-base"
 						>
 							Contact us
 						</Link>
 						<Link
 							href="#"
-							className="text-primery w-1/3 py-3 text-center text-base"
+							className="text-primary w-1/3 py-3 text-center text-base"
 						>
 							Enquire Now
 						</Link>
@@ -78,29 +78,29 @@ function Hero() {
 				<div className="col-span-3 w-full">
 					<div className="w-full flex xl:mb-5 justify-between">
 						<div className="flex items-end">
-							<h3 className="text-2xl font-mono font-bold text-primery">
+							<h3 className="text-2xl font-mono font-bold text-primary">
 								Cookies
 							</h3>
 						</div>
 						<Image src={Cookie} alt="Cookie" />
 					</div>
 					<div className="flex xl:mb-5">
-						<span className="text-sm font-normal text-primery">
+						<span className="text-sm font-normal text-primary">
 							We use cookies to make your experience better!
 						</span>
 					</div>
 					<div className="flex items-center xl:mt-5">
-						<Link href="#" className="text-sm text-primery pr-12">
+						<Link href="#" className="text-sm text-primary pr-12">
 							Privacy Policy
 						</Link>
-						<button className="bg-primery text-secondary text-base rounded-md w-1/3 py-2">
+						<button className="bg-primary text-secondary text-base rounded-md w-1/3 py-2">
 							Agree
 						</button>
 					</div>
 				</div>
 			</div>
 
-			<div className="col-span-12 border-y-2 border-y-primery py-2 w-full hidden xl:flex">
+			<div className="col-span-12 border-y-2 border-y-primary py-2 w-full hidden xl:flex">
 				<ImageSlider />
 			</div>
 		</div>

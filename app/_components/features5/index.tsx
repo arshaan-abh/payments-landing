@@ -12,7 +12,7 @@ function Feature5() {
 					<Image src={Pre} alt="Pre" />
 				</div>
 				<div className="col-span-6 col-end-13 flex flex-col justify-center">
-					<h3 className="text-[32px] font-black text-primery pr-24">
+					<h3 className="text-[32px] font-black text-primary pr-24">
 						Pre-Paid Debit Card Issuing with Bank Account
 					</h3>
 					<span className="text-base font-normal text-gray_2 mt-5">
@@ -34,7 +34,7 @@ function Feature5() {
 			</div>
 			<div className="col-span-12 grid grid-cols-12">
 				<div className="col-span-6 flex flex-col justify-center">
-					<h3 className="text-[32px] font-black text-primery">
+					<h3 className="text-[32px] font-black text-primary">
 						Business Finance Service with Bank Account
 					</h3>
 					<span className="text-base font-normal text-gray_2 mt-5">

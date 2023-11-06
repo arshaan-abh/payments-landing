@@ -59,7 +59,7 @@ const Options = (props: props) => {
 							id="message"
 							rows={1}
 							disabled={checkedList[11] ? false : true}
-							className="block p-2.5 w-full text-sm text-gray-900 bg-primery rounded-lg border "
+							className="block p-2.5 w-full text-sm text-gray-900 bg-primary rounded-lg border "
 							placeholder="Other description"
 						></textarea>
 					</div>

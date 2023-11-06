@@ -17,7 +17,7 @@ const config: Config = {
 				gray_5: "#CFCFCF",
 				gray_6: "#D0D0D0",
 				gray_7: "#F2F2F2",
-				primery: "#161616",
+				primary: "#161616",
 				secondary: "#FFFFFF",
 			},
 			fontFamily: {

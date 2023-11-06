@@ -12,7 +12,7 @@ function Feature2() {
 			<div className="grid grid-cols-12 max-w-[1440px] md:px-[40px] lg:px-[80px] xl:px-[120px]">
 				<div className="col-span-12 grid grid-cols-12 py-20">
 					<div className="md:col-span-12 lg:col-span-6 flex flex-col items-center">
-						<h2 className="text-primery font-mono font-extrabold lg:text-[30px] xl:text-[40px]">
+						<h2 className="text-primary font-mono font-extrabold lg:text-[30px] xl:text-[40px]">
 							ePOS All-In-One Solutions
 						</h2>
 						<div className="flex lg:justify-evenly xl:justify-normal">
@@ -52,7 +52,7 @@ function Feature2() {
 							<Image src={Flexible} alt="flexible" />
 						</div>
 						<div className="col-span-5 flex flex-col justify-center">
-							<h3 className="text-2xl text-primery font-black">
+							<h3 className="text-2xl text-primary font-black">
 								Flexible in-store payments
 							</h3>
 							<p className="font-normal text-base text-gray_2">
@@ -66,7 +66,7 @@ function Feature2() {
 							<Image src={POS} alt="POS" />
 						</div>
 						<div className="col-span-5 flex flex-col justify-center">
-							<h3 className="text-2xl text-primery font-black">
+							<h3 className="text-2xl text-primary font-black">
 								POS Payments without device
 							</h3>
 							<p className="font-normal text-base text-gray_2">
@@ -80,7 +80,7 @@ function Feature2() {
 							<Image src={Phone} alt="Phone" />
 						</div>
 						<div className="col-span-5 flex flex-col justify-center">
-							<h3 className="text-2xl text-primery font-black">
+							<h3 className="text-2xl text-primary font-black">
 								Phone payments using MO/TO
 							</h3>
 							<p className="font-normal text-base text-gray_2">
@@ -94,7 +94,7 @@ function Feature2() {
 							<Image src={Qr} alt="Qr" />
 						</div>
 						<div className="col-span-5 flex flex-col justify-center">
-							<h3 className="text-2xl text-primery font-black">
+							<h3 className="text-2xl text-primary font-black">
 								QR payment codes
 							</h3>
 							<p className="font-normal text-base text-gray_2">

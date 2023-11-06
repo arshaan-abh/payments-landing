@@ -16,7 +16,7 @@ import Link from "next/link";
 function Footer() {
 	return (
 		<div className="h-screen flex justify-end flex-col">
-			<div className="grid grid-cols-12 bg-primery mt-10 w-full px-[120px]">
+			<div className="grid grid-cols-12 bg-primary mt-10 w-full px-[120px]">
 				<div className="col-span-12 py-[50px]">
 					<Image src={FooterLogo} alt="selected-payment" />
 				</div>
@@ -98,7 +98,7 @@ function Footer() {
 								id="email"
 								name="email"
 								placeholder="Email"
-								className="h-16 rounded-md bg-primery border-secondary border px-3 w-full "
+								className="h-16 rounded-md bg-primary border-secondary border px-3 w-full "
 							/>
 						</div>
 						<div className="w-full">

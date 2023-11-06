@@ -5,7 +5,7 @@ interface MarketingBannerProps {}
 
 const MarketingBanner: FC<MarketingBannerProps> = ({}) => {
 	return (
-		<header className="bg-primery flex">
+		<header className="bg-primary flex">
 			{MarketingBanners.length !== 0 && (
 				<>
 					<MarketingBannerItems className="animate-marquee" />

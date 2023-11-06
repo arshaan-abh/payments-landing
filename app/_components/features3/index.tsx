@@ -12,7 +12,7 @@ function Feature3() {
 			<div className="grid grid-cols-12 max-w-[1440px] px-[120px]">
 				<div className="col-span-12 grid grid-cols-12 pt-20 pb-10">
 					<div className="col-span-6">
-						<h2 className="text-primery font-mono font-extrabold text-[40px]">
+						<h2 className="text-primary font-mono font-extrabold text-[40px]">
 							Marketplace & Platforms
 						</h2>
 						<div className="flex">
@@ -39,7 +39,7 @@ function Feature3() {
 							<Image src={Flexible} alt="flexible" />
 						</div>
 						<div className="col-span-5 flex flex-col justify-center">
-							<h3 className="text-2xl text-primery font-black">
+							<h3 className="text-2xl text-primary font-black">
 								Instant Payouts
 							</h3>
 							<p className="font-normal text-base text-gray_2">
@@ -53,7 +53,7 @@ function Feature3() {
 							<Image src={POS} alt="POS" />
 						</div>
 						<div className="col-span-5 flex flex-col justify-center">
-							<h3 className="text-2xl text-primery font-black">
+							<h3 className="text-2xl text-primary font-black">
 								Commission Alignment
 							</h3>
 							<p className="font-normal text-base text-gray_2">
@@ -68,7 +68,7 @@ function Feature3() {
 							<Image src={Phone} alt="Phone" />
 						</div>
 						<div className="col-span-5 flex flex-col justify-center">
-							<h3 className="text-2xl text-primery font-black">
+							<h3 className="text-2xl text-primary font-black">
 								Instant Settlements
 							</h3>
 							<p className="font-normal text-base text-gray_2">
@@ -82,7 +82,7 @@ function Feature3() {
 							<Image src={Qr} alt="Qr" />
 						</div>
 						<div className="col-span-5 flex flex-col justify-center">
-							<h3 className="text-2xl text-primery font-black">
+							<h3 className="text-2xl text-primary font-black">
 								Multiparty Split Payments and Payouts
 							</h3>
 							<p className="font-normal text-base text-gray_2">

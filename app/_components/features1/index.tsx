@@ -11,7 +11,7 @@ function Feature1() {
 				<div className="grid col-span-12 grid-cols-12 my-28 md:px-[40px] lg:px-[80px] xl:px-[120px] max-w-[1440px]">
 					<div className="col-span-12 grid grid-cols-12">
 						<div className="md:col-span-12 lg:col-span-5 md:px-10 lg:px-0">
-							<h2 className="md:text-[34px] xl:text-4xl font-mono font-extrabold text-primery md:text-center lg:text-start">
+							<h2 className="md:text-[34px] xl:text-4xl font-mono font-extrabold text-primary md:text-center lg:text-start">
 								Simplified Customer Payment Processing!
 							</h2>
 						</div>
@@ -30,7 +30,7 @@ function Feature1() {
 							<div className="flex justify-center mb-7">
 								<Image src={FeatureImage1} alt="FeatureImage1" />
 							</div>
-							<h3 className="font-bold text-primery text-2xl mb-2 text-center lg:text-start">
+							<h3 className="font-bold text-primary text-2xl mb-2 text-center lg:text-start">
 								One-Click checkout with Pay link
 							</h3>
 							<p className="font-normal text-base text-gray_2 text-center lg:text-start">
@@ -42,7 +42,7 @@ function Feature1() {
 							<div className="flex justify-center mb-7">
 								<Image src={FeatureImage2} alt="FeatureImage2" />
 							</div>
-							<h3 className="font-bold text-primery text-2xl mb-2 text-center lg:text-start">
+							<h3 className="font-bold text-primary text-2xl mb-2 text-center lg:text-start">
 								Flexible Payment Methods
 							</h3>
 							<p className="font-normal text-base text-gray_2 text-center lg:text-start">
@@ -58,7 +58,7 @@ function Feature1() {
 									className="h-full"
 								/>
 							</div>
-							<h3 className="font-bold text-primery text-2xl mb-2 text-center lg:text-start">
+							<h3 className="font-bold text-primary text-2xl mb-2 text-center lg:text-start">
 								Multicurrency Payments
 							</h3>
 							<p className="font-normal text-base text-gray_2 text-center lg:text-start">
@@ -74,7 +74,7 @@ function Feature1() {
 								<div>
 									<Image src={FeatureImage1} alt="FeatureImage1" />
 								</div>
-								<h3 className="font-bold text-primery text-2xl mb-2 text-center">
+								<h3 className="font-bold text-primary text-2xl mb-2 text-center">
 									One-Click checkout with Pay link
 								</h3>
 								<div>
@@ -88,7 +88,7 @@ function Feature1() {
 								<div>
 									<Image src={FeatureImage2} alt="FeatureImage2" />
 								</div>
-								<h3 className="font-bold text-primery text-2xl mb-2 text-center lg:text-start">
+								<h3 className="font-bold text-primary text-2xl mb-2 text-center lg:text-start">
 									Flexible Payment Methods
 								</h3>
 								<div>
@@ -102,7 +102,7 @@ function Feature1() {
 								<div className="justify-center flex">
 									<Image src={FeatureImage3} alt="FeatureImage3" />
 								</div>
-								<h3 className="font-bold text-primery text-2xl mb-2 text-center lg:text-start">
+								<h3 className="font-bold text-primary text-2xl mb-2 text-center lg:text-start">
 									Multicurrency Payments
 								</h3>
 
