@@ -12,20 +12,21 @@ import Feature6 from "./_components/features6";
 import { motion } from "framer-motion";
 import Feature7 from "./_components/features7";
 import FaqSection from "./_components/faq";
+import MarketingBanner from "./_components/marketing-banner";
 
 export default function Home() {
 	return (
 		<>
 			<main className="min-h-screen flex flex-col items-center">
-				<Header />
-
 				<motion.section
-					className="h-screen mb-5 w-full"
+					className="h-screen mb-5 w-full flex-col"
 					// initial={{ opacity: 0 }}
 					// whileInView={{ opacity: 1 }}
 					// transition={{ duration: 6 }}
 					// viewport={{ once: true }}
 				>
+					<MarketingBanner />
+					<Header />
 					<Hero />
 				</motion.section>
 				<motion.section
