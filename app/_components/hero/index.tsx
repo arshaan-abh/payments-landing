@@ -3,26 +3,12 @@ import Link from "next/link";
 import React from "react";
 import HeroSection from "../../../public/Hero section SVG.webp";
 import Cookie from "../../../public/Cookie.svg";
-import Logo from "../../../public/Frame 26085919.svg";
 import ImageSlider from "../image-slider";
 
 function Hero() {
 	return (
 		<div className="h-screen flex flex-col items-center justify-center w-full">
 			<div className="grid grid-cols-12 md:px-[40px] lg:px-[80px] xl:px-[120px] xl:max-w-[1440px] xl:mt-8">
-				<div className="grid grid-cols-12 col-span-12 lg:col-span-12">
-					<div className="col-span-4 lg:col-span-2">
-						<Image src={Logo} alt="logo" />
-					</div>
-					<div className="col-span-3 lg:col-span-2 col-end-13 justify-end flex">
-						<Link
-							href="#"
-							className="w-2/3 h-10 text-white bg-primary rounded-md text-base font-normal flex items-center justify-center"
-						>
-							Contact us
-						</Link>
-					</div>
-				</div>
 				<div className="md:col-span-12 lg:hidden md:flex justify-center my-10">
 					<Image
 						src={HeroSection}
