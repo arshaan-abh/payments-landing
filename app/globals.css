@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
-}
 @layer base {
 	html {
 		font-family: "lato", system-ui, sans-serif;
@@ -72,25 +67,10 @@
 	}
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
-	}
-}
-
 body {
 	overscroll-behavior-y: none;
 	overflow-x: hidden;
 	color: rgb(var(--foreground-rgb));
-	background: linear-gradient(
-			to bottom,
-			transparent,
-			rgb(var(--background-end-rgb))
-		)
-		rgb(var(--background-start-rgb));
-
 	margin: 0;
 	padding: 0;
 	background-color: var(--background);
@@ -106,10 +86,6 @@ footer {
 	justify-content: flex-start;
 	align-items: center;
 	padding: 20px;
-	background-image: radial-gradient(
-		rgba(0, 0, 0, 0) 1px,
-		var(--background) 1px
-	);
 	background-size: 4px 4px;
 	backdrop-filter: blur(3px);
 	-webkit-backdrop-filter: blur(3px);
