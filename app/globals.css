@@ -124,21 +124,6 @@ code {
 	font-style: normal;
 }
 
-::-webkit-scrollbar {
-	height: 5px;
-	width: 0;
-	background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-	background: var(--accent);
-	-webkit-border-radius: 1ex;
-}
-
-::-webkit-scrollbar-corner {
-	background: var(--background);
-}
-
 html {
 	-webkit-scroll-snap-type: mandatory;
 	-ms-scroll-snap-type: mandatory;
