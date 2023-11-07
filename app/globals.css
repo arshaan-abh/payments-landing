@@ -78,18 +78,11 @@ body {
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	padding: 20px;
 	background-size: 4px 4px;
-	backdrop-filter: blur(3px);
-	-webkit-backdrop-filter: blur(3px);
-	-moz-backdrop-filter: blur(3px);
 	font-size: 14px;
 	line-height: 14px;
 }
@@ -111,7 +104,6 @@ html {
 
 section {
 	scroll-snap-align: center;
-	height: 100vh;
 }
 .custom-bg {
 	background-image: url("../public/Grow Sales BG.svg");
@@ -147,10 +139,6 @@ section {
 	display: flex;
 }
 
-section {
-	display: flex;
-}
-
 .center-content {
 	display: flex;
 	flex-direction: column;
@@ -174,4 +162,11 @@ section {
 .menu-item.active {
 	background-color: #007bff;
 	color: #fff;
+}
+
+.animation-play-state-paused {
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;
 }

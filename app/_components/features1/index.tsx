@@ -69,7 +69,7 @@ function Feature1() {
 					</div>
 
 					<div className="lg:hidden col-span-12 flex items-center">
-						<div className=" w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth">
+						<div className=" w-full h-full overflow-x-scroll whitespace-nowrap">
 							<div className="col-span-12 lg:col-span-4 my-10 lg:my-0 inline-block p-2 w-2/3">
 								<div>
 									<Image src={FeatureImage1} alt="FeatureImage1" />

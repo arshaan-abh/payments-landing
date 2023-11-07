@@ -77,7 +77,7 @@ function Feature7() {
 						</span>
 					</div>
 					<div className="h-full flex flex-col justify-center">
-						<Slider {...sliderSettings}>
+						{/* <Slider {...sliderSettings}>
 							{terminals.map((t, index) => (
 								<div
 									key={index}
@@ -100,7 +100,7 @@ function Feature7() {
 									</div>
 								</div>
 							))}
-						</Slider>
+						</Slider> */}
 					</div>
 				</div>
 			</div>
