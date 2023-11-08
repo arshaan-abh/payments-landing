@@ -16,7 +16,8 @@ const MarketingBanner: FC<MarketingBannerProps> = ({}) => {
 
 	const handleScroll = useCallback(() => {
 		pause();
-		if (window.scrollY === 0) play();
+		const scrollY = window.scrollY || window.pageYOffset;
+		if (scrollY === 0) play();
 	}, [pause, play]);
 
 	useEffect(() => {
