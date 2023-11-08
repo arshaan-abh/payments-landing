@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { FaqData } from "@/app/staticData/faq";
 import Image from "next/image";

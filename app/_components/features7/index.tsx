@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Mobile1 from "../../../public/Terminal 1.webp";
 import Mobile2 from "../../../public/Terminal 2.webp";

@@ -1,3 +1,4 @@
+"use client";
 import MarketingBanners from "@/app/staticData/marketingBanners";
 import { useState, type FC, useEffect, useCallback, useRef } from "react";
 
