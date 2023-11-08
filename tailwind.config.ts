@@ -44,6 +44,12 @@ const config: Config = {
 				marquee: "marquee 16s infinite linear",
 				"marquee-after": "marquee-after 16s infinite linear",
 			},
+			maxWidth: {
+				"screen-1.5xl": "88rem",
+			},
+			padding: {
+				30: "7.5rem",
+			},
 		},
 	},
 	plugins: [],
