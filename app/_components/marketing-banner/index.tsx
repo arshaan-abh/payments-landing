@@ -14,19 +14,22 @@ const MarketingBanner: FC<MarketingBannerProps> = ({}) => {
 		setPaused(false);
 	}, []);
 
+	const handleScroll = useCallback(() => {
+		if (window.scrollY > 0) pause();
+		else play();
+	}, [pause, play]);
+
 	useEffect(() => {
 		const marketingBanner = marketingBannerRef.current;
-		addEventListener("scroll", pause);
-		addEventListener("scrollend", play);
+		addEventListener("scroll", handleScroll);
 		marketingBanner?.addEventListener("mousemove", pause);
 		marketingBanner?.addEventListener("mouseleave", play);
 		return () => {
-			removeEventListener("scroll", pause);
-			removeEventListener("scrollend", play);
+			removeEventListener("scroll", handleScroll);
 			marketingBanner?.removeEventListener("mousemove", pause);
 			marketingBanner?.removeEventListener("mouseleave", play);
 		};
-	}, [play, pause]);
+	}, [play, pause, handleScroll]);
 
 	return (
 		<header ref={marketingBannerRef} className="bg-primary flex">
