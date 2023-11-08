@@ -11,16 +11,33 @@ import Feature6 from "./_components/features6";
 import Feature7 from "./_components/features7";
 import FaqSection from "./_components/faq";
 import MarketingBanner from "./_components/marketing-banner";
+import Stack from "./_components/stack";
 
 export default function Home() {
 	return (
 		<div className="flex flex-col">
-			<section id="hero" className="h-screen min-h-fit flex flex-col">
-				<MarketingBanner />
-				<Navbar />
-				<Hero />
-			</section>
-			<section className="h-screen min-h-fit">
+			<Stack
+				underLayer={
+					<video
+						className="w-full h-full object-cover grayscale"
+						autoPlay
+						loop
+						muted
+					>
+						<source src="hero-background.mp4" type="video/mp4" />
+					</video>
+				}
+			>
+				<section
+					id="hero"
+					className="h-screen min-h-fit flex flex-col relative bg-gradient-to-r from-primary to-transparent"
+				>
+					<MarketingBanner />
+					<Navbar />
+					{/* <Hero /> */}
+				</section>
+			</Stack>
+			{/* <section className="h-screen min-h-fit">
 				<Feature1 />
 			</section>
 			<section className="h-screen min-h-fit">
@@ -49,7 +66,7 @@ export default function Home() {
 			</section>
 			<section className="h-screen min-h-fit">
 				<Footer />
-			</section>
+			</section> */}
 		</div>
 	);
 }
