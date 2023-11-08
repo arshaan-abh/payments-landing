@@ -5,6 +5,7 @@ interface StackProps {
 	underLayer?: ReactNode;
 	overLayer?: ReactNode;
 	className?: string;
+	containerClassName?: string;
 }
 
 const Stack: FC<StackProps> = ({
@@ -12,9 +13,10 @@ const Stack: FC<StackProps> = ({
 	overLayer,
 	underLayer,
 	className = "",
+	containerClassName = "",
 }) => {
 	return (
-		<div className="relative">
+		<div className={`relative ${containerClassName}`}>
 			<div className="absolute z-0 inset-0">{underLayer}</div>
 			<div className={`relative z-10 ${className}`}>{children}</div>
 			<div className="absolute z-20 inset-0 pointer-events-none">
