@@ -16,7 +16,7 @@ function Feature1() {
 							</h2>
 						</div>
 						<div className="md:col-span-12  lg:col-end-13 lg:col-span-6 mt-5 lg:mt-0 md:px-10 lg:px-0 md:text-center lg:text-start">
-							<p className="font-normal text-base text-gray_2">
+							<p className="font-normal text-base text-gray-200">
 								In a rapidly evolving marketplace, staying ahead means embracing
 								efficient solutions. Our Streamlined Customer Payment Processing
 								is your gateway to a new era in payment convenience. Weve
@@ -33,7 +33,7 @@ function Feature1() {
 							<h3 className="font-bold text-primary text-2xl mb-2 text-center lg:text-start">
 								One-Click checkout with Pay link
 							</h3>
-							<p className="font-normal text-base text-gray_2 text-center lg:text-start">
+							<p className="font-normal text-base text-gray-200 text-center lg:text-start">
 								Your customers will love the simplicity of one-click checkout
 								through our seamless pay link.
 							</p>
@@ -45,7 +45,7 @@ function Feature1() {
 							<h3 className="font-bold text-primary text-2xl mb-2 text-center lg:text-start">
 								Flexible Payment Methods
 							</h3>
-							<p className="font-normal text-base text-gray_2 text-center lg:text-start">
+							<p className="font-normal text-base text-gray-200 text-center lg:text-start">
 								Users will enjoy the convenience of flexible payout methods
 								tailored to their needs.
 							</p>
@@ -61,7 +61,7 @@ function Feature1() {
 							<h3 className="font-bold text-primary text-2xl mb-2 text-center lg:text-start">
 								Multicurrency Payments
 							</h3>
-							<p className="font-normal text-base text-gray_2 text-center lg:text-start">
+							<p className="font-normal text-base text-gray-200 text-center lg:text-start">
 								They will appreciate the value of flexible multicurrency
 								payments, tailored to their global needs.
 							</p>
@@ -78,7 +78,7 @@ function Feature1() {
 									One-Click checkout with Pay link
 								</h3>
 								<div>
-									<p className="font-normal text-base text-gray_2 text-center">
+									<p className="font-normal text-base text-gray-200 text-center">
 										Your customers will love the simplicity of
 										<br /> one-click checkout through our seamless pay link.
 									</p>
@@ -92,7 +92,7 @@ function Feature1() {
 									Flexible Payment Methods
 								</h3>
 								<div>
-									<p className="font-normal text-base text-gray_2 text-center ">
+									<p className="font-normal text-base text-gray-200 text-center ">
 										Users will enjoy the convenience of <br />
 										flexible payout methods tailored to their needs.
 									</p>
@@ -106,7 +106,7 @@ function Feature1() {
 									Multicurrency Payments
 								</h3>
 
-								<p className="font-normal text-base text-gray_2 text-center h-24 ">
+								<p className="font-normal text-base text-gray-200 text-center h-24 ">
 									They will appreciate the value of flexible multicurrency
 									payments, <br />
 									tailored to their global needs.

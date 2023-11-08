@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
 	content: [
@@ -10,25 +9,22 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
-				gray_1: "#3B3B3B",
-				gray_2: "#606060",
-				gray_3: "#858585",
-				gray_4: "#AAAAAA",
-				gray_5: "#CFCFCF",
-				gray_6: "#D0D0D0",
-				gray_7: "#F2F2F2",
+				gray: {
+					100: "#3b3b3b",
+					200: "#606060",
+					300: "#858585",
+					400: "#aaaaaa",
+					500: "#cfcfcf",
+					600: "#d0d0d0",
+					700: "#f2f2f2",
+				},
 				primary: "#161616",
-				secondary: "#FFFFFF",
+				secondary: "#ffffff",
 			},
 			fontFamily: {
-				sans: ["var(--font-lato)", ...defaultTheme.fontFamily.sans],
-				mono: ["var(--font-mono)", ...defaultTheme.fontFamily.sans],
-				montserrat: ["var(--font-montserrat)", ...defaultTheme.fontFamily.sans],
-			},
-			backgroundImage: {
-				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-				"gradient-conic":
-					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+				lato: ["var(--font-lato)"],
+				mono: ["var(--font-mono)"],
+				montserrat: ["var(--font-montserrat)"],
 			},
 			keyframes: {
 				marquee: {
@@ -54,4 +50,5 @@ const config: Config = {
 	},
 	plugins: [],
 };
+
 export default config;

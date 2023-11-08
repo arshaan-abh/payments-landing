@@ -30,11 +30,11 @@ export default function Home() {
 			>
 				<section
 					id="hero"
-					className="h-screen min-h-fit flex flex-col relative bg-gradient-to-r from-primary to-transparent"
+					className="h-screen min-h-fit flex flex-col items-center relative bg-gradient-to-r from-primary to-transparent"
 				>
 					<MarketingBanner />
 					<Navbar />
-					{/* <Hero /> */}
+					<Hero />
 				</section>
 			</Stack>
 			{/* <section className="h-screen min-h-fit">

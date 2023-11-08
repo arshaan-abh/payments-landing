@@ -46,7 +46,7 @@ function ModalSection(props: ModalProps) {
 							</span>
 						</div>
 						<div>
-							<span className="text-lg font-normal text-gray_1">
+							<span className="text-lg font-normal text-gray-100">
 								{ModalData[selectedImage]?.description[0].subTitle}
 							</span>
 						</div>
@@ -61,7 +61,7 @@ function ModalSection(props: ModalProps) {
 							<span className="text-primary text-base font-normal text-end">
 								{ModalData[selectedImage]?.description[0].information.inf1}
 							</span>
-							<span className="text-base font-normal text-gray_3">
+							<span className="text-base font-normal text-gray-300">
 								{ModalData[selectedImage]?.description[0].information.inf1des}
 							</span>
 						</div>
@@ -69,7 +69,7 @@ function ModalSection(props: ModalProps) {
 							<span className="text-primary text-base font-normal">
 								{ModalData[selectedImage]?.description[0].information.inf2}
 							</span>
-							<span className="text-base font-normal text-gray_3">
+							<span className="text-base font-normal text-gray-300">
 								{ModalData[selectedImage]?.description[0].information.inf2des}
 							</span>
 						</div>
@@ -77,7 +77,7 @@ function ModalSection(props: ModalProps) {
 							<span className="text-primary text-base font-normal">
 								{ModalData[selectedImage]?.description[0].information.inf3}
 							</span>
-							<span className="text-base font-normal text-gray_3">
+							<span className="text-base font-normal text-gray-300">
 								{ModalData[selectedImage]?.description[0].information.inf3des}
 							</span>
 						</div>
@@ -85,7 +85,7 @@ function ModalSection(props: ModalProps) {
 							<span className="text-primary text-base font-normal">
 								{ModalData[selectedImage]?.description[0].information.inf4}
 							</span>
-							<span className="text-base font-normal text-gray_3">
+							<span className="text-base font-normal text-gray-300">
 								{ModalData[selectedImage]?.description[0].information.inf4des}
 							</span>
 						</div>
@@ -93,7 +93,7 @@ function ModalSection(props: ModalProps) {
 							<span className="text-primary text-base font-normal">
 								{ModalData[selectedImage]?.description[0].information.inf5}
 							</span>
-							<span className="text-base font-normal text-gray_3">
+							<span className="text-base font-normal text-gray-300">
 								{ModalData[selectedImage]?.description[0].information.inf5des}
 							</span>
 						</div>

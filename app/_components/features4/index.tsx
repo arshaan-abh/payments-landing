@@ -15,26 +15,26 @@ function Feature4() {
 						<div className="col-span-6 space-y-[76px]">
 							<div>
 								<h3 className="text-[53px] font-black text-primary">245M+</h3>
-								<p className="text-base font-normal text-gray_2">
+								<p className="text-base font-normal text-gray-200">
 									API request per day, peaking at 13,000 requests a second.
 								</p>
 							</div>
 							<div>
 								<h3 className="text-[53px] font-black text-primary">90%</h3>
-								<p className="text-base font-normal text-gray_2">
+								<p className="text-base font-normal text-gray-200">
 									Of U.K. adults have bought from businesses using Selected
 									payment
 								</p>
 							</div>
 							<div>
 								<h3 className="text-[53px] font-black text-primary">130+</h3>
-								<p className="text-base font-normal text-gray_2">
+								<p className="text-base font-normal text-gray-200">
 									currencies and payment methods supported.
 								</p>
 							</div>
 							<div>
 								<h3 className="text-[53px] font-black text-primary">99.99%</h3>
-								<p className="text-base font-normal text-gray_2">
+								<p className="text-base font-normal text-gray-200">
 									historical uptime for Selected payment.
 								</p>
 							</div>
@@ -47,7 +47,7 @@ function Feature4() {
 							</h2>
 						</div>
 						<div>
-							<span className="font-normal text-gray_2 text-base">
+							<span className="font-normal text-gray-200 text-base">
 								Our platform is your gateway to effortless financial
 								transactions. We provide user-friendly, secure, and hassle-free
 								money transfer solutions, so you can effortlessly manage your

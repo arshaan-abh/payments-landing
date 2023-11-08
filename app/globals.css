@@ -105,11 +105,6 @@ html {
 section {
 	scroll-snap-align: center;
 }
-.custom-bg {
-	background-image: url("../public/Grow Sales BG.svg");
-
-	/* Add other background properties as needed */
-}
 
 .ReactModal__Overlay {
 	opacity: 0;

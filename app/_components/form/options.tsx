@@ -22,7 +22,7 @@ const Options = (props: props) => {
 						<div
 							key={index}
 							className={`flex items-center lg:pl-1 border ${
-								checkedList[index] ? "border-[#FAFAFA]" : "border-gray_1"
+								checkedList[index] ? "border-[#FAFAFA]" : "border-gray-100"
 							} rounded-md  dark:border-gray-700 h-[100px] lg:h-10 ${
 								index === 0
 									? "col-span-6 lg:col-span-5"

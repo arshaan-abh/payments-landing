@@ -15,11 +15,11 @@ function Feature5() {
 					<h3 className="text-[32px] font-black text-primary pr-24">
 						Pre-Paid Debit Card Issuing with Bank Account
 					</h3>
-					<span className="text-base font-normal text-gray_2 mt-5">
+					<span className="text-base font-normal text-gray-200 mt-5">
 						By easily issuing Prepaid Debit Cards tailored to your brand, you
 						create a distinct competitive edge in the market.{" "}
 					</span>
-					<span className="text-base font-normal text-gray_2">
+					<span className="text-base font-normal text-gray-200">
 						These adaptable solutions not only streamline payments but also
 						empower your business to provide a unique payment experience that is
 						both user-friendly and reflective of your brands values. This
@@ -37,7 +37,7 @@ function Feature5() {
 					<h3 className="text-[32px] font-black text-primary">
 						Business Finance Service with Bank Account
 					</h3>
-					<span className="text-base font-normal text-gray_2 mt-5">
+					<span className="text-base font-normal text-gray-200 mt-5">
 						Weve tailored our services to provide you with a seamless experience
 						in managing your business credit lines and bank accounts.
 					</span>

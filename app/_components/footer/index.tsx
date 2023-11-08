@@ -140,7 +140,7 @@ function Footer() {
 				</div>
 				<div className="col-span-12 grid grid-cols-12 py-10">
 					<div className="col-span-2 flex">
-						<span className="text-xs font-normal text-gray_4">
+						<span className="text-xs font-normal text-gray-400">
 							Copyright © 2023 Powered by
 						</span>
 						<span className="text-xs font-bold text-secondary ml-1">

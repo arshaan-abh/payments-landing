@@ -84,7 +84,7 @@ function Form() {
 						<h2 className="text-secondary text-2xl lg:text-[40px] font-mono font-extrabold text-center lg:text-start">
 							Begin Your Next Chapter Now!
 						</h2>
-						<p className="text-base lg:text-lg font-normal lg:font-medium text-gray_4 text-center lg:text-start mt-6 mb-5">
+						<p className="text-base lg:text-lg font-normal lg:font-medium text-gray-400 text-center lg:text-start mt-6 mb-5">
 							Elevate your business with our convenient in-app payment
 							solutions.
 						</p>

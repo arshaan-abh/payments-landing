@@ -10,8 +10,8 @@ const Stack: FC<StackProps> = ({ children, overLayer, underLayer }) => {
 	return (
 		<div className="relative">
 			<div className="absolute z-0 inset-0">{underLayer}</div>
-			{children}
-			<div className="absolute z-10 inset-0 pointer-events-none">
+			<div className="relative z-10">{children}</div>
+			<div className="absolute z-20 inset-0 pointer-events-none">
 				{overLayer}
 			</div>
 		</div>

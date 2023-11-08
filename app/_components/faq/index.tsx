@@ -21,7 +21,7 @@ function FaqSection() {
 		<div className="xl:mx-[120px] flex flex-col h-full">
 			<div className="pt-10">
 				<h2 className="font-black text-[32px] text-primary">FAQ</h2>
-				<span className="text-base font-normal text-gray_2">
+				<span className="text-base font-normal text-gray-200">
 					Welcome to the Selected Payments FAQ, your source for clear,
 					insightful answers.
 				</span>
@@ -31,7 +31,9 @@ function FaqSection() {
 					<div key={index} className="flex justify-between border-b">
 						<div className="my-2">
 							<p className="text-[30px] font-bold text-primary">{faq.title}</p>
-							{openFaq[index] && <p className="text-gray_2">{faq.subtitle}</p>}
+							{openFaq[index] && (
+								<p className="text-gray-200">{faq.subtitle}</p>
+							)}
 						</div>
 						<div className="w-40 flex justify-end">
 							<Image

@@ -16,15 +16,17 @@ function Feature3() {
 							Marketplace & Platforms
 						</h2>
 						<div className="flex">
-							<h3 className="text-gray_1 text-xl font-bold">INTEGRATED</h3>
-							<h3 className="text-gray_1 text-xl font-bold mx-10">
+							<h3 className="text-gray-100 text-xl font-bold">INTEGRATED</h3>
+							<h3 className="text-gray-100 text-xl font-bold mx-10">
 								MOBILE FRIENDLY
 							</h3>
-							<h3 className="text-gray_1 text-xl font-bold">MOBILE FRIENDLY</h3>
+							<h3 className="text-gray-100 text-xl font-bold">
+								MOBILE FRIENDLY
+							</h3>
 						</div>
 					</div>
 					<div className="col-span-6 pt-4">
-						<p className="text-gray_2 font-normal text-base">
+						<p className="text-gray-200 font-normal text-base">
 							Establish a thriving ecosystem for sellers on your platform.
 							Cultivate an environment where sellers not only succeed but
 							thrive. Instant Payouts, Commission Alignment, Effortless
@@ -42,7 +44,7 @@ function Feature3() {
 							<h3 className="text-2xl text-primary font-black">
 								Instant Payouts
 							</h3>
-							<p className="font-normal text-base text-gray_2">
+							<p className="font-normal text-base text-gray-200">
 								Sellers receive payments instantly, greatly enhancing their
 								overall experience with rapid, hassle-free transactions.
 							</p>
@@ -56,7 +58,7 @@ function Feature3() {
 							<h3 className="text-2xl text-primary font-black">
 								Commission Alignment
 							</h3>
-							<p className="font-normal text-base text-gray_2">
+							<p className="font-normal text-base text-gray-200">
 								Customise payments to perfectly align with your unique
 								commission model, ensuring a tailored and efficient payment
 								process.
@@ -71,7 +73,7 @@ function Feature3() {
 							<h3 className="text-2xl text-primary font-black">
 								Instant Settlements
 							</h3>
-							<p className="font-normal text-base text-gray_2">
+							<p className="font-normal text-base text-gray-200">
 								Simplify the process with automation, ensuring swift and
 								efficient settlement procedures that save you time and effort.
 							</p>
@@ -85,7 +87,7 @@ function Feature3() {
 							<h3 className="text-2xl text-primary font-black">
 								Multiparty Split Payments and Payouts
 							</h3>
-							<p className="font-normal text-base text-gray_2">
+							<p className="font-normal text-base text-gray-200">
 								Effortlessly pay multiple parties in local currencies, making
 								financial transactions more accessible and efficient for
 								everyone involved.

@@ -73,7 +73,7 @@ function Feature7() {
 				<div className="flex flex-col flex-1 xl:px-[120px] max-w-[1440px] h-full">
 					<div className="flex flex-col">
 						<h2 className="text-[32px] font-black text-primary">Terminals</h2>
-						<span className="font-normal text-gray_2 text-base mt-3">
+						<span className="font-normal text-gray-200 text-base mt-3">
 							Here you can see our terminals and order anyone do you want.
 						</span>
 					</div>
@@ -95,7 +95,7 @@ function Feature7() {
 										</h3>
 									</div>
 									<div>
-										<span className="text-lg text-gray_2 font-normal">
+										<span className="text-lg text-gray-200 font-normal">
 											{t.subtitle}
 										</span>
 									</div>

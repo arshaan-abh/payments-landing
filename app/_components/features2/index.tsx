@@ -16,19 +16,19 @@ function Feature2() {
 							ePOS All-In-One Solutions
 						</h2>
 						<div className="flex lg:justify-evenly xl:justify-normal">
-							<h3 className="text-gray_1 lg:text-lg xl:text-xl lg:font-normal xl:font-bold">
+							<h3 className="text-gray-100 lg:text-lg xl:text-xl lg:font-normal xl:font-bold">
 								INTEGRATED
 							</h3>
-							<h3 className="text-gray_1 lg:text-lg xl:text-xl lg:font-normal xl:font-boldmx-10">
+							<h3 className="text-gray-100 lg:text-lg xl:text-xl lg:font-normal xl:font-boldmx-10">
 								MOBILE FRIENDLY
 							</h3>
-							<h3 className="text-gray_1 lg:text-lg xl:text-xl lg:font-normal xl:font-bold">
+							<h3 className="text-gray-100 lg:text-lg xl:text-xl lg:font-normal xl:font-bold">
 								MOBILE FRIENDLY
 							</h3>
 						</div>
 					</div>
 					<div className="md:col-span-12 lg:col-span-6 flex md:justify-center lg:justify-normal md:px-10">
-						<p className="text-gray_2 font-normal text-base text-center">
+						<p className="text-gray-200 font-normal text-base text-center">
 							Unlock the potential of retail with our ePOS All-In-One Solutions.
 							Tailor your in-store payments, simplify transactions without extra
 							hardware, enable on-the-go mobile payments, and embrace secure,
@@ -55,7 +55,7 @@ function Feature2() {
 							<h3 className="text-2xl text-primary font-black">
 								Flexible in-store payments
 							</h3>
-							<p className="font-normal text-base text-gray_2">
+							<p className="font-normal text-base text-gray-200">
 								Customise your payment method for the ultimate convenience and
 								experience a new level of financial flexibility.
 							</p>
@@ -69,7 +69,7 @@ function Feature2() {
 							<h3 className="text-2xl text-primary font-black">
 								POS Payments without device
 							</h3>
-							<p className="font-normal text-base text-gray_2">
+							<p className="font-normal text-base text-gray-200">
 								Witness optimised transactions without the need for any
 								hardware, making your point-of-sale payments straightforward
 							</p>
@@ -83,7 +83,7 @@ function Feature2() {
 							<h3 className="text-2xl text-primary font-black">
 								Phone payments using MO/TO
 							</h3>
-							<p className="font-normal text-base text-gray_2">
+							<p className="font-normal text-base text-gray-200">
 								Empower mobile transactions for on-the-go ease and elevate your
 								payment experience with the convenience of MO/TO payments.
 							</p>
@@ -97,7 +97,7 @@ function Feature2() {
 							<h3 className="text-2xl text-primary font-black">
 								QR payment codes
 							</h3>
-							<p className="font-normal text-base text-gray_2">
+							<p className="font-normal text-base text-gray-200">
 								Enjoy quick, secure, and contactless payments with a simple
 								scan, providing you with a seamless and efficient way to pay.
 							</p>
