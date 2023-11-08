@@ -34,7 +34,10 @@ const MarketingBanner: FC<MarketingBannerProps> = ({}) => {
 	}, [play, pause, handleScroll]);
 
 	return (
-		<header ref={marketingBannerRef} className="bg-primary flex">
+		<header
+			ref={marketingBannerRef}
+			className="bg-primary flex w-full overflow-hidden"
+		>
 			{MarketingBanners.length !== 0 && (
 				<>
 					<MarketingBannerItems className="animate-marquee" paused={paused} />
