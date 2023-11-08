@@ -1,25 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { FC } from "react";
-import Logo from "public/Frame 26085919.svg";
+import logo from "public/logo.svg";
+import Button from "../button";
 
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
 	return (
-		<nav className="grid grid-cols-12 col-span-12">
-			<div className="col-span-4 lg:col-span-2">
-				<Image src={Logo} alt="logo" />
-			</div>
-			<div className="col-span-3 lg:col-span-2 col-end-13 justify-end flex">
-				<Link
-					href="#"
-					className="w-2/3 h-10 text-white bg-primary rounded-md text-base font-normal flex items-center justify-center"
-				>
-					Contact us
-				</Link>
-			</div>
-		</nav>
+		<>
+			<nav className="w-full flex flex-col px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl">
+				<div className="flex gap-10 justify-between items-center py-6">
+					<Image src={logo} alt="Logo" />
+					<Button white>Enquire Now</Button>
+				</div>
+				<div className="border-b border-white w-full h-px opacity-10" />
+			</nav>
+		</>
 	);
 };
 
