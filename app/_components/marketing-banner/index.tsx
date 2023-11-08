@@ -36,7 +36,7 @@ const MarketingBanner: FC<MarketingBannerProps> = ({}) => {
 	return (
 		<header
 			ref={marketingBannerRef}
-			className="bg-primary flex w-full overflow-hidden"
+			className="bg-primary flex w-full overflow-hidden shrink-0"
 		>
 			{MarketingBanners.length !== 0 && (
 				<>
@@ -64,7 +64,7 @@ const MarketingBannerItems: FC<MarketingBannerItemsProps> = ({
 }) => {
 	return (
 		<div
-			className={`gap-5 py-5 pl-5 flex min-w-max w-screen shrink-0 ${className} ${
+			className={`gap-5 py-3 pl-5 flex min-w-max w-screen shrink-0 ${className} ${
 				paused && "animation-play-state-paused"
 			}`}
 		>
