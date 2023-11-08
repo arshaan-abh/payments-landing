@@ -64,7 +64,7 @@ const MarketingBannerItems: FC<MarketingBannerItemsProps> = ({
 }) => {
 	return (
 		<div
-			className={`gap-5 py-2 pl-5 flex min-w-max w-screen shrink-0 ${className} ${
+			className={`gap-5 py-5 pl-5 flex min-w-max w-screen shrink-0 ${className} ${
 				paused && "animation-play-state-paused"
 			}`}
 		>
@@ -81,4 +81,4 @@ const MarketingBannerItems: FC<MarketingBannerItemsProps> = ({
 };
 
 // TODO better performance
-// https://stackoverflow.com/questions/70785150/css-scroll-snap-choppy-laggy-on-chrome-desktop
+// https://stackoverflow.com/a/77431729/21186859
