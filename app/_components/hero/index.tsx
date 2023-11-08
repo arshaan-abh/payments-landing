@@ -12,7 +12,7 @@ function Hero() {
 					<Image
 						src={growSales}
 						alt="Grow Sales"
-						className="-translate-x-3 -translate-y-1"
+						className="-translate-x-3 -translate-y-1 select-none pointer-events-none"
 					/>
 				}
 			>
