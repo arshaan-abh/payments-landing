@@ -14,7 +14,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 					<Image src={logo} alt="Logo" />
 					<Button white>Enquire Now</Button>
 				</div>
-				<div className="border-b border-white w-full h-px opacity-10" />
+				<div className="border-b border-gray-700 w-full h-px opacity-10" />
 			</nav>
 		</>
 	);
