@@ -1,6 +1,6 @@
 import Navbar from "./_components/navbar";
 import Hero, { HeroBackground } from "./_components/hero";
-import Feature1 from "./_components/features1";
+import FeatureOne from "./_components/features-one";
 import Form from "./_components/form";
 import Footer from "./_components/footer";
 import Feature2 from "./_components/features2";
@@ -30,11 +30,14 @@ export default function Home() {
 					<Hero />
 				</section>
 			</Stack>
-			<section className="h-screen min-h-fit">
+			<section
+				id="feature-one"
+				className="h-screen min-h-fit flex flex-col items-center"
+			>
 				<MarketingBanner data={secondMarqueeData} white />
-				<Feature1 />
+				<FeatureOne />
 			</section>
-			{/* <section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit">
 				<Feature2 />
 			</section>
 			<section className="h-screen min-h-fit">
@@ -60,7 +63,7 @@ export default function Home() {
 			</section>
 			<section className="h-screen min-h-fit">
 				<Footer />
-			</section> */}
+			</section>
 			<Menu />
 			<CookiesModal />
 			<EnquireNowIcon className="fixed bottom-12 right-10 z-10" />
