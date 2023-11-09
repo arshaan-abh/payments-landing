@@ -6,12 +6,12 @@ import featureImageThree from "../../../public/Currency.webp";
 
 const FeatureOne: FC<CardProps> = ({}) => {
 	return (
-		<div className="w-full h-full justify-center gap-32 px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col">
-			<div className="flex justify-between items-center gap-32">
-				<div className="w-1/2 text-primary text-4xl font-extrabold font-montserrat">
+		<div className="w-full h-full justify-evenly px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col">
+			<div className="flex justify-between items-center">
+				<div className="basis-5/12 text-primary text-4xl font-extrabold font-montserrat">
 					Simplified Customer Payment Processing!
 				</div>
-				<div className="w-1/2 text-gray-200 text-base font-medium font-lato">
+				<div className="basis-5/12 text-gray-200 text-base font-medium font-lato">
 					In a rapidly evolving marketplace, staying ahead means embracing
 					efficient solutions. Our Streamlined customer payment processing is
 					your gateway to a new era in payment convenience. We&apos;ve

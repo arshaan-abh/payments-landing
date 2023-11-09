@@ -23,7 +23,7 @@ export default function Home() {
 			<Stack underLayer={<HeroBackground />}>
 				<section
 					id="hero"
-					className="h-screen min-h-fit flex flex-col items-center relative bg-gradient-to-r from-primary to-transparent"
+					className="h-screen min-h-fit flex flex-col items-center relative bg-gradient-to-r from-primary to-transparent overflow-hidden"
 				>
 					<MarketingBanner data={firstMarqueeData} />
 					<Navbar />
@@ -32,36 +32,36 @@ export default function Home() {
 			</Stack>
 			<section
 				id="feature-one"
-				className="h-screen min-h-fit flex flex-col items-center"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
 			>
 				<MarketingBanner data={secondMarqueeData} white />
 				<FeatureOne />
 			</section>
-			<section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit overflow-hidden">
 				<Feature2 />
 			</section>
-			<section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit overflow-hidden">
 				<Feature3 />
 			</section>
-			<section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit overflow-hidden">
 				<Feature4 />
 			</section>
-			<section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit overflow-hidden">
 				<Feature5 />
 			</section>
-			<section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit overflow-hidden">
 				<Feature6 />
 			</section>
-			<section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit overflow-hidden">
 				<Feature7 />
 			</section>
-			<section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit overflow-hidden">
 				<FaqSection />
 			</section>
-			<section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit overflow-hidden">
 				<Form />
 			</section>
-			<section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit overflow-hidden">
 				<Footer />
 			</section>
 			<Menu />
