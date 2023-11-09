@@ -15,6 +15,7 @@ import Stack from "./_components/stack";
 import CookiesModal from "./_components/cookies-modal";
 import Menu from "./_components/menu";
 import { firstMarqueeData, secondMarqueeData } from "./staticData/marqueesData";
+import { EnquireNowIcon } from "./_components/icons";
 
 export default function Home() {
 	return (
@@ -62,6 +63,7 @@ export default function Home() {
 			</section> */}
 			<Menu />
 			<CookiesModal />
+			<EnquireNowIcon className="fixed bottom-12 right-10 z-10" />
 		</div>
 	);
 }
