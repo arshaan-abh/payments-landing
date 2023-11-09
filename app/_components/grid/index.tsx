@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import PlusIcon from "../plus-icon";
+import { PlusIcon } from "../icons";
 
 interface GridProps {}
 

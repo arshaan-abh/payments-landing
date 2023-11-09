@@ -13,6 +13,7 @@ import FaqSection from "./_components/faq";
 import MarketingBanner from "./_components/marketing-banner";
 import Stack from "./_components/stack";
 import CookiesModal from "./_components/cookies-modal";
+import Menu from "./_components/menu";
 
 export default function Home() {
 	return (
@@ -68,6 +69,7 @@ export default function Home() {
 			<section className="h-screen min-h-fit">
 				<Footer />
 			</section> */}
+			<Menu />
 			<CookiesModal />
 		</div>
 	);
