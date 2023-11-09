@@ -10,10 +10,11 @@ import Feature5 from "./_components/features5";
 import Feature6 from "./_components/features6";
 import Feature7 from "./_components/features7";
 import FaqSection from "./_components/faq";
-import MarketingBanner from "./_components/marketing-banner";
+import MarketingBanner from "./_components/marquee";
 import Stack from "./_components/stack";
 import CookiesModal from "./_components/cookies-modal";
 import Menu from "./_components/menu";
+import { firstMarqueeData, secondMarqueeData } from "./staticData/marqueesData";
 
 export default function Home() {
 	return (
@@ -23,12 +24,13 @@ export default function Home() {
 					id="hero"
 					className="h-screen min-h-fit flex flex-col items-center relative bg-gradient-to-r from-primary to-transparent"
 				>
-					<MarketingBanner />
+					<MarketingBanner data={firstMarqueeData} />
 					<Navbar />
 					<Hero />
 				</section>
 			</Stack>
 			<section className="h-screen min-h-fit">
+				<MarketingBanner data={secondMarqueeData} white />
 				<Feature1 />
 			</section>
 			{/* <section className="h-screen min-h-fit">
