@@ -1,5 +1,5 @@
 import Navbar from "./_components/navbar";
-import Hero from "./_components/hero";
+import Hero, { HeroBackground } from "./_components/hero";
 import Feature1 from "./_components/features1";
 import Form from "./_components/form";
 import Footer from "./_components/footer";
@@ -18,18 +18,7 @@ import Menu from "./_components/menu";
 export default function Home() {
 	return (
 		<div className="flex flex-col">
-			<Stack
-				underLayer={
-					<video
-						className="w-full h-full object-cover grayscale"
-						autoPlay
-						loop
-						muted
-					>
-						<source src="hero-background.mp4" type="video/mp4" />
-					</video>
-				}
-			>
+			<Stack underLayer={<HeroBackground />}>
 				<section
 					id="hero"
 					className="h-screen min-h-fit flex flex-col items-center relative bg-gradient-to-r from-primary to-transparent"
@@ -39,10 +28,10 @@ export default function Home() {
 					<Hero />
 				</section>
 			</Stack>
-			{/* <section className="h-screen min-h-fit">
+			<section className="h-screen min-h-fit">
 				<Feature1 />
 			</section>
-			<section className="h-screen min-h-fit">
+			{/* <section className="h-screen min-h-fit">
 				<Feature2 />
 			</section>
 			<section className="h-screen min-h-fit">

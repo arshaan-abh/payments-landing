@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { FC, useCallback, useEffect, useRef } from "react";
 import Button from "../button";
 import Stack from "../stack";
 import growSales from "public/grow-scales.svg";
@@ -47,3 +48,42 @@ function Hero() {
 }
 
 export default Hero;
+
+interface HeroBackgroundProps {}
+
+export const HeroBackground: FC<HeroBackgroundProps> = ({}) => {
+	const videoRef = useRef<HTMLVideoElement>(null);
+
+	const pause = useCallback(() => {
+		videoRef.current?.pause();
+	}, []);
+
+	const play = useCallback(() => {
+		videoRef.current?.play();
+	}, []);
+
+	const handleScroll = useCallback(() => {
+		pause();
+		const scrollY = window.scrollY || window.pageYOffset;
+		if (scrollY === 0) play();
+	}, [pause, play]);
+
+	useEffect(() => {
+		addEventListener("scroll", handleScroll);
+		return () => {
+			removeEventListener("scroll", handleScroll);
+		};
+	}, [play, pause, handleScroll]);
+
+	return (
+		<video
+			className="w-full h-full object-cover grayscale"
+			autoPlay
+			loop
+			muted
+			ref={videoRef}
+		>
+			<source src="hero-background.mp4" type="video/mp4" />
+		</video>
+	);
+};
