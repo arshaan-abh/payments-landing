@@ -37,7 +37,7 @@ interface CardProps {
 	supportingText: string;
 }
 
-const Card: FC<CardProps> = ({ title, supportingText }) => {
+export const Card: FC<CardProps> = ({ title, supportingText }) => {
 	return (
 		<div className="flex flex-col gap-4">
 			<h4 className="font-lato font-extrabold text-3xl text-primary">
