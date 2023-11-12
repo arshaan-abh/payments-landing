@@ -3,7 +3,7 @@ import Hero, { HeroBackground } from "./_components/hero";
 import FeatureOne from "./_components/features-one";
 import Form from "./_components/form";
 import Footer from "./_components/footer";
-import Feature2 from "./_components/features2";
+import FeatureTwo from "./_components/features-two";
 import Feature3 from "./_components/features3";
 import Feature4 from "./_components/features4";
 import Feature5 from "./_components/features5";
@@ -37,8 +37,11 @@ export default function Home() {
 				<MarketingBanner data={secondMarqueeData} white />
 				<FeatureOne />
 			</section>
-			<section className="h-screen min-h-fit overflow-hidden">
-				<Feature2 />
+			<section
+				id="feature-two"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+			>
+				<FeatureTwo />
 			</section>
 			<section className="h-screen min-h-fit overflow-hidden">
 				<Feature3 />
