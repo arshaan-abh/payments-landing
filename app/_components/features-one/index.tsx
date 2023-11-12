@@ -3,10 +3,17 @@ import React, { FC, ReactNode } from "react";
 import featureImageOne from "../../../public/One click.webp";
 import featureImageTwo from "../../../public/Pay Method.webp";
 import featureImageThree from "../../../public/Currency.webp";
+import Stack from "../stack";
+import Grid from "../grid";
 
 const FeatureOne: FC<CardProps> = ({}) => {
 	return (
-		<div className="w-full h-full justify-evenly px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col">
+		<Stack
+			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			className="h-full flex flex-col justify-evenly"
+			underLayer={<Grid black />}
+		>
 			<div className="flex justify-between items-center gap-10">
 				<div className="w-1/2 text-primary text-4xl font-extrabold font-montserrat">
 					Simplified Customer Payment Processing!
@@ -43,7 +50,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					Multicurrency Payments
 				</Card>
 			</div>
-		</div>
+		</Stack>
 	);
 };
 
@@ -68,3 +75,5 @@ const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 		</div>
 	);
 };
+
+// TODO inspect image component's props

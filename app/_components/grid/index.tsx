@@ -1,11 +1,16 @@
 import type { FC } from "react";
 import { PlusIcon } from "../icons";
 
-interface GridProps {}
+interface GridProps {
+	black?: boolean;
+}
 
-const Grid: FC<GridProps> = ({}) => {
+const Grid: FC<GridProps> = ({ black }) => {
 	const x = 12;
 	const y = 6;
+	const variableClassNames = black
+		? "text-black opacity-10"
+		: "text-gray-700 opacity-10";
 	return (
 		<div className="flex flex-col justify-evenly w-full h-full">
 			{Array.from(Array(y), (_, yIndex) => (
@@ -13,7 +18,7 @@ const Grid: FC<GridProps> = ({}) => {
 					{Array.from(Array(x), (_, xIndex) => (
 						<PlusIcon
 							key={`${yIndex} ${xIndex}`}
-							className="pointer-events-none select-none text-gray-700 opacity-10"
+							className={`pointer-events-none select-none ${variableClassNames}`}
 						/>
 					))}
 				</div>

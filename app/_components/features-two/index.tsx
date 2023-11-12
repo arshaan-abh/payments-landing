@@ -6,10 +6,17 @@ import smallPictureOne from "public/hands-using-phone-credit-card-online-payment
 import smallPictureTwo from "public/Frame 26085950.webp";
 import smallPictureThree from "public/Frame 26085950 (1).webp";
 import smallPictureFour from "public/Frame 26085950 (2).webp";
+import Stack from "../stack";
+import Grid from "../grid";
 
 function FeatureTwo() {
 	return (
-		<div className="w-full h-full justify-evenly px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col">
+		<Stack
+			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			className="h-full flex flex-col justify-evenly"
+			underLayer={<Grid black />}
+		>
 			<div className="flex justify-between items-center gap-10">
 				<div className="w-1/2 flex flex-col gap-1">
 					<div className="text-primary text-4xl font-extrabold font-montserrat">
@@ -63,7 +70,7 @@ function FeatureTwo() {
 					/>
 				</div>
 			</div>
-		</div>
+		</Stack>
 	);
 }
 

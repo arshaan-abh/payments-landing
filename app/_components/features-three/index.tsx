@@ -1,16 +1,22 @@
-import React, { FC } from "react";
+import React from "react";
 import bigPicture from "public/WhatsApp Image 2023-10-20 at 14.03 3.webp";
 import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import smallPictureOne from "public/hand-holding-100-dollar-bill-concept-receiving-salary-income-concept-counting4 1.webp";
 import smallPictureTwo from "public/decreasing-piles-coin-money-with-arrow44 1.webp";
 import smallPictureThree from "public/pexels-antoni-shkraba-production-88375101 2.webp";
 import smallPictureFour from "public/vardan-papikyan-3Q4H1BQAvVo-unsplash1 1.webp";
 import { Card } from "../features-two";
+import Stack from "../stack";
+import Grid from "../grid";
 
 function FeatureThree() {
 	return (
-		<div className="w-full h-full justify-evenly px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col">
+		<Stack
+			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			className="h-full flex flex-col justify-evenly"
+			underLayer={<Grid black />}
+		>
 			<div className="flex justify-between items-center gap-10">
 				<div className="w-1/2 flex flex-col gap-1">
 					<div className="text-primary text-4xl font-extrabold font-montserrat">
@@ -63,7 +69,7 @@ function FeatureThree() {
 					<Image src={bigPicture} alt="Big picture" />
 				</div>
 			</div>
-		</div>
+		</Stack>
 	);
 }
 

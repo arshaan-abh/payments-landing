@@ -2,12 +2,19 @@ import type { FC } from "react";
 import Pre from "../../../public/Frame 26085948.webp";
 import Business from "../../../public/Frame 26085949.webp";
 import Image from "next/image";
+import Grid from "../grid";
+import Stack from "../stack";
 
 interface FeatureFiveProps {}
 
 const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col justify-evenly">
+		<Stack
+			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			className="h-full flex flex-col justify-evenly"
+			underLayer={<Grid black />}
+		>
 			<div className="flex items-center h-2/4 gap-24">
 				<Image src={Pre} alt="Pre" className="h-full object-contain" />
 				<Card
@@ -26,7 +33,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 					className="h-full object-contain"
 				/>
 			</div>
-		</div>
+		</Stack>
 	);
 };
 
@@ -49,3 +56,5 @@ export const Card: FC<CardProps> = ({ title, supportingText }) => {
 		</div>
 	);
 };
+
+// TODO grid is not centered

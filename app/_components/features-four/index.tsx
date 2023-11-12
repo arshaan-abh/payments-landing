@@ -1,12 +1,19 @@
 import type { FC } from "react";
 import Empowering from "../../../public/WhatsApp Image 2023-10-20 at 14.03 4.webp";
 import Image from "next/image";
+import Grid from "../grid";
+import Stack from "../stack";
 
 interface FeatureFourProps {}
 
 const FeatureFour: FC<FeatureFourProps> = ({}) => {
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex gap-10 items-center">
+		<Stack
+			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			className="h-full flex gap-10 items-center"
+			underLayer={<Grid black />}
+		>
 			<div className="w-1/2 flex flex-col gap-5">
 				<Card
 					title="245M+"
@@ -41,7 +48,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 				</p>
 				<Image src={Empowering} alt="Empowering" />
 			</div>
-		</div>
+		</Stack>
 	);
 };
 
