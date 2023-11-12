@@ -5,7 +5,7 @@ import Form from "./_components/form";
 import Footer from "./_components/footer";
 import FeatureTwo from "./_components/features-two";
 import FeatureThree from "./_components/features-three";
-import Feature4 from "./_components/features4";
+import FeatureFour from "./_components/features-four";
 import Feature5 from "./_components/features5";
 import Feature6 from "./_components/features6";
 import Feature7 from "./_components/features7";
@@ -53,7 +53,7 @@ export default function Home() {
 				id="feature-four"
 				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
 			>
-				<Feature4 />
+				<FeatureFour />
 			</section>
 			<section
 				id="feature-five"
