@@ -6,7 +6,7 @@ import Footer from "./_components/footer";
 import FeatureTwo from "./_components/features-two";
 import FeatureThree from "./_components/features-three";
 import FeatureFour from "./_components/features-four";
-import Feature5 from "./_components/features5";
+import FeatureFive from "./_components/features-five";
 import Feature6 from "./_components/features6";
 import Feature7 from "./_components/features7";
 import FaqSection from "./_components/faq";
@@ -59,7 +59,8 @@ export default function Home() {
 				id="feature-five"
 				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
 			>
-				<Feature5 />
+				<MarketingBanner data={secondMarqueeData} white />
+				<FeatureFive />
 			</section>
 			<section
 				id="feature-six"
