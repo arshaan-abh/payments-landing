@@ -75,9 +75,9 @@ interface CardProps {
 	supportingText: string;
 }
 
-const Card: FC<CardProps> = ({ image, title, supportingText }) => {
+export const Card: FC<CardProps> = ({ image, title, supportingText }) => {
 	return (
-		<div className="flex gap-5">
+		<div className="flex gap-5 items-center">
 			<Image src={image} alt="Small picture" />
 			<div className="flex flex-col gap-1">
 				<div className="font-lato font-extrabold text-2xl text-primary">

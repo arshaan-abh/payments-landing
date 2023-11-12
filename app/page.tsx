@@ -4,7 +4,7 @@ import FeatureOne from "./_components/features-one";
 import Form from "./_components/form";
 import Footer from "./_components/footer";
 import FeatureTwo from "./_components/features-two";
-import Feature3 from "./_components/features3";
+import FeatureThree from "./_components/features-three";
 import Feature4 from "./_components/features4";
 import Feature5 from "./_components/features5";
 import Feature6 from "./_components/features6";
@@ -43,28 +43,52 @@ export default function Home() {
 			>
 				<FeatureTwo />
 			</section>
-			<section className="h-screen min-h-fit overflow-hidden">
-				<Feature3 />
+			<section
+				id="feature-three"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+			>
+				<FeatureThree />
 			</section>
-			<section className="h-screen min-h-fit overflow-hidden">
+			<section
+				id="feature-four"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+			>
 				<Feature4 />
 			</section>
-			<section className="h-screen min-h-fit overflow-hidden">
+			<section
+				id="feature-five"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+			>
 				<Feature5 />
 			</section>
-			<section className="h-screen min-h-fit overflow-hidden">
+			<section
+				id="feature-six"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+			>
 				<Feature6 />
 			</section>
-			<section className="h-screen min-h-fit overflow-hidden">
+			<section
+				id="feature-seven"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+			>
 				<Feature7 />
 			</section>
-			<section className="h-screen min-h-fit overflow-hidden">
+			<section
+				id="feature-eight"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+			>
 				<FaqSection />
 			</section>
-			<section className="h-screen min-h-fit overflow-hidden">
+			<section
+				id="feature-nine"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+			>
 				<Form />
 			</section>
-			<section className="h-screen min-h-fit overflow-hidden">
+			<section
+				id="feature-ten"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+			>
 				<Footer />
 			</section>
 			<Menu />
