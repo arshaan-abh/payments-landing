@@ -130,3 +130,37 @@ export const EnquireNowIcon: FC<IconProps> = ({ className }) => {
 		</svg>
 	);
 };
+
+export const ArrowRightIcon: FC<IconProps> = ({ className }) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="14"
+			height="14"
+			fill="none"
+			className={className}
+		>
+			<path
+				d="M0 7.538h12.112l-5.191 5.654.653.808L14 7 7.573 0l-.653.808 5.191 5.654H0v1.077z"
+				fill="currentColor"
+			/>
+		</svg>
+	);
+};
+
+export const ArrowLeftIcon: FC<IconProps> = ({ className }) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="14"
+			height="14"
+			fill="none"
+			className={className}
+		>
+			<path
+				d="M14 7.538H1.888l5.191 5.654-.653.808L0 7l6.427-7 .653.808-5.191 5.654H14v1.077z"
+				fill="currentColor"
+			/>
+		</svg>
+	);
+};
