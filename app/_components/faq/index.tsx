@@ -1,53 +1,39 @@
-"use client";
-import React, { useState } from "react";
-import { FaqData } from "@/app/staticData/faq";
-import Image from "next/image";
-import Pluse from "../../../public/Vector.svg";
-import Negative from "../../../public/Negative.svg";
+import { type FC } from "react";
+import Stack from "../stack";
+import Grid from "../grid";
+import Accordion from "./Accordion";
 
-function FaqSection() {
-	const [openFaq, setOpenFaq] = useState<boolean[]>(
-		Array(FaqData.length).fill(false)
-	);
+interface FaqProps {}
 
-	const handleFaqClick = (faqIndex: number) => {
-		// Create a copy of the openFaq array and toggle the value for the clicked FAQ
-		const updatedOpenFaq = [...openFaq];
-		updatedOpenFaq[faqIndex] = !updatedOpenFaq[faqIndex];
-		setOpenFaq(updatedOpenFaq);
-	};
-
+const Faq: FC<FaqProps> = ({}) => {
 	return (
-		<div className="xl:mx-[120px] flex flex-col h-full">
-			<div className="pt-10">
-				<h2 className="font-black text-[32px] text-primary">FAQ</h2>
-				<span className="text-base font-normal text-gray-200">
-					Welcome to the Selected Payments FAQ, your source for clear,
-					insightful answers.
-				</span>
+		<Stack
+			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			className="h-full flex flex-col justify-center gap-3"
+			underLayer={<Grid black />}
+		>
+			<h3 className="font-lato font-extrabold text-3xl text-primary">FAQ</h3>
+			<p className="font-lato text-base text-gray-100 font-medium">
+				Welcome to the Selected Payments FAQ, your source for clear, insightful
+				answers.
+			</p>
+			<div>
+				<Accordion title="How do I open an account with Selected Payments, and is there a fee?">
+					<p className="font-lato text-base text-gray-100 font-medium">
+						How do I open an account with Selected Payments, and is there a fee?
+					</p>
+				</Accordion>
+				<Accordion title="What should I do if I need customer support or assistance?">
+					<p className="font-lato text-base text-gray-100 font-medium">
+						What should I do if I need customer support or assistance?
+					</p>
+				</Accordion>
 			</div>
-			<div className="flex-1 flex flex-col justify-center">
-				{FaqData.map((faq, index) => (
-					<div key={index} className="flex justify-between border-b">
-						<div className="my-2">
-							<p className="text-[30px] font-bold text-primary">{faq.title}</p>
-							{openFaq[index] && (
-								<p className="text-gray-200">{faq.subtitle}</p>
-							)}
-						</div>
-						<div className="w-40 flex justify-end">
-							<Image
-								className="mt-6"
-								src={openFaq[index] ? Negative : Pluse}
-								alt="Pluse"
-								onClick={() => handleFaqClick(index)}
-							/>
-						</div>
-					</div>
-				))}
-			</div>
-		</div>
+		</Stack>
 	);
-}
+};
 
-export default FaqSection;
+export default Faq;
+
+// TODO map faqs

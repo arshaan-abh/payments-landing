@@ -204,3 +204,18 @@ export const PlanePlusIcon: FC<IconProps> = ({ className }) => {
 		</svg>
 	);
 };
+
+export const PlaneMinusIcon: FC<IconProps> = ({ className }) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			fill="currentColor"
+			className={className}
+		>
+			{/* <path d="M10 0h4v24h-4V0z" /> */}
+			<path d="M0 14v-4h24v4H0z" />
+		</svg>
+	);
+};
