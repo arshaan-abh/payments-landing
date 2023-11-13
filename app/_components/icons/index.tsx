@@ -164,3 +164,28 @@ export const ArrowLeftIcon: FC<IconProps> = ({ className }) => {
 		</svg>
 	);
 };
+
+export const CheckIcon: FC<IconProps> = ({ className }) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="16"
+			height="16"
+			fill="none"
+			className={className}
+		>
+			<g clip-path="url(#A)">
+				<rect width="16" height="16" rx="8" fill="currentColor" />
+				<path
+					d="M6.665 10.39L4.47 8.195l-.943.943 3.138 3.138 6.471-6.471-.943-.943-5.529 5.529z"
+					fill="#fff"
+				/>
+			</g>
+			<defs>
+				<clipPath id="A">
+					<rect width="16" height="16" rx="8" fill="#fff" />
+				</clipPath>
+			</defs>
+		</svg>
+	);
+};
