@@ -8,7 +8,7 @@ import FeatureThree from "./_components/features-three";
 import FeatureFour from "./_components/features-four";
 import FeatureFive from "./_components/features-five";
 import FeatureSix from "./_components/features-six";
-import Feature7 from "./_components/features7";
+import FeatureEight from "./_components/features-eight";
 import FaqSection from "./_components/faq";
 import MarketingBanner from "./_components/marquee";
 import Stack from "./_components/stack";
@@ -72,7 +72,7 @@ export default function Home() {
 				id="feature-seven"
 				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
 			>
-				<Feature7 />
+				<FeatureEight />
 			</section>
 			<section
 				id="feature-eight"

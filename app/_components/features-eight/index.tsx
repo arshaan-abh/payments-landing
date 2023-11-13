@@ -45,7 +45,7 @@ const terminals = [
 	},
 ];
 
-function Feature7() {
+function FeatureEight() {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 	const [selectedImage, setSelectedImage] = useState(null);
 
@@ -78,7 +78,7 @@ function Feature7() {
 						</span>
 					</div>
 					<div className="h-full flex flex-col justify-center">
-						{/* <Slider {...sliderSettings}>
+						<Slider {...sliderSettings}>
 							{terminals.map((t, index) => (
 								<div
 									key={index}
@@ -101,14 +101,14 @@ function Feature7() {
 									</div>
 								</div>
 							))}
-						</Slider> */}
+						</Slider>
 					</div>
 				</div>
 			</div>
 			<div className="col-span-12 flex justify-between border-y-2 border-y-primary py-2 mt-10">
 				<ImageSlider />
 			</div>
-			{/* <Modal
+			<Modal
 				isOpen={modalIsOpen}
 				onRequestClose={closeModal}
 				contentLabel="Image Modal"
@@ -128,7 +128,7 @@ function Feature7() {
 					/>
 				)}
 				<button onClick={closeModal}>Close Modal</button>
-			</Modal> */}
+			</Modal>
 			<ModalSection
 				isOpen={modalIsOpen}
 				onRequestClose={closeModal}
@@ -140,4 +140,4 @@ function Feature7() {
 	);
 }
 
-export default Feature7;
+export default FeatureEight;
