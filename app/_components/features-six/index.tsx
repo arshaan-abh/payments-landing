@@ -3,12 +3,19 @@ import Advance from "../../../public/advance.webp";
 import Billing from "../../../public/billing.webp";
 import Image from "next/image";
 import { Card } from "../features-five";
+import Stack from "../stack";
+import Grid from "../grid";
 
 interface FeatureFiveProps {}
 
 const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col justify-evenly">
+		<Stack
+			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			className="h-full flex flex-col justify-evenly"
+			underLayer={<Grid black />}
+		>
 			<div className="flex items-center h-2/4 gap-24">
 				<Image src={Advance} alt="Advance" className="h-full object-contain" />
 				<Card
@@ -23,7 +30,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 				/>
 				<Image src={Billing} alt="Billing" className="h-full object-contain" />
 			</div>
-		</div>
+		</Stack>
 	);
 };
 
