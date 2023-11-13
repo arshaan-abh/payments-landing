@@ -78,6 +78,7 @@ export default function Home() {
 				id="feature-eight"
 				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
 			>
+				<MarketingBanner data={secondMarqueeData} white />
 				<FaqSection />
 			</section>
 			<section
