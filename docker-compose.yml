@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: frontend-payments-landing
+    restart: always
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - 3000:3000
+  nginx:
+    image: nginx:latest
+    container_name: webserver-payments-landing
+    restart: unless-stopped
+    ports:
+      - 80:80
+      # - 443:443
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
