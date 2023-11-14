@@ -16,7 +16,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.docker.network=traefik-web
-      - traefik.http.routers.payments-landing.rule=Host(`giveaway.myselected.org`)
+      - traefik.http.routers.payments-landing.rule=Host(`landing-peyments.selectedstartups.com`)
       - traefik.http.routers.payments-landing.service=nginx-payments-landing
       - treafik.http.routers.payments-landing.priority=10
       - traefik.http.routers.payments-landing.entrypoints=https
