@@ -36,7 +36,7 @@ const Accordion: FC<AccordionProps> = ({ title, children }) => {
 			</button>
 			<div
 				ref={childrenRef}
-				className={`overflow-hidden pb-6 ${variableClassNames}`}
+				className={`overflow-hidden ${variableClassNames}`}
 			>
 				{children}
 			</div>
