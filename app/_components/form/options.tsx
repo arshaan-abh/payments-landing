@@ -22,7 +22,7 @@ const Options = (props: props) => {
 						<div
 							key={index}
 							className={`flex items-center lg:pl-1 border ${
-								checkedList[index] ? "border-[#FAFAFA]" : "border-gray_1"
+								checkedList[index] ? "border-[#FAFAFA]" : "border-gray-100"
 							} rounded-md  dark:border-gray-700 h-[100px] lg:h-10 ${
 								index === 0
 									? "col-span-6 lg:col-span-5"
@@ -59,7 +59,7 @@ const Options = (props: props) => {
 							id="message"
 							rows={1}
 							disabled={checkedList[11] ? false : true}
-							className="block p-2.5 w-full text-sm text-gray-900 bg-primery rounded-lg border "
+							className="block p-2.5 w-full text-sm text-gray-900 bg-primary rounded-lg border "
 							placeholder="Other description"
 						></textarea>
 					</div>

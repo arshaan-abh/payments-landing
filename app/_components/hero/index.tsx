@@ -1,110 +1,89 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import HeroSection from "../../../public/Hero section SVG.webp";
-import Cookie from "../../../public/Cookie.svg";
-import Logo from "../../../public/Frame 26085919.svg";
-import ImageSlider from "../image-slider";
+import React, { FC, useCallback, useEffect, useRef } from "react";
+import Button from "../button";
+import Stack from "../stack";
+import growSales from "public/grow-scales.svg";
+import Grid from "../grid";
 
 function Hero() {
 	return (
-		<div className="h-screen flex flex-col items-center justify-center w-full">
-			<div className="grid grid-cols-12 md:px-[40px] lg:px-[80px] xl:px-[120px] xl:max-w-[1440px] xl:mt-8">
-				<div className="grid grid-cols-12 col-span-12 lg:col-span-12">
-					<div className="col-span-4 lg:col-span-2">
-						<Image src={Logo} alt="logo" />
-					</div>
-					<div className="col-span-3 lg:col-span-2 col-end-13 justify-end flex">
-						<Link
-							href="#"
-							className="w-2/3 h-10 text-white bg-primery rounded-md text-base font-normal flex items-center justify-center"
-						>
-							Contact us
-						</Link>
-					</div>
-				</div>
-				<div className="md:col-span-12 lg:hidden md:flex justify-center my-10">
-					<Image
-						src={HeroSection}
-						alt="hero-section"
-						width={360}
-						height={333}
-					/>
-				</div>
-				<div className="col-span-12 lg:col-span-8 xl:col-span-6 flex flex-col h-full justify-center lg:space-y-7 xl:space-y-8">
-					<div className="flex md:justify-center lg:justify-normal">
-						<h1 className="custom-bg bg-no-repeat text-6xl font-mono text-secondary font-extrabold pl-2">
+		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl">
+			<Stack
+				containerClassName="h-full flex items-center"
+				className="flex flex-col gap-10"
+				underLayer={<Grid />}
+			>
+				<Stack
+					underLayer={
+						<Image
+							src={growSales}
+							alt="Grow Sales"
+							className="-translate-x-3 -translate-y-1 select-none pointer-events-none"
+						/>
+					}
+				>
+					<h1 className="text-white font-montserrat font-medium text-6xl lg:w-1/2">
+						<span className="font-extrabold italic text-primary">
 							Grow Sales
-						</h1>
-						<h1 className="text-6xl font-mono font-medium text-primery ml-1">
-							with a
-						</h1>
-					</div>
-					<h1 className="text-6xl font-mono font-medium text-primery md:px-10 lg:px-0 md:text-center lg:text-start">
-						better payment solution
+						</span>{" "}
+						with a better payment solution
 					</h1>
-
-					<div className="md:px-24 lg:px-0">
-						<span className="text-base font-normal text-gray_2">
-							Selected Payments leading one-stop payment solution for
-							cross-border commerce, marketplaces, and platforms enables the
-							means to move money without friction. We help you grow your
-							business locally and internationally, allow you to collect
-							payments, flexible multiparty split payments, and make payouts.
-							With our multicurrency accounts, this process is simpler and
-							faster.
-						</span>
-					</div>
-					<div className="flex justify-center lg:justify-normal mt-10 lg:mt-0">
-						<Link
-							href="#"
-							className="bg-primery text-secondary rounded-md w-1/3 py-3 text-center text-base"
-						>
-							Contact us
-						</Link>
-						<Link
-							href="#"
-							className="text-primery w-1/3 py-3 text-center text-base"
-						>
-							Enquire Now
-						</Link>
-					</div>
+				</Stack>
+				<p className="font-lato text-white text-base font-normal lg:w-1/2">
+					Selected Payments leading one-stop payment solution for cross-border
+					commerce, marketplaces, and platforms enables the means to move money
+					without friction. We help you grow your business locally and
+					internationally, allow you to collect payments, flexible multiparty
+					split payments, and make payouts. With our multicurrency accounts,
+					this process is simpler and faster.
+				</p>
+				<div className="flex gap-2.5 lg:w-1/2">
+					<Button white>Enquire Now</Button>
+					<Button>Contact us</Button>
 				</div>
-				<div className="col-span-12 lg:col-span-4 xl:col-span-6 md:hidden lg:flex justify-center my-10 lg:my-0 xl:items-center">
-					<Image src={HeroSection} alt="hero-section" />
-				</div>
-			</div>
-			<div className="lg:grid grid-cols-12 w-full max-w-[1440px] xl:mb-5 lg:pl-10 xl:pl-0 mt-10 lg:mt-0 hidden">
-				<div className="col-span-3 w-full">
-					<div className="w-full flex xl:mb-5 justify-between">
-						<div className="flex items-end">
-							<h3 className="text-2xl font-mono font-bold text-primery">
-								Cookies
-							</h3>
-						</div>
-						<Image src={Cookie} alt="Cookie" />
-					</div>
-					<div className="flex xl:mb-5">
-						<span className="text-sm font-normal text-primery">
-							We use cookies to make your experience better!
-						</span>
-					</div>
-					<div className="flex items-center xl:mt-5">
-						<Link href="#" className="text-sm text-primery pr-12">
-							Privacy Policy
-						</Link>
-						<button className="bg-primery text-secondary text-base rounded-md w-1/3 py-2">
-							Agree
-						</button>
-					</div>
-				</div>
-			</div>
-
-			<div className="col-span-12 border-y-2 border-y-primery py-2 w-full hidden xl:flex">
-				<ImageSlider />
-			</div>
+			</Stack>
 		</div>
 	);
 }
 
 export default Hero;
+
+interface HeroBackgroundProps {}
+
+export const HeroBackground: FC<HeroBackgroundProps> = ({}) => {
+	const videoRef = useRef<HTMLVideoElement>(null);
+
+	const pause = useCallback(() => {
+		videoRef.current?.pause();
+	}, []);
+
+	const play = useCallback(() => {
+		videoRef.current?.play();
+	}, []);
+
+	const handleScroll = useCallback(() => {
+		pause();
+		const scrollY = window.scrollY || window.pageYOffset;
+		if (scrollY === 0) play();
+	}, [pause, play]);
+
+	useEffect(() => {
+		addEventListener("scroll", handleScroll);
+		return () => {
+			removeEventListener("scroll", handleScroll);
+		};
+	}, [play, pause, handleScroll]);
+
+	return (
+		<video
+			className="w-full h-full object-cover grayscale"
+			autoPlay
+			loop
+			muted
+			ref={videoRef}
+		>
+			<source src="hero-background.mp4" type="video/mp4" />
+		</video>
+	);
+};

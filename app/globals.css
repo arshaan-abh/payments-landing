@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
-}
 @layer base {
 	html {
 		font-family: "lato", system-ui, sans-serif;
@@ -72,23 +67,10 @@
 	}
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
-	}
-}
-
 body {
+	overscroll-behavior-y: none;
+	overflow-x: hidden;
 	color: rgb(var(--foreground-rgb));
-	background: linear-gradient(
-			to bottom,
-			transparent,
-			rgb(var(--background-end-rgb))
-		)
-		rgb(var(--background-start-rgb));
-
 	margin: 0;
 	padding: 0;
 	background-color: var(--background);
@@ -96,22 +78,11 @@ body {
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	padding: 20px;
-	background-image: radial-gradient(
-		rgba(0, 0, 0, 0) 1px,
-		var(--background) 1px
-	);
 	background-size: 4px 4px;
-	backdrop-filter: blur(3px);
-	-webkit-backdrop-filter: blur(3px);
-	-moz-backdrop-filter: blur(3px);
 	font-size: 14px;
 	line-height: 14px;
 }
@@ -122,33 +93,17 @@ code {
 	font-style: normal;
 }
 
-::-webkit-scrollbar {
-	height: 5px;
-	width: 5px;
-	background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-	background: var(--accent);
-	-webkit-border-radius: 1ex;
-}
-
-::-webkit-scrollbar-corner {
-	background: var(--background);
-}
-
 html {
+	-webkit-scroll-snap-type: mandatory;
+	-ms-scroll-snap-type: mandatory;
+	scroll-snap-type: mandatory;
+	-webkit-scroll-snap-type: y mandatory;
+	-ms-scroll-snap-type: y mandatory;
 	scroll-snap-type: y mandatory;
 }
 
 section {
 	scroll-snap-align: center;
-	height: 100vh;
-}
-.custom-bg {
-	background-image: url("../public/Grow Sales BG.svg");
-
-	/* Add other background properties as needed */
 }
 
 .ReactModal__Overlay {
@@ -179,20 +134,6 @@ section {
 	display: flex;
 }
 
-section {
-	display: flex;
-	animation: swipe var(--speed) linear infinite backwards;
-}
-
-@keyframes swipe {
-	0% {
-		transform: translate(0);
-	}
-
-	100% {
-		transform: translate(-100%);
-	}
-}
 .center-content {
 	display: flex;
 	flex-direction: column;
@@ -216,4 +157,11 @@ section {
 .menu-item.active {
 	background-color: #007bff;
 	color: #fff;
+}
+
+.animation-play-state-paused {
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;
 }

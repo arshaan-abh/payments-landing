@@ -172,7 +172,7 @@ function FormSection(props: props) {
 										{...field}
 										id="description"
 										rows={5}
-										className="block p-2.5 w-full text-sm text-secondary bg-primery rounded-lg border "
+										className="block p-2.5 w-full text-sm text-secondary bg-primary rounded-lg border "
 										placeholder="Description"
 									></textarea>
 								</div>
