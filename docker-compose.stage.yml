@@ -11,14 +11,14 @@ services:
       # - /app/node_modules
       - /app/.next
     networks:
-      - default
+      - payments-landing-net
   nginx:
     image: nginx:latest
     container_name: webserver-payments-landing
     labels:
       - traefik.enable=true
       - traefik.docker.network=traefik-web
-      - traefik.http.routers.payments-landing.rule=Host(`landing-peyments.selectedstartups.com`)
+      - traefik.http.routers.payments-landing.rule=Host(`landing-payments.selectedstartups.com`)
       - traefik.http.routers.payments-landing.service=nginx-payments-landing
       - treafik.http.routers.payments-landing.priority=10
       - traefik.http.routers.payments-landing.entrypoints=https
@@ -31,9 +31,8 @@ services:
 
     networks:
       - traefik-web
-      - default
+      - payments-landing-net
 networks:
-  default:
-    driver: bridge
+  payments-landing-net:
   traefik-web:
     external: true
