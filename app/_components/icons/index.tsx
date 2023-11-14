@@ -174,7 +174,7 @@ export const CheckIcon: FC<IconProps> = ({ className }) => {
 			fill="none"
 			className={className}
 		>
-			<g clip-path="url(#A)">
+			<g clipPath="url(#A)">
 				<rect width="16" height="16" rx="8" fill="currentColor" />
 				<path
 					d="M6.665 10.39L4.47 8.195l-.943.943 3.138 3.138 6.471-6.471-.943-.943-5.529 5.529z"
