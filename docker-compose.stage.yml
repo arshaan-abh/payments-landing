@@ -10,6 +10,8 @@ services:
       - ./:/app
       # - /app/node_modules
       - /app/.next
+    networks:
+      - default
   nginx:
     image: nginx:latest
     container_name: webserver-payments-landing
