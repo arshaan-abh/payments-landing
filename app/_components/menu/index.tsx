@@ -11,7 +11,7 @@ interface MenuProps {}
 
 const Menu: FC<MenuProps> = ({}) => {
 	return (
-		<div className="fixed bottom-12 inset-x-0 mx-auto z-10 flex items-center justify-center gap-2.5">
+		<div className="fixed bottom-12 inset-x-0 mx-auto w-fit z-10 flex items-center justify-center gap-2.5">
 			<MenuItem>
 				<EnquireIcon />
 			</MenuItem>
