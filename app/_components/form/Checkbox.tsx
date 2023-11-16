@@ -4,15 +4,17 @@ import { PlaneCheckIcon } from "../icons";
 
 interface checkboxProps {
 	children?: ReactNode;
+	checkHandler: () => void;
 }
 
-const checkbox: FC<checkboxProps> = ({ children }) => {
+const checkbox: FC<checkboxProps> = ({ children, checkHandler }) => {
 	const id = useId();
 	const [checked, setChecked] = useState<boolean>(false);
 
-	const checkHandler = useCallback(() => {
+	const handler = useCallback(() => {
 		setChecked((state) => !state);
-	}, [setChecked]);
+		checkHandler();
+	}, [setChecked, checkHandler]);
 
 	return (
 		<label htmlFor={id} className="flex select-none cursor-pointer grow">
@@ -21,7 +23,7 @@ const checkbox: FC<checkboxProps> = ({ children }) => {
 				type="checkbox"
 				name={id}
 				className="hidden"
-				onChange={checkHandler}
+				onChange={handler}
 			/>
 			<div
 				className={`text-base font-semibold text-secondary border-2 pr-4 rounded-md p-2.5 flex items-center gap-2.5 w-full ${
