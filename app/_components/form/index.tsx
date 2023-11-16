@@ -77,7 +77,7 @@ function Form() {
 	};
 
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl">
+		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex items-center">
 			<div className="bg-primary rounded-xl flex flex-col items-center p-16">
 				<h3 className="text-secondary text-4xl font-montserrat font-extrabold mb-2">
 					Begin Your Next Chapter Now!
@@ -85,7 +85,7 @@ function Form() {
 				<p className="font-lato text-lg font-medium text-gray-400 mb-8">
 					Elevate your business with our convenient in-app payment solutions.
 				</p>
-				<div className="flex w-full justify-between">
+				<div className="flex w-full justify-evenly">
 					<Options
 						checkedList={checkedList}
 						handleCheckBox={handleCheckBox}

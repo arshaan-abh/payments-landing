@@ -1,4 +1,5 @@
 "use client";
+import Checkbox from "./Checkbox";
 
 interface props {
 	checkedList: any;
@@ -16,26 +17,7 @@ const Options = (props: props) => {
 			</p>
 			<div className="flex flex-wrap gap-3 mb-3">
 				{labels.map((label, index) => (
-					<div
-						key={index}
-						className={`flex items-center border pr-4 ${
-							checkedList[index] ? "border-white" : "border-gray-100"
-						} rounded-md dark:border-gray-700 h-[100px] lg:h-10 `}
-					>
-						<input
-							id={`bordered-checkbox-${index}`}
-							type="checkbox"
-							onChange={() => handleCheckBox(index)}
-							name={`bordered-checkbox-${index}`}
-							className="checkbox-round"
-						/>
-						<label
-							htmlFor={`bordered-checkbox-${index}`}
-							className="w-full py-4 ml-2 text-sm font-medium text-[#FAFAFA] dark:text-gray-300"
-						>
-							{label}
-						</label>
-					</div>
+					<Checkbox key={index}>{label}</Checkbox>
 				))}
 			</div>
 			<div className="col-span-12">

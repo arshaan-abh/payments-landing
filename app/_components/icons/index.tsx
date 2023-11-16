@@ -214,8 +214,24 @@ export const PlaneMinusIcon: FC<IconProps> = ({ className }) => {
 			fill="currentColor"
 			className={className}
 		>
-			{/* <path d="M10 0h4v24h-4V0z" /> */}
 			<path d="M0 14v-4h24v4H0z" />
+		</svg>
+	);
+};
+
+export const PlaneCheckIcon: FC<IconProps> = ({ className }) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="16"
+			height="16"
+			fill="none"
+			className={className}
+		>
+			<path
+				d="M12.82 2l-1.38 1.44L5.88 9 4.26 7.44 2.82 6 0 8.82l1.44 1.44 3 3 1.38 1.44 1.44-1.44 7-7 1.44-1.44L12.82 2z"
+				fill="currentColor"
+			/>
 		</svg>
 	);
 };
