@@ -30,6 +30,7 @@ function ModalSection(props: ModalProps) {
 					overflow: "hidden",
 					backgroundColor: "white",
 				},
+				overlay: { zIndex: 999 },
 			}}
 		>
 			<div className="grid grid-cols-12 h-full">
