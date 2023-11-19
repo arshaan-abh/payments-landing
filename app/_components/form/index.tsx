@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { array, number, object, ObjectSchema, string } from "yup";
+import { number, object, string } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { EnquireRequest } from "@/app/@types/enquireRequest";
 import FormSection from "./form";
-import Options from "./options";
+import Checkbox from "./Checkbox";
 const schema = object({
 	name: string().required("This field is required."),
 	companyName: string().required("This field is required."),
@@ -46,21 +46,21 @@ function Form() {
 		"Business's Credit adn Bank Account Issuing ",
 		"Others",
 	];
-	const [labels] = useState<string[]>(initialLabels);
-	const [checkedList, setCheckedList] = useState<boolean[]>(
+	const [options] = useState<string[]>(initialLabels);
+	const [checkableList, setCheckableList] = useState<boolean[]>(
 		new Array(initialLabels.length).fill(false)
 	);
 
 	// Function to update the checkedList state
-	const handleCheckBox = (index: any) => {
-		const updatedList = [...checkedList];
-		updatedList[index] = !checkedList[index];
-		setCheckedList(updatedList);
+	const checkHandler = (index: number) => {
+		const updatedList = [...checkableList];
+		updatedList[index] = !checkableList[index];
+		setCheckableList(updatedList);
 	};
 	const handleFormSubmit = () => {
 		// Access the form data using getValues()
 		const formData = getValues();
-		formData.checkedList = checkedList;
+		formData.checkedList = checkableList;
 		console.log(formData);
 		// Validate the form data against the schema
 
@@ -77,7 +77,7 @@ function Form() {
 	};
 
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl">
+		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex items-center">
 			<div className="bg-primary rounded-xl flex flex-col items-center p-16">
 				<h3 className="text-secondary text-4xl font-montserrat font-extrabold mb-2">
 					Begin Your Next Chapter Now!
@@ -85,12 +85,33 @@ function Form() {
 				<p className="font-lato text-lg font-medium text-gray-400 mb-8">
 					Elevate your business with our convenient in-app payment solutions.
 				</p>
-				<div className="flex w-full justify-between">
-					<Options
-						checkedList={checkedList}
-						handleCheckBox={handleCheckBox}
-						labels={labels}
-					/>
+				<div className="flex w-full justify-evenly">
+					<div className="flex flex-col basis-1/2">
+						<p className="font-lato text-xl text-secondary font-extrabold text-center mb-4">
+							Select your favorite solutions
+						</p>
+						<div className="flex flex-wrap gap-3 mb-3">
+							{options.map((option, index) => {
+								const handler = () => {
+									checkHandler(index);
+								};
+								return (
+									<Checkbox checkHandler={handler} key={index}>
+										{option}
+									</Checkbox>
+								);
+							})}
+						</div>
+						<div className="col-span-12">
+							<textarea
+								id="message"
+								rows={1}
+								disabled={checkableList[11] ? false : true}
+								className="block p-2.5 w-full text-sm text-gray-900 bg-primary rounded-lg border "
+								placeholder="Other description"
+							></textarea>
+						</div>
+					</div>
 					<FormSection control={control} errors={errors} />
 				</div>
 				{/* <div className="col-span-12 grid grid-cols-12">
