@@ -1,6 +1,5 @@
-version: '3.8'
+version: "3.8"
 services:
-
   frontend:
     build:
       context: .
@@ -15,7 +14,7 @@ services:
       - payments-landing-net
     ports:
       - "3003:3000"
-  
+
   nginx:
     image: nginx:latest
     container_name: webserver-payments-landing

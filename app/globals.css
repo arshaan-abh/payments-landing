@@ -7,65 +7,6 @@
 		font-family: "lato", system-ui, sans-serif;
 	}
 }
-.checkbox-round {
-	display: none; /* Hide the default checkbox */
-}
-
-.checkbox-round + label {
-	position: relative;
-	padding-left: 2em;
-	cursor: pointer;
-	overflow: hidden;
-}
-
-.checkbox-round + label::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 30%;
-	width: 1.5em;
-	height: 1.5em;
-	background-color: white;
-	border-radius: 50%;
-	border: 1px solid #ddd;
-}
-
-.checkbox-round:checked + label::before {
-	background-color: white;
-}
-
-.checkbox-round + label::after {
-	content: url(../public/oi_check.svg); /* Unicode checkmark character */
-	position: absolute;
-	left: 0.1em;
-	top: 33%;
-	color: #161616;
-	font-size: 20px;
-	font-weight: bold;
-	display: none;
-}
-
-.checkbox-round:checked + label::after {
-	display: block;
-}
-/* Styles for mobile screens (less than 768px width) */
-@media (max-width: 767px) {
-	.checkbox-round + label {
-		height: 100%;
-	}
-
-	.checkbox-round + label::before {
-		top: 20%;
-		width: 1.5em;
-		height: 1.5em;
-		/* Mobile-specific styles here */
-	}
-
-	.checkbox-round + label::after {
-		top: 20%;
-		/* Mobile-specific styles here */
-	}
-}
 
 body {
 	overscroll-behavior-y: none;
@@ -164,4 +105,16 @@ section {
 	-moz-animation-play-state: paused;
 	-o-animation-play-state: paused;
 	animation-play-state: paused;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
 }
