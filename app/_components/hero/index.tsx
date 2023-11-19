@@ -14,22 +14,24 @@ function Hero() {
 				className="flex flex-col gap-10"
 				underLayer={<Grid />}
 			>
-				<Stack
-					underLayer={
-						<Image
-							src={growSales}
-							alt="Grow Sales"
-							className="-translate-x-3 -translate-y-1 select-none pointer-events-none"
-						/>
-					}
-				>
-					<h1 className="text-white font-montserrat font-medium text-6xl lg:w-1/2">
+				<h1 className="text-white font-montserrat font-medium text-6xl lg:w-1/2 text-center md:text-left">
+					<Stack
+						className="inline"
+						containerClassName="inline"
+						underLayer={
+							<Image
+								src={growSales}
+								alt="Grow Sales"
+								className="-translate-x-1 translate-y-2 select-none pointer-events-none"
+							/>
+						}
+					>
 						<span className="font-extrabold italic text-primary">
 							Grow Sales
 						</span>{" "}
-						with a better payment solution
-					</h1>
-				</Stack>
+					</Stack>
+					with a better payment solution
+				</h1>
 				<p className="font-lato text-white text-base font-normal lg:w-1/2">
 					Selected Payments leading one-stop payment solution for cross-border
 					commerce, marketplaces, and platforms enables the means to move money
@@ -38,7 +40,7 @@ function Hero() {
 					split payments, and make payouts. With our multicurrency accounts,
 					this process is simpler and faster.
 				</p>
-				<div className="flex gap-2.5 lg:w-1/2">
+				<div className="flex gap-2.5 lg:w-1/2 justify-center md:justify-start">
 					<Button white>Enquire Now</Button>
 					<Button>Contact us</Button>
 				</div>
