@@ -1,167 +1,148 @@
-import React from "react";
-import FooterLogo from "../../../public/footerLogo.svg";
+import type { FC } from "react";
 import Image from "next/image";
-import { LeftSideFooter } from "@/app/staticData/staticData";
-import { centerDataFooter } from "@/app/staticData/staticData2";
+import logo from "public/logo.svg";
 import Facebook from "../../../public/facebook.svg";
 import Twitter from "../../../public/twitter-x-fill.svg";
 import Youtube from "../../../public/youtube-line.svg";
-import Linkdin from "../../../public/linkedin-fill.svg";
+import Linkedin from "../../../public/linkedin-fill.svg";
 import InstagramIcon from "../../../public/instagram-fill.svg";
 import Phone from "../../../public/phone.svg";
 import Email from "../../../public/email.svg";
 import Location from "../../../public/location.svg";
 import Link from "next/link";
+import Button from "../button";
+const solutionsLinks = [
+	{ text: "Online Payment", link: "" },
+	{ text: "In-App Payments", link: "" },
+	{ text: "Marketplace & Platform", link: "" },
+	{ text: "eCommerce", link: "" },
+	{ text: "Billing and Invoicing", link: "" },
+	{ text: "In-Person Payment", link: "" },
+	{ text: "Terminal-less Payments ( Mobile App )", link: "" },
+	{ text: "ePOS All-In-One ( Terminal + eposense mobile ) ", link: "" },
+	{ text: "Pre- Paid Debit Card with Bank Account issuing ", link: "" },
+	{ text: "Business’s Credit adn Bank Account Issuing ", link: "" },
+];
+const featuresLinks = [
+	{ text: "Instant Settlement", link: "" },
+	{ text: "Instant Payout", link: "" },
+	{ text: "Flexible split payments and multiparty payouts", link: "" },
+	{ text: "Multicurrency Payout", link: "" },
+	{ text: "Flexible Payment Methods", link: "" },
+	{ text: "Multicurrency Payments", link: "" },
+	{ text: "One-Click checkout with Payment link", link: "" },
+	{ text: "Competitive Merchant Fees", link: "" },
+	{ text: "Highest industry Rate", link: "" },
+];
 
-function Footer() {
+interface FooterProps {}
+
+const Footer: FC<FooterProps> = ({}) => {
 	return (
-		<div className="h-screen flex justify-end flex-col">
-			<div className="grid grid-cols-12 bg-primary mt-10 w-full px-[120px]">
-				<div className="col-span-12 py-[50px]">
-					<Image src={FooterLogo} alt="selected-payment" />
-				</div>
-				<div className="col-span-12 grid grid-cols-12 border-b-2">
-					<div className="col-span-12 lg:col-span-4 mt-10 lg:mt-0">
-						{LeftSideFooter.map((l, index) => {
-							return (
-								<div key={index}>
-									<h3 className="text-secondary font-extrabold text-base mb-5">
-										{l.title}
-									</h3>
-									{l.list.map((i, index) => {
-										return (
-											<ul className="my-3" key={index}>
-												<li className="text-secondary text-sm font-medium">
-													{i}
-												</li>
-											</ul>
-										);
-									})}
-								</div>
-							);
-						})}
-					</div>
-					<div className="col-span-12 lg:col-span-4 mt-10 lg:mt-0">
-						{centerDataFooter.map((l, index) => {
-							return (
-								<div key={index}>
-									<h3 className="text-secondary font-extrabold text-base mb-5">
-										{l.title}
-									</h3>
-									{l.list.map((i, index) => {
-										return (
-											<ul className="my-3" key={index}>
-												<li className="text-secondary text-sm font-medium">
-													{i}
-												</li>
-											</ul>
-										);
-									})}
-								</div>
-							);
-						})}
-					</div>
-					<div className="col-span-12 lg:col-span-4 mb-5 mt-10 lg:mt-0">
-						<h3 className="text-secondary font-extrabold text-base mb-5">
-							Were social
-						</h3>
-
-						<ul className="my-3">
-							<li className="text-secondary text-sm font-medium">
+		<div className="w-full h-full flex flex-col">
+			<div className="grow"></div>
+			<div className="text-secondary bg-primary flex justify-center">
+				<div className="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col pt-11 gap-11">
+					<Image src={logo} alt="Logo" />
+					<div className="flex gap-4">
+						<div className="basis-1/3 flex flex-col gap-3">
+							<h5 className="font-lato font-extrabold text-base mb-1">
+								Solutions
+							</h5>
+							{solutionsLinks.map((link, index) => (
+								<Link
+									key={index}
+									href={link.link}
+									className="font-lato font-medium text-sm text-secondary"
+								>
+									{link.text}
+								</Link>
+							))}
+						</div>
+						<div className="basis-1/3 flex flex-col gap-3">
+							<h5 className="font-lato font-extrabold text-base mb-1">
+								Features
+							</h5>
+							{featuresLinks.map((link, index) => (
+								<Link
+									key={index}
+									href={link.link}
+									className="font-lato font-medium text-sm text-secondary"
+								>
+									{link.text}
+								</Link>
+							))}
+						</div>
+						<div className="basis-1/3 flex flex-col gap-3">
+							<h5 className="font-lato font-extrabold text-base mb-1">
+								We&apos;re social
+							</h5>
+							<p className="font-lato font-medium text-sm text-secondary">
 								Follow us on social media and scroll through the latest scoop
 								effortlessly in your feed
-							</li>
-						</ul>
-						<div className="my-3 flex ">
-							<div className="flex justify-between w-2/3">
+							</p>
+							<div className="flex gap-4 items-center h-11 my-2">
 								<Image src={Facebook} alt="facebook" />
 								<Image src={Twitter} alt="twitter" />
 								<Image src={Youtube} alt="youtube" />
-								<Image src={Linkdin} alt="linkdin" />
+								<Image src={Linkedin} alt="linkedin" />
 								<Image src={InstagramIcon} alt="instagram" />
 							</div>
-						</div>
-						<div className="my-5">
-							<p className="text-secondary font-extrabold text-base">
+							<h5 className="font-lato font-extrabold text-base mb-1">
 								Join us and stay ahead of the curve
-							</p>
-						</div>
-						<div className="my-3">
-							<p className="text-secondary text-sm font-medium">
+							</h5>
+							<p className="font-lato font-medium text-sm text-secondary mb-2">
 								Get the latest news and exclusive promotions conveniently in
 								your inbox.
 							</p>
-						</div>
-						<div className="my-3">
-							<input
-								type="email"
-								id="email"
-								name="email"
-								placeholder="Email"
-								className="h-16 rounded-md bg-primary border-secondary border px-3 w-full "
-							/>
-						</div>
-						<div className="w-full">
-							<button className="h-16 w-full  rounded-md bg-secondary px-3">
-								Sign up
-							</button>
+							<div className="flex gap-1">
+								<input
+									type="email"
+									placeholder="Email"
+									className="grow bg-[#ffffff0a] text-secondary font-lato font-normal text-base px-4 py-2 border border-secondary outline-none rounded-md"
+								/>
+								<Button white>Sign up</Button>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className="col-span-12 grid grid-cols-12 py-10 border-b-2">
-					<div className="col-span-5">
-						<span className="text-sm font-normal text-[#FAFAFA]">
-							At Selected Payments, We&apos;re More Than Just a Payment Solution
-							– We&apos;re Your Trustworthy Partner. Our Innovative Approach
-							Combines with Dedication to Ensure Your Payments Are Effortless
-							and Secure, Paving the Way for a Smooth Financial Future.
-						</span>
-					</div>
-					<div className="col-span-4 col-end-13">
-						<div className="flex justify-end">
-							<span className="text-sm font-normal text-secondary">
-								+44 1273 705050
-							</span>
-							<Image src={Phone} alt="Phone" />
+					<div className="flex flex-col">
+						<div className="flex border-t border-gray-100 py-5 justify-between items-center">
+							<div className="basis-1/3 text-sm font-medium font-lato">
+								At Selected Payments, We&apos;re More Than Just a Payment
+								Solution - We&apos;re Your Trustworthy Partner. Our Innovative
+								Approach Combines with Dedication to Ensure Your Payments Are
+								Effortless and Secure, Paving the Way for a Smooth Financial
+								Future.
+							</div>
+							<div className="basis-1/3 flex flex-col gap-1">
+								<div className="flex gap-1 font-lato text-sm font-normal justify-end items-center">
+									<p>+44 1273 705050</p>
+									<Image src={Phone} alt="Phone" />
+								</div>
+								<div className="flex gap-1 font-lato text-sm font-normal justify-end items-center">
+									<p>hello@selectedpayment.com</p>
+									<Image src={Email} alt="Email" />
+								</div>
+								<div className="flex gap-1 font-lato text-sm font-normal justify-end items-center">
+									<p>4 Gordon Mews, Gordon Close, BN41 1HU, Brighton</p>
+									<Image src={Location} alt="Location" />
+								</div>
+							</div>
 						</div>
-						<div className="flex justify-end">
-							<span className="text-sm font-normal text-secondary">
-								hello@selectedgeeks.com
-							</span>
-							<Image src={Email} alt="Email" />
-						</div>
-						<div className="flex justify-end">
-							<span className="text-sm font-normal text-secondary">
-								4 Gordon Mews, Gordon Close, BN41 1HU, Brighton
-							</span>
-							<Image src={Location} alt="Location" />
-						</div>
-					</div>
-				</div>
-				<div className="col-span-12 grid grid-cols-12 py-10">
-					<div className="col-span-2 flex">
-						<span className="text-xs font-normal text-gray-400">
-							Copyright © 2023 Powered by
-						</span>
-						<span className="text-xs font-bold text-secondary ml-1">
-							Selected
-						</span>
-					</div>
-					<div className="col-span-2 col-end-13">
-						<div className="w-full justify-end flex">
-							<Link href="#" className="text-xs text-secondary font-bold">
-								Privacy Policy
-							</Link>
-							<span className="text-xs text-secondary font-bold mx-1">|</span>
-							<Link href="#" className="text-xs text-secondary font-bold">
-								Terms of Use
-							</Link>
+						<div className="flex border-t border-gray-100 py-3 justify-between items-center">
+							<p className="font-lato text-xs text-gray-400 font-normal">
+								Copyright © 2023 Powered by{" "}
+								<span className="font-bold text-secondary">Selected</span>
+							</p>
+							<p className="font-lato text-xs font-bold text-secondary">
+								Privacy Policy | Terms of Use
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	);
-}
+};
 
 export default Footer;
