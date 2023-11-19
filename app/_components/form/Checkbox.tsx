@@ -7,7 +7,7 @@ interface checkboxProps {
 	checkHandler: () => void;
 }
 
-const checkbox: FC<checkboxProps> = ({ children, checkHandler }) => {
+const Checkbox: FC<checkboxProps> = ({ children, checkHandler }) => {
 	const id = useId();
 	const [checked, setChecked] = useState<boolean>(false);
 
@@ -43,4 +43,4 @@ const checkbox: FC<checkboxProps> = ({ children, checkHandler }) => {
 	);
 };
 
-export default checkbox;
+export default Checkbox;
