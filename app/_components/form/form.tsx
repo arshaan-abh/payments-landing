@@ -50,149 +50,144 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 
 	const theme = createTheme();
 	return (
-		<div className="grid grid-cols-12 items-center">
-			<div className="col-span-12 flex justify-center items-center py-5">
-				<p className="text-xl text-secondary font-bold">
-					Begin your next chapter now!
-				</p>
-			</div>
-			<div className="col-span-12 flex justify-center items-center">
-				<form className="rounded-md w-full max-w-md flex flex-col justify-center">
-					<div>
-						<Controller
-							name="name"
-							control={control}
-							render={({ field }) => (
-								<div className="w-full">
-									<ThemeProvider theme={theme}>
-										<CustomTextField
-											{...field}
-											type="text"
-											id="name"
-											label="Full name"
-											error={!!errors.name}
-											helperText={errors.name?.message ?? " "}
-											variant="outlined"
-											className="w-full"
-										/>
-									</ThemeProvider>
-								</div>
-							)}
-						/>
-					</div>
-
-					<div>
-						<Controller
-							name="companyName"
-							control={control}
-							render={({ field }) => (
-								<div className="w-full">
-									<ThemeProvider theme={theme}>
-										<CustomTextField
-											{...field}
-											type="text"
-											id="companyName"
-											label="Company name"
-											error={!!errors.companyName}
-											helperText={errors.companyName?.message ?? " "}
-											variant="outlined"
-											className="w-full"
-										/>
-									</ThemeProvider>
-								</div>
-							)}
-						/>
-					</div>
-					<div>
-						<Controller
-							name="email"
-							control={control}
-							render={({ field }) => (
-								<div className="w-full">
-									<ThemeProvider theme={theme}>
-										<CustomTextField
-											{...field}
-											type="email"
-											id="email"
-											label="Email"
-											error={!!errors.email}
-											helperText={errors.email?.message ?? " "}
-											variant="outlined"
-											className="w-full"
-										/>
-									</ThemeProvider>
-								</div>
-							)}
-						/>
-					</div>
-					<div>
-						<Controller
-							name="phone"
-							control={control}
-							render={({ field }) => (
-								<div className="w-full">
-									<ThemeProvider theme={theme}>
-										<CustomTextField
-											{...field}
-											type="number"
-											id="phone"
-											label="Phone"
-											error={!!errors.phone}
-											helperText={errors.phone?.message ?? " "}
-											variant="outlined"
-											className="w-full"
-										/>
-									</ThemeProvider>
-								</div>
-							)}
-						/>
-					</div>
-					<div>
-						<Controller
-							name="webUrl"
-							control={control}
-							render={({ field }) => (
-								<div className="w-full ">
-									<ThemeProvider theme={theme}>
-										<CustomTextField
-											{...field}
-											type="text"
-											id="webUrl"
-											label="Website url"
-											error={!!errors.webUrl}
-											helperText={errors.webUrl?.message ?? " "}
-											variant="outlined"
-											className="w-full"
-										/>
-									</ThemeProvider>
-								</div>
-							)}
-						/>
-					</div>
-					<div>
-						<Controller
-							name="description"
-							control={control}
-							render={({ field }) => (
-								<div className="w-full ">
+		<div className="flex flex-col basis-1/2">
+			<p className="font-lato text-xl text-secondary font-extrabold text-center mb-4">
+				Begin your next chapter now!
+			</p>
+			<form className="rounded-md w-full flex flex-col justify-center">
+				<div>
+					<Controller
+						name="name"
+						control={control}
+						render={({ field }) => (
+							<div className="w-full">
+								<ThemeProvider theme={theme}>
 									<CustomTextField
 										{...field}
 										type="text"
-										id="description"
-										label="Description"
-										error={!!errors.description}
-										helperText={errors.description?.message ?? " "}
+										id="name"
+										label="Full name"
+										error={!!errors.name}
+										helperText={errors.name?.message ?? " "}
 										variant="outlined"
 										className="w-full"
-										multiline
-										rows={3}
-									></CustomTextField>
-								</div>
-							)}
-						/>
-					</div>
-				</form>
-			</div>
+									/>
+								</ThemeProvider>
+							</div>
+						)}
+					/>
+				</div>
+				<div>
+					<Controller
+						name="companyName"
+						control={control}
+						render={({ field }) => (
+							<div className="w-full">
+								<ThemeProvider theme={theme}>
+									<CustomTextField
+										{...field}
+										type="text"
+										id="companyName"
+										label="Company name"
+										error={!!errors.companyName}
+										helperText={errors.companyName?.message ?? " "}
+										variant="outlined"
+										className="w-full"
+									/>
+								</ThemeProvider>
+							</div>
+						)}
+					/>
+				</div>
+				<div>
+					<Controller
+						name="email"
+						control={control}
+						render={({ field }) => (
+							<div className="w-full">
+								<ThemeProvider theme={theme}>
+									<CustomTextField
+										{...field}
+										type="email"
+										id="email"
+										label="Email"
+										error={!!errors.email}
+										helperText={errors.email?.message ?? " "}
+										variant="outlined"
+										className="w-full"
+									/>
+								</ThemeProvider>
+							</div>
+						)}
+					/>
+				</div>
+				<div>
+					<Controller
+						name="phone"
+						control={control}
+						render={({ field }) => (
+							<div className="w-full">
+								<ThemeProvider theme={theme}>
+									<CustomTextField
+										{...field}
+										type="number"
+										id="phone"
+										label="Phone"
+										error={!!errors.phone}
+										helperText={errors.phone?.message ?? " "}
+										variant="outlined"
+										className="w-full"
+									/>
+								</ThemeProvider>
+							</div>
+						)}
+					/>
+				</div>
+				<div>
+					<Controller
+						name="webUrl"
+						control={control}
+						render={({ field }) => (
+							<div className="w-full ">
+								<ThemeProvider theme={theme}>
+									<CustomTextField
+										{...field}
+										type="text"
+										id="webUrl"
+										label="Website url"
+										error={!!errors.webUrl}
+										helperText={errors.webUrl?.message ?? " "}
+										variant="outlined"
+										className="w-full"
+									/>
+								</ThemeProvider>
+							</div>
+						)}
+					/>
+				</div>
+				<div>
+					<Controller
+						name="description"
+						control={control}
+						render={({ field }) => (
+							<div className="w-full ">
+								<CustomTextField
+									{...field}
+									type="text"
+									id="description"
+									label="Description"
+									error={!!errors.description}
+									helperText={errors.description?.message ?? " "}
+									variant="outlined"
+									className="w-full"
+									multiline
+									rows={3}
+								></CustomTextField>
+							</div>
+						)}
+					/>
+				</div>
+			</form>
 		</div>
 	);
 };

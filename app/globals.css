@@ -118,3 +118,17 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
 	-moz-appearance: textfield;
 }
+
+textarea {
+	outline: none;
+}
+
+textarea::placeholder {
+	color: white;
+	opacity: 1; /* Firefox */
+}
+
+textarea::-ms-input-placeholder {
+	/* Edge 12 -18 */
+	color: white;
+}

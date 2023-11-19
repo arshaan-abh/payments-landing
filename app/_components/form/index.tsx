@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { EnquireRequest } from "@/app/@types/enquireRequest";
 import FormSection from "./form";
 import Checkbox from "./Checkbox";
+import Button from "../button";
 const schema = object({
 	name: string().required("This field is required."),
 	companyName: string().required("This field is required."),
@@ -85,7 +86,7 @@ function Form() {
 				<p className="font-lato text-lg font-medium text-gray-400 mb-8">
 					Elevate your business with our convenient in-app payment solutions.
 				</p>
-				<div className="flex w-full justify-evenly">
+				<div className="flex w-full justify-evenly gap-16 mb-2.5">
 					<div className="flex flex-col basis-1/2">
 						<p className="font-lato text-xl text-secondary font-extrabold text-center mb-4">
 							Select your favorite solutions
@@ -102,26 +103,20 @@ function Form() {
 								);
 							})}
 						</div>
-						<div className="col-span-12">
-							<textarea
-								id="message"
-								rows={1}
-								disabled={checkableList[11] ? false : true}
-								className="block p-2.5 w-full text-sm text-gray-900 bg-primary rounded-lg border "
-								placeholder="Other description"
-							></textarea>
-						</div>
+						<textarea
+							id="message"
+							rows={3}
+							disabled={checkableList[11] ? false : true}
+							className="w-full text-base font-semibold text-secondary border-2 border-gray-100 rounded-md p-2.5 bg-transparent focus:border-secondary"
+							placeholder="Others"
+							style={{ resize: "none" }}
+						></textarea>
 					</div>
 					<FormSection control={control} errors={errors} />
 				</div>
-				{/* <div className="col-span-12 grid grid-cols-12">
-					<button
-						className="col-span-10 col-start-2 lg:col-span-4 lg:col-start-5 bg-secondary my-10 rounded-md p-4"
-						onClick={handleFormSubmit}
-					>
-						Enquire Now
-					</button>
-				</div> */}
+				<Button clickHandler={handleFormSubmit} white>
+					Enquire Now
+				</Button>
 			</div>
 		</div>
 	);
