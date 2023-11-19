@@ -1,35 +1,40 @@
 "use client";
-import { Controller } from "react-hook-form";
+import { Control, Controller, FieldErrors } from "react-hook-form";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 
 import { TextField } from "@mui/material";
+import { EnquireRequest } from "@/app/@types/enquireRequest";
+import { FC } from "react";
 
-interface props {
-	control: any;
-	errors: any;
+interface FormSectionProps {
+	control: Control<EnquireRequest, any>;
+	errors: FieldErrors<EnquireRequest>;
 }
 
-function FormSection(props: props) {
-	const { control, errors } = props;
-
+const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 	const CustomTextField = styled(TextField)({
 		"& .MuiOutlinedInput-notchedOutline": {
 			borderColor: "white",
+			borderRadius: "0.375rem /* 6px */",
 		},
 		"& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": {
 			borderColor: "white", // Change the border color on hover
 		},
 		"& .MuiFormLabel-root": {
-			color: "white", // Change the placeholder text color
+			color: "#fafafa", // Change the placeholder text color
 		},
 		"& .MuiInputBase-input": {
 			color: "white", // Change the text color
+			fontFamily: "var(--font-lato)",
+			fontWeight: 400 /* font-normal */,
+			fontSize: "1rem" /* 16px */,
 		},
 		"& .MuiOutlinedInput-root": {
 			"&.Mui-error fieldset": {
 				borderColor: "CE7272", // Change the outline color when there's an error
 			},
 			"& fieldset": {
+				backgroundColor: "#ffffff0a",
 				borderColor: "white", // Change the outline color when not focused
 			},
 			"&.Mui-focused fieldset": {
@@ -38,6 +43,8 @@ function FormSection(props: props) {
 		},
 		"& .MuiFormHelperText-root": {
 			color: "CE7272", // Change the color of the helper text
+			marginBottom: "0.125rem" /* 2px */,
+			marginTop: "0.125rem" /* 2px */,
 		},
 	});
 
@@ -85,7 +92,7 @@ function FormSection(props: props) {
 											{...field}
 											type="text"
 											id="companyName"
-											label="company name"
+											label="Company name"
 											error={!!errors.companyName}
 											helperText={errors.companyName?.message ?? " "}
 											variant="outlined"
@@ -129,7 +136,7 @@ function FormSection(props: props) {
 											{...field}
 											type="number"
 											id="phone"
-											label="phone"
+											label="Phone"
 											error={!!errors.phone}
 											helperText={errors.phone?.message ?? " "}
 											variant="outlined"
@@ -168,13 +175,18 @@ function FormSection(props: props) {
 							control={control}
 							render={({ field }) => (
 								<div className="w-full ">
-									<textarea
+									<CustomTextField
 										{...field}
+										type="text"
 										id="description"
-										rows={5}
-										className="block p-2.5 w-full text-sm text-secondary bg-primary rounded-lg border "
-										placeholder="Description"
-									></textarea>
+										label="Description"
+										error={!!errors.description}
+										helperText={errors.description?.message ?? " "}
+										variant="outlined"
+										className="w-full"
+										multiline
+										rows={3}
+									></CustomTextField>
 								</div>
 							)}
 						/>
@@ -183,6 +195,6 @@ function FormSection(props: props) {
 			</div>
 		</div>
 	);
-}
+};
 
 export default FormSection;
