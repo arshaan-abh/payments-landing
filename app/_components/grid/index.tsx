@@ -11,6 +11,7 @@ const Grid: FC<GridProps> = ({ black }) => {
 	const x = useResponsiveState({
 		defaultState: 3,
 		breakpoints: [
+			{ breakpoint: 376, state: 4 },
 			{ breakpoint: 768, state: 6 },
 			{ breakpoint: 1024, state: 12 },
 		],
