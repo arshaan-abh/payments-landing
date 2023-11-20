@@ -2,10 +2,10 @@ import React, { FC } from "react";
 import bigPicture from "public/WhatsApp Image 2023-10-20 at 14.03 1.webp";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import smallPictureOne from "public/hands-using-phone-credit-card-online-payment 2 1.webp";
-import smallPictureTwo from "public/Frame 26085950.webp";
-import smallPictureThree from "public/Frame 26085950 (1).webp";
-import smallPictureFour from "public/Frame 26085950 (2).webp";
+import smallPictureOne from "public/flexible-pay.svg";
+import smallPictureTwo from "public/pos.svg";
+import smallPictureThree from "public/pomo.svg";
+import smallPictureFour from "public/qr-code.svg";
 import Stack from "../stack";
 import Grid from "../grid";
 
