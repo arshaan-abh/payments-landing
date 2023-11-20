@@ -44,7 +44,7 @@ function FeatureTwo() {
 				</div>
 			</div>
 			<div className="flex gap-10">
-				<div className="w-1/2 flex items-center justify-end">
+				<div className="w-1/2 flex items-center justify-start">
 					<Image src={bigPicture} alt="Big picture" />
 				</div>
 				<div className="w-1/2 flex flex-col justify-between gap-5">
