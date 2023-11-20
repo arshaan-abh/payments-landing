@@ -235,3 +235,20 @@ export const PlaneCheckIcon: FC<IconProps> = ({ className }) => {
 		</svg>
 	);
 };
+
+export const ThunderIcon: FC<IconProps> = ({ className }) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="15"
+			height="19"
+			fill="none"
+			className={className}
+		>
+			<path
+				d="M12.902.5H5.379a.2.2 0 0 0-.182.118l-4.32 9.6a.2.2 0 0 0 .182.282h3.913a.2.2 0 0 1 .19.263l-2.644 7.933c-.067.2.182.354.331.205l12.06-12.059a.2.2 0 0 0-.141-.341h-4.669a.2.2 0 0 1-.173-.301L13.075.801A.2.2 0 0 0 12.902.5z"
+				fill="currentColor"
+			/>
+		</svg>
+	);
+};

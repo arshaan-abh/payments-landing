@@ -7,6 +7,7 @@ import {
 	useRef,
 	ReactNode,
 } from "react";
+import { ThunderIcon } from "../icons";
 
 export interface marqueeItemData {
 	body: ReactNode;
@@ -95,9 +96,7 @@ const MarqueeItems: FC<MarqueeItemsProps> = ({
 		>
 			{data.map((marqueeItem, index) => (
 				<div key={index} className="flex gap-5 items-center py-2.5">
-					{marqueeItem.head ?? (
-						<div className="w-3 h-3 shrink-0 border-white border rounded-full"></div>
-					)}
+					{marqueeItem.head ?? <ThunderIcon className="text-secondary" />}
 					<div className="text-xl font-montserrat">{marqueeItem.body}</div>
 				</div>
 			))}
