@@ -9,9 +9,11 @@ interface NavbarProps {}
 const Navbar: FC<NavbarProps> = ({}) => {
 	return (
 		<nav className="shrink-0 w-full flex flex-col px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl">
-			<div className="flex gap-10 justify-between items-center py-6">
+			<div className="flex gap-10 items-center py-6 justify-center md:justify-between">
 				<Image src={logo} alt="Logo" />
-				<Button white>Enquire Now</Button>
+				<div className="hidden md:flex">
+					<Button white>Enquire Now</Button>
+				</div>
 			</div>
 			<div className="border-b border-gray-700 w-full h-px opacity-10" />
 		</nav>

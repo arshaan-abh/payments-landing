@@ -26,20 +26,25 @@ function Hero() {
 							/>
 						}
 					>
-						<span className="font-extrabold italic text-primary">
+						<span className="font-extrabold italic text-primary whitespace-nowrap">
 							Grow Sales
 						</span>{" "}
 					</Stack>
 					with a better payment solution
 				</h1>
-				<p className="font-lato text-white text-base font-normal lg:w-1/2">
-					Selected Payments leading one-stop payment solution for cross-border
-					commerce, marketplaces, and platforms enables the means to move money
-					without friction. We help you grow your business locally and
-					internationally, allow you to collect payments, flexible multiparty
-					split payments, and make payouts. With our multicurrency accounts,
-					this process is simpler and faster.
-				</p>
+				<div className="font-lato text-white text-base font-normal lg:w-1/2 text-center md:text-left">
+					<p>
+						Selected Payments leading one-stop payment solution for cross-border
+						commerce, marketplaces, and platforms enables the means to move
+						money without friction.
+					</p>
+					<p className="hidden md:flex">
+						We help you grow your business locally and internationally, allow
+						you to collect payments, flexible multiparty split payments, and
+						make payouts. With our multicurrency accounts, this process is
+						simpler and faster.
+					</p>
+				</div>
 				<div className="flex gap-2.5 lg:w-1/2 justify-center md:justify-start">
 					<Button white>Enquire Now</Button>
 					<Button>Contact us</Button>
