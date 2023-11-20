@@ -16,15 +16,15 @@ const Grid: FC<GridProps> = ({ black }) => {
 		],
 	});
 	const y = 6;
-	const variableClassNames = black ? "opacity-10" : "";
+	const variableClassNames = black ? "" : "opacity-10";
 	return (
-		<div className="flex flex-col justify-evenly w-full h-full">
+		<div className="flex flex-col justify-evenly w-full h-full select-none pointer-events-none">
 			{Array.from(Array(y), (_, yIndex) => (
 				<div key={yIndex} className="flex justify-between">
 					{Array.from(Array(x), (_, xIndex) => (
 						<span
 							key={`${yIndex} ${xIndex}`}
-							className={`user-select-none pointer-events-none font-lato text-base font-normal text-[#e6e6e6] ${variableClassNames}`}
+							className={`font-lato text-base font-normal text-[#e6e6e6] ${variableClassNames}`}
 						>
 							+
 						</span>
