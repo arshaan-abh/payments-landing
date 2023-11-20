@@ -174,7 +174,7 @@ export const SlideButton: FC<SlideButtonProps> = ({ children, buttonRef }) => {
 	return (
 		<button
 			ref={buttonRef}
-			className="w-10 h-10 flex justify-center items-center border rounded-full border-primary text-primary disabled:border-gray-400 disabled:text-gray-400 transition-colors"
+			className="w-[40px] h-[40px] flex justify-center items-center border rounded-full border-primary text-primary disabled:border-gray-400 disabled:text-gray-400 transition-colors"
 		>
 			{children}
 		</button>
