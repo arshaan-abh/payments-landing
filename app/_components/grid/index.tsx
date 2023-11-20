@@ -1,12 +1,20 @@
+"use client";
 import type { FC } from "react";
 import { PlusIcon } from "../icons";
+import useResponsiveState from "../features-one/useResponsiveState";
 
 interface GridProps {
 	black?: boolean;
 }
 
 const Grid: FC<GridProps> = ({ black }) => {
-	const x = 12;
+	const x = useResponsiveState({
+		defaultState: 3,
+		breakpoints: [
+			{ breakpoint: 768, state: 6 },
+			{ breakpoint: 1024, state: 12 },
+		],
+	});
 	const y = 6;
 	const variableClassNames = black
 		? "text-black opacity-10"
