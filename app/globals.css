@@ -135,12 +135,12 @@ textarea::-ms-input-placeholder {
 
 ::-moz-selection {
 	color: currentColor;
-	background: #aaaaaa80;
+	background: #60606080;
 }
 
 ::selection {
 	color: currentColor;
-	background: #aaaaaa80;
+	background: #60606080;
 }
 
 @media (max-width: 375px) and (min-width: 0) {
