@@ -1,10 +1,10 @@
 import React from "react";
-import bigPicture from "public/WhatsApp Image 2023-10-20 at 14.03 3.webp";
+import bigPicture from "public/marketplace.jpg";
 import Image from "next/image";
-import smallPictureOne from "public/hand-holding-100-dollar-bill-concept-receiving-salary-income-concept-counting4 1.webp";
-import smallPictureTwo from "public/decreasing-piles-coin-money-with-arrow44 1.webp";
-import smallPictureThree from "public/pexels-antoni-shkraba-production-88375101 2.webp";
-import smallPictureFour from "public/vardan-papikyan-3Q4H1BQAvVo-unsplash1 1.webp";
+import smallPictureOne from "public/handing-money.svg";
+import smallPictureTwo from "public/money.svg";
+import smallPictureThree from "public/shaking-hands.svg";
+import smallPictureFour from "public/split.svg";
 import { Card } from "../features-two";
 import Stack from "../stack";
 import Grid from "../grid";
@@ -65,7 +65,7 @@ function FeatureThree() {
 						supportingText="Effortlessly pay multiple parties in local currencies, making financial transactions more accessible and efficient for everyone involved."
 					/>
 				</div>
-				<div className="w-1/2 flex items-center justify-center">
+				<div className="w-1/2 flex items-center justify-end">
 					<Image src={bigPicture} alt="Big picture" />
 				</div>
 			</div>

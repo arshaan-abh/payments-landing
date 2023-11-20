@@ -105,10 +105,10 @@ const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 	return (
 		<div className="flex flex-col gap-7 basis-1/3 items-center">
 			<div className="w-1/2 xs:w-auto">{media}</div>
-			<div className="text-primary text-2xl font-extrabold font-lato text-center sm:text-start">
+			<div className="text-primary text-2xl font-extrabold font-lato text-center sm:text-start w-full">
 				{children}
 			</div>
-			<div className="text-gray-200 text-base font-medium font-lato text-center sm:text-start">
+			<div className="text-gray-200 text-base font-medium font-lato text-center sm:text-start w-full">
 				{supportingText}
 			</div>
 		</div>
