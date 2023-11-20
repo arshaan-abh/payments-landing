@@ -24,3 +24,5 @@ export const secondMarqueeData: marqueeItemData[] = [
 		body: "Marketing Banner",
 	},
 ];
+
+// TODO solve mozilla issue
