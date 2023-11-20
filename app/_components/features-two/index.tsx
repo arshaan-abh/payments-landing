@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import bigPicture from "public/WhatsApp Image 2023-10-20 at 14.03 1.webp";
+import bigPicture from "public/epos.jpg";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import smallPictureOne from "public/flexible-pay.svg";
