@@ -133,6 +133,16 @@ textarea::-ms-input-placeholder {
 	color: white;
 }
 
+::-moz-selection {
+	color: currentColor;
+	background: #aaaaaa80;
+}
+
+::selection {
+	color: currentColor;
+	background: #aaaaaa80;
+}
+
 @media (max-width: 375px) and (min-width: 0) {
 	:root {
 		font-size: 10px /* text-2xs */;
