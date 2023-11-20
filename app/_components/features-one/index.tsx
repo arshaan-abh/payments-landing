@@ -58,10 +58,10 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			underLayer={<Grid black />}
 		>
 			<div className="flex justify-between items-center gap-10 flex-col md:flex-row">
-				<div className="md:w-1/2 text-primary text-4xl font-extrabold font-montserrat">
+				<div className="md:w-1/2 text-primary text-4xl font-extrabold font-montserrat text-center md:text-left">
 					Simplified Customer Payment Processing!
 				</div>
-				<div className="md:w-1/2 text-gray-200 text-base font-medium font-lato">
+				<div className="md:w-1/2 text-gray-200 text-base font-medium font-lato text-center md:text-left">
 					In a rapidly evolving marketplace, staying ahead means embracing
 					efficient solutions. Our Streamlined customer payment processing is
 					your gateway to a new era in payment convenience. We&apos;ve
@@ -69,17 +69,19 @@ const FeatureOne: FC<CardProps> = ({}) => {
 				</div>
 			</div>
 			{slider}
-			<div className="flex items-center justify-between">
-				<SlideButton buttonRef={prevButtonRef}>
-					<ArrowLeftIcon />
-				</SlideButton>
-				<div className="uppercase font-lato font-light text-2xl text-gray-400">
-					Scroll
+			{visibleSlidesNumber < 3 && (
+				<div className="flex items-center justify-between">
+					<SlideButton buttonRef={prevButtonRef}>
+						<ArrowLeftIcon />
+					</SlideButton>
+					<div className="uppercase font-lato font-light text-2xl text-gray-400">
+						Scroll
+					</div>
+					<SlideButton buttonRef={nextButtonRef}>
+						<ArrowRightIcon />
+					</SlideButton>
 				</div>
-				<SlideButton buttonRef={nextButtonRef}>
-					<ArrowRightIcon />
-				</SlideButton>
-			</div>
+			)}{" "}
 		</Stack>
 	);
 };
