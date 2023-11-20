@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import Empowering from "../../../public/WhatsApp Image 2023-10-20 at 14.03 4.webp";
+import Empowering from "public/transfer.jpg";
 import Image from "next/image";
 import Grid from "../grid";
 import Stack from "../stack";

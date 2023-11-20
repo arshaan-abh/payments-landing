@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import Pre from "../../../public/Frame 26085948.webp";
-import Business from "../../../public/Frame 26085949.webp";
+import Pre from "public/credit-card.jpg";
+import Business from "public/business-finance.jpg";
 import Image from "next/image";
 import Grid from "../grid";
 import Stack from "../stack";

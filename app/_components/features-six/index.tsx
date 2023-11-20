@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import Advance from "../../../public/advance.webp";
-import Billing from "../../../public/billing.webp";
+import Advance from "public/terminal.jpg";
+import Billing from "public/invoicing.jpg";
 import Image from "next/image";
 import { Card } from "../features-five";
 import Stack from "../stack";
