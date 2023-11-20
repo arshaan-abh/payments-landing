@@ -95,7 +95,7 @@ export default function Home() {
 			</section>
 			<Menu />
 			<CookiesModal />
-			<EnquireNowIcon className="fixed bottom-12 right-10 z-10" />
+			<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />
 		</div>
 	);
 }

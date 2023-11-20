@@ -132,3 +132,21 @@ textarea::-ms-input-placeholder {
 	/* Edge 12 -18 */
 	color: white;
 }
+
+@media (max-width: 375px) and (min-width: 0) {
+	:root {
+		font-size: 10px /* text-2xs */;
+	}
+}
+
+@media (max-width: 639px) and (min-width: 376px /* xs */) {
+	:root {
+		font-size: 12px /* text-xs */;
+	}
+}
+
+@media (max-width: 767px) and (min-width: 640px /* sm */) {
+	:root {
+		font-size: 14px /* text-sm */;
+	}
+}

@@ -27,8 +27,8 @@ function Hero() {
 						}
 					>
 						<span className="font-extrabold italic text-primary whitespace-nowrap">
-							Grow Sales
-						</span>{" "}
+							Grow Sales&nbsp;
+						</span>
 					</Stack>
 					with a better payment solution
 				</h1>

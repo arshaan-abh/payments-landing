@@ -103,14 +103,16 @@ function Form() {
 								);
 							})}
 						</div>
-						<textarea
-							id="message"
-							rows={3}
-							disabled={checkableList[11] ? false : true}
-							className="w-full text-base font-semibold text-secondary border-2 border-gray-100 rounded-md p-2.5 bg-transparent focus:border-secondary"
-							placeholder="Others"
-							style={{ resize: "none" }}
-						></textarea>
+						{checkableList[11] && (
+							<textarea
+								id="message"
+								rows={3}
+								disabled={checkableList[11] ? false : true}
+								className="w-full text-base font-semibold text-secondary border-2 border-gray-100 rounded-md p-2.5 bg-transparent focus:border-secondary"
+								placeholder="Others"
+								style={{ resize: "none" }}
+							></textarea>
+						)}
 					</div>
 					<FormSection control={control} errors={errors} />
 				</div>
