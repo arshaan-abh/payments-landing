@@ -57,31 +57,38 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			className="h-full flex flex-col justify-evenly"
 			underLayer={<Grid black />}
 		>
-			<div className="flex justify-between items-center gap-10 flex-col md:flex-row">
+			<div className="flex justify-between items-center gap-x-10 gap-y-1 flex-col md:flex-row">
 				<div className="md:w-1/2 text-primary text-4xl font-extrabold font-montserrat text-center md:text-left">
 					Simplified Customer Payment Processing!
 				</div>
 				<div className="md:w-1/2 text-gray-200 text-base font-medium font-lato text-center md:text-left">
-					In a rapidly evolving marketplace, staying ahead means embracing
-					efficient solutions. Our Streamlined customer payment processing is
-					your gateway to a new era in payment convenience. We&apos;ve
-					reimagined the payment journey to be effortless and user-friendly.
+					<p>
+						In a rapidly evolving marketplace, staying ahead means embracing
+						efficient solutions.
+					</p>
+					<p className="hidden md:flex">
+						Our Streamlined customer payment processing is your gateway to a new
+						era in payment convenience. We&apos;ve reimagined the payment
+						journey to be effortless and user-friendly.
+					</p>
 				</div>
 			</div>
-			{slider}
-			{visibleSlidesNumber < 3 && (
-				<div className="flex items-center justify-between">
-					<SlideButton buttonRef={prevButtonRef}>
-						<ArrowLeftIcon />
-					</SlideButton>
-					<div className="uppercase font-lato font-light text-2xl text-gray-400">
-						Scroll
+			<div className="flex flex-col gap-10">
+				{slider}
+				{visibleSlidesNumber < 3 && (
+					<div className="flex items-center justify-between">
+						<SlideButton buttonRef={prevButtonRef}>
+							<ArrowLeftIcon />
+						</SlideButton>
+						<div className="uppercase font-lato font-light text-2xl text-gray-400">
+							Scroll
+						</div>
+						<SlideButton buttonRef={nextButtonRef}>
+							<ArrowRightIcon />
+						</SlideButton>
 					</div>
-					<SlideButton buttonRef={nextButtonRef}>
-						<ArrowRightIcon />
-					</SlideButton>
-				</div>
-			)}{" "}
+				)}
+			</div>
 		</Stack>
 	);
 };
@@ -96,12 +103,12 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 	return (
-		<div className="flex flex-col gap-7 basis-1/3">
-			{media}
-			<div className="text-primary text-2xl font-extrabold font-lato">
+		<div className="flex flex-col gap-7 basis-1/3 items-center">
+			<div className="w-1/2 xs:w-auto">{media}</div>
+			<div className="text-primary text-2xl font-extrabold font-lato text-center sm:text-start">
 				{children}
 			</div>
-			<div className="text-gray-200 text-base font-medium font-lato">
+			<div className="text-gray-200 text-base font-medium font-lato text-center sm:text-start">
 				{supportingText}
 			</div>
 		</div>
