@@ -38,10 +38,37 @@ const config: Config = {
 					"0%": { transform: "translateX(0%)" },
 					"100%": { transform: "translateX(-100%)" },
 				},
+				wiggle: {
+					"0%, 50%": {
+						"-webkit-transform": "rotate(0deg)",
+						transform: "rotate(0deg)",
+					},
+					"60%": {
+						"-webkit-transform": "rotate(15deg)",
+						transform: "rotate(15deg)",
+					},
+					"70%": {
+						"-webkit-transform": "rotate(-10deg)",
+						transform: "rotate(-10deg)",
+					},
+					"80% ": {
+						"-webkit-transform": "rotate(5deg)",
+						transform: "rotate(5deg)",
+					},
+					"90%": {
+						"-webkit-transform": "rotate(-5deg)",
+						transform: "rotate(-5deg)",
+					},
+					"100%": {
+						"-webkit-transform": "rotate(0deg)",
+						transform: "rotate(0deg)",
+					},
+				},
 			},
 			animation: {
 				marquee: "marquee 16s infinite linear",
 				"marquee-after": "marquee-after 16s infinite linear",
+				wiggle: "wiggle 2s infinite",
 			},
 			maxWidth: {
 				"screen-1.5xl": "88rem",
