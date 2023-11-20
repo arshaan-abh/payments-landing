@@ -8,18 +8,20 @@ import Stack from "../stack";
 import Grid from "../grid";
 import useSlider from "../features-seven/Slider";
 import useResponsiveState from "./useResponsiveState";
+import { SlideButton } from "../features-seven";
+import { ArrowLeftIcon, ArrowRightIcon } from "../icons";
 
 const FeatureOne: FC<CardProps> = ({}) => {
 	const visibleSlidesNumber = useResponsiveState<number>({
 		defaultState: 1,
 		breakpoints: [
-			{ breakpoint: 376, state: 2 },
-			{ breakpoint: 768, state: 3 },
+			{ breakpoint: 374, state: 2 },
+			{ breakpoint: 640, state: 3 },
 		],
 	});
 
-	const [slider, prevButtonRef, nextButtonRef] = useSlider(
-		[
+	const [slider, prevButtonRef, nextButtonRef] = useSlider({
+		children: [
 			<Card
 				key={0}
 				media={
@@ -45,8 +47,8 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			</Card>,
 		],
 		visibleSlidesNumber,
-		2.5
-	);
+		gapInRem: 2.5,
+	});
 
 	return (
 		<Stack
@@ -56,10 +58,10 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			underLayer={<Grid black />}
 		>
 			<div className="flex justify-between items-center gap-10 flex-col md:flex-row">
-				<div className="w-1/2 text-primary text-4xl font-extrabold font-montserrat">
+				<div className="md:w-1/2 text-primary text-4xl font-extrabold font-montserrat">
 					Simplified Customer Payment Processing!
 				</div>
-				<div className="w-1/2 text-gray-200 text-base font-medium font-lato">
+				<div className="md:w-1/2 text-gray-200 text-base font-medium font-lato">
 					In a rapidly evolving marketplace, staying ahead means embracing
 					efficient solutions. Our Streamlined customer payment processing is
 					your gateway to a new era in payment convenience. We&apos;ve
@@ -67,6 +69,17 @@ const FeatureOne: FC<CardProps> = ({}) => {
 				</div>
 			</div>
 			{slider}
+			<div className="flex items-center justify-between">
+				<SlideButton buttonRef={prevButtonRef}>
+					<ArrowLeftIcon />
+				</SlideButton>
+				<div className="uppercase font-lato font-light text-2xl text-gray-400">
+					Scroll
+				</div>
+				<SlideButton buttonRef={nextButtonRef}>
+					<ArrowRightIcon />
+				</SlideButton>
+			</div>
 		</Stack>
 	);
 };

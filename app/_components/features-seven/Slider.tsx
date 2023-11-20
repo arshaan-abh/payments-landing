@@ -7,12 +7,22 @@ import {
 	RefObject,
 } from "react";
 
-const useSlider = (
-	children: ReactNode[],
-	visibleSlidesNumber: number,
-	gapInRem: number
-): [ReactNode, RefObject<HTMLButtonElement>, RefObject<HTMLButtonElement>] => {
-	const [index, setIndex] = useState<number>(0);
+interface useSliderProps {
+	children: ReactNode[];
+	visibleSlidesNumber: number;
+	gapInRem: number;
+}
+
+const useSlider = ({
+	children,
+	gapInRem,
+	visibleSlidesNumber,
+}: useSliderProps): [
+	ReactNode,
+	RefObject<HTMLButtonElement>,
+	RefObject<HTMLButtonElement>,
+] => {
+	const [index, setIndex] = useState<number>(1);
 	const prevButtonRef = useRef<HTMLButtonElement>(null);
 	const nextButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -29,10 +39,10 @@ const useSlider = (
 		const nextButton = nextButtonRef.current;
 
 		if (prevButton)
-			if (index === 0) prevButton.disabled = true;
+			if (index === 1) prevButton.disabled = true;
 			else prevButton.disabled = false;
 		if (nextButton)
-			if (index === Math.floor(children.length / visibleSlidesNumber))
+			if (index === Math.ceil(children.length / visibleSlidesNumber))
 				nextButton.disabled = true;
 			else nextButton.disabled = false;
 
@@ -49,7 +59,7 @@ const useSlider = (
 			<div
 				className="flex w-fit transition-transform"
 				style={{
-					transform: `translateX(calc(-100% * ${index}))`,
+					transform: `translateX(calc(-100% * ${index - 1}))`,
 					gap: `${gapInRem}rem`,
 				}}
 			>

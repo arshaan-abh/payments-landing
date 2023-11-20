@@ -61,8 +61,8 @@ function FeatureEight() {
 		setModalIsOpen(false);
 	};
 
-	const [slider, previousButtonRef, nextButtonRef] = useSlider(
-		terminals.map((t, index) => (
+	const [slider, previousButtonRef, nextButtonRef] = useSlider({
+		children: terminals.map((t, index) => (
 			<div
 				key={index}
 				className="flex flex-col gap-5"
@@ -94,9 +94,9 @@ function FeatureEight() {
 				</div>
 			</div>
 		)),
-		4,
-		2.5
-	);
+		visibleSlidesNumber: 4,
+		gapInRem: 2.5,
+	});
 
 	return (
 		<>
@@ -170,7 +170,7 @@ interface SlideButtonProps {
 	buttonRef: RefObject<HTMLButtonElement>;
 }
 
-const SlideButton: FC<SlideButtonProps> = ({ children, buttonRef }) => {
+export const SlideButton: FC<SlideButtonProps> = ({ children, buttonRef }) => {
 	return (
 		<button
 			ref={buttonRef}
