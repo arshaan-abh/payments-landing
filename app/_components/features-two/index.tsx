@@ -14,15 +14,16 @@ function FeatureTwo() {
 		<Stack
 			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
 			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			className="h-full flex flex-col justify-evenly"
+			className="h-full flex flex-col py-4"
 			// underLayer={<Grid black />}
 		>
-			<div className="flex justify-between items-center gap-10">
-				<div className="w-1/2 flex flex-col gap-1">
+			<div className="grow-2 min-h-[1rem]" />
+			<div className="flex items-center gap-x-16 gap-y-2 flex-col md:flex-row">
+				<div className="w-1/2 flex flex-col gap-2">
 					<div className="text-primary text-4xl font-extrabold font-montserrat">
 						ePOS All-In-One Solutions
 					</div>
-					<div className="flex gap-4 items-center">
+					<div className="flex gap-2 items-center justify-between">
 						<div className="font-lato text-gray-100 text-lg font-semibold uppercase">
 							Integrated
 						</div>
@@ -43,11 +44,16 @@ function FeatureTwo() {
 					contactless QR payments.
 				</div>
 			</div>
-			<div className="flex gap-10">
-				<div className="w-1/2 flex items-center justify-start">
-					<Image src={bigPicture} alt="Big picture" />
+			<div className="grow min-h-[1rem]" />
+			<div className="flex gap-16">
+				<div className="w-1/2 flex items-center">
+					<Image
+						src={bigPicture}
+						alt="Big picture"
+						className="w-full object-contain"
+					/>
 				</div>
-				<div className="w-1/2 flex flex-col justify-between gap-5">
+				<div className="w-1/2 flex flex-col justify-between gap-6">
 					<Card
 						image={smallPictureOne}
 						title="Flexible in-store payments"
@@ -70,6 +76,7 @@ function FeatureTwo() {
 					/>
 				</div>
 			</div>
+			<div className="grow-2 min-h-[1rem]" />
 		</Stack>
 	);
 }
@@ -84,9 +91,9 @@ interface CardProps {
 
 export const Card: FC<CardProps> = ({ image, title, supportingText }) => {
 	return (
-		<div className="flex gap-5 items-center">
+		<div className="flex gap-6 items-center">
 			<Image src={image} alt="Small picture" />
-			<div className="flex flex-col gap-1">
+			<div className="flex flex-col gap-2">
 				<div className="font-lato font-extrabold text-2xl text-primary">
 					{title}
 				</div>
