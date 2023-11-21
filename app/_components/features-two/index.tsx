@@ -18,34 +18,38 @@ function FeatureTwo() {
 			// underLayer={<Grid black />}
 		>
 			<div className="grow-2 min-h-[1rem]" />
-			<div className="flex items-center gap-x-16 gap-y-2 flex-col md:flex-row">
-				<div className="w-1/2 flex flex-col gap-2">
+			<div className="flex items-center gap-x-16 gap-y-4 flex-col xl:flex-row">
+				<div className="text-center xl:text-start xl:w-1/2 flex flex-col gap-2">
 					<div className="text-primary text-4xl font-extrabold font-montserrat">
 						ePOS All-In-One Solutions
 					</div>
-					<div className="flex gap-2 items-center justify-between">
-						<div className="font-lato text-gray-100 text-lg font-semibold uppercase">
+					<div className="hidden sm:flex gap-2 items-center justify-between">
+						<div className="font-lato text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
 							Integrated
 						</div>
 						<div className="w-2 h-2 shrink-0 border border-gray-200 rounded-full"></div>
-						<div className="font-lato text-gray-100 text-lg font-semibold uppercase">
+						<div className="font-lato text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
 							Mobile Friendly
 						</div>
 						<div className="w-2 h-2 shrink-0 border border-gray-200 rounded-full"></div>
-						<div className="font-lato text-gray-100 text-lg font-semibold uppercase">
+						<div className="font-lato text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
 							Mobile Friendly
 						</div>
 					</div>
 				</div>
-				<div className="w-1/2 text-gray-200 text-base font-medium font-lato">
-					Unlock the potential of retail with our ePOS All-In-One Solutions.
-					Tailor your in-store payments, simplify transactions without extra
-					hardware, enable on-the-go mobile payments, and embrace secure,
-					contactless QR payments.
+				<div className="text-center xl:text-start xl:w-1/2 text-gray-200 text-base font-medium font-lato">
+					<p className="inline">
+						Unlock the potential of retail with our ePOS All-In-One Solutions.
+					</p>
+					<p className="hidden sm:inline">
+						Tailor your in-store payments, simplify transactions without extra
+						hardware, enable on-the-go mobile payments, and embrace secure,
+						contactless QR payments.
+					</p>
 				</div>
 			</div>
 			<div className="grow min-h-[1rem]" />
-			<div className="flex gap-16">
+			<div className="flex gap-16 flex-col sm:flex-row items-center">
 				<div className="w-1/2 flex items-center">
 					<Image
 						src={bigPicture}
