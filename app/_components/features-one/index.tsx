@@ -53,9 +53,9 @@ const FeatureOne: FC<CardProps> = ({}) => {
 	return (
 		<Stack
 			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
 			className="h-full flex flex-col justify-evenly"
-			underLayer={<Grid black />}
+			// underLayer={<Grid black />}
 		>
 			<div className="flex justify-between items-center gap-x-10 gap-y-1 flex-col md:flex-row">
 				<div className="md:w-1/2 text-primary text-4xl font-extrabold font-montserrat text-center md:text-left">

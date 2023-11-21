@@ -13,9 +13,9 @@ function FeatureTwo() {
 	return (
 		<Stack
 			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
 			className="h-full flex flex-col justify-evenly"
-			underLayer={<Grid black />}
+			// underLayer={<Grid black />}
 		>
 			<div className="flex justify-between items-center gap-10">
 				<div className="w-1/2 flex flex-col gap-1">

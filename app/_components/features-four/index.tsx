@@ -10,9 +10,9 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 	return (
 		<Stack
 			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
 			className="h-full flex gap-10 items-center"
-			underLayer={<Grid black />}
+			// underLayer={<Grid black />}
 		>
 			<div className="w-1/2 flex flex-col gap-5">
 				<Card

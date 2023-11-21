@@ -12,9 +12,9 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 	return (
 		<Stack
 			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
+			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
 			className="h-full flex flex-col justify-evenly"
-			underLayer={<Grid black />}
+			// underLayer={<Grid black />}
 		>
 			<div className="flex items-center h-2/4 gap-24">
 				<Image src={Advance} alt="Advance" className="h-full object-contain" />
