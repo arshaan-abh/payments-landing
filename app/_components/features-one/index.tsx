@@ -58,7 +58,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			// underLayer={<Grid black />}
 		>
 			<div className="grow-2 min-h-[1rem]" />
-			<div className="flex items-center gap-x-8 gap-y-2 flex-col md:flex-row">
+			<div className="flex items-center gap-x-16 gap-y-2 flex-col md:flex-row">
 				<div className="md:w-1/2 text-primary text-4xl font-extrabold font-montserrat text-center md:text-left">
 					Simplified Customer Payment Processing!
 				</div>
