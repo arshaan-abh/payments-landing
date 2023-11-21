@@ -57,7 +57,7 @@ const useSlider = ({
 	return [
 		<div key="slider" className="overflow-hidden">
 			<div
-				className="flex w-fit transition-transform"
+				className="flex flex-nowrap transition-transform"
 				style={{
 					transform: `translateX(calc(-100% * ${index - 1}))`,
 					gap: `${gapInRem}rem`,

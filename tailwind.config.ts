@@ -8,6 +8,9 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			flexGrow: {
+				2: "2",
+			},
 			screens: {
 				xs: "376px",
 			},

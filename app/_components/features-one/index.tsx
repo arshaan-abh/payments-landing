@@ -15,7 +15,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 	const visibleSlidesNumber = useResponsiveState<number>({
 		defaultState: 1,
 		breakpoints: [
-			{ breakpoint: 374, state: 2 },
+			{ breakpoint: 376, state: 2 },
 			{ breakpoint: 640, state: 3 },
 		],
 	});
@@ -47,17 +47,18 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			</Card>,
 		],
 		visibleSlidesNumber,
-		gapInRem: 2.5,
+		gapInRem: 2,
 	});
 
 	return (
 		<Stack
 			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
 			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			className="h-full flex flex-col justify-evenly"
+			className="h-full flex flex-col py-4 gap-4"
 			// underLayer={<Grid black />}
 		>
-			<div className="flex justify-between items-center gap-x-10 gap-y-1 flex-col md:flex-row">
+			<div className="grow-2" />
+			<div className="flex items-center gap-x-8 gap-y-2 flex-col md:flex-row">
 				<div className="md:w-1/2 text-primary text-4xl font-extrabold font-montserrat text-center md:text-left">
 					Simplified Customer Payment Processing!
 				</div>
@@ -73,7 +74,8 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					</p>
 				</div>
 			</div>
-			<div className="flex flex-col gap-10">
+			<div className="grow" />
+			<div className="flex flex-col gap-8">
 				{slider}
 				{visibleSlidesNumber < 3 && (
 					<div className="flex items-center justify-between">
@@ -89,6 +91,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					</div>
 				)}
 			</div>
+			<div className="grow-2" />
 		</Stack>
 	);
 };
@@ -104,8 +107,8 @@ interface CardProps {
 const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 	return (
 		<div className="flex flex-col basis-1/3 items-center">
-			<div className="w-1/2 xs:w-auto mb-7">{media}</div>
-			<div className="text-primary text-2xl font-extrabold font-lato text-center sm:text-start w-full mb-3.5">
+			<div className="w-2/3 xs:w-auto mb-4">{media}</div>
+			<div className="text-primary text-2xl font-extrabold font-lato text-center sm:text-start w-full mb-2">
 				{children}
 			</div>
 			<div className="text-gray-200 text-base font-medium font-lato text-center sm:text-start w-full">
