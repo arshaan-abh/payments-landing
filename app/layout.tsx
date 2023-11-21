@@ -4,7 +4,8 @@ import { Montserrat as Mono, Lato, Montserrat } from "next/font/google";
 
 export const metadata: Metadata = {
 	title: "Selected Payment",
-	description: "",
+	description:
+		"Enjoy effortless and secure transactions with Selected Payments. We're not just a solution, but your trusted partner making financial transactions smooth and worry-free. Join us for a future of easy payments.",
 };
 const mono = Mono({
 	subsets: ["latin"],
