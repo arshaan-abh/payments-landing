@@ -20,7 +20,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 				<Image src={Advance} alt="Advance" className="h-full object-contain" />
 				<Card
 					title="Advanced Terminal Services"
-					supportingText="Businesses seeking the pinnacle of terminal technology need look no further than our solutions, which are designed to elevate in-person transactions. Our commitment to security, speed, and reliability means that you can trust your payment processes to be both efficient and dependable. In a world where customers prioritize a smooth and secure payment experience, our solutions deliver, ensuring that your business remains competitive, efficient, and trusted by your clientele."
+					supportingText="Businesses seeking the pinnacle of terminal technology need look no further than our solutions, which are designed to elevate in-person transactions. Our commitment to security, speed, and reliability means that you can trust your payment processes to be both efficient and dependable. In a world where customers prioritise a smooth and secure payment experience, our solutions deliver, ensuring that your business remains competitive, efficient, and trusted by your clientele."
 				/>
 			</div>
 			<div className="flex items-center h-1/4 gap-24">

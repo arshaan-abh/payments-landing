@@ -51,7 +51,7 @@ function FeatureTwo() {
 					<Card
 						image={smallPictureOne}
 						title="Flexible in-store payments"
-						supportingText="Customize your payment method for the ultimate convenience and experience a new level of financial flexibility."
+						supportingText="Customise your payment method for the ultimate convenience and experience a new level of financial flexibility."
 					/>
 					<Card
 						image={smallPictureTwo}

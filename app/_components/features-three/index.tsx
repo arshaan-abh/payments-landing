@@ -52,7 +52,7 @@ function FeatureThree() {
 					<Card
 						image={smallPictureTwo}
 						title="Commission Alignment"
-						supportingText="Customize payments to perfectly align with your unique commission model, ensuring a tailored and efficient payment process."
+						supportingText="Customise payments to perfectly align with your unique commission model, ensuring a tailored and efficient payment process."
 					/>
 					<Card
 						image={smallPictureThree}
