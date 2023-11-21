@@ -103,9 +103,9 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 	return (
-		<div className="flex flex-col gap-7 basis-1/3 items-center">
-			<div className="w-1/2 xs:w-auto">{media}</div>
-			<div className="text-primary text-2xl font-extrabold font-lato text-center sm:text-start w-full">
+		<div className="flex flex-col basis-1/3 items-center">
+			<div className="w-1/2 xs:w-auto mb-7">{media}</div>
+			<div className="text-primary text-2xl font-extrabold font-lato text-center sm:text-start w-full mb-3.5">
 				{children}
 			</div>
 			<div className="text-gray-200 text-base font-medium font-lato text-center sm:text-start w-full">
