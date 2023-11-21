@@ -62,13 +62,13 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					Simplified Customer Payment Processing!
 				</div>
 				<div className="md:w-1/2 text-gray-200 text-base font-medium font-lato text-center md:text-left">
-					<p>
+					<p className="inline">
 						In a rapidly evolving marketplace, staying ahead means embracing
 						efficient solutions.
 					</p>
-					<p className="hidden md:flex">
-						Our Streamlined customer payment processing is your gateway to a new
-						era in payment convenience. We&apos;ve reimagined the payment
+					<p className="hidden md:inline">
+						&nbsp;Our Streamlined customer payment processing is your gateway to
+						a new era in payment convenience. We&apos;ve reimagined the payment
 						journey to be effortless and user-friendly.
 					</p>
 				</div>
