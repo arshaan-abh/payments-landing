@@ -54,10 +54,10 @@ const FeatureOne: FC<CardProps> = ({}) => {
 		<Stack
 			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
 			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			className="h-full flex flex-col py-4 gap-4"
+			className="h-full flex flex-col py-4"
 			// underLayer={<Grid black />}
 		>
-			<div className="grow-2" />
+			<div className="grow-2 min-h-[1rem]" />
 			<div className="flex items-center gap-x-8 gap-y-2 flex-col md:flex-row">
 				<div className="md:w-1/2 text-primary text-4xl font-extrabold font-montserrat text-center md:text-left">
 					Simplified Customer Payment Processing!
@@ -74,7 +74,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					</p>
 				</div>
 			</div>
-			<div className="grow" />
+			<div className="grow min-h-[1rem]" />
 			<div className="flex flex-col gap-8">
 				{slider}
 				{visibleSlidesNumber < 3 && (
@@ -91,7 +91,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					</div>
 				)}
 			</div>
-			<div className="grow-2" />
+			<div className="grow-2 min-h-[1rem]" />
 		</Stack>
 	);
 };
