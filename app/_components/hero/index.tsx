@@ -84,7 +84,7 @@ export const HeroBackground: FC<HeroBackgroundProps> = ({}) => {
 
 	return (
 		<video
-			className="w-full h-full object-cover grayscale"
+			className="w-full h-full object-cover"
 			autoPlay
 			loop
 			muted
