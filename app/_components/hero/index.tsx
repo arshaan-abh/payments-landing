@@ -1,10 +1,9 @@
 "use client";
-import Image from "next/image";
 import React, { FC, useCallback, useEffect, useRef } from "react";
 import Button from "../button";
 import Stack from "../stack";
-import growSales from "public/grow-scales.svg";
 import Grid from "../grid";
+import Hoverable from "../hoverable";
 
 function Hero() {
 	return (
@@ -15,22 +14,10 @@ function Hero() {
 				underLayer={<Grid />}
 			>
 				<h1 className="text-white font-montserrat font-medium text-6xl lg:w-1/2 text-center md:text-left">
-					<Stack
-						className="inline"
-						containerClassName="inline"
-						underLayer={
-							<Image
-								src={growSales}
-								alt="Grow Sales"
-								className="-translate-x-1 translate-y-2 select-none pointer-events-none"
-							/>
-						}
-					>
-						<span className="font-extrabold italic text-primary whitespace-nowrap">
-							Grow Sales&nbsp;
-						</span>
-					</Stack>
-					with a better payment solution
+					<Hoverable className="font-extrabold whitespace-nowrap inline-block p-1 pb-0 m-1 mb-0">
+						Grow Sales
+					</Hoverable>
+					&nbsp;with a better payment solution
 				</h1>
 				<div className="font-lato text-white text-base font-normal lg:w-1/2 text-center md:text-left">
 					<p>
