@@ -8,6 +8,7 @@ import smallPictureFour from "public/split.svg";
 import { Card } from "../features-two";
 import Stack from "../stack";
 import Grid from "../grid";
+import Hoverable from "../hoverable";
 
 function FeatureThree() {
 	return (
@@ -67,7 +68,9 @@ function FeatureThree() {
 					/>
 				</div>
 				<div className="w-1/2 flex items-center justify-end">
-					<Image src={bigPicture} alt="Big picture" />
+					<Hoverable round>
+						<Image src={bigPicture} alt="Big picture" />
+					</Hoverable>
 				</div>
 			</div>
 		</Stack>

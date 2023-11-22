@@ -3,6 +3,7 @@ import Empowering from "public/transfer.jpg";
 import Image from "next/image";
 import Grid from "../grid";
 import Stack from "../stack";
+import Hoverable from "../hoverable";
 
 interface FeatureFourProps {}
 
@@ -46,7 +47,9 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					solutions, so you can efficiently manage your finances. Join us today
 					and discover a new level of financial convenience.
 				</p>
-				<Image src={Empowering} alt="Empowering" />
+				<Hoverable round>
+					<Image src={Empowering} alt="Empowering" />
+				</Hoverable>
 			</div>
 		</Stack>
 	);
