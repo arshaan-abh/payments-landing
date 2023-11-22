@@ -8,6 +8,7 @@ import smallPictureThree from "public/pomo.svg";
 import smallPictureFour from "public/qr-code.svg";
 import Stack from "../stack";
 import Grid from "../grid";
+import Hoverable from "../hoverable";
 
 function FeatureTwo() {
 	return (
@@ -51,11 +52,13 @@ function FeatureTwo() {
 			<div className="grow min-h-[1rem]" />
 			<div className="flex gap-16 flex-col sm:flex-row items-center">
 				<div className="w-1/2 flex items-center">
-					<Image
-						src={bigPicture}
-						alt="Big picture"
-						className="w-full object-contain"
-					/>
+					<Hoverable>
+						<Image
+							src={bigPicture}
+							alt="Big picture"
+							className="w-full object-contain"
+						/>
+					</Hoverable>
 				</div>
 				<div className="w-1/2 flex flex-col justify-between gap-6">
 					<Card
