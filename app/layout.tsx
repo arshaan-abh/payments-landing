@@ -131,13 +131,26 @@ export default function RootLayout({
 					href="metadata/light/favicon-16x16.png"
 					media="(prefers-color-scheme: light)"
 				/>
-				<link rel="manifest" href="metadata/light/manifest.json" />
-				<meta name="msapplication-TileColor" content="#ffffff" />
+				<link
+					rel="manifest"
+					href="metadata/light/manifest.json"
+					media="(prefers-color-scheme: light)"
+				/>
+				<meta
+					name="msapplication-TileColor"
+					content="#ffffff"
+					media="(prefers-color-scheme: light)"
+				/>
 				<meta
 					name="msapplication-TileImage"
 					content="metadata/light/ms-icon-144x144.png"
+					media="(prefers-color-scheme: light)"
 				/>
-				<meta name="theme-color" content="#ffffff" />
+				<meta
+					name="theme-color"
+					content="#ffffff"
+					media="(prefers-color-scheme: light)"
+				/>
 
 				<link
 					rel="apple-touch-icon"
@@ -221,13 +234,26 @@ export default function RootLayout({
 					href="metadata/dark/favicon-16x16.png"
 					media="(prefers-color-scheme: dark)"
 				/>
-				<link rel="manifest" href="metadata/dark/manifest.json" />
-				<meta name="msapplication-TileColor" content="#161616" />
+				<link
+					rel="manifest"
+					href="metadata/dark/manifest.json"
+					media="(prefers-color-scheme: dark)"
+				/>
+				<meta
+					name="msapplication-TileColor"
+					content="#161616"
+					media="(prefers-color-scheme: dark)"
+				/>
 				<meta
 					name="msapplication-TileImage"
 					content="metadata/dark/ms-icon-144x144.png"
+					media="(prefers-color-scheme: dark)"
 				/>
-				<meta name="theme-color" content="#161616" />
+				<meta
+					name="theme-color"
+					content="#161616"
+					media="(prefers-color-scheme: dark)"
+				/>
 			</head>
 			<body
 				className={`${mono.variable} ${lato.variable} ${montserrat.variable} bg-secondary`}
