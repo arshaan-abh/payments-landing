@@ -143,20 +143,24 @@ textarea::-ms-input-placeholder {
 	background: #60606080;
 }
 
-@media (max-width: 768px /* md */) {
-	:root {
-		font-size: 14px /* text-sm */;
-	}
+:root {
+	font-size: 10px /* text-2xs */;
 }
 
-@media (max-width: 640px /* sm */) {
+@media (min-width: 376px /* xs */) {
 	:root {
 		font-size: 12px /* text-xs */;
 	}
 }
 
-@media (max-width: 376px /* xs */) {
+@media (min-width: 640px /* sm */) {
 	:root {
-		font-size: 10px /* text-2xs */;
+		font-size: 14px /* text-sm */;
+	}
+}
+
+@media (min-width: 768px /* md */) {
+	:root {
+		font-size: 16px /* text-base */;
 	}
 }
