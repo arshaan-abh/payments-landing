@@ -32,7 +32,7 @@ const config: Config = {
 				secondary: "#ffffff",
 			},
 			fontFamily: {
-				mono: ["var(--font-geist-mono)", "sans-serif"],
+				mono: ["var(--font-geist-mono)"],
 			},
 			keyframes: {
 				marquee: {
