@@ -1,6 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
-import type { FC } from "react";
+import { type FC } from "react";
 import logo from "public/logo.svg";
 import Button from "../button";
 
