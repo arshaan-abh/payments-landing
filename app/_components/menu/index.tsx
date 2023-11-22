@@ -1,4 +1,11 @@
-import { type FC, type ReactNode } from "react";
+"use client";
+import {
+	useState,
+	type FC,
+	type ReactNode,
+	useCallback,
+	useEffect,
+} from "react";
 import {
 	CallUsIcon,
 	EnquireIcon,
@@ -39,13 +46,36 @@ interface MenuItemProps {
 }
 
 const MenuItem: FC<MenuItemProps> = ({ primary, children }) => {
+	const [darkMode, setDarkMode] = useState<boolean>(false);
+
+	const handleScroll = useCallback(() => {
+		const scrollY = window.scrollY || window.pageYOffset;
+		if (scrollY === 0) setDarkMode(false);
+		else setDarkMode(true);
+	}, []);
+
+	useEffect(() => {
+		addEventListener("scroll", handleScroll);
+		return () => {
+			removeEventListener("scroll", handleScroll);
+		};
+	}, [handleScroll]);
+
+	const variableContainerClasses = darkMode
+		? "text-primary bg-primary/10"
+		: "text-white bg-white/10";
+	const variablePrimaryClasses = darkMode
+		? "text-white bg-primary"
+		: "text-primary bg-white";
 	const w = primary ? "w-[64px]" : "w-[44px]";
 	return (
 		<div
-			className={`${w} text-white aspect-square bg-white/10 rounded-full backdrop-blur-sm flex items-center justify-center`}
+			className={`${w} aspect-square rounded-full backdrop-blur-sm flex items-center justify-center transition-colors ${variableContainerClasses}`}
 		>
 			{primary ? (
-				<div className="w-[48px] aspect-square bg-white rounded-full text-primary flex justify-center items-center">
+				<div
+					className={`w-[48px] aspect-square rounded-full flex justify-center items-center transition-colors ${variablePrimaryClasses}`}
+				>
 					{children}
 				</div>
 			) : (
