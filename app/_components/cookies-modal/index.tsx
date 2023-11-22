@@ -28,7 +28,7 @@ const CookiesModal: FC<CookiesModalProps> = ({}) => {
 						<Image
 							src={cookies}
 							alt="Cookies"
-							className="pointer-events-none select-none -mt-10 -mr-6 animate-wiggle"
+							className="pointer-events-none select-none -mt-10 -mr-6 animate-wiggle w-[7.8125rem]"
 						/>
 					}
 				>
