@@ -34,7 +34,7 @@ function Hero() {
 				</h1>
 				<div className="font-lato text-white text-base font-normal lg:w-1/2 text-center md:text-left">
 					<p>
-						Selected Payments leading one-stop payment solution for cross-border
+						Selected Payments, a leading one-stop payment solution for cross-border
 						commerce, marketplaces, and platforms enables the means to move
 						money without friction.
 					</p>
