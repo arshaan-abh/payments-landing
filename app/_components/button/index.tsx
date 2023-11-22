@@ -14,7 +14,7 @@ const Button: FC<ButtonProps> = ({ children, white, clickHandler }) => {
 	return (
 		<button
 			onClick={clickHandler}
-			className={`${variableClassNames} py-3 px-8 rounded-md text-base font-bold font-lato whitespace-nowrap`}
+			className={`${variableClassNames} py-3 px-8 rounded-md text-base font-bold whitespace-nowrap`}
 		>
 			{children}
 		</button>

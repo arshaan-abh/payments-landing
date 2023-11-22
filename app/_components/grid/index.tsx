@@ -24,7 +24,7 @@ const Grid: FC<GridProps> = ({ black }) => {
 					{Array.from(Array(x), (_, xIndex) => (
 						<span
 							key={`${yIndex} ${xIndex}`}
-							className={`font-lato text-base font-normal text-[#e6e6e6] ${variableClassNames}`}
+							className={`text-base font-normal text-[#e6e6e6] ${variableClassNames}`}
 						>
 							+
 						</span>

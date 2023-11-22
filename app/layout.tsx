@@ -8,20 +8,6 @@ export const metadata: Metadata = {
 	description:
 		"Enjoy effortless and secure transactions with Selected Payments.",
 };
-// const mono = GeistMono({
-// 	subsets: ["latin"],
-// 	variable: "--font-mono",
-// 	weight: ["500", "600", "800", "900"],
-// });
-// const lato = GeistSans({
-// 	subsets: ["latin"],
-// 	variable: "--font-lato",
-// 	weight: ["300", "400", "700", "900"],
-// });
-// const montserrat = Montserrat({
-// 	subsets: ["latin"],
-// 	variable: "--font-montserrat",
-// });
 
 export default function RootLayout({
 	children,
@@ -257,7 +243,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={`${GeistMono.variable} ${GeistSans.variable} bg-secondary`}
+				className={`${GeistMono.variable} ${GeistSans.className} bg-secondary`}
 			>
 				{children}
 			</body>

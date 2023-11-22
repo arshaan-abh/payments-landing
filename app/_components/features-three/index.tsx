@@ -20,24 +20,24 @@ function FeatureThree() {
 		>
 			<div className="flex justify-between items-center gap-10">
 				<div className="w-1/2 flex flex-col gap-1">
-					<div className="text-primary text-4xl font-extrabold font-montserrat">
+					<div className="text-primary text-4xl font-extrabold">
 						Marketplace & Platforms
 					</div>
 					<div className="flex gap-4 items-center">
-						<div className="font-lato text-gray-100 text-lg font-semibold uppercase">
+						<div className="text-gray-100 text-lg font-semibold uppercase">
 							Integrated
 						</div>
 						<div className="w-2 h-2 shrink-0 border border-gray-200 rounded-full"></div>
-						<div className="font-lato text-gray-100 text-lg font-semibold uppercase">
+						<div className="text-gray-100 text-lg font-semibold uppercase">
 							Mobile Friendly
 						</div>
 						<div className="w-2 h-2 shrink-0 border border-gray-200 rounded-full"></div>
-						<div className="font-lato text-gray-100 text-lg font-semibold uppercase">
+						<div className="text-gray-100 text-lg font-semibold uppercase">
 							Mobile Friendly
 						</div>
 					</div>
 				</div>
-				<div className="w-1/2 text-gray-200 text-base font-medium font-lato">
+				<div className="w-1/2 text-gray-200 text-base font-medium">
 					Establish a thriving ecosystem for sellers on your platform. Cultivate
 					an environment where sellers not only succeed but prosper. Benefit
 					from Instant Payouts, Commission Alignment, Effortless Automation, and

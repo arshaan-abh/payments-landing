@@ -46,38 +46,34 @@ const Footer: FC<FooterProps> = ({}) => {
 					<Image src={logo} alt="Logo" />
 					<div className="flex gap-4">
 						<div className="basis-1/3 flex flex-col gap-3">
-							<h5 className="font-lato font-extrabold text-base mb-1">
-								Solutions
-							</h5>
+							<h5 className="font-extrabold text-base mb-1">Solutions</h5>
 							{solutionsLinks.map((link, index) => (
 								<Link
 									key={index}
 									href={link.link}
-									className="font-lato font-medium text-sm text-secondary"
+									className="font-medium text-sm text-secondary"
 								>
 									{link.text}
 								</Link>
 							))}
 						</div>
 						<div className="basis-1/3 flex flex-col gap-3">
-							<h5 className="font-lato font-extrabold text-base mb-1">
-								Features
-							</h5>
+							<h5 className="font-extrabold text-base mb-1">Features</h5>
 							{featuresLinks.map((link, index) => (
 								<Link
 									key={index}
 									href={link.link}
-									className="font-lato font-medium text-sm text-secondary"
+									className="font-medium text-sm text-secondary"
 								>
 									{link.text}
 								</Link>
 							))}
 						</div>
 						<div className="basis-1/3 flex flex-col gap-3">
-							<h5 className="font-lato font-extrabold text-base mb-1">
+							<h5 className="font-extrabold text-base mb-1">
 								We&apos;re social
 							</h5>
-							<p className="font-lato font-medium text-sm text-secondary">
+							<p className="font-medium text-sm text-secondary">
 								Follow us on social media and scroll through the latest scoop
 								effortlessly in your feed
 							</p>
@@ -88,10 +84,10 @@ const Footer: FC<FooterProps> = ({}) => {
 								<Image src={Linkedin} alt="linkedin" />
 								<Image src={InstagramIcon} alt="instagram" />
 							</div>
-							<h5 className="font-lato font-extrabold text-base mb-1">
+							<h5 className="font-extrabold text-base mb-1">
 								Join us and stay ahead of the curve
 							</h5>
-							<p className="font-lato font-medium text-sm text-secondary mb-2">
+							<p className="font-medium text-sm text-secondary mb-2">
 								Get the latest news and exclusive promotions conveniently in
 								your inbox.
 							</p>
@@ -99,7 +95,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								<input
 									type="email"
 									placeholder="Email"
-									className="grow bg-[#ffffff0a] text-secondary font-lato font-normal text-base px-4 py-2 border border-secondary outline-none rounded-md"
+									className="grow bg-[#ffffff0a] text-secondary font-normal text-base px-4 py-2 border border-secondary outline-none rounded-md"
 								/>
 								<Button white>Sign up</Button>
 							</div>
@@ -107,7 +103,7 @@ const Footer: FC<FooterProps> = ({}) => {
 					</div>
 					<div className="flex flex-col">
 						<div className="flex border-t border-gray-100 py-5 justify-between items-center">
-							<div className="basis-1/3 text-sm font-medium font-lato">
+							<div className="basis-1/3 text-sm font-medium">
 								At Selected Payments, We&apos;re More Than Just a Payment
 								Solution - We&apos;re Your Trustworthy Partner. Our Innovative
 								Approach Combines with Dedication to Ensure Your Payments Are
@@ -115,26 +111,26 @@ const Footer: FC<FooterProps> = ({}) => {
 								Future.
 							</div>
 							<div className="basis-1/3 flex flex-col gap-1">
-								<div className="flex gap-1 font-lato text-sm font-normal justify-end items-center">
+								<div className="flex gap-1 text-sm font-normal justify-end items-center">
 									<p>+44 1273 705050</p>
 									<Image src={Phone} alt="Phone" />
 								</div>
-								<div className="flex gap-1 font-lato text-sm font-normal justify-end items-center">
+								<div className="flex gap-1 text-sm font-normal justify-end items-center">
 									<p>hello@selectedpayment.com</p>
 									<Image src={Email} alt="Email" />
 								</div>
-								<div className="flex gap-1 font-lato text-sm font-normal justify-end items-center">
+								<div className="flex gap-1 text-sm font-normal justify-end items-center">
 									<p>4 Gordon Mews, Gordon Close, BN41 1HU, Brighton</p>
 									<Image src={Location} alt="Location" />
 								</div>
 							</div>
 						</div>
 						<div className="flex border-t border-gray-100 py-3 justify-between items-center">
-							<p className="font-lato text-xs text-gray-400 font-normal">
+							<p className="text-xs text-gray-400 font-normal">
 								Copyright © 2023 Powered by{" "}
 								<span className="font-bold text-secondary">Selected</span>
 							</p>
-							<p className="font-lato text-xs font-bold text-secondary">
+							<p className="text-xs font-bold text-secondary">
 								Privacy Policy | Terms of Use
 							</p>
 						</div>

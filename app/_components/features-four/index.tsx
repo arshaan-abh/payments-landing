@@ -38,10 +38,10 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 				/>
 			</div>
 			<div className="w-1/2 flex flex-col gap-5">
-				<h3 className="text-primary text-4xl font-extrabold font-montserrat">
+				<h3 className="text-primary text-4xl font-extrabold">
 					Empowering Effortless Money Transfers
 				</h3>
-				<p className="font-lato font-medium text-base text-gray-200">
+				<p className="font-medium text-base text-gray-200">
 					Our platform is your gateway to effortless financial transactions. We
 					provide user-friendly, secure, and hassle-free money transfer
 					solutions, so you can efficiently manage your finances. Join us today
@@ -66,13 +66,9 @@ interface CardProps {
 const Card: FC<CardProps> = ({ title, supportingText, percent }) => {
 	return (
 		<div className="flex flex-col gap-2 w-1/2">
-			<div className="font-lato font-extrabold text-primary text-7xl">
-				{title}
-			</div>
+			<div className="font-extrabold text-primary text-7xl">{title}</div>
 			<div className="h-5 bg-gray-700" style={{ width: `${percent}%` }} />
-			<p className="font-lato font-medium text-base text-gray-100">
-				{supportingText}
-			</p>
+			<p className="font-medium text-base text-gray-100">{supportingText}</p>
 		</div>
 	);
 };

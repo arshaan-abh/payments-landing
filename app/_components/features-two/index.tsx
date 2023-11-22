@@ -21,24 +21,24 @@ function FeatureTwo() {
 			<div className="grow-2 min-h-[1rem]" />
 			<div className="flex items-center gap-x-16 gap-y-4 flex-col xl:flex-row">
 				<div className="text-center xl:text-start xl:w-1/2 flex flex-col gap-2">
-					<div className="text-primary text-4xl font-extrabold font-montserrat">
+					<div className="text-primary text-4xl font-extrabold">
 						ePOS All-In-One Solutions
 					</div>
 					<div className="hidden sm:flex gap-2 items-center justify-between">
-						<div className="font-lato text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
+						<div className="text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
 							Integrated
 						</div>
 						<div className="w-2 h-2 shrink-0 border border-gray-200 rounded-full"></div>
-						<div className="font-lato text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
+						<div className="text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
 							Mobile Friendly
 						</div>
 						<div className="w-2 h-2 shrink-0 border border-gray-200 rounded-full"></div>
-						<div className="font-lato text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
+						<div className="text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
 							Mobile Friendly
 						</div>
 					</div>
 				</div>
-				<div className="text-center xl:text-start xl:w-1/2 text-gray-200 text-base font-medium font-lato">
+				<div className="text-center xl:text-start xl:w-1/2 text-gray-200 text-base font-medium">
 					<p className="inline">
 						Unlock the potential of retail with our ePOS All-In-One Solutions.
 					</p>
@@ -103,10 +103,8 @@ export const Card: FC<CardProps> = ({ image, title, supportingText }) => {
 				<Image src={image} alt="Small picture" />
 			</Hoverable>
 			<div className="flex flex-col gap-2">
-				<div className="font-lato font-extrabold text-2xl text-primary">
-					{title}
-				</div>
-				<div className="font-lato font-medium text-base text-gray-200">
+				<div className="font-extrabold text-2xl text-primary">{title}</div>
+				<div className="font-medium text-base text-gray-200">
 					{supportingText}
 				</div>
 			</div>

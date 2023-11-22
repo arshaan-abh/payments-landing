@@ -70,24 +70,18 @@ function FeatureEight() {
 				style={{ cursor: "pointer" }}
 			>
 				<Image src={t.image} alt={t.title} />
-				<h4 className="font-lato text-2xl text-primary font-extrabold">
-					{t.title}
-				</h4>
-				<p className="font-lato text-lg text-gray-100 font-medium">
-					{t.subtitle}
-				</p>
+				<h4 className="text-2xl text-primary font-extrabold">{t.title}</h4>
+				<p className="text-lg text-gray-100 font-medium">{t.subtitle}</p>
 				<div className="flex flex-col gap-1">
 					{t.items ? (
 						t.items.map((item, index) => (
 							<div className="flex justify-between items-center" key={index}>
-								<div className="font-lato font-medium text-gray-200 text-sm">
-									{item}
-								</div>
+								<div className="font-medium text-gray-200 text-sm">{item}</div>
 								<CheckIcon className="text-primary" />
 							</div>
 						))
 					) : (
-						<p className="font-lato font-normal italic text-lg text-gray-100">
+						<p className="font-normal italic text-lg text-gray-100">
 							* no extra terminals or hardware needed.
 						</p>
 					)}
@@ -108,15 +102,13 @@ function FeatureEight() {
 			>
 				<div className="flex justify-between items-center">
 					<div className="flex flex-col gap-2">
-						<h3 className="font-lato font-extrabold text-4xl text-primary">
-							Terminals
-						</h3>
-						<p className="font-lato font-normal text-base text-gray-200">
+						<h3 className="font-extrabold text-4xl text-primary">Terminals</h3>
+						<p className="font-normal text-base text-gray-200">
 							Here you can see our terminals and order anyone do you want.
 						</p>
 					</div>
 					<div className="flex flex-col items-end gap-1">
-						<div className="uppercase font-lato font-light text-2xl text-gray-400">
+						<div className="uppercase font-light text-2xl text-gray-400">
 							Scroll
 						</div>
 						<div className="flex gap-2.5">

@@ -39,17 +39,15 @@ const Faq: FC<FaqProps> = ({}) => {
 			className="h-full flex flex-col justify-center gap-3"
 			// underLayer={<Grid black />}
 		>
-			<h3 className="font-lato font-extrabold text-3xl text-primary">FAQ</h3>
-			<p className="font-lato text-base text-gray-100 font-medium">
+			<h3 className="font-extrabold text-3xl text-primary">FAQ</h3>
+			<p className="text-base text-gray-100 font-medium">
 				Welcome to the Selected Payments FAQ, your source for clear, insightful
 				answers.
 			</p>
 			<div>
 				{faqs.map((faq, index) => (
 					<Accordion key={index} title={faq.title}>
-						<p className="font-lato text-base text-gray-100 font-medium">
-							{faq.answer}
-						</p>
+						<p className="text-base text-gray-100 font-medium">{faq.answer}</p>
 					</Accordion>
 				))}
 			</div>

@@ -25,9 +25,7 @@ const Accordion: FC<AccordionProps> = ({ title, children }) => {
 				ref={buttonRef}
 				onClick={clickHandler}
 			>
-				<h4 className="font-lato font-semibold text-3xl text-primary">
-					{title}
-				</h4>
+				<h4 className="font-semibold text-3xl text-primary">{title}</h4>
 				{open ? (
 					<PlaneMinusIcon className="text-primary" />
 				) : (

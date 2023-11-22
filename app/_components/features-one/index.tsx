@@ -73,10 +73,10 @@ const FeatureOne: FC<CardProps> = ({}) => {
 		>
 			<div className="grow-2 min-h-[1rem]" />
 			<div className="flex items-center gap-x-16 gap-y-2 flex-col md:flex-row">
-				<div className="md:w-1/2 text-primary text-4xl font-extrabold font-montserrat text-center md:text-left">
+				<div className="md:w-1/2 text-primary text-4xl font-extrabold text-center md:text-left">
 					Simplified Customer Payment Processing!
 				</div>
-				<div className="md:w-1/2 text-gray-200 text-base font-medium font-lato text-center md:text-left">
+				<div className="md:w-1/2 text-gray-200 text-base font-medium text-center md:text-left">
 					<p className="inline">
 						In a rapidly evolving marketplace, staying ahead means embracing
 						efficient solutions.
@@ -96,7 +96,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 						<SlideButton buttonRef={prevButtonRef}>
 							<ArrowLeftIcon />
 						</SlideButton>
-						<div className="uppercase font-lato font-light text-2xl text-gray-400">
+						<div className="uppercase font-light text-2xl text-gray-400">
 							Scroll
 						</div>
 						<SlideButton buttonRef={nextButtonRef}>
@@ -122,10 +122,10 @@ const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 	return (
 		<div className="flex flex-col basis-1/3 items-center">
 			<div className="w-2/3 xs:w-auto mb-4">{media}</div>
-			<div className="text-primary text-2xl font-extrabold font-lato text-center sm:text-start w-full mb-2">
+			<div className="text-primary text-2xl font-extrabold text-center sm:text-start w-full mb-2">
 				{children}
 			</div>
-			<div className="text-gray-200 text-base font-medium font-lato text-center sm:text-start w-full">
+			<div className="text-gray-200 text-base font-medium text-center sm:text-start w-full">
 				{supportingText}
 			</div>
 		</div>

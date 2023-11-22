@@ -51,7 +51,7 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 	const theme = createTheme();
 	return (
 		<div className="flex flex-col basis-1/2">
-			<p className="font-lato text-xl text-secondary font-extrabold text-center mb-4">
+			<p className="text-xl text-secondary font-extrabold text-center mb-4">
 				Begin your next chapter now!
 			</p>
 			<form className="rounded-md w-full flex flex-col justify-center">

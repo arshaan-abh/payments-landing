@@ -12,13 +12,13 @@ function Hero() {
 				className="flex flex-col gap-10"
 				underLayer={<Grid />}
 			>
-				<h1 className="text-white font-montserrat font-medium text-6xl lg:w-1/2 text-center md:text-left">
+				<h1 className="text-white font-medium text-6xl lg:w-1/2 text-center md:text-left">
 					<span className="font-extrabold whitespace-nowrap italic">
 						Grow Sales
 					</span>
 					&nbsp;with a better payment solution
 				</h1>
-				<div className="font-lato text-white text-base font-normal lg:w-1/2 text-center md:text-left">
+				<div className="text-white text-base font-normal lg:w-1/2 text-center md:text-left">
 					<p>
 						Selected Payments, a leading one-stop payment solution for
 						cross-border commerce, marketplaces, and platforms enables the means
