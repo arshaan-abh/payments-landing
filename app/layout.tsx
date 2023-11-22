@@ -1,26 +1,27 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat as Mono, Lato, Montserrat } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 export const metadata: Metadata = {
 	title: "Selected Payment",
 	description:
 		"Enjoy effortless and secure transactions with Selected Payments.",
 };
-const mono = Mono({
-	subsets: ["latin"],
-	variable: "--font-mono",
-	weight: ["500", "600", "800", "900"],
-});
-const lato = Lato({
-	subsets: ["latin"],
-	variable: "--font-lato",
-	weight: ["300", "400", "700", "900"],
-});
-const montserrat = Montserrat({
-	subsets: ["latin"],
-	variable: "--font-montserrat",
-});
+// const mono = GeistMono({
+// 	subsets: ["latin"],
+// 	variable: "--font-mono",
+// 	weight: ["500", "600", "800", "900"],
+// });
+// const lato = GeistSans({
+// 	subsets: ["latin"],
+// 	variable: "--font-lato",
+// 	weight: ["300", "400", "700", "900"],
+// });
+// const montserrat = Montserrat({
+// 	subsets: ["latin"],
+// 	variable: "--font-montserrat",
+// });
 
 export default function RootLayout({
 	children,
@@ -256,7 +257,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={`${mono.variable} ${lato.variable} ${montserrat.variable} bg-secondary`}
+				className={`${GeistMono.variable} ${GeistSans.variable} bg-secondary`}
 			>
 				{children}
 			</body>

@@ -28,9 +28,9 @@ const config: Config = {
 				secondary: "#ffffff",
 			},
 			fontFamily: {
-				lato: ["var(--font-lato)"],
-				mono: ["var(--font-mono)"],
-				montserrat: ["var(--font-montserrat)"],
+				lato: ["var(--font-geist-sans)"],
+				mono: ["var(--font-geist-mono)"],
+				montserrat: ["var(--font-geist-sans)"],
 			},
 			keyframes: {
 				marquee: {
