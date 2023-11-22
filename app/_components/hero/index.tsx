@@ -3,7 +3,6 @@ import React, { FC, useCallback, useEffect, useRef } from "react";
 import Button from "../button";
 import Stack from "../stack";
 import Grid from "../grid";
-import Hoverable from "../hoverable";
 
 function Hero() {
 	return (
@@ -14,9 +13,9 @@ function Hero() {
 				underLayer={<Grid />}
 			>
 				<h1 className="text-white font-montserrat font-medium text-6xl lg:w-1/2 text-center md:text-left">
-					<Hoverable className="font-extrabold whitespace-nowrap inline-block p-1 pb-0 m-1 mb-0">
+					<span className="font-extrabold whitespace-nowrap italic">
 						Grow Sales
-					</Hoverable>
+					</span>
 					&nbsp;with a better payment solution
 				</h1>
 				<div className="font-lato text-white text-base font-normal lg:w-1/2 text-center md:text-left">
