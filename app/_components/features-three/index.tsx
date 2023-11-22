@@ -38,8 +38,9 @@ function FeatureThree() {
 				</div>
 				<div className="w-1/2 text-gray-200 text-base font-medium font-lato">
 					Establish a thriving ecosystem for sellers on your platform. Cultivate
-					an environment where sellers not only succeed but thrive. Instant
-					Payouts, Commission Alignment, Effortless Automation, and Multi-Party.
+					an environment where sellers not only succeed but prosper. Benefit
+					from Instant Payouts, Commission Alignment, Effortless Automation, and
+					Multi-Party.
 				</div>
 			</div>
 			<div className="flex gap-10">
@@ -47,7 +48,7 @@ function FeatureThree() {
 					<Card
 						image={smallPictureOne}
 						title="Instant Payouts"
-						supportingText="Sellers receive payments instantly, greatly enhancing their overall experience with rapid, hassle-free transactions."
+						supportingText="Sellers receive payments instantly, significantly enhancing and refining their overall experience with rapid, hassle-free transactions."
 					/>
 					<Card
 						image={smallPictureTwo}
@@ -57,12 +58,12 @@ function FeatureThree() {
 					<Card
 						image={smallPictureThree}
 						title="Instant Settlements"
-						supportingText="Simplify the process with automation, ensuring swift and efficient settlement procedures that save you time and effort."
+						supportingText="Simplify the process with automation, ensuring swift and highly efficient settlement procedures that save you time and effort."
 					/>
 					<Card
 						image={smallPictureFour}
 						title="Multiparty Split Payments and Payouts"
-						supportingText="Effortlessly pay multiple parties in local currencies, making financial transactions more accessible and efficient for everyone involved."
+						supportingText="Effortlessly pay multiple parties in local currencies, making financial transactions more accessible and effective for everyone involved."
 					/>
 				</div>
 				<div className="w-1/2 flex items-center justify-end">

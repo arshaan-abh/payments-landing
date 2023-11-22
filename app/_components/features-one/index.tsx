@@ -35,7 +35,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 				}
 				supportingText="Your customers will love the simplicity of one-click checkout through our seamless pay link."
 			>
-				One-Click checkout with Pay link
+				One-Click Pay Link
 			</Card>,
 			<Card
 				key={1}
@@ -82,7 +82,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 						efficient solutions.
 					</p>
 					<p className="hidden md:inline">
-						&nbsp;Our Streamlined customer payment processing is your gateway to
+						&nbsp;Our streamlined customer payment processing is your gateway to
 						a new era in payment convenience. We&apos;ve reimagined the payment
 						journey to be effortless and user-friendly.
 					</p>

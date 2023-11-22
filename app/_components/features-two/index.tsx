@@ -69,7 +69,7 @@ function FeatureTwo() {
 					<Card
 						image={smallPictureTwo}
 						title="POS Payments without device"
-						supportingText="Witness optimized transactions without the need for any hardware, making your point-of-sale payments straightforward"
+						supportingText="Witness optimized transactions without the need for any hardware, making your point-of-sale payments straightforward."
 					/>
 					<Card
 						image={smallPictureThree}
