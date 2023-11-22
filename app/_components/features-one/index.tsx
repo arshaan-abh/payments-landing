@@ -10,6 +10,7 @@ import useSlider from "../features-seven/Slider";
 import useResponsiveState from "./useResponsiveState";
 import { SlideButton } from "../features-seven";
 import { ArrowLeftIcon, ArrowRightIcon } from "../icons";
+import Hoverable from "../hoverable";
 
 const FeatureOne: FC<CardProps> = ({}) => {
 	const visibleSlidesNumber = useResponsiveState<number>({
@@ -25,7 +26,12 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			<Card
 				key={0}
 				media={
-					<Image src={featureImageOne} alt="One-Click checkout with Pay link" />
+					<Hoverable round>
+						<Image
+							src={featureImageOne}
+							alt="One-Click checkout with Pay link"
+						/>
+					</Hoverable>
 				}
 				supportingText="Your customers will love the simplicity of one-click checkout through our seamless pay link."
 			>
@@ -33,14 +39,22 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			</Card>,
 			<Card
 				key={1}
-				media={<Image src={featureImageTwo} alt="Flexible Payment Methods" />}
+				media={
+					<Hoverable round>
+						<Image src={featureImageTwo} alt="Flexible Payment Methods" />
+					</Hoverable>
+				}
 				supportingText="Users will enjoy the convenience of flexible payout methods tailored to their needs."
 			>
 				Flexible Payment Methods
 			</Card>,
 			<Card
 				key={2}
-				media={<Image src={featureImageThree} alt="Multicurrency Payments" />}
+				media={
+					<Hoverable round>
+						<Image src={featureImageThree} alt="Multicurrency Payments" />
+					</Hoverable>
+				}
 				supportingText="Clients will recognise the benefits of adaptable multi-currency payment options designed to meet their international requirements."
 			>
 				Multicurrency Payments

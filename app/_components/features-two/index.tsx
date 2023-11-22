@@ -52,7 +52,7 @@ function FeatureTwo() {
 			<div className="grow min-h-[1rem]" />
 			<div className="flex gap-16 flex-col sm:flex-row items-center">
 				<div className="w-1/2 flex items-center">
-					<Hoverable>
+					<Hoverable className="w-full" round>
 						<Image
 							src={bigPicture}
 							alt="Big picture"
@@ -99,7 +99,9 @@ interface CardProps {
 export const Card: FC<CardProps> = ({ image, title, supportingText }) => {
 	return (
 		<div className="flex gap-6 items-center">
-			<Image src={image} alt="Small picture" />
+			<Hoverable className="w-max h-max ">
+				<Image src={image} alt="Small picture" />
+			</Hoverable>
 			<div className="flex flex-col gap-2">
 				<div className="font-lato font-extrabold text-2xl text-primary">
 					{title}
