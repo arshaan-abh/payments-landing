@@ -13,7 +13,7 @@ function Hero() {
 				underLayer={<Grid />}
 			>
 				<h1 className="text-white font-medium text-6xl lg:w-1/2 text-center md:text-left">
-					<span className="font-extrabold whitespace-nowrap italic">
+					<span className="font-extrabold whitespace-nowrap bg-underline">
 						Grow Sales
 					</span>
 					&nbsp;with a better payment solution

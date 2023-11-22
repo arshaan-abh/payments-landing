@@ -8,6 +8,10 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			backgroundImage: {
+				underline:
+					"linear-gradient(0deg, #ffffff1a 0%, #ffffff1a calc(100% / 3), transparent calc(100% / 3), transparent 100%)",
+			},
 			flexGrow: {
 				2: "2",
 			},
