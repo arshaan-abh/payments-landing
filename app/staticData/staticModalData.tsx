@@ -10,7 +10,7 @@ export const ModalData: ModalDataType[] = [
 		image: Mobile1,
 		description: [
 			{
-				title: "S1F2",
+				title: "SPF2",
 				subTitle: "An all-in-one Android device with printing power",
 				information: {
 					name: "Hardware",
@@ -36,10 +36,10 @@ export const ModalData: ModalDataType[] = [
 		],
 	},
 	{
-		image: Mobile2,
+		image: Mobile4,
 		description: [
 			{
-				title: "S1EL2",
+				title: "SPL2",
 				subTitle: "An all-in-one Android device with printing power",
 				information: {
 					name: "Hardware",
@@ -65,10 +65,10 @@ export const ModalData: ModalDataType[] = [
 		],
 	},
 	{
-		image: Mobile3,
+		image: Mobile2,
 		description: [
 			{
-				title: "S1F2",
+				title: "Tap to Pay iPhone",
 				subTitle:
 					"Accept contactless payments right on an iPhone with Tap to Pay on iPhone* no extra terminals or hardware needed. ",
 				information: {
@@ -95,12 +95,11 @@ export const ModalData: ModalDataType[] = [
 		],
 	},
 	{
-		image: Mobile4,
+		image: Mobile3,
 		description: [
 			{
-				title: "AMS1",
-				subTitle:
-					"Designed by Adyen; your all-in-one terminal running on Android.",
+				title: "SPS1",
+				subTitle: "Your all-in-one terminal running on Android.",
 				information: {
 					name: "Hardware",
 					inf1: "Printer Availability",
@@ -113,36 +112,6 @@ export const ModalData: ModalDataType[] = [
 					inf4des: "Android 10",
 					inf5: "Camera/Barcode scanner",
 					inf5des: "Camera",
-				},
-				connecting: {
-					name: "Connectivity",
-					con1: "Ethernet",
-					con2: "Cellular",
-					con3: "Wi-Fi",
-					con4: "Bluetooth",
-				},
-			},
-		],
-	},
-	{
-		image: Mobile5,
-		description: [
-			{
-				title: "NYC1",
-				subTitle:
-					"Designed by us, inspired by you; a card reader for businesses on the move.",
-				information: {
-					name: "Hardware",
-					inf1: "Printer Availability",
-					inf1des: "No",
-					inf2: "User interface",
-					inf2des: "Not applicable",
-					inf3: "Memory",
-					inf3des: "8MB Flash, 1MB RAM",
-					inf4: "Operation system",
-					inf4des: "Not applicable",
-					inf5: "Camera/Barcode scanner",
-					inf5des: "Not applicable",
 				},
 				connecting: {
 					name: "Connectivity",

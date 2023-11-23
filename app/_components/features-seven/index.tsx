@@ -23,29 +23,22 @@ const terminals = [
 		items: ["Cellular", "Wi-Fi", "Bluetooth"],
 	},
 	{
-		image: Mobile2,
+		image: Mobile4,
 		title: "SPL2",
 		subtitle: "Sleek, durable, and mobile all-in-one Android device.",
 		items: ["Cellular", "Wi-Fi", "Bluetooth"],
 	},
 	{
-		image: Mobile3,
+		image: Mobile2,
 		title: "Tap to Pay iPhone",
 		subtitle:
 			"Accept contactless payments right on an iPhone with Tap to Pay on iPhone.",
 	},
 	{
-		image: Mobile4,
+		image: Mobile3,
 		title: "SPS1",
-		subtitle: "Designed by Adyen; your all-in-one terminal running on Android.",
+		subtitle: "Your all-in-one terminal running on Android.",
 		items: ["Cellular", "Wi-Fi", "Bluetooth"],
-	},
-	{
-		image: Mobile5,
-		title: "NYC1",
-		subtitle:
-			"Designed by us, inspired by you; a card reader for businesses on the move.",
-		items: ["Bluetooth"],
 	},
 ];
 
