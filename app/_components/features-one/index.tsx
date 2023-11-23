@@ -5,7 +5,6 @@ import featureImageOne from "../../../public/one-click.jpg";
 import featureImageTwo from "../../../public/pay-method.jpg";
 import featureImageThree from "../../../public/currency.jpg";
 import Stack from "../stack";
-import Grid from "../grid";
 import useSlider from "../features-seven/Slider";
 import useResponsiveState from "./useResponsiveState";
 import { SlideButton } from "../features-seven";
