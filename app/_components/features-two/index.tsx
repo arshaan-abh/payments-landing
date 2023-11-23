@@ -6,18 +6,11 @@ import smallPictureOne from "public/flexible-pay.svg";
 import smallPictureTwo from "public/pos.svg";
 import smallPictureThree from "public/pomo.svg";
 import smallPictureFour from "public/qr-code.svg";
-import Stack from "../stack";
-import Grid from "../grid";
 import Hoverable from "../hoverable";
 
 function FeatureTwo() {
 	return (
-		<Stack
-			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			className="h-full flex flex-col py-4 items-center"
-			// underLayer={<Grid black />}
-		>
+		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col py-4 items-center">
 			<div className="grow-2 min-h-[1rem]" />
 			<div className="flex items-center gap-x-16 gap-y-4 flex-col xl:flex-row sm:w-2/3 lg:w-auto">
 				<div className="text-center xl:text-start xl:w-1/2 flex flex-col gap-2">
@@ -84,7 +77,7 @@ function FeatureTwo() {
 				</div>
 			</div>
 			<div className="grow-2 min-h-[1rem]" />
-		</Stack>
+		</div>
 	);
 }
 
