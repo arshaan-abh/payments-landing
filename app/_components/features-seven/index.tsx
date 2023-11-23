@@ -4,17 +4,15 @@ import Mobile1 from "../../../public/Terminal 1.webp";
 import Mobile2 from "../../../public/Terminal 2.webp";
 import Mobile3 from "../../../public/Terminal 3.webp";
 import Mobile4 from "../../../public/Terminal 4.webp";
-import Mobile5 from "../../../public/Terminal 5.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import Modal from "react-modal";
 import ModalSection from "./modal";
-import Grid from "../grid";
-import Stack from "../stack";
 import { ArrowLeftIcon, ArrowRightIcon, CheckIcon } from "../icons";
 import useSlider from "./Slider";
 import { HoverableImage } from "../hoverable";
+import useResponsiveState from "../features-one/useResponsiveState";
 const terminals = [
 	{
 		image: Mobile1,
@@ -55,6 +53,15 @@ function FeatureEight() {
 		setModalIsOpen(false);
 	};
 
+	const visibleSlidesNumber = useResponsiveState<number>({
+		defaultState: 1,
+		breakpoints: [
+			{ breakpoint: 376, state: 2 },
+			{ breakpoint: 640, state: 3 },
+			{ breakpoint: 1024, state: 4 },
+		],
+	});
+
 	const [slider, previousButtonRef, nextButtonRef] = useSlider({
 		children: terminals.map((t, index) => (
 			<div
@@ -82,19 +89,15 @@ function FeatureEight() {
 				</div>
 			</div>
 		)),
-		visibleSlidesNumber: 4,
+		visibleSlidesNumber,
 		gapInRem: 2.5,
 	});
 
 	return (
 		<>
-			<Stack
-				containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-				// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-				className="h-full flex flex-col justify-evenly"
-				// underLayer={<Grid black />}
-			>
-				<div className="flex justify-between items-center">
+			<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col">
+				<div className="grow-2 min-h-[1rem]" />
+				<div className="flex justify-between items-center gap-4">
 					<div className="flex flex-col gap-2">
 						<h3 className="font-extrabold text-4xl text-primary">Terminals</h3>
 						<p className="font-normal text-base text-gray-200">
@@ -115,8 +118,10 @@ function FeatureEight() {
 						</div>
 					</div>
 				</div>
+				<div className="grow min-h-[1rem]" />
 				{slider}
-			</Stack>
+				<div className="grow-2 min-h-[1rem]" />
+			</div>
 			<Modal
 				isOpen={modalIsOpen}
 				onRequestClose={closeModal}
