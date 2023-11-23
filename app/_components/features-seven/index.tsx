@@ -14,6 +14,7 @@ import Grid from "../grid";
 import Stack from "../stack";
 import { ArrowLeftIcon, ArrowRightIcon, CheckIcon } from "../icons";
 import useSlider from "./Slider";
+import { HoverableImage } from "../hoverable";
 const terminals = [
 	{
 		image: Mobile1,
@@ -69,7 +70,7 @@ function FeatureEight() {
 				onClick={() => openModal(index)}
 				style={{ cursor: "pointer" }}
 			>
-				<Image src={t.image} alt={t.title} />
+				<HoverableImage src={t.image} alt={t.title} />
 				<h4 className="text-2xl text-primary font-extrabold">{t.title}</h4>
 				<p className="text-lg text-gray-100 font-medium">{t.subtitle}</p>
 				<div className="flex flex-col gap-1">

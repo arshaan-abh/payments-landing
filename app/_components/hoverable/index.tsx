@@ -83,6 +83,7 @@ interface HoverableImageProps {
 	alt: string;
 	className?: string;
 	round?: boolean;
+	locate?: boolean;
 }
 
 export const HoverableImage: FC<HoverableImageProps> = ({
@@ -90,6 +91,7 @@ export const HoverableImage: FC<HoverableImageProps> = ({
 	src,
 	className = "",
 	round,
+	locate,
 }) => {
 	const imageRef = useRef<HTMLImageElement>(null);
 	const [width, setWidth] = useState<number>(0);
@@ -116,7 +118,7 @@ export const HoverableImage: FC<HoverableImageProps> = ({
 		<>
 			<div
 				className="peer absolute hover:[--border:50%] hover:[--rounded:0] active:pointer-events-none"
-				style={{ width: width, height: height, left: left }}
+				style={{ width: width, height: height, left: locate ? left : "auto" }}
 			>
 				<div
 					className="bg-gray-600 h-0.5 absolute top-0 right-0 transition-all duration-300"

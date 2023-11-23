@@ -31,6 +31,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 					alt="Billing"
 					className="h-full object-cover"
 					round
+					locate
 				/>
 			</div>
 		</div>
