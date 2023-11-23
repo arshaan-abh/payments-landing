@@ -1,21 +1,14 @@
 import type { FC } from "react";
 import Empowering from "public/transfer.jpg";
 import Image from "next/image";
-import Grid from "../grid";
-import Stack from "../stack";
 import Hoverable from "../hoverable";
 
 interface FeatureFourProps {}
 
 const FeatureFour: FC<FeatureFourProps> = ({}) => {
 	return (
-		<Stack
-			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			className="h-full flex gap-10 items-center"
-			// underLayer={<Grid black />}
-		>
-			<div className="w-1/2 flex flex-col gap-5">
+		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex gap-10 items-center justify-center flex-col-reverse lg:flex-row">
+			<div className="md:w-2/3 lg:w-1/2 flex flex-row lg:flex-col gap-y-4 lg:gap-5 flex-wrap justify-between">
 				<Card
 					title="245M+"
 					percent={100}
@@ -37,11 +30,11 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					supportingText="currencies and payment methods supported."
 				/>
 			</div>
-			<div className="w-1/2 flex flex-col gap-5">
-				<h3 className="text-primary text-4xl font-extrabold">
+			<div className="md:w-2/3 lg:w-1/2 flex flex-col gap-5">
+				<h3 className="text-primary text-4xl font-extrabold text-center lg:text-start">
 					Empowering Effortless Money Transfers
 				</h3>
-				<p className="font-medium text-base text-gray-200">
+				<p className="font-medium text-base text-gray-200 text-center lg:text-start">
 					Our platform is your gateway to effortless financial transactions. We
 					provide user-friendly, secure, and hassle-free money transfer
 					solutions, so you can efficiently manage your finances. Join us today
@@ -51,7 +44,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					<Image src={Empowering} alt="Empowering" />
 				</Hoverable>
 			</div>
-		</Stack>
+		</div>
 	);
 };
 
@@ -65,8 +58,10 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ title, supportingText, percent }) => {
 	return (
-		<div className="flex flex-col gap-2 w-1/2">
-			<div className="font-extrabold text-primary text-7xl">{title}</div>
+		<div className="flex flex-col gap-2 w-[48%]">
+			<div className="font-extrabold text-primary text-6xl lg:text-7xl">
+				{title}
+			</div>
 			<div className="h-5 bg-gray-700" style={{ width: `${percent}%` }} />
 			<p className="font-medium text-base text-gray-100">{supportingText}</p>
 		</div>
