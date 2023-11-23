@@ -30,6 +30,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 					alt="Business"
 					className="h-full object-cover"
 					round
+					locate
 				/>
 			</div>
 		</div>
