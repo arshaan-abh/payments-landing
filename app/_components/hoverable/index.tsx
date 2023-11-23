@@ -106,8 +106,7 @@ export const HoverableImage: FC<HoverableImageProps> = ({
 
 	useEffect(() => {
 		setSize();
-		addEventListener("resize", setSize);
-		return () => removeEventListener("resize", setSize);
+		new ResizeObserver(setSize).observe(imageRef.current as Element);
 	}, [setSize]);
 
 	const variableClassNames = round
