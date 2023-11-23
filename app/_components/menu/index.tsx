@@ -51,6 +51,7 @@ const MenuItem: FC<MenuItemProps> = ({ primary, children }) => {
 	const handleScroll = useCallback(() => {
 		const scrollY = window.scrollY || window.pageYOffset;
 		if (scrollY === 0) setDarkMode(false);
+		else if (scrollY > window.innerHeight * 8) setDarkMode(false);
 		else setDarkMode(true);
 	}, []);
 
