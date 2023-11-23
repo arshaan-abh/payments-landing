@@ -1,6 +1,4 @@
 import { type FC } from "react";
-import Stack from "../stack";
-import Grid from "../grid";
 import Accordion from "./Accordion";
 
 const faqs = [
@@ -33,12 +31,7 @@ interface FaqProps {}
 
 const Faq: FC<FaqProps> = ({}) => {
 	return (
-		<Stack
-			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			className="h-full flex flex-col justify-center gap-3"
-			// underLayer={<Grid black />}
-		>
+		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col justify-center gap-3">
 			<h3 className="font-extrabold text-3xl text-primary">FAQ</h3>
 			<p className="text-base text-gray-100 font-medium">
 				Welcome to the Selected Payments FAQ, your source for clear, insightful
@@ -51,7 +44,7 @@ const Faq: FC<FaqProps> = ({}) => {
 					</Accordion>
 				))}
 			</div>
-		</Stack>
+		</div>
 	);
 };
 
