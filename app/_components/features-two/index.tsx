@@ -19,7 +19,7 @@ function FeatureTwo() {
 			// underLayer={<Grid black />}
 		>
 			<div className="grow-2 min-h-[1rem]" />
-			<div className="flex items-center gap-x-16 gap-y-4 flex-col xl:flex-row w-2/3 lg:w-auto">
+			<div className="flex items-center gap-x-16 gap-y-4 flex-col xl:flex-row sm:w-2/3 lg:w-auto">
 				<div className="text-center xl:text-start xl:w-1/2 flex flex-col gap-2">
 					<div className="text-primary text-4xl font-extrabold">
 						ePOS All-In-One Solutions
@@ -50,8 +50,8 @@ function FeatureTwo() {
 				</div>
 			</div>
 			<div className="grow min-h-[1rem]" />
-			<div className="flex gap-x-16 gap-y-8 flex-col lg:flex-row items-center w-2/3 lg:w-auto">
-				<div className="lg:w-1/2 flex items-center">
+			<div className="flex gap-x-16 gap-y-8 flex-col lg:flex-row items-center sm:w-2/3 lg:w-auto">
+				<div className="flex items-center w-2/3 sm:w-full lg:w-1/2">
 					<Hoverable className="w-full" round>
 						<Image
 							src={bigPicture}
@@ -98,13 +98,15 @@ interface CardProps {
 
 export const Card: FC<CardProps> = ({ image, title, supportingText }) => {
 	return (
-		<div className="flex gap-6 items-center">
+		<div className="flex gap-6 items-center flex-col sm:flex-row">
 			<Hoverable className="w-max h-max ">
 				<Image src={image} alt="Small picture" />
 			</Hoverable>
 			<div className="flex flex-col gap-2">
-				<div className="font-extrabold text-2xl text-primary">{title}</div>
-				<div className="font-medium text-base text-gray-200">
+				<div className="font-extrabold text-2xl text-primary text-center sm:text-start">
+					{title}
+				</div>
+				<div className="font-medium text-base text-gray-200 text-center sm:text-start">
 					{supportingText}
 				</div>
 			</div>
