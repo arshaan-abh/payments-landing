@@ -33,15 +33,15 @@ function FeatureThree() {
 						</div>
 						<div className="w-2 h-2 shrink-0 border border-gray-200 rounded-full"></div>
 						<div className="text-gray-100 text-lg font-semibold uppercase">
-							Mobile Friendly
+							Innovative
 						</div>
 					</div>
 				</div>
 				<div className="w-1/2 text-gray-200 text-base font-medium">
 					Establish a thriving ecosystem for sellers on your platform. Cultivate
 					an environment where sellers not only succeed but prosper. Benefit
-					from Instant Payouts, Commission Alignment, Effortless Automation, and
-					Multi-Party.
+					from instant payouts, commission alignment, effortless automation, and
+					multi-party.
 				</div>
 			</div>
 			<div className="flex gap-10">
@@ -59,7 +59,7 @@ function FeatureThree() {
 					<Card
 						image={smallPictureThree}
 						title="Instant Settlements"
-						supportingText="Simplify the process with automation, ensuring swift and highly efficient settlement procedures that save you time and effort."
+						supportingText="Simplify the process with automation, ensuring swift and highly time-saving settlement procedures that save you time and effort."
 					/>
 					<Card
 						image={smallPictureFour}

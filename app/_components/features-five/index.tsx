@@ -41,7 +41,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col">
 			<div className="grow-2" />
 			<div
-				className="flex items-center gap-16 transition-all"
+				className="flex items-center gap-16 transition-all justify-between"
 				style={{ height: `${biggerHeight}%` }}
 				ref={biggerElementRef}
 			>
@@ -59,7 +59,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 			</div>
 			<div className="grow" />
 			<div
-				className="flex items-center gap-16 transition-all"
+				className="flex items-center gap-16 transition-all justify-between"
 				style={{ height: `${smallerHeight}%` }}
 				ref={smallerElementRef}
 			>

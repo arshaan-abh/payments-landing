@@ -55,7 +55,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 						<Image src={featureImageThree} alt="Multicurrency Payments" />
 					</Hoverable>
 				}
-				supportingText="Clients will recognise the benefits of adaptable multi-currency payment options designed to meet their international requirements."
+				supportingText="Clients will recognise the benefits of adaptable multi-currency payment options."
 			>
 				Multicurrency Payments
 			</Card>,

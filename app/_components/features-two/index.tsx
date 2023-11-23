@@ -34,7 +34,7 @@ function FeatureTwo() {
 						</div>
 						<div className="w-2 h-2 shrink-0 border border-gray-200 rounded-full"></div>
 						<div className="text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
-							Mobile Friendly
+							Innovative
 						</div>
 					</div>
 				</div>
@@ -69,12 +69,12 @@ function FeatureTwo() {
 					<Card
 						image={smallPictureTwo}
 						title="POS Payments without device"
-						supportingText="Witness optimized transactions without the need for any hardware, making your point-of-sale payments straightforward."
+						supportingText="Witness optimised transactions without the need for any hardware, making your point-of-sale payments straightforward."
 					/>
 					<Card
 						image={smallPictureThree}
 						title="Phone  payments using MO/TO"
-						supportingText="Empower mobile transactions for on-the-go ease and elevate your payment experience with the convenience of MO/TO payments."
+						supportingText="Empower mobile transactions for fluid flexibility and elevate your payment experience with the convenience of MO/TO payments."
 					/>
 					<Card
 						image={smallPictureFour}
