@@ -76,9 +76,9 @@ function FeatureEight() {
 				<div className="flex flex-col gap-1">
 					{t.items ? (
 						t.items.map((item, index) => (
-							<div className="flex justify-between items-center" key={index}>
-								<div className="font-medium text-gray-200 text-sm">{item}</div>
+							<div className="flex gap-2 items-center" key={index}>
 								<CheckIcon className="text-primary" />
+								<div className="font-medium text-gray-200 text-sm">{item}</div>
 							</div>
 						))
 					) : (
