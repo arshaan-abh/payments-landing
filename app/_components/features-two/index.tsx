@@ -15,11 +15,11 @@ function FeatureTwo() {
 		<Stack
 			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
 			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			className="h-full flex flex-col py-4"
+			className="h-full flex flex-col py-4 items-center"
 			// underLayer={<Grid black />}
 		>
 			<div className="grow-2 min-h-[1rem]" />
-			<div className="flex items-center gap-x-16 gap-y-4 flex-col xl:flex-row">
+			<div className="flex items-center gap-x-16 gap-y-4 flex-col xl:flex-row w-2/3 lg:w-auto">
 				<div className="text-center xl:text-start xl:w-1/2 flex flex-col gap-2">
 					<div className="text-primary text-4xl font-extrabold">
 						ePOS All-In-One Solutions
@@ -50,17 +50,17 @@ function FeatureTwo() {
 				</div>
 			</div>
 			<div className="grow min-h-[1rem]" />
-			<div className="flex gap-16 flex-col sm:flex-row items-center">
-				<div className="w-1/2 flex items-center">
+			<div className="flex gap-x-16 gap-y-8 flex-col lg:flex-row items-center w-2/3 lg:w-auto">
+				<div className="lg:w-1/2 flex items-center">
 					<Hoverable className="w-full" round>
 						<Image
 							src={bigPicture}
 							alt="Big picture"
-							className="w-full object-cover"
+							className="h-full object-cover"
 						/>
 					</Hoverable>
 				</div>
-				<div className="w-1/2 flex flex-col justify-between gap-6">
+				<div className="lg:w-1/2 flex flex-col justify-between gap-6">
 					<Card
 						image={smallPictureOne}
 						title="Flexible in-store payments"
