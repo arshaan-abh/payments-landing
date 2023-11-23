@@ -115,7 +115,7 @@ export const HoverableImage: FC<HoverableImageProps> = ({
 	return (
 		<>
 			<div
-				className="peer absolute hover:[--border:50%] hover:[--rounded:0]"
+				className="peer absolute hover:[--border:50%] hover:[--rounded:0] active:pointer-events-none"
 				style={{ width: width, height: height, left: left }}
 			>
 				<div
