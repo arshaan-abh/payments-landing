@@ -182,6 +182,7 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 									className="w-full"
 									multiline
 									rows={3}
+									FormHelperTextProps={{ style: { display: "none" } }}
 								></CustomTextField>
 							</div>
 						)}
