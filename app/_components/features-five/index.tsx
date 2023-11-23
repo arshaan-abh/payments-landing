@@ -8,7 +8,7 @@ interface FeatureFiveProps {}
 
 const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 	const biggerHeightValue = 50;
-	const smallerHeightValue = 30;
+	const smallerHeightValue = 25;
 
 	const [biggerHeight, setBiggerHeight] = useState<number>(biggerHeightValue);
 	const [smallerHeight, setSmallerHeight] =
@@ -17,7 +17,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 	const biggerElementRef = useRef<HTMLDivElement>(null);
 	const smallerElementRef = useRef<HTMLDivElement>(null);
 
-	const mouseMoveHandler = useCallback(() => {
+	/* const mouseMoveHandler = useCallback(() => {
 		setBiggerHeight(smallerHeightValue);
 		setSmallerHeight(biggerHeightValue);
 	}, []);
@@ -35,11 +35,11 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 			smallerElement?.removeEventListener("mousemove", mouseMoveHandler);
 			smallerElement?.removeEventListener("mouseleave", mouseLeaveHandler);
 		};
-	}, [mouseLeaveHandler, mouseMoveHandler]);
+	}, [mouseLeaveHandler, mouseMoveHandler]); */
 
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col">
-			<div className="grow-2" />
+		<div className="w-full h-[calc(100vh_-_4rem)] px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col">
+			<div className="grow-2 min-h-[1rem]" />
 			<div
 				className="flex items-center gap-16 transition-all justify-between"
 				style={{ height: `${biggerHeight}%` }}
@@ -57,7 +57,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 					supportingText="By easily issuing Prepaid Debit Cards tailored to your brand, you create a distinct competitive edge in the market. These adaptable solutions not only optimise payments but also empower your business to provide a unique payment experience that's both user-friendly and reflective of your brand's values. This uniqueness resonates with customers, enhancing their engagement and loyalty. Moreover, the introduction of these cards can open up new revenue streams, as satisfied customers are more likely to increase their spending and recommend your business to others. As you align your payment options with your brand identity, you're poised for business growth and long-term success."
 				/>
 			</div>
-			<div className="grow" />
+			<div className="grow min-h-[1rem]" />
 			<div
 				className="flex items-center gap-16 transition-all justify-between"
 				style={{ height: `${smallerHeight}%` }}
@@ -76,7 +76,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 					locate
 				/>
 			</div>
-			<div className="grow-2" />
+			<div className="grow-2 min-h-[1rem]" />
 		</div>
 	);
 };
