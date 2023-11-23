@@ -56,7 +56,7 @@ function FeatureTwo() {
 						<Image
 							src={bigPicture}
 							alt="Big picture"
-							className="w-full object-contain"
+							className="w-full object-cover"
 						/>
 					</Hoverable>
 				</div>

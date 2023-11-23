@@ -140,7 +140,7 @@ function FeatureEight() {
 					<Image
 						src={selectedImage}
 						alt="Selected Image"
-						className="object-contain h-full"
+						className="object-cover h-full"
 					/>
 				)}
 				<button onClick={closeModal}>Close Modal</button>
