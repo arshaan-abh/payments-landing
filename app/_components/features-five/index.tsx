@@ -4,19 +4,20 @@ import Business from "public/business-finance.jpg";
 import Image from "next/image";
 import Grid from "../grid";
 import Stack from "../stack";
+import Hoverable, { HoverableImage } from "../hoverable";
 
 interface FeatureFiveProps {}
 
 const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 	return (
-		<Stack
-			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			className="h-full flex flex-col justify-evenly"
-			// underLayer={<Grid black />}
-		>
+		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col justify-evenly">
 			<div className="flex items-center h-2/4 gap-24">
-				<Image src={Pre} alt="Pre" className="h-full object-contain" />
+				<HoverableImage
+					src={Pre}
+					alt="Pre"
+					className="h-full object-cover"
+					round
+				/>
 				<Card
 					title="Pre-Paid Debit Card Issuing with Bank Account"
 					supportingText="By easily issuing Prepaid Debit Cards tailored to your brand, you create a distinct competitive edge in the market. These adaptable solutions not only optimise payments but also empower your business to provide a unique payment experience that's both user-friendly and reflective of your brand's values. This uniqueness resonates with customers, enhancing their engagement and loyalty. Moreover, the introduction of these cards can open up new revenue streams, as satisfied customers are more likely to increase their spending and recommend your business to others. As you align your payment options with your brand identity, you're poised for business growth and long-term success."
@@ -27,13 +28,14 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 					title="Business Finance Service with Bank Account"
 					supportingText="We've tailored our services to provide you with a seamless experience in managing your business's credit lines and bank accounts."
 				/>
-				<Image
+				<HoverableImage
 					src={Business}
 					alt="Business"
-					className="h-full object-contain"
+					className="h-full object-cover"
+					round
 				/>
 			</div>
-		</Stack>
+		</div>
 	);
 };
 
