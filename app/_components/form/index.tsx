@@ -78,48 +78,48 @@ function Form() {
 	};
 
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex items-center">
-			<div className="bg-primary rounded-xl flex flex-col items-center p-16">
-				<h3 className="text-secondary text-4xl font-extrabold mb-2">
-					Begin Your Next Chapter Now!
-				</h3>
-				<p className="text-lg font-medium text-gray-400 mb-8">
-					Elevate your business with our convenient in-app payment solutions.
-				</p>
-				<div className="flex w-full justify-evenly gap-16 mb-2.5">
-					<div className="flex flex-col basis-1/2">
-						<p className="text-xl text-secondary font-extrabold text-center mb-4">
-							Select your favorite solutions
-						</p>
-						<div className="flex flex-wrap gap-3 mb-3">
-							{options.map((option, index) => {
-								const handler = () => {
-									checkHandler(index);
-								};
-								return (
-									<Checkbox checkHandler={handler} key={index}>
-										{option}
-									</Checkbox>
-								);
-							})}
-						</div>
-						{checkableList[11] && (
-							<textarea
-								id="message"
-								rows={3}
-								disabled={checkableList[11] ? false : true}
-								className="w-full text-base font-semibold text-secondary border-2 border-gray-100 rounded-md p-2.5 bg-transparent focus:border-secondary"
-								placeholder="Others"
-								style={{ resize: "none" }}
-							></textarea>
-						)}
+		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col items-center">
+			<div className="grow min-h-[1rem]" />
+			<h3 className="text-4xl font-extrabold mb-2">
+				Begin Your Next Chapter Now!
+			</h3>
+			<p className="text-lg font-medium text-gray-400 mb-8">
+				Elevate your business with our convenient in-app payment solutions.
+			</p>
+			<div className="flex w-full justify-evenly gap-16 mb-2.5">
+				<div className="flex flex-col basis-1/2">
+					<p className="text-xl text-secondary font-extrabold text-center mb-4">
+						Select your favorite solutions
+					</p>
+					<div className="flex flex-wrap gap-3 mb-3">
+						{options.map((option, index) => {
+							const handler = () => {
+								checkHandler(index);
+							};
+							return (
+								<Checkbox checkHandler={handler} key={index}>
+									{option}
+								</Checkbox>
+							);
+						})}
 					</div>
-					<FormSection control={control} errors={errors} />
+					{checkableList[11] && (
+						<textarea
+							id="message"
+							rows={3}
+							disabled={checkableList[11] ? false : true}
+							className="w-full text-base font-semibold text-secondary border-2 border-gray-100 rounded-md p-2.5 bg-transparent focus:border-secondary"
+							placeholder="Others"
+							style={{ resize: "none" }}
+						></textarea>
+					)}
 				</div>
-				<Button clickHandler={handleFormSubmit} white>
-					Enquire Now
-				</Button>
+				<FormSection control={control} errors={errors} />
 			</div>
+			<Button clickHandler={handleFormSubmit} white>
+				Enquire Now
+			</Button>
+			<div className="grow-2 min-h-[1rem]" />
 		</div>
 	);
 }

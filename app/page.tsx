@@ -83,13 +83,13 @@ export default function Home() {
 			</section>
 			<section
 				id="feature-nine"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden bg-primary text-secondary"
 			>
 				<Form />
 			</section>
 			<section
 				id="feature-ten"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+				className="h-screen min-h-fit flex flex-col items-center overflow-hidden bg-primary text-secondary"
 			>
 				<Footer />
 			</section>
