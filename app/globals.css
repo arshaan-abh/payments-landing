@@ -37,10 +37,6 @@ html {
 	scroll-snap-type: y mandatory;
 }
 
-section {
-	scroll-snap-align: center;
-}
-
 .ReactModal__Overlay {
 	opacity: 0;
 	scale: 0;
@@ -141,6 +137,11 @@ textarea::-ms-input-placeholder {
 	font-size: 10px /* text-2xs */;
 }
 
+section {
+	scroll-snap-align: none;
+	padding-bottom: 1rem;
+}
+
 @media (min-width: 376px /* xs */) {
 	:root {
 		font-size: 12px /* text-xs */;
@@ -150,6 +151,11 @@ textarea::-ms-input-placeholder {
 @media (min-width: 640px /* sm */) {
 	:root {
 		font-size: 14px /* text-sm */;
+	}
+
+	section {
+		scroll-snap-align: center;
+		height: 100vh;
 	}
 }
 

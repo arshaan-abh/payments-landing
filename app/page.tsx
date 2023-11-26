@@ -23,7 +23,7 @@ export default function Home() {
 			<Stack underLayer={<HeroBackground />}>
 				<section
 					id="hero"
-					className="h-screen min-h-fit flex flex-col items-center relative bg-gradient-to-r from-primary to-transparent overflow-hidden"
+					className="flex flex-col items-center relative bg-gradient-to-r from-primary to-transparent overflow-hidden"
 				>
 					<MarketingBanner data={firstMarqueeData} />
 					<Navbar />
@@ -32,64 +32,64 @@ export default function Home() {
 			</Stack>
 			<section
 				id="feature-one"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+				className="flex flex-col items-center overflow-hidden"
 			>
 				<MarketingBanner data={secondMarqueeData} white />
 				<FeatureOne />
 			</section>
 			<section
 				id="feature-two"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+				className="flex flex-col items-center overflow-hidden"
 			>
 				<FeatureTwo />
 			</section>
 			<section
 				id="feature-three"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+				className="flex flex-col items-center overflow-hidden"
 			>
 				<FeatureThree />
 			</section>
 			<section
 				id="feature-four"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+				className="flex flex-col items-center overflow-hidden"
 			>
 				<FeatureFour />
 			</section>
 			<section
 				id="feature-five"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+				className="flex flex-col items-center overflow-hidden"
 			>
 				<MarketingBanner data={secondMarqueeData} white />
 				<FeatureFive />
 			</section>
 			<section
 				id="feature-six"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+				className="flex flex-col items-center overflow-hidden"
 			>
 				<FeatureSix />
 			</section>
 			<section
 				id="feature-seven"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+				className="flex flex-col items-center overflow-hidden"
 			>
 				<FeatureSeven />
 			</section>
 			<section
 				id="feature-eight"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden"
+				className="flex flex-col items-center overflow-hidden"
 			>
 				<MarketingBanner data={secondMarqueeData} white />
 				<FaqSection />
 			</section>
 			<section
 				id="feature-nine"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden bg-primary text-secondary"
+				className="flex flex-col items-center overflow-hidden bg-primary text-secondary"
 			>
 				<Form />
 			</section>
 			<section
 				id="feature-ten"
-				className="h-screen min-h-fit flex flex-col items-center overflow-hidden bg-primary text-secondary"
+				className="flex flex-col items-center overflow-hidden bg-primary text-secondary"
 			>
 				<Footer />
 			</section>
