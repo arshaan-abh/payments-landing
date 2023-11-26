@@ -21,6 +21,7 @@ const useSlider = ({
 	ReactNode,
 	RefObject<HTMLButtonElement>,
 	RefObject<HTMLButtonElement>,
+	number,
 ] => {
 	const [index, setIndex] = useState<number>(1);
 	const prevButtonRef = useRef<HTMLButtonElement>(null);
@@ -78,6 +79,7 @@ const useSlider = ({
 		</div>,
 		prevButtonRef,
 		nextButtonRef,
+		index,
 	];
 };
 

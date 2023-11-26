@@ -89,7 +89,7 @@ function Form() {
 		breakpoints: [{ breakpoint: 768, state: 2.5 }],
 	});
 
-	const [slider, _, nextButtonRef] = useSlider({
+	const [slider, prevButtonRef, nextButtonRef, index] = useSlider({
 		children: [
 			<div className="flex flex-col basis-1/2" key={0}>
 				<p className="text-xl text-secondary font-extrabold text-center mb-4">
@@ -134,15 +134,38 @@ function Form() {
 				Elevate your business with our convenient in-app payment solutions.
 			</p>
 			<div className="flex mb-2.5">{slider}</div>
-			<Button
-				customRef={nextButtonRef}
-				clickHandler={() => {
-					handleFormSubmit();
-				}}
-				white
-			>
-				Enquire Now
-			</Button>
+			<div className="flex gap-4">
+				{visibleSlidesNumber === 2 ? (
+					<Button
+						clickHandler={() => {
+							handleFormSubmit();
+						}}
+						white
+					>
+						Enquire Now
+					</Button>
+				) : (
+					<>
+						{index === 1 ? (
+							<Button white className="f-full" customRef={nextButtonRef}>
+								Next
+							</Button>
+						) : (
+							<Button customRef={prevButtonRef}>Back</Button>
+						)}
+						{index === 2 && (
+							<Button
+								clickHandler={() => {
+									handleFormSubmit();
+								}}
+								white
+							>
+								Enquire Now
+							</Button>
+						)}
+					</>
+				)}
+			</div>
 			<div className="grow-2 min-h-[1rem]" />
 		</div>
 	);

@@ -6,6 +6,7 @@ interface ButtonProps {
 	children?: ReactNode;
 	white?: boolean;
 	clickHandler?: MouseEventHandler<HTMLButtonElement>;
+	className?: string;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -13,6 +14,7 @@ const Button: FC<ButtonProps> = ({
 	white,
 	clickHandler,
 	customRef,
+	className = "",
 }) => {
 	const variableClassNames = white
 		? "text-primary bg-white"
@@ -21,7 +23,7 @@ const Button: FC<ButtonProps> = ({
 		<button
 			ref={customRef}
 			onClick={clickHandler}
-			className={`${variableClassNames} py-3 px-8 rounded-md text-base font-bold whitespace-nowrap`}
+			className={`${variableClassNames} py-3 px-8 rounded-md text-base font-bold whitespace-nowrap ${className}`}
 		>
 			{children}
 		</button>
