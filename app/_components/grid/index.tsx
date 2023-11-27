@@ -18,7 +18,7 @@ const Grid: FC<GridProps> = ({ black }) => {
 	const y = 6;
 	const variableClassNames = black ? "" : "opacity-10";
 	return (
-		<div className="flex flex-col justify-evenly w-full h-full select-none pointer-events-none">
+		<div className="pointer-events-none flex h-full w-full select-none flex-col justify-evenly">
 			{Array.from(Array(y), (_, yIndex) => (
 				<div key={yIndex} className="flex justify-between">
 					{Array.from(Array(x), (_, xIndex) => (

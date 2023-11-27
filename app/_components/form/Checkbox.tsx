@@ -17,7 +17,7 @@ const Checkbox: FC<checkboxProps> = ({ children, checkHandler }) => {
 	}, [setChecked, checkHandler]);
 
 	return (
-		<label htmlFor={id} className="flex select-none cursor-pointer grow">
+		<label htmlFor={id} className="flex grow cursor-pointer select-none">
 			<input
 				id={id}
 				type="checkbox"
@@ -26,12 +26,12 @@ const Checkbox: FC<checkboxProps> = ({ children, checkHandler }) => {
 				onChange={handler}
 			/>
 			<div
-				className={`text-base font-semibold text-secondary border-2 pr-4 rounded-md p-2.5 flex items-center gap-2.5 w-full ${
+				className={`flex w-full items-center gap-2.5 rounded-md border-2 p-2.5 pr-4 text-base font-semibold text-secondary ${
 					checked ? "border-secondary" : "border-gray-100"
 				}`}
 			>
 				<div
-					className={`w-6 h-6 rounded-full flex items-center justify-center ${
+					className={`flex h-6 w-6 items-center justify-center rounded-full ${
 						checked ? "bg-secondary" : "bg-gray-500"
 					}`}
 				>

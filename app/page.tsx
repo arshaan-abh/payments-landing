@@ -23,7 +23,7 @@ export default function Home() {
 			<Stack underLayer={<HeroBackground />}>
 				<section
 					id="hero"
-					className="flex flex-col items-center relative bg-gradient-to-r from-primary to-transparent overflow-hidden"
+					className="relative flex flex-col items-center overflow-hidden bg-gradient-to-r from-primary to-transparent"
 				>
 					<MarketingBanner data={firstMarqueeData} />
 					<Navbar />

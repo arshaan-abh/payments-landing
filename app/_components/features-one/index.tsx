@@ -67,15 +67,15 @@ const FeatureOne: FC<CardProps> = ({}) => {
 		<Stack
 			containerClassName="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
 			// underClassName="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl"
-			className="h-full flex flex-col py-4"
+			className="flex h-full flex-col py-4"
 			// underLayer={<Grid black />}
 		>
-			<div className="grow-2 min-h-[1rem]" />
-			<div className="flex items-center gap-x-16 gap-y-2 flex-col md:flex-row">
-				<div className="md:w-1/2 text-primary text-4xl font-extrabold text-center md:text-left">
+			<div className="min-h-[1rem] grow-2" />
+			<div className="flex flex-col items-center gap-x-16 gap-y-2 md:flex-row">
+				<div className="text-center text-4xl font-extrabold text-primary md:w-1/2 md:text-left">
 					Simplified Customer Payment Processing!
 				</div>
-				<div className="md:w-1/2 text-gray-200 text-base font-medium text-center md:text-left">
+				<div className="text-center text-base font-medium text-gray-200 md:w-1/2 md:text-left">
 					<p className="inline">
 						In a rapidly evolving marketplace, staying ahead means embracing
 						efficient solutions.
@@ -87,7 +87,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					</p>
 				</div>
 			</div>
-			<div className="grow min-h-[1rem]" />
+			<div className="min-h-[1rem] grow" />
 			<div className="flex flex-col gap-8">
 				{slider}
 				{visibleSlidesNumber < 3 && (
@@ -95,7 +95,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 						<SlideButton buttonRef={prevButtonRef}>
 							<ArrowLeftIcon />
 						</SlideButton>
-						<div className="uppercase font-light text-2xl text-gray-400">
+						<div className="text-2xl font-light uppercase text-gray-400">
 							Scroll
 						</div>
 						<SlideButton buttonRef={nextButtonRef}>
@@ -104,7 +104,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					</div>
 				)}
 			</div>
-			<div className="grow-2 min-h-[1rem]" />
+			<div className="min-h-[1rem] grow-2" />
 		</Stack>
 	);
 };
@@ -119,12 +119,12 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 	return (
-		<div className="flex flex-col basis-1/3 items-center">
-			<div className="w-2/3 xs:w-auto mb-4">{media}</div>
-			<div className="text-primary text-2xl font-extrabold text-center sm:text-start w-full mb-2">
+		<div className="flex basis-1/3 flex-col items-center">
+			<div className="mb-4 w-2/3 xs:w-auto">{media}</div>
+			<div className="mb-2 w-full text-center text-2xl font-extrabold text-primary sm:text-start">
 				{children}
 			</div>
-			<div className="text-gray-200 text-base font-medium text-center sm:text-start w-full">
+			<div className="w-full text-center text-base font-medium text-gray-200 sm:text-start">
 				{supportingText}
 			</div>
 		</div>

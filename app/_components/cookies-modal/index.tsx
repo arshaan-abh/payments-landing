@@ -21,18 +21,18 @@ const CookiesModal: FC<CookiesModalProps> = ({}) => {
 
 	if (opened)
 		return (
-			<div className="w-72 fixed bottom-12 left-10 z-10 bg-gray-700 rounded-xl p-5 pt-6 flex flex-col gap-2">
+			<div className="fixed bottom-12 left-10 z-10 flex w-72 flex-col gap-2 rounded-xl bg-gray-700 p-5 pt-6">
 				<Stack
 					underClassName="flex justify-end items-start -translate-y-6 translate-x-5"
 					underLayer={
 						<Image
 							src={cookies}
 							alt="Cookies"
-							className="pointer-events-none select-none -mt-10 -mr-6 animate-wiggle w-[7.8125rem]"
+							className="pointer-events-none -mr-6 -mt-10 w-[7.8125rem] animate-wiggle select-none"
 						/>
 					}
 				>
-					<div className="text-primary font-bold text-2xl">Cookies</div>
+					<div className="text-2xl font-bold text-primary">Cookies</div>
 					<p className="text-sm font-normal text-primary">
 						We use cookies to make your experience better!
 					</p>

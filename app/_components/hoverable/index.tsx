@@ -29,7 +29,7 @@ const Hoverable: FC<HoverableProps> = ({
 			className={`relative hover:[--border:50%] hover:[--rounded:0] ${className}`}
 		>
 			<div
-				className={`transition-all duration-300 overflow-hidden ${className}`}
+				className={`overflow-hidden transition-all duration-300 ${className}`}
 				style={{
 					borderRadius: round ? "var(--rounded, 2.5rem)" : "0",
 					...style,
@@ -38,38 +38,38 @@ const Hoverable: FC<HoverableProps> = ({
 				{children}
 			</div>
 			<div
-				className="bg-gray-600 h-0.5 absolute top-0 right-0 transition-all duration-300"
+				className="absolute right-0 top-0 h-0.5 bg-gray-600 transition-all duration-300"
 				style={{ width: "var(--border, 0.5rem)" }}
 			/>
 			<div
-				className="bg-gray-600 w-0.5 absolute top-0 right-0 transition-all duration-300"
+				className="absolute right-0 top-0 w-0.5 bg-gray-600 transition-all duration-300"
 				style={{ height: "var(--border, 0.5rem)" }}
 			/>
 
 			<div
-				className="bg-gray-600 h-0.5 absolute bottom-0 right-0 transition-all duration-300"
+				className="absolute bottom-0 right-0 h-0.5 bg-gray-600 transition-all duration-300"
 				style={{ width: "var(--border, 0.5rem)" }}
 			/>
 			<div
-				className="bg-gray-600 w-0.5 absolute bottom-0 right-0 transition-all duration-300"
+				className="absolute bottom-0 right-0 w-0.5 bg-gray-600 transition-all duration-300"
 				style={{ height: "var(--border, 0.5rem)" }}
 			/>
 
 			<div
-				className="bg-gray-600 h-0.5 absolute bottom-0 left-0 transition-all duration-300"
+				className="absolute bottom-0 left-0 h-0.5 bg-gray-600 transition-all duration-300"
 				style={{ width: "var(--border, 0.5rem)" }}
 			/>
 			<div
-				className="bg-gray-600 w-0.5 absolute bottom-0 left-0 transition-all duration-300"
+				className="absolute bottom-0 left-0 w-0.5 bg-gray-600 transition-all duration-300"
 				style={{ height: "var(--border, 0.5rem)" }}
 			/>
 
 			<div
-				className="bg-gray-600 h-0.5 absolute top-0 left-0 transition-all duration-300"
+				className="absolute left-0 top-0 h-0.5 bg-gray-600 transition-all duration-300"
 				style={{ width: "var(--border, 0.5rem)" }}
 			/>
 			<div
-				className="bg-gray-600 w-0.5 absolute top-0 left-0 transition-all duration-300"
+				className="absolute left-0 top-0 w-0.5 bg-gray-600 transition-all duration-300"
 				style={{ height: "var(--border, 0.5rem)" }}
 			/>
 		</div>
@@ -122,38 +122,38 @@ export const HoverableImage: FC<HoverableImageProps> = ({
 				style={{ width: width, height: height, left: locate ? left : "auto" }}
 			>
 				<div
-					className="bg-gray-600 h-0.5 absolute top-0 right-0 transition-all duration-300"
+					className="absolute right-0 top-0 h-0.5 bg-gray-600 transition-all duration-300"
 					style={{ width: "var(--border, 0.5rem)" }}
 				/>
 				<div
-					className="bg-gray-600 w-0.5 absolute top-0 right-0 transition-all duration-300"
+					className="absolute right-0 top-0 w-0.5 bg-gray-600 transition-all duration-300"
 					style={{ height: "var(--border, 0.5rem)" }}
 				/>
 
 				<div
-					className="bg-gray-600 h-0.5 absolute bottom-0 right-0 transition-all duration-300"
+					className="absolute bottom-0 right-0 h-0.5 bg-gray-600 transition-all duration-300"
 					style={{ width: "var(--border, 0.5rem)" }}
 				/>
 				<div
-					className="bg-gray-600 w-0.5 absolute bottom-0 right-0 transition-all duration-300"
+					className="absolute bottom-0 right-0 w-0.5 bg-gray-600 transition-all duration-300"
 					style={{ height: "var(--border, 0.5rem)" }}
 				/>
 
 				<div
-					className="bg-gray-600 h-0.5 absolute bottom-0 left-0 transition-all duration-300"
+					className="absolute bottom-0 left-0 h-0.5 bg-gray-600 transition-all duration-300"
 					style={{ width: "var(--border, 0.5rem)" }}
 				/>
 				<div
-					className="bg-gray-600 w-0.5 absolute bottom-0 left-0 transition-all duration-300"
+					className="absolute bottom-0 left-0 w-0.5 bg-gray-600 transition-all duration-300"
 					style={{ height: "var(--border, 0.5rem)" }}
 				/>
 
 				<div
-					className="bg-gray-600 h-0.5 absolute top-0 left-0 transition-all duration-300"
+					className="absolute left-0 top-0 h-0.5 bg-gray-600 transition-all duration-300"
 					style={{ width: "var(--border, 0.5rem)" }}
 				/>
 				<div
-					className="bg-gray-600 w-0.5 absolute top-0 left-0 transition-all duration-300"
+					className="absolute left-0 top-0 w-0.5 bg-gray-600 transition-all duration-300"
 					style={{ height: "var(--border, 0.5rem)" }}
 				/>
 			</div>

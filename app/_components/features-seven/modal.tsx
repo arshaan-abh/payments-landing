@@ -33,8 +33,8 @@ function ModalSection(props: ModalProps) {
 				overlay: { zIndex: 999 },
 			}}
 		>
-			<div className="grid grid-cols-12 h-full">
-				<div className="col-span-4 object-contain h-full flex items-center">
+			<div className="grid h-full grid-cols-12">
+				<div className="col-span-4 flex h-full items-center object-contain">
 					{ModalData[selectedImage]?.image && (
 						<Image src={ModalData[selectedImage]?.image} alt={selectedImage} />
 					)}
@@ -54,12 +54,12 @@ function ModalSection(props: ModalProps) {
 					</div>
 					<div className="space-y-2">
 						<div>
-							<span className="text-2xl text-primary font-bold">
+							<span className="text-2xl font-bold text-primary">
 								{ModalData[selectedImage]?.description[0].information.name}
 							</span>
 						</div>
 						<div className="flex justify-between">
-							<span className="text-primary text-base font-normal text-end">
+							<span className="text-end text-base font-normal text-primary">
 								{ModalData[selectedImage]?.description[0].information.inf1}
 							</span>
 							<span className="text-base font-normal text-gray-300">
@@ -67,7 +67,7 @@ function ModalSection(props: ModalProps) {
 							</span>
 						</div>
 						<div className="flex justify-between">
-							<span className="text-primary text-base font-normal">
+							<span className="text-base font-normal text-primary">
 								{ModalData[selectedImage]?.description[0].information.inf2}
 							</span>
 							<span className="text-base font-normal text-gray-300">
@@ -75,7 +75,7 @@ function ModalSection(props: ModalProps) {
 							</span>
 						</div>
 						<div className="flex justify-between">
-							<span className="text-primary text-base font-normal">
+							<span className="text-base font-normal text-primary">
 								{ModalData[selectedImage]?.description[0].information.inf3}
 							</span>
 							<span className="text-base font-normal text-gray-300">
@@ -83,7 +83,7 @@ function ModalSection(props: ModalProps) {
 							</span>
 						</div>
 						<div className="flex justify-between">
-							<span className="text-primary text-base font-normal">
+							<span className="text-base font-normal text-primary">
 								{ModalData[selectedImage]?.description[0].information.inf4}
 							</span>
 							<span className="text-base font-normal text-gray-300">
@@ -91,7 +91,7 @@ function ModalSection(props: ModalProps) {
 							</span>
 						</div>
 						<div className="flex justify-between">
-							<span className="text-primary text-base font-normal">
+							<span className="text-base font-normal text-primary">
 								{ModalData[selectedImage]?.description[0].information.inf5}
 							</span>
 							<span className="text-base font-normal text-gray-300">
@@ -101,27 +101,27 @@ function ModalSection(props: ModalProps) {
 					</div>
 					<div className="space-y-2">
 						<div>
-							<span className="font-bold text-2xl text-primary">
+							<span className="text-2xl font-bold text-primary">
 								{ModalData[selectedImage]?.description[0].connecting.name}
 							</span>
 						</div>
 						<div>
-							<span className="text-primary text-base font-normal">
+							<span className="text-base font-normal text-primary">
 								{ModalData[selectedImage]?.description[0].connecting.con1}
 							</span>
 						</div>
 						<div>
-							<span className="text-primary text-base font-normal">
+							<span className="text-base font-normal text-primary">
 								{ModalData[selectedImage]?.description[0].connecting.con2}
 							</span>
 						</div>
 						<div>
-							<span className="text-primary text-base font-normal">
+							<span className="text-base font-normal text-primary">
 								{ModalData[selectedImage]?.description[0].connecting.con3}
 							</span>
 						</div>
 						<div>
-							<span className="text-primary text-base font-normal">
+							<span className="text-base font-normal text-primary">
 								{ModalData[selectedImage]?.description[0].connecting.con4}
 							</span>
 						</div>

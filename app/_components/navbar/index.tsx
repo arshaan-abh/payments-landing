@@ -7,14 +7,14 @@ interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
 	return (
-		<nav className="shrink-0 w-full flex flex-col px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl">
-			<div className="flex gap-10 items-center py-6 justify-center md:justify-between">
+		<nav className="flex w-full shrink-0 flex-col px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<div className="flex items-center justify-center gap-10 py-6 md:justify-between">
 				<Image src={logo} alt="Logo" />
 				<div className="hidden md:flex">
 					<Button white>Enquire Now</Button>
 				</div>
 			</div>
-			<div className="border-b border-gray-700 w-full h-px opacity-10" />
+			<div className="h-px w-full border-b border-gray-700 opacity-10" />
 		</nav>
 	);
 };

@@ -50,11 +50,11 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 
 	const theme = createTheme();
 	return (
-		<div className="flex flex-col basis-1/2">
-			<p className="text-xl text-secondary font-extrabold text-center mb-4">
+		<div className="flex basis-1/2 flex-col">
+			<p className="mb-4 text-center text-xl font-extrabold text-secondary">
 				Begin your next chapter now!
 			</p>
-			<form className="rounded-md w-full flex flex-col justify-center">
+			<form className="flex w-full flex-col justify-center rounded-md">
 				<div>
 					<Controller
 						name="name"

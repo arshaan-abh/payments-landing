@@ -55,7 +55,7 @@ const MarketingBanner: FC<MarketingBannerProps> = ({ white, data }) => {
 	return (
 		<header
 			ref={marqueeRef}
-			className={`${variableClassNames} flex w-full overflow-hidden shrink-0`}
+			className={`${variableClassNames} flex w-full shrink-0 overflow-hidden`}
 		>
 			{data.length !== 0 && (
 				<>
@@ -90,12 +90,12 @@ const MarqueeItems: FC<MarqueeItemsProps> = ({
 }) => {
 	return (
 		<div
-			className={`gap-5 pl-5 flex min-w-max w-screen shrink-0 ${className} ${
+			className={`flex w-screen min-w-max shrink-0 gap-5 pl-5 ${className} ${
 				paused && "animation-play-state-paused"
 			}`}
 		>
 			{data.map((marqueeItem, index) => (
-				<div key={index} className="flex gap-5 items-center py-2.5">
+				<div key={index} className="flex items-center gap-5 py-2.5">
 					{marqueeItem.head ?? <ThunderIcon className="text-secondary" />}
 					<div className="text-xl font-bold">{marqueeItem.body}</div>
 				</div>

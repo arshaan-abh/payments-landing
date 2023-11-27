@@ -31,16 +31,16 @@ interface FaqProps {}
 
 const Faq: FC<FaqProps> = ({}) => {
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col justify-center gap-3">
-			<h3 className="font-extrabold text-3xl text-primary">FAQ</h3>
-			<p className="text-base text-gray-100 font-medium">
+		<div className="flex h-full w-full flex-col justify-center gap-3 px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<h3 className="text-3xl font-extrabold text-primary">FAQ</h3>
+			<p className="text-base font-medium text-gray-100">
 				Welcome to the Selected Payments FAQ, your source for clear, insightful
 				answers.
 			</p>
 			<div>
 				{faqs.map((faq, index) => (
 					<Accordion key={index} title={faq.title}>
-						<p className="text-base text-gray-100 font-medium">{faq.answer}</p>
+						<p className="text-base font-medium text-gray-100">{faq.answer}</p>
 					</Accordion>
 				))}
 			</div>

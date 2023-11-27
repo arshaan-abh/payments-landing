@@ -6,19 +6,19 @@ import Grid from "../grid";
 
 function Hero() {
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl">
+		<div className="h-full w-full px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<Stack
 				containerClassName="h-full flex items-center"
 				className="flex flex-col gap-10"
 				underLayer={<Grid />}
 			>
-				<h1 className="text-white font-medium text-6xl lg:w-1/2 text-center md:text-left">
-					<span className="font-extrabold whitespace-nowrap bg-underline">
+				<h1 className="text-center text-6xl font-medium text-white md:text-left lg:w-1/2">
+					<span className="whitespace-nowrap bg-underline font-extrabold">
 						Grow Sales
 					</span>
 					&nbsp;with a better payment solution
 				</h1>
-				<div className="text-white text-base font-normal lg:w-1/2 text-center md:text-left">
+				<div className="text-center text-base font-normal text-white md:text-left lg:w-1/2">
 					<p>
 						Selected Payments, a leading one-stop payment solution for
 						cross-border commerce, marketplaces, and platforms enables the means
@@ -31,7 +31,7 @@ function Hero() {
 						this process is simpler and faster.
 					</p>
 				</div>
-				<div className="flex gap-2.5 lg:w-1/2 justify-center md:justify-start">
+				<div className="flex justify-center gap-2.5 md:justify-start lg:w-1/2">
 					<Button white>Enquire Now</Button>
 					<Button>Contact us</Button>
 				</div>
@@ -70,7 +70,7 @@ export const HeroBackground: FC<HeroBackgroundProps> = ({}) => {
 
 	return (
 		<video
-			className="w-full h-full object-cover"
+			className="h-full w-full object-cover"
 			autoPlay
 			loop
 			muted

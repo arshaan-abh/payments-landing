@@ -21,15 +21,15 @@ const Accordion: FC<AccordionProps> = ({ title, children }) => {
 	return (
 		<div className="border-b-2 border-primary">
 			<button
-				className="flex w-full justify-between items-center py-6 gap-4"
+				className="flex w-full items-center justify-between gap-4 py-6"
 				ref={buttonRef}
 				onClick={clickHandler}
 			>
-				<h4 className="font-semibold text-3xl text-primary">{title}</h4>
+				<h4 className="text-3xl font-semibold text-primary">{title}</h4>
 				{open ? (
-					<PlaneMinusIcon className="text-primary shrink-0" />
+					<PlaneMinusIcon className="shrink-0 text-primary" />
 				) : (
-					<PlanePlusIcon className="text-primary shrink-0" />
+					<PlanePlusIcon className="shrink-0 text-primary" />
 				)}
 			</button>
 			<div

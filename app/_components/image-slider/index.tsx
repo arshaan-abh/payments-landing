@@ -31,8 +31,8 @@ const ImageSlider = () => {
 							<div>
 								<Image src={image} alt={id} />
 							</div>
-							<div className="h-full pt-5 pl-3">
-								<span className="text-primary text-xl font-bold">
+							<div className="h-full pl-3 pt-5">
+								<span className="text-xl font-bold text-primary">
 									Marketing Banner
 								</span>
 							</div>
@@ -48,8 +48,8 @@ const ImageSlider = () => {
 							<div>
 								<Image src={image} alt={id} />
 							</div>
-							<div className="h-full pt-5 pl-3">
-								<span className="text-primary text-xl font-bold">
+							<div className="h-full pl-3 pt-5">
+								<span className="text-xl font-bold text-primary">
 									Marketing Banner
 								</span>
 							</div>
@@ -65,8 +65,8 @@ const ImageSlider = () => {
 							<div>
 								<Image src={image} alt={id} />
 							</div>
-							<div className="h-full pt-5 pl-3">
-								<span className="text-primary text-xl font-bold">
+							<div className="h-full pl-3 pt-5">
+								<span className="text-xl font-bold text-primary">
 									Marketing Banner
 								</span>
 							</div>
@@ -82,8 +82,8 @@ const ImageSlider = () => {
 							<div>
 								<Image src={image} alt={id} />
 							</div>
-							<div className="h-full pt-5 pl-3">
-								<span className="text-primary text-xl font-bold">
+							<div className="h-full pl-3 pt-5">
+								<span className="text-xl font-bold text-primary">
 									Marketing Banner
 								</span>
 							</div>
@@ -99,8 +99,8 @@ const ImageSlider = () => {
 							<div>
 								<Image src={image} alt={id} />
 							</div>
-							<div className="h-full pt-5 pl-3">
-								<span className="text-primary text-xl font-bold">
+							<div className="h-full pl-3 pt-5">
+								<span className="text-xl font-bold text-primary">
 									Marketing Banner
 								</span>
 							</div>
@@ -116,8 +116,8 @@ const ImageSlider = () => {
 							<div>
 								<Image src={image} alt={id} />
 							</div>
-							<div className="h-full pt-5 pl-3">
-								<span className="text-primary text-xl font-bold">
+							<div className="h-full pl-3 pt-5">
+								<span className="text-xl font-bold text-primary">
 									Marketing Banner
 								</span>
 							</div>

@@ -38,16 +38,16 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 	}, [mouseLeaveHandler, mouseMoveHandler]); */
 
 	return (
-		<div className="w-full h-[calc(100vh_-_4rem)] px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col">
-			<div className="grow-2 min-h-[1rem]" />
+		<div className="flex h-[calc(100vh_-_4rem)] w-full flex-col px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<div className="min-h-[1rem] grow-2" />
 			<div
-				className="flex items-center gap-8 xl:gap-16 transition-all xl:justify-between flex-col xl:flex-row xl:h-1/2"
+				className="flex flex-col items-center gap-8 transition-all xl:h-1/2 xl:flex-row xl:justify-between xl:gap-16"
 				ref={biggerElementRef}
 			>
 				<HoverableImage
 					src={Pre}
 					alt="Pre"
-					className="xl:h-full w-1/2 xl:w-max xl:aspect-square object-cover"
+					className="w-1/2 object-cover xl:aspect-square xl:h-full xl:w-max"
 					round
 				/>
 
@@ -69,9 +69,9 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 					</p>
 				</Card>
 			</div>
-			<div className="grow min-h-[1rem]" />
+			<div className="min-h-[1rem] grow" />
 			<div
-				className="flex items-center xl:gap-16 gap-8 transition-all xl:justify-between flex-col-reverse xl:flex-row xl:h-1/4"
+				className="flex flex-col-reverse items-center gap-8 transition-all xl:h-1/4 xl:flex-row xl:justify-between xl:gap-16"
 				ref={smallerElementRef}
 			>
 				<Card title="Business Finance Service with Bank Account">
@@ -83,12 +83,12 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 				<HoverableImage
 					src={Business}
 					alt="Business"
-					className="xl:h-full w-1/2 xl:w-max xl:aspect-square object-cover"
+					className="w-1/2 object-cover xl:aspect-square xl:h-full xl:w-max"
 					round
 					locate
 				/>
 			</div>
-			<div className="grow-2 min-h-[1rem]" />
+			<div className="min-h-[1rem] grow-2" />
 		</div>
 	);
 };
@@ -103,10 +103,10 @@ interface CardProps {
 export const Card: FC<CardProps> = ({ title, children }) => {
 	return (
 		<div className="flex flex-col gap-4">
-			<h4 className="font-extrabold text-3xl text-primary text-center xl:text-start">
+			<h4 className="text-center text-3xl font-extrabold text-primary xl:text-start">
 				{title}
 			</h4>
-			<div className="font-normal text-base text-gray-200 text-center xl:text-start">
+			<div className="text-center text-base font-normal text-gray-200 xl:text-start">
 				{children}
 			</div>
 		</div>

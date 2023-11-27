@@ -21,12 +21,12 @@ const Stack: FC<StackProps> = ({
 }) => {
 	return (
 		<div className={`relative ${containerClassName}`}>
-			<div className={`absolute z-0 inset-0 ${underClassName}`}>
+			<div className={`absolute inset-0 z-0 ${underClassName}`}>
 				{underLayer}
 			</div>
 			<div className={`relative z-10 ${className}`}>{children}</div>
 			<div
-				className={`absolute z-20 inset-0 pointer-events-none ${overClassName}`}
+				className={`pointer-events-none absolute inset-0 z-20 ${overClassName}`}
 			>
 				{overLayer}
 			</div>

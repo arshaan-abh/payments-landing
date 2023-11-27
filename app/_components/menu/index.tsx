@@ -18,7 +18,7 @@ interface MenuProps {}
 
 const Menu: FC<MenuProps> = ({}) => {
 	return (
-		<div className="fixed bottom-12 inset-x-0 mx-auto w-fit z-10 flex items-center justify-center gap-2.5">
+		<div className="fixed inset-x-0 bottom-12 z-10 mx-auto flex w-fit items-center justify-center gap-2.5">
 			<MenuItem>
 				<EnquireIcon />
 			</MenuItem>
@@ -71,11 +71,11 @@ const MenuItem: FC<MenuItemProps> = ({ primary, children }) => {
 	const w = primary ? "w-[64px]" : "w-[44px]";
 	return (
 		<div
-			className={`${w} aspect-square rounded-full backdrop-blur-sm flex items-center justify-center transition-colors ${variableContainerClasses}`}
+			className={`${w} flex aspect-square items-center justify-center rounded-full backdrop-blur-sm transition-colors ${variableContainerClasses}`}
 		>
 			{primary ? (
 				<div
-					className={`w-[48px] aspect-square rounded-full flex justify-center items-center transition-colors ${variablePrimaryClasses}`}
+					className={`flex aspect-square w-[48px] items-center justify-center rounded-full transition-colors ${variablePrimaryClasses}`}
 				>
 					{children}
 				</div>

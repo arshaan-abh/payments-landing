@@ -23,7 +23,7 @@ const Button: FC<ButtonProps> = ({
 		<button
 			ref={customRef}
 			onClick={clickHandler}
-			className={`${variableClassNames} py-3 px-8 rounded-md text-base font-bold whitespace-nowrap ${className}`}
+			className={`${variableClassNames} whitespace-nowrap rounded-md px-8 py-3 text-base font-bold ${className}`}
 		>
 			{children}
 		</button>

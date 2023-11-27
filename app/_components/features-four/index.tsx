@@ -7,8 +7,8 @@ interface FeatureFourProps {}
 
 const FeatureFour: FC<FeatureFourProps> = ({}) => {
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex gap-10 items-center justify-center flex-col-reverse lg:flex-row">
-			<div className="md:w-2/3 lg:w-1/2 flex flex-row lg:flex-col gap-y-4 lg:gap-5 flex-wrap justify-between">
+		<div className="flex h-full w-full flex-col-reverse items-center justify-center gap-10 px-10 lg:flex-row lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<div className="flex flex-row flex-wrap justify-between gap-y-4 md:w-2/3 lg:w-1/2 lg:flex-col lg:gap-5">
 				<Card
 					title="245M+"
 					percent={100}
@@ -30,11 +30,11 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					supportingText="currencies and payment methods supported."
 				/>
 			</div>
-			<div className="md:w-2/3 lg:w-1/2 flex flex-col gap-5">
-				<h3 className="text-primary text-4xl font-extrabold text-center lg:text-start">
+			<div className="flex flex-col gap-5 md:w-2/3 lg:w-1/2">
+				<h3 className="text-center text-4xl font-extrabold text-primary lg:text-start">
 					Empowering Effortless Money Transfers
 				</h3>
-				<div className="font-medium text-base text-gray-200 text-center lg:text-start">
+				<div className="text-center text-base font-medium text-gray-200 lg:text-start">
 					<p className="inline">
 						Our platform is your gateway to effortless financial transactions.
 					</p>
@@ -62,12 +62,12 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ title, supportingText, percent }) => {
 	return (
-		<div className="flex flex-col gap-2 w-full sm:w-[48%]">
-			<div className="font-extrabold text-primary text-6xl lg:text-7xl text-center sm:text-start">
+		<div className="flex w-full flex-col gap-2 sm:w-[48%]">
+			<div className="text-center text-6xl font-extrabold text-primary sm:text-start lg:text-7xl">
 				{title}
 			</div>
 			<div className="h-5 bg-gray-700" style={{ width: `${percent}%` }} />
-			<p className="font-medium text-base text-gray-100 text-center sm:text-start">
+			<p className="text-center text-base font-medium text-gray-100 sm:text-start">
 				{supportingText}
 			</p>
 		</div>

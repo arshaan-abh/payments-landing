@@ -10,28 +10,28 @@ import Hoverable from "../hoverable";
 
 function FeatureTwo() {
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col py-4 items-center">
-			<div className="grow-2 min-h-[1rem]" />
-			<div className="flex items-center gap-x-16 gap-y-4 flex-col xl:flex-row sm:w-2/3 lg:w-auto">
-				<div className="text-center xl:text-start xl:w-1/2 flex flex-col gap-2">
-					<div className="text-primary text-4xl font-extrabold">
+		<div className="flex h-full w-full flex-col items-center px-10 py-4 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<div className="min-h-[1rem] grow-2" />
+			<div className="flex flex-col items-center gap-x-16 gap-y-4 sm:w-2/3 lg:w-auto xl:flex-row">
+				<div className="flex flex-col gap-2 text-center xl:w-1/2 xl:text-start">
+					<div className="text-4xl font-extrabold text-primary">
 						ePOS All-In-One Solutions
 					</div>
-					<div className="hidden sm:flex gap-2 items-center justify-between">
-						<div className="text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
+					<div className="hidden items-center justify-between gap-2 sm:flex">
+						<div className="whitespace-nowrap text-lg font-semibold uppercase text-gray-100">
 							Integrated
 						</div>
-						<div className="w-2 h-2 shrink-0 border border-gray-200 rounded-full"></div>
-						<div className="text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
+						<div className="h-2 w-2 shrink-0 rounded-full border border-gray-200"></div>
+						<div className="whitespace-nowrap text-lg font-semibold uppercase text-gray-100">
 							Mobile Friendly
 						</div>
-						<div className="w-2 h-2 shrink-0 border border-gray-200 rounded-full"></div>
-						<div className="text-gray-100 text-lg font-semibold uppercase whitespace-nowrap">
+						<div className="h-2 w-2 shrink-0 rounded-full border border-gray-200"></div>
+						<div className="whitespace-nowrap text-lg font-semibold uppercase text-gray-100">
 							Innovative
 						</div>
 					</div>
 				</div>
-				<div className="text-center xl:text-start xl:w-1/2 text-gray-200 text-base font-medium">
+				<div className="text-center text-base font-medium text-gray-200 xl:w-1/2 xl:text-start">
 					<p className="inline">
 						Unlock the potential of retail with our ePOS All-In-One Solutions.
 					</p>
@@ -42,9 +42,9 @@ function FeatureTwo() {
 					</p>
 				</div>
 			</div>
-			<div className="grow min-h-[1rem]" />
-			<div className="flex gap-x-16 gap-y-8 flex-col lg:flex-row items-center sm:w-2/3 lg:w-auto">
-				<div className="flex items-center w-2/3 sm:w-full lg:w-1/2">
+			<div className="min-h-[1rem] grow" />
+			<div className="flex flex-col items-center gap-x-16 gap-y-8 sm:w-2/3 lg:w-auto lg:flex-row">
+				<div className="flex w-2/3 items-center sm:w-full lg:w-1/2">
 					<Hoverable className="w-full" round>
 						<Image
 							src={bigPicture}
@@ -53,7 +53,7 @@ function FeatureTwo() {
 						/>
 					</Hoverable>
 				</div>
-				<div className="lg:w-1/2 flex flex-col justify-between gap-6">
+				<div className="flex flex-col justify-between gap-6 lg:w-1/2">
 					<Card
 						image={smallPictureOne}
 						title="Flexible in-store payments"
@@ -76,7 +76,7 @@ function FeatureTwo() {
 					/>
 				</div>
 			</div>
-			<div className="grow-2 min-h-[1rem]" />
+			<div className="min-h-[1rem] grow-2" />
 		</div>
 	);
 }
@@ -91,15 +91,15 @@ interface CardProps {
 
 export const Card: FC<CardProps> = ({ image, title, supportingText }) => {
 	return (
-		<div className="flex gap-6 items-center flex-col sm:flex-row">
-			<Hoverable className="w-max h-max ">
+		<div className="flex flex-col items-center gap-6 sm:flex-row">
+			<Hoverable className="h-max w-max ">
 				<Image src={image} alt="Small picture" />
 			</Hoverable>
 			<div className="flex flex-col gap-2">
-				<div className="font-extrabold text-2xl text-primary text-center sm:text-start">
+				<div className="text-center text-2xl font-extrabold text-primary sm:text-start">
 					{title}
 				</div>
-				<div className="font-medium text-base text-gray-200 text-center sm:text-start">
+				<div className="text-center text-base font-medium text-gray-200 sm:text-start">
 					{supportingText}
 				</div>
 			</div>

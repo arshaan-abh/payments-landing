@@ -1,1 +1,6 @@
-{ "trailingComma": "es5", "useTabs": true, "endOfLine": "auto" }
+{
+	"trailingComma": "es5",
+	"useTabs": true,
+	"endOfLine": "auto",
+	"plugins": ["prettier-plugin-tailwindcss"]
+}

@@ -91,11 +91,11 @@ function Form() {
 
 	const [slider, prevButtonRef, nextButtonRef, index] = useSlider({
 		children: [
-			<div className="flex flex-col basis-1/2" key={0}>
-				<p className="text-xl text-secondary font-extrabold text-center mb-4">
+			<div className="flex basis-1/2 flex-col" key={0}>
+				<p className="mb-4 text-center text-xl font-extrabold text-secondary">
 					Select your favorite solutions
 				</p>
-				<div className="flex flex-wrap gap-3 mb-3">
+				<div className="mb-3 flex flex-wrap gap-3">
 					{options.map((option, index) => {
 						const handler = () => {
 							checkHandler(index);
@@ -112,7 +112,7 @@ function Form() {
 						id="message"
 						rows={3}
 						disabled={checkableList[11] ? false : true}
-						className="w-full text-base font-semibold text-secondary border-2 border-gray-100 rounded-md p-2.5 bg-transparent focus:border-secondary"
+						className="w-full rounded-md border-2 border-gray-100 bg-transparent p-2.5 text-base font-semibold text-secondary focus:border-secondary"
 						placeholder="Others"
 						style={{ resize: "none" }}
 					></textarea>
@@ -125,15 +125,15 @@ function Form() {
 	});
 
 	return (
-		<div className="w-full h-full px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col items-center">
-			<div className="grow min-h-[1rem]" />
-			<h3 className="text-4xl font-extrabold mb-2">
+		<div className="flex h-full w-full flex-col items-center px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<div className="min-h-[1rem] grow" />
+			<h3 className="mb-2 text-4xl font-extrabold">
 				Begin Your Next Chapter Now!
 			</h3>
-			<p className="text-lg font-medium text-gray-400 mb-8">
+			<p className="mb-8 text-lg font-medium text-gray-400">
 				Elevate your business with our convenient in-app payment solutions.
 			</p>
-			<div className="flex mb-2.5">{slider}</div>
+			<div className="mb-2.5 flex">{slider}</div>
 			<div className="flex gap-4">
 				{visibleSlidesNumber === 2 ? (
 					<Button
@@ -166,7 +166,7 @@ function Form() {
 					</>
 				)}
 			</div>
-			<div className="grow-2 min-h-[1rem]" />
+			<div className="min-h-[1rem] grow-2" />
 		</div>
 	);
 }
