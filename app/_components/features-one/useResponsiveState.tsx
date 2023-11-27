@@ -21,7 +21,7 @@ const useResponsiveState = <T,>({
 		for (let i = 0; i < breakpoints.length; i++) {
 			if (window.innerWidth >= breakpoints[i].breakpoint) {
 				setState(breakpoints[i].state);
-				set = "true";
+				set = true;
 			}
 		}
 		if (!set) setState(defaultState);
