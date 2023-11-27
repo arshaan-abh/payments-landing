@@ -38,7 +38,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 	}, [mouseLeaveHandler, mouseMoveHandler]); */
 
 	return (
-		<div className="flex h-[calc(100vh_-_4rem)] w-full flex-col px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+		<div className="flex w-full flex-col px-10 sm:h-[calc(100vh_-_4rem)] lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow-2" />
 			<div
 				className="flex flex-col items-center gap-8 transition-all xl:h-1/2 xl:flex-row xl:justify-between xl:gap-16"

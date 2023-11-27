@@ -31,12 +31,15 @@ interface FaqProps {}
 
 const Faq: FC<FaqProps> = ({}) => {
 	return (
-		<div className="flex h-full w-full flex-col justify-center gap-3 px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+		<div className="flex h-full w-full flex-col justify-center px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<div className="min-h-[1rem] grow-2" />
 			<h3 className="text-3xl font-extrabold text-primary">FAQ</h3>
+			<div className="min-h-[1rem] grow" />
 			<p className="text-base font-medium text-gray-100">
 				Welcome to the Selected Payments FAQ, your source for clear, insightful
 				answers.
 			</p>
+			<div className="min-h-[1rem] grow" />
 			<div>
 				{faqs.map((faq, index) => (
 					<Accordion key={index} title={faq.title}>
@@ -44,6 +47,7 @@ const Faq: FC<FaqProps> = ({}) => {
 					</Accordion>
 				))}
 			</div>
+			<div className="min-h-[1rem] grow-2" />
 		</div>
 	);
 };

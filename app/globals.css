@@ -139,7 +139,7 @@ textarea::-ms-input-placeholder {
 
 section {
 	scroll-snap-align: none;
-	padding-bottom: 1rem;
+	padding-bottom: 4rem;
 }
 
 @media (min-width: 376px /* xs */) {
