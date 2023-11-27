@@ -130,7 +130,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								</div>
 							</div>
 						</div>
-						<div className="flex items-center justify-between border-t border-gray-100 py-3">
+						<div className="flex flex-col items-center justify-between gap-y-4 border-t border-gray-100 py-3 pt-6 md:flex-row md:pt-3">
 							<p className="text-xs font-normal text-gray-400">
 								Copyright © 2023 Powered by{" "}
 								<span className="font-bold text-secondary">Selected</span>
