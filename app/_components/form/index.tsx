@@ -79,14 +79,14 @@ function Form() {
 			});
 	};
 
-	const visibleSlidesNumber = useResponsiveState({
-		defaultState: 1,
-		breakpoints: [{ breakpoint: 768, state: 2 }],
-	});
-
-	const gapInRem = useResponsiveState({
-		defaultState: 0,
-		breakpoints: [{ breakpoint: 768, state: 2.5 }],
+	const responsiveState = useResponsiveState({
+		defaultState: { visibleSlidesNumber: 1, gapInRem: 0, isPhone: true },
+		breakpoints: [
+			{
+				breakpoint: 768,
+				state: { visibleSlidesNumber: 2, gapInRem: 2.5, isPhone: false },
+			},
+		],
 	});
 
 	const [slider, prevButtonRef, nextButtonRef, index] = useSlider({
@@ -120,8 +120,9 @@ function Form() {
 			</div>,
 			<FormSection control={control} errors={errors} key={1} />,
 		],
-		gapInRem,
-		visibleSlidesNumber,
+		gapInRem: responsiveState.gapInRem,
+		visibleSlidesNumber: responsiveState.visibleSlidesNumber,
+		dynamicHeight: responsiveState.isPhone,
 	});
 
 	return (
@@ -135,7 +136,7 @@ function Form() {
 			</p>
 			<div className="mb-2.5 flex">{slider}</div>
 			<div className="flex gap-4">
-				{visibleSlidesNumber === 2 ? (
+				{!responsiveState.isPhone ? (
 					<Button
 						clickHandler={() => {
 							handleFormSubmit();

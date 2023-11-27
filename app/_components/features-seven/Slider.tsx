@@ -12,12 +12,14 @@ interface useSliderProps {
 	children: ReactNode[];
 	visibleSlidesNumber: number;
 	gapInRem: number;
+	dynamicHeight?: boolean;
 }
 
 const useSlider = ({
 	children,
 	gapInRem,
 	visibleSlidesNumber,
+	dynamicHeight,
 }: useSliderProps): [
 	ReactNode,
 	RefObject<HTMLButtonElement>,
@@ -79,7 +81,7 @@ const useSlider = ({
 		<div
 			key="slider"
 			className="overflow-hidden transition-all"
-			style={{ height: `${height}px` }}
+			style={{ height: dynamicHeight ? `${height}px` : "auto" }}
 		>
 			<div
 				className="flex flex-nowrap transition-all"
