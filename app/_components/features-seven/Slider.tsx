@@ -1,3 +1,4 @@
+import useRefs from "@/app/_hooks/use-refs";
 import {
 	useState,
 	type ReactNode,
@@ -26,6 +27,16 @@ const useSlider = ({
 	const [index, setIndex] = useState<number>(1);
 	const prevButtonRef = useRef<HTMLButtonElement>(null);
 	const nextButtonRef = useRef<HTMLButtonElement>(null);
+	const [height, setHeight] = useState<number>(0);
+	const heightRef = useRefs<HTMLDivElement | null>({
+		length: children.length,
+		initialValue: null,
+	});
+
+	const heightHandler = useCallback(() => {
+		const heightRefElement = heightRef[index - 1].current;
+		setHeight(heightRefElement?.clientHeight ?? 0);
+	}, [heightRef, index]);
 
 	const prevHandler = useCallback(() => {
 		setIndex((prevIndex) => prevIndex - 1);
@@ -36,6 +47,8 @@ const useSlider = ({
 	}, []);
 
 	useEffect(() => {
+		heightHandler();
+
 		const prevButton = prevButtonRef.current;
 		const nextButton = nextButtonRef.current;
 
@@ -53,12 +66,23 @@ const useSlider = ({
 			prevButton?.removeEventListener("click", prevHandler);
 			nextButton?.removeEventListener("click", nextHandler);
 		};
-	}, [children, index, nextHandler, prevHandler, visibleSlidesNumber]);
+	}, [
+		children,
+		heightHandler,
+		index,
+		nextHandler,
+		prevHandler,
+		visibleSlidesNumber,
+	]);
 
 	return [
-		<div key="slider" className="overflow-hidden">
+		<div
+			key="slider"
+			className="overflow-hidden transition-all"
+			style={{ height: `${height}px` }}
+		>
 			<div
-				className="flex flex-nowrap transition-transform"
+				className="flex flex-nowrap transition-all"
 				style={{
 					transform: `translateX(calc(-100% * ${index - 1}))`,
 					gap: `${gapInRem}rem`,
@@ -66,7 +90,8 @@ const useSlider = ({
 			>
 				{children.map((child, index) => (
 					<div
-						className="shrink-0"
+						ref={heightRef[index]}
+						className="h-fit shrink-0"
 						key={index}
 						style={{
 							flexBasis: `calc((100% / ${visibleSlidesNumber} - ${gapInRem}rem))`,
