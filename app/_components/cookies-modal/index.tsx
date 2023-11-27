@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState, type FC, useCallback } from "react";
+import { useState, type FC, useCallback, useEffect } from "react";
 import Button from "../button";
 import Stack from "../stack";
 import Image from "next/image";
@@ -9,7 +9,7 @@ import cookies from "public/cookies.svg";
 interface CookiesModalProps {}
 
 const CookiesModal: FC<CookiesModalProps> = ({}) => {
-	const [opened, setOpened] = useState<boolean>(true);
+	const [opened, setOpened] = useState<boolean>(false);
 
 	const open = useCallback(() => {
 		setOpened(true);
@@ -17,6 +17,13 @@ const CookiesModal: FC<CookiesModalProps> = ({}) => {
 
 	const close = useCallback(() => {
 		setOpened(false);
+		document.cookie = "consent=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+	}, []);
+
+	useEffect(() => {
+		if (!document.cookie.includes("consent=true")) {
+			setOpened(true);
+		}
 	}, []);
 
 	if (opened)
