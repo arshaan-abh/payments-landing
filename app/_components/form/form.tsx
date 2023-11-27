@@ -1,6 +1,5 @@
 "use client";
-import { Control, Controller, FieldErrors } from "react-hook-form";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Control, Controller, FieldErrors, RefCallBack } from "react-hook-form";
 
 import { EnquireRequest } from "@/app/@types/enquireRequest";
 import { DetailedHTMLProps, FC } from "react";
@@ -11,7 +10,6 @@ interface FormSectionProps {
 }
 
 const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
-	const theme = createTheme();
 	return (
 		<div className="flex basis-1/2 flex-col">
 			<p className="mb-4 text-center text-xl font-extrabold text-secondary">
@@ -22,19 +20,18 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 					<Controller
 						name="name"
 						control={control}
-						render={({ field }) => (
+						render={({ field: { ref, ...otherFields } }) => (
 							<div className="w-full">
-								<ThemeProvider theme={theme}>
-									<CustomTextField
-										{...field}
-										type="text"
-										id="name"
-										placeholder="Full name"
-										error={!!errors.name}
-										helperText={errors.name?.message ?? " "}
-										className="w-full"
-									/>
-								</ThemeProvider>
+								<CustomTextField
+									customRef={ref}
+									{...otherFields}
+									type="text"
+									id="name"
+									placeholder="Full name"
+									error={!!errors.name}
+									helperText={errors.name?.message ?? " "}
+									className="w-full"
+								/>
 							</div>
 						)}
 					/>
@@ -43,19 +40,18 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 					<Controller
 						name="companyName"
 						control={control}
-						render={({ field }) => (
+						render={({ field: { ref, ...otherFields } }) => (
 							<div className="w-full">
-								<ThemeProvider theme={theme}>
-									<CustomTextField
-										{...field}
-										type="text"
-										id="companyName"
-										placeholder="Company name"
-										error={!!errors.companyName}
-										helperText={errors.companyName?.message ?? " "}
-										className="w-full"
-									/>
-								</ThemeProvider>
+								<CustomTextField
+									{...otherFields}
+									customRef={ref}
+									type="text"
+									id="companyName"
+									placeholder="Company name"
+									error={!!errors.companyName}
+									helperText={errors.companyName?.message ?? " "}
+									className="w-full"
+								/>
 							</div>
 						)}
 					/>
@@ -64,19 +60,18 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 					<Controller
 						name="email"
 						control={control}
-						render={({ field }) => (
+						render={({ field: { ref, ...otherFields } }) => (
 							<div className="w-full">
-								<ThemeProvider theme={theme}>
-									<CustomTextField
-										{...field}
-										type="email"
-										id="email"
-										placeholder="Email"
-										error={!!errors.email}
-										helperText={errors.email?.message ?? " "}
-										className="w-full"
-									/>
-								</ThemeProvider>
+								<CustomTextField
+									{...otherFields}
+									customRef={ref}
+									type="email"
+									id="email"
+									placeholder="Email"
+									error={!!errors.email}
+									helperText={errors.email?.message ?? " "}
+									className="w-full"
+								/>
 							</div>
 						)}
 					/>
@@ -85,19 +80,18 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 					<Controller
 						name="phone"
 						control={control}
-						render={({ field }) => (
+						render={({ field: { ref, ...otherFields } }) => (
 							<div className="w-full">
-								<ThemeProvider theme={theme}>
-									<CustomTextField
-										{...field}
-										type="number"
-										id="phone"
-										placeholder="Phone"
-										error={!!errors.phone}
-										helperText={errors.phone?.message ?? " "}
-										className="w-full"
-									/>
-								</ThemeProvider>
+								<CustomTextField
+									{...otherFields}
+									customRef={ref}
+									type="number"
+									id="phone"
+									placeholder="Phone"
+									error={!!errors.phone}
+									helperText={errors.phone?.message ?? " "}
+									className="w-full"
+								/>
 							</div>
 						)}
 					/>
@@ -106,19 +100,18 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 					<Controller
 						name="webUrl"
 						control={control}
-						render={({ field }) => (
+						render={({ field: { ref, ...otherFields } }) => (
 							<div className="w-full ">
-								<ThemeProvider theme={theme}>
-									<CustomTextField
-										{...field}
-										type="text"
-										id="webUrl"
-										placeholder="Website url"
-										error={!!errors.webUrl}
-										helperText={errors.webUrl?.message ?? " "}
-										className="w-full"
-									/>
-								</ThemeProvider>
+								<CustomTextField
+									{...otherFields}
+									customRef={ref}
+									type="text"
+									id="webUrl"
+									placeholder="Website url"
+									error={!!errors.webUrl}
+									helperText={errors.webUrl?.message ?? " "}
+									className="w-full"
+								/>
 							</div>
 						)}
 					/>
@@ -127,10 +120,11 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 					<Controller
 						name="description"
 						control={control}
-						render={({ field }) => (
+						render={({ field: { ref, ...otherFields } }) => (
 							<div className="w-full ">
 								<CustomTextArea
-									{...field}
+									{...otherFields}
+									customRef={ref}
 									id="description"
 									placeholder="Description"
 									error={!!errors.description}
@@ -156,10 +150,11 @@ interface CustomTextFieldProps
 	> {
 	error: boolean;
 	helperText: string;
+	customRef: RefCallBack;
 }
 
 const CustomTextField: FC<CustomTextFieldProps> = (props) => {
-	const { error, helperText, className, ...otherProps } = props;
+	const { error, helperText, className, customRef, ref, ...otherProps } = props;
 
 	const inputErrorClasses = error
 		? "border-red-500 placeholder:text-red-500"
@@ -169,6 +164,7 @@ const CustomTextField: FC<CustomTextFieldProps> = (props) => {
 	return (
 		<>
 			<input
+				ref={customRef}
 				className={`rounded-md border bg-[#ffffff0a] p-4 text-base font-normal text-[#fafafa] outline-none ${inputErrorClasses} ${className}`}
 				{...otherProps}
 			/>
@@ -189,10 +185,11 @@ interface CustomTextAreaProps
 	> {
 	error: boolean;
 	helperText: string;
+	customRef: RefCallBack;
 }
 
 const CustomTextArea: FC<CustomTextAreaProps> = (props) => {
-	const { error, helperText, className, ...otherProps } = props;
+	const { error, helperText, className, customRef, ref, ...otherProps } = props;
 
 	const inputErrorClasses = error
 		? "border-red-500 placeholder:text-red-500"
@@ -202,6 +199,7 @@ const CustomTextArea: FC<CustomTextAreaProps> = (props) => {
 	return (
 		<>
 			<textarea
+				ref={customRef}
 				className={`rounded-md border bg-[#ffffff0a] p-4 text-base font-normal text-[#fafafa] outline-none ${inputErrorClasses} ${className}`}
 				{...otherProps}
 			/>

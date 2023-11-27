@@ -19,7 +19,6 @@ const useSlider = ({
 	children,
 	gapInRem,
 	visibleSlidesNumber,
-	dynamicHeight,
 }: useSliderProps): [
 	ReactNode,
 	RefObject<HTMLButtonElement>,
@@ -78,30 +77,37 @@ const useSlider = ({
 	]);
 
 	return [
-		<div
-			key="slider"
-			className="overflow-hidden transition-all"
-			style={{ height: dynamicHeight ? `${height}px` : "auto" }}
-		>
+		<div className="overflow-hidden" key="slider">
 			<div
 				className="flex flex-nowrap transition-all"
 				style={{
+					height: `${height}px`,
 					transform: `translateX(calc(-100% * ${index - 1}))`,
-					gap: `${gapInRem}rem`,
 				}}
 			>
-				{children.map((child, index) => (
-					<div
-						ref={heightRef[index]}
-						className="h-fit shrink-0"
-						key={index}
-						style={{
-							flexBasis: `calc((100% / ${visibleSlidesNumber} - ${gapInRem}rem))`,
-						}}
-					>
-						{child}
-					</div>
-				))}
+				{Array.from(
+					Array(Math.ceil(children.length / visibleSlidesNumber)),
+					(_, indexI) => (
+						<div
+							key={indexI}
+							ref={heightRef[indexI]}
+							className="flex h-min shrink-0 basis-full"
+							style={{
+								gap: `${gapInRem}rem`,
+							}}
+						>
+							{Array.from(
+								Array(visibleSlidesNumber),
+								(_, indexJ) =>
+									children[indexI * visibleSlidesNumber + indexJ] && (
+										<div className="grow basis-0" key={`${indexI} ${indexJ}`}>
+											{children[indexI * visibleSlidesNumber + indexJ]}
+										</div>
+									)
+							)}
+						</div>
+					)
+				)}
 			</div>
 		</div>,
 		prevButtonRef,

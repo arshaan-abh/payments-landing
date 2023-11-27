@@ -80,11 +80,11 @@ function Form() {
 	};
 
 	const responsiveState = useResponsiveState({
-		defaultState: { visibleSlidesNumber: 1, gapInRem: 0, isPhone: true },
+		defaultState: { visibleSlidesNumber: 1, isPhone: true },
 		breakpoints: [
 			{
 				breakpoint: 768,
-				state: { visibleSlidesNumber: 2, gapInRem: 2.5, isPhone: false },
+				state: { visibleSlidesNumber: 2, isPhone: false },
 			},
 		],
 	});
@@ -120,9 +120,8 @@ function Form() {
 			</div>,
 			<FormSection control={control} errors={errors} key={1} />,
 		],
-		gapInRem: responsiveState.gapInRem,
+		gapInRem: 2.5,
 		visibleSlidesNumber: responsiveState.visibleSlidesNumber,
-		dynamicHeight: responsiveState.isPhone,
 	});
 
 	return (

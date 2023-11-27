@@ -28,7 +28,7 @@ const useResponsiveState = <T,>({
 	}, [breakpoints, defaultState]);
 
 	useEffect(() => {
-		resizeHandler();
+		resizeHandler;
 		addEventListener("resize", resizeHandler);
 		return () => removeEventListener("resize", resizeHandler);
 	}, [resizeHandler]);
