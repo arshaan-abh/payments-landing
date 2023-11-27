@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 interface Breakpoint<T> {
 	breakpoint: number;
@@ -17,25 +17,36 @@ const useResponsiveState = <T,>({
 	const [state, setState] = useState<T>(defaultState);
 
 	const resizeHandler = useCallback(() => {
-		let set: boolean = false;
+		let set = false;
 		for (let i = 0; i < breakpoints.length; i++) {
 			if (window.innerWidth >= breakpoints[i].breakpoint) {
 				setState(breakpoints[i].state);
-				set = true;
+				set = "true";
 			}
 		}
 		if (!set) setState(defaultState);
 	}, [breakpoints, defaultState]);
 
-	useEffect(() => {
-		resizeHandler;
-		addEventListener("resize", resizeHandler);
-		return () => removeEventListener("resize", resizeHandler);
+	const debouncedResizeHandler = useMemo(() => {
+		const delay = 200; // Adjust the delay as needed
+		let timeoutId: NodeJS.Timeout;
+
+		return () => {
+			clearTimeout(timeoutId);
+			timeoutId = setTimeout(resizeHandler, delay);
+		};
 	}, [resizeHandler]);
+
+	useEffect(() => {
+		debouncedResizeHandler(); // Initial setup
+
+		window.addEventListener("resize", debouncedResizeHandler);
+		return () => {
+			window.removeEventListener("resize", debouncedResizeHandler);
+		};
+	}, [debouncedResizeHandler]);
 
 	return state;
 };
 
 export default useResponsiveState;
-
-// TODO enhance performance
