@@ -104,25 +104,28 @@ const Footer: FC<FooterProps> = ({}) => {
 						</div>
 					</div>
 					<div className="flex flex-col">
-						<div className="flex items-center justify-between border-t border-gray-100 py-5">
-							<div className="basis-1/3 text-sm font-medium">
+						<div className="flex flex-col items-center justify-between border-t border-gray-100 py-5 text-center md:flex-row md:text-start">
+							<div className="basis-1/2 text-sm font-medium lg:basis-1/3">
 								At Selected Payments, We&apos;re More Than Just a Payment
 								Solution - We&apos;re Your Trustworthy Partner. Our Innovative
 								Approach Combines with Dedication to Ensure Your Payments Are
 								Effortless and Secure, Paving the Way for a Smooth Financial
 								Future.
 							</div>
-							<div className="flex basis-1/3 flex-col gap-1">
-								<div className="flex items-center justify-end gap-1 text-sm font-normal">
-									<p>+44 1273 705050</p>
+							<div className="hidden min-h-[1rem] min-w-[1rem] xs:flex" />
+							<div className="hidden basis-1/2 flex-col gap-1 xs:flex lg:basis-1/3">
+								<div className="flex items-center justify-center gap-1 text-sm font-normal md:justify-end">
+									<p className="text-right">+44 1273 705050</p>
 									<Image src={Phone} alt="Phone" />
 								</div>
-								<div className="flex items-center justify-end gap-1 text-sm font-normal">
-									<p>hello@selectedpayment.com</p>
+								<div className="flex items-center justify-center gap-1 text-sm font-normal md:justify-end">
+									<p className="text-right">hello@selectedpayment.com</p>
 									<Image src={Email} alt="Email" />
 								</div>
-								<div className="flex items-center justify-end gap-1 text-sm font-normal">
-									<p>4 Gordon Mews, Gordon Close, BN41 1HU, Brighton</p>
+								<div className="flex items-center justify-center gap-1 text-sm font-normal md:justify-end">
+									<p className="text-right">
+										4 Gordon Mews, Gordon Close, BN41 1HU, Brighton
+									</p>
 									<Image src={Location} alt="Location" />
 								</div>
 							</div>
