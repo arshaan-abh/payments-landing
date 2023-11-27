@@ -75,6 +75,7 @@ export const HeroBackground: FC<HeroBackgroundProps> = ({}) => {
 			loop
 			muted
 			ref={videoRef}
+			poster="hero-background.jpg"
 		>
 			<source src="hero-background.mp4" type="video/mp4" />
 		</video>
