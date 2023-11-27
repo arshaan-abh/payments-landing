@@ -31,7 +31,7 @@ const Checkbox: FC<checkboxProps> = ({ children, checkHandler }) => {
 				}`}
 			>
 				<div
-					className={`flex h-6 w-6 items-center justify-center rounded-full ${
+					className={`flex h-[24px] w-[24px] items-center justify-center rounded-full ${
 						checked ? "bg-secondary" : "bg-gray-500"
 					}`}
 				>
