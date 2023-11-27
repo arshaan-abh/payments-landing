@@ -1,10 +1,9 @@
 "use client";
 import { Control, Controller, FieldErrors } from "react-hook-form";
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import { TextField } from "@mui/material";
 import { EnquireRequest } from "@/app/@types/enquireRequest";
-import { FC } from "react";
+import { DetailedHTMLProps, FC } from "react";
 
 interface FormSectionProps {
 	control: Control<EnquireRequest, any>;
@@ -12,42 +11,6 @@ interface FormSectionProps {
 }
 
 const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
-	const CustomTextField = styled(TextField)({
-		"& .MuiOutlinedInput-notchedOutline": {
-			borderColor: "white",
-			borderRadius: "0.375rem /* 6px */",
-		},
-		"& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": {
-			borderColor: "white", // Change the border color on hover
-		},
-		"& .MuiFormLabel-root": {
-			color: "#fafafa", // Change the placeholder text color
-		},
-		"& .MuiInputBase-input": {
-			color: "white", // Change the text color
-			fontFamily: "var(--font-lato)",
-			fontWeight: 400 /* font-normal */,
-			fontSize: "1rem" /* 16px */,
-		},
-		"& .MuiOutlinedInput-root": {
-			"&.Mui-error fieldset": {
-				borderColor: "CE7272", // Change the outline color when there's an error
-			},
-			"& fieldset": {
-				backgroundColor: "#ffffff0a",
-				borderColor: "white", // Change the outline color when not focused
-			},
-			"&.Mui-focused fieldset": {
-				borderColor: "white", // Change the outline color when focused
-			},
-		},
-		"& .MuiFormHelperText-root": {
-			color: "CE7272", // Change the color of the helper text
-			marginBottom: "0.125rem" /* 2px */,
-			marginTop: "0.125rem" /* 2px */,
-		},
-	});
-
 	const theme = createTheme();
 	return (
 		<div className="flex basis-1/2 flex-col">
@@ -66,10 +29,9 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 										{...field}
 										type="text"
 										id="name"
-										label="Full name"
+										placeholder="Full name"
 										error={!!errors.name}
 										helperText={errors.name?.message ?? " "}
-										variant="outlined"
 										className="w-full"
 									/>
 								</ThemeProvider>
@@ -88,10 +50,9 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 										{...field}
 										type="text"
 										id="companyName"
-										label="Company name"
+										placeholder="Company name"
 										error={!!errors.companyName}
 										helperText={errors.companyName?.message ?? " "}
-										variant="outlined"
 										className="w-full"
 									/>
 								</ThemeProvider>
@@ -110,10 +71,9 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 										{...field}
 										type="email"
 										id="email"
-										label="Email"
+										placeholder="Email"
 										error={!!errors.email}
 										helperText={errors.email?.message ?? " "}
-										variant="outlined"
 										className="w-full"
 									/>
 								</ThemeProvider>
@@ -132,10 +92,9 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 										{...field}
 										type="number"
 										id="phone"
-										label="Phone"
+										placeholder="Phone"
 										error={!!errors.phone}
 										helperText={errors.phone?.message ?? " "}
-										variant="outlined"
 										className="w-full"
 									/>
 								</ThemeProvider>
@@ -154,10 +113,9 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 										{...field}
 										type="text"
 										id="webUrl"
-										label="Website url"
+										placeholder="Website url"
 										error={!!errors.webUrl}
 										helperText={errors.webUrl?.message ?? " "}
-										variant="outlined"
 										className="w-full"
 									/>
 								</ThemeProvider>
@@ -171,19 +129,15 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 						control={control}
 						render={({ field }) => (
 							<div className="w-full ">
-								<CustomTextField
+								<CustomTextArea
 									{...field}
-									type="text"
 									id="description"
-									label="Description"
+									placeholder="Description"
 									error={!!errors.description}
 									helperText={errors.description?.message ?? " "}
-									variant="outlined"
 									className="w-full"
-									multiline
 									rows={3}
-									FormHelperTextProps={{ style: { display: "none" } }}
-								></CustomTextField>
+								/>
 							</div>
 						)}
 					/>
@@ -194,3 +148,69 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 };
 
 export default FormSection;
+
+interface CustomTextFieldProps
+	extends DetailedHTMLProps<
+		React.InputHTMLAttributes<HTMLInputElement>,
+		HTMLInputElement
+	> {
+	error: boolean;
+	helperText: string;
+}
+
+const CustomTextField: FC<CustomTextFieldProps> = (props) => {
+	const { error, helperText, className, ...otherProps } = props;
+
+	const inputErrorClasses = error
+		? "border-red-500 placeholder:text-red-500"
+		: "border-white placeholder:text-[#fafafa]";
+	const helperErrorClasses = error ? "text-red-500" : "text-white";
+
+	return (
+		<>
+			<input
+				className={`rounded-md border bg-[#ffffff0a] p-4 text-base font-normal text-[#fafafa] outline-none ${inputErrorClasses} ${className}`}
+				{...otherProps}
+			/>
+			<div
+				title={helperText}
+				className={`my-1 h-6 ${helperErrorClasses} line-clamp-1`}
+			>
+				{helperText}
+			</div>
+		</>
+	);
+};
+
+interface CustomTextAreaProps
+	extends DetailedHTMLProps<
+		React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+		HTMLTextAreaElement
+	> {
+	error: boolean;
+	helperText: string;
+}
+
+const CustomTextArea: FC<CustomTextAreaProps> = (props) => {
+	const { error, helperText, className, ...otherProps } = props;
+
+	const inputErrorClasses = error
+		? "border-red-500 placeholder:text-red-500"
+		: "border-white placeholder:text-[#fafafa]";
+	const helperErrorClasses = error ? "text-red-500" : "text-white";
+
+	return (
+		<>
+			<textarea
+				className={`rounded-md border bg-[#ffffff0a] p-4 text-base font-normal text-[#fafafa] outline-none ${inputErrorClasses} ${className}`}
+				{...otherProps}
+			/>
+			<div
+				title={helperText}
+				className={`my-1 h-6 ${helperErrorClasses} line-clamp-1`}
+			>
+				{helperText}
+			</div>
+		</>
+	);
+};
