@@ -44,8 +44,8 @@ const Footer: FC<FooterProps> = ({}) => {
 			<div className="text-secondary bg-primary flex justify-center">
 				<div className="px-10 lg:px-20 xl:px-30 xl:max-w-screen-1.5xl flex flex-col pt-11 gap-11">
 					<Image src={logo} alt="Logo" />
-					<div className="flex gap-4">
-						<div className="basis-1/3 flex flex-col gap-3">
+					<div className="flex gap-4 flex-wrap sm:flex-nowrap justify-center">
+						<div className="basis-full xs:basis-2/5 sm:basis-1/3 text-start xs:text-center sm:text-start flex flex-col gap-3">
 							<h5 className="font-extrabold text-base mb-1">Solutions</h5>
 							{solutionsLinks.map((link, index) => (
 								<Link
@@ -57,7 +57,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								</Link>
 							))}
 						</div>
-						<div className="basis-1/3 flex flex-col gap-3">
+						<div className="basis-full xs:basis-2/5 sm:basis-1/3 text-start xs:text-center sm:text-start flex flex-col gap-3">
 							<h5 className="font-extrabold text-base mb-1">Features</h5>
 							{featuresLinks.map((link, index) => (
 								<Link
@@ -69,7 +69,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								</Link>
 							))}
 						</div>
-						<div className="basis-1/3 flex flex-col gap-3">
+						<div className="basis-full xs:basis-3/5 sm:basis-1/3 text-start xs:text-center sm:text-start flex flex-col gap-3">
 							<h5 className="font-extrabold text-base mb-1">
 								We&apos;re social
 							</h5>
@@ -91,13 +91,13 @@ const Footer: FC<FooterProps> = ({}) => {
 								Get the latest news and exclusive promotions conveniently in
 								your inbox.
 							</p>
-							<div className="flex gap-1">
+							<div className="flex gap-1 flex-row sm:flex-col lg:flex-row">
 								<input
 									type="email"
 									placeholder="Email"
-									className="grow bg-[#ffffff0a] text-secondary font-normal text-base px-4 py-2 border border-secondary outline-none rounded-md"
+									className="w-full bg-[#ffffff0a] text-secondary font-normal text-base px-4 py-2 border border-secondary outline-none rounded-md"
 								/>
-								<Button white>Sign up</Button>
+								<Button white className="w-1/2 sm:w-full lg:w-1/2">Sign up</Button>
 							</div>
 						</div>
 					</div>
