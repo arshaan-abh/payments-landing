@@ -97,6 +97,9 @@ const config: Config = {
 			padding: {
 				30: "7.5rem",
 			},
+			borderRadius: {
+				"rectangle-full": "999px",
+			},
 		},
 	},
 	plugins: [require("@tailwindcss/line-clamp")],
