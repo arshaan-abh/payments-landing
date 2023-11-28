@@ -28,8 +28,8 @@ const config: Config = {
 					600: "#d0d0d0",
 					700: "#f2f2f2",
 				},
-				primary: "#161616",
-				secondary: "#ffffff",
+				primary: "#013334",
+				secondary: "#66FECB",
 			},
 			fontFamily: {
 				mono: ["var(--font-geist-mono)"],
