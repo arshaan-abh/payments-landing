@@ -129,7 +129,7 @@ export const EnquireNowIcon: FC<IconProps> = ({ className }) => {
 							type="rotate"
 							from="0 43 43"
 							to="180 43 43"
-							dur="4s"
+							dur="8s"
 							repeatCount="indefinite"
 						/>
 						<path

@@ -11,6 +11,7 @@ export const firstMarqueeData: marqueeItemData[] = [
 	{ body: "Special offer! - up to 30%" },
 	{ body: "Special offer! - up to 30%" },
 	{ body: "Special offer! - up to 30%" },
+	{ body: "Special offer! - up to 30%" },
 ];
 
 export const secondMarqueeData: marqueeItemData[] = [

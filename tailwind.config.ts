@@ -85,8 +85,8 @@ const config: Config = {
 				},
 			},
 			animation: {
-				marquee: "marquee 16s infinite linear",
-				"marquee-after": "marquee-after 16s infinite linear",
+				marquee: "marquee 64s infinite linear",
+				"marquee-after": "marquee-after 64s infinite linear",
 				wiggle: "wiggle 2s infinite",
 				show: "showHide 8s infinite alternate linear",
 				hide: "showHide 8s infinite alternate-reverse linear",
