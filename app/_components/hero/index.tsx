@@ -62,7 +62,7 @@ export const HeroBackground: FC<HeroBackgroundProps> = ({}) => {
 
 	return (
 		<video
-			className="fixed inset-0 h-full w-full object-cover"
+			className="absolute inset-0 h-full w-full object-cover sm:fixed"
 			autoPlay
 			loop
 			muted
