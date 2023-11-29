@@ -11,7 +11,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 			<div className="flex items-center justify-center gap-10 py-6 md:justify-between">
 				<Image src={logo} alt="Logo" />
 				<div className="hidden md:flex">
-					<Button white>Enquire Now</Button>
+					<Button white>Enquire Now</Button> {/* test */}
 				</div>
 			</div>
 			<div className="h-px w-full border-b border-gray-700 opacity-10" />
