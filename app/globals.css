@@ -35,6 +35,8 @@ html {
 	-webkit-scroll-snap-type: y mandatory;
 	-ms-scroll-snap-type: y mandatory;
 	scroll-snap-type: y mandatory;
+
+	scroll-behavior: smooth;
 }
 
 .ReactModal__Overlay {
