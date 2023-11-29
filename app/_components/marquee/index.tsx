@@ -96,7 +96,11 @@ const MarqueeItems: FC<MarqueeItemsProps> = ({
 		>
 			{data.map((marqueeItem, index) => (
 				<div key={index} className="flex items-center gap-5 py-2.5">
-					{marqueeItem.head ?? <ThunderIcon className="text-secondary" />}
+					{(
+						<div className="flex w-10 items-center justify-center">
+							{marqueeItem.head}
+						</div>
+					) ?? <ThunderIcon className="text-secondary" />}
 					<div className="text-xl font-bold">{marqueeItem.body}</div>
 				</div>
 			))}

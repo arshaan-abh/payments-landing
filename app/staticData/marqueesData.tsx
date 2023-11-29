@@ -16,27 +16,27 @@ export const firstMarqueeData: marqueeItemData[] = [
 
 export const secondMarqueeData: marqueeItemData[] = [
 	{
-		head: <Image src={calculator} alt="Calculator" className="h-full w-auto" />,
+		head: <Image src={calculator} alt="Calculator" />,
 		body: "Marketing Banner",
 	},
 	{
-		head: <Image src={money} alt="Money" className="h-full w-auto" />,
+		head: <Image src={money} alt="Money" />,
 		body: "Marketing Banner",
 	},
 	{
-		head: <Image src={coinPiles} alt="Coin Piles" className="h-full w-auto" />,
+		head: <Image src={coinPiles} alt="Coin Piles" />,
 		body: "Marketing Banner",
 	},
 	{
-		head: <Image src={calculator} alt="Calculator" className="h-full w-auto" />,
+		head: <Image src={calculator} alt="Calculator" />,
 		body: "Marketing Banner",
 	},
 	{
-		head: <Image src={money} alt="Money" className="h-full w-auto" />,
+		head: <Image src={money} alt="Money" />,
 		body: "Marketing Banner",
 	},
 	{
-		head: <Image src={coinPiles} alt="Coin Piles" className="h-full w-auto" />,
+		head: <Image src={coinPiles} alt="Coin Piles" />,
 		body: "Marketing Banner",
 	},
 ];
