@@ -139,6 +139,7 @@ textarea::-ms-input-placeholder {
 
 section {
 	padding-bottom: 4rem;
+	background-color: white;
 }
 
 @media (min-width: 376px /* xs */) {
@@ -157,7 +158,6 @@ section {
 		top: 0;
 		width: 100%;
 		height: 100vh;
-		background-color: white;
 	}
 
 	.section-shadow {
