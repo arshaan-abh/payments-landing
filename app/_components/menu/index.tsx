@@ -100,7 +100,7 @@ const Menu: FC<MenuProps> = ({}) => {
 			<div
 				ref={detailRef}
 				onTransitionEnd={transitionEndHandler}
-				className="fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit min-w-fit max-w-fit items-center justify-center overflow-hidden rounded-rectangle-full bg-[#1616161a] p-2 backdrop-blur-sm transition-all duration-300"
+				className="fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit max-w-fit items-center justify-center overflow-hidden rounded-rectangle-full bg-[#1616161a] p-2 backdrop-blur-sm transition-all duration-300"
 				style={{
 					opacity: open ? (maxWidthRef.current ? 1 : 0) : 0,
 					...(maxWidthRef.current && {
