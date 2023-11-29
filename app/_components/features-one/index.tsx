@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode, useContext } from "react";
 import featureImageOne from "../../../public/one-click.jpg";
 import featureImageTwo from "../../../public/pay-method.jpg";
 import featureImageThree from "../../../public/currency.jpg";
@@ -8,8 +8,12 @@ import useSlider from "../features-seven/Slider";
 import useResponsiveState from "./useResponsiveState";
 import { SlideButton } from "../features-seven";
 import { ArrowLeftIcon, ArrowRightIcon } from "../icons";
+import { Context } from "@/app/page";
+import { motion } from "framer-motion";
 
 const FeatureOne: FC<CardProps> = ({}) => {
+	const isIntersecting = useContext(Context)[1];
+
 	const visibleSlidesNumber = useResponsiveState<number>({
 		defaultState: 1,
 		breakpoints: [
@@ -52,8 +56,15 @@ const FeatureOne: FC<CardProps> = ({}) => {
 		<div className="flex h-full w-full flex-col px-10 py-4 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow" />
 			<div className="flex flex-col items-center gap-x-8 gap-y-2 md:flex-row">
-				<div className="text-center text-4xl font-extrabold leading-tight text-primary md:w-1/2 md:text-left">
-					Simplified Customer Payment Processing!
+				<div className="md:w-1/2">
+					<motion.div
+						className="overflow-hidden text-center text-4xl font-extrabold leading-tight text-primary transition-all ease-linear md:text-left"
+						animate={{
+							width: `calc(${isIntersecting} * 100%)`,
+						}}
+					>
+						Simplified&nbsp;Customer Payment&nbsp;Processing!
+					</motion.div>
 				</div>
 				<div className="text-center text-base font-medium leading-tight text-gray-200 md:w-1/2 md:text-left">
 					<p className="inline">
