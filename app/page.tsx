@@ -39,7 +39,7 @@ export default function Home() {
 					opacity: isIntersecting[0],
 				}}
 				id="hero"
-				className={`relative flex flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-primary to-transparent transition-opacity duration-300 ${
+				className={`relative flex flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-primary to-transparent transition-opacity ${
 					isIntersecting[0] > 0 ? "" : "pointer-events-none"
 				}`}
 			>
@@ -50,7 +50,7 @@ export default function Home() {
 			<section
 				style={{ opacity: isIntersecting[1] }}
 				id="feature-one"
-				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+				className={`flex flex-col items-center overflow-hidden transition-opacity ${
 					isIntersecting[1] > 0 ? "" : "pointer-events-none"
 				}`}
 			>
@@ -60,7 +60,7 @@ export default function Home() {
 			<section
 				style={{ opacity: isIntersecting[2] }}
 				id="feature-two"
-				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+				className={`flex flex-col items-center overflow-hidden transition-opacity ${
 					isIntersecting[2] > 0 ? "" : "pointer-events-none"
 				}`}
 			>
@@ -69,7 +69,7 @@ export default function Home() {
 			<section
 				style={{ opacity: isIntersecting[3] }}
 				id="feature-three"
-				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+				className={`flex flex-col items-center overflow-hidden transition-opacity ${
 					isIntersecting[3] > 0 ? "" : "pointer-events-none"
 				}`}
 			>
@@ -78,7 +78,7 @@ export default function Home() {
 			<section
 				style={{ opacity: isIntersecting[4] }}
 				id="feature-four"
-				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+				className={`flex flex-col items-center overflow-hidden transition-opacity ${
 					isIntersecting[4] > 0 ? "" : "pointer-events-none"
 				}`}
 			>
@@ -87,7 +87,7 @@ export default function Home() {
 			<section
 				style={{ opacity: isIntersecting[5] }}
 				id="feature-five"
-				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+				className={`flex flex-col items-center overflow-hidden transition-opacity ${
 					isIntersecting[5] > 0 ? "" : "pointer-events-none"
 				}`}
 			>
@@ -97,7 +97,7 @@ export default function Home() {
 			<section
 				style={{ opacity: isIntersecting[6] }}
 				id="feature-six"
-				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+				className={`flex flex-col items-center overflow-hidden transition-opacity ${
 					isIntersecting[6] > 0 ? "" : "pointer-events-none"
 				}`}
 			>
@@ -107,7 +107,7 @@ export default function Home() {
 			<section
 				style={{ opacity: isIntersecting[7] }}
 				id="feature-seven"
-				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+				className={`flex flex-col items-center overflow-hidden transition-opacity ${
 					isIntersecting[7] > 0 ? "" : "pointer-events-none"
 				}`}
 			>
@@ -116,7 +116,7 @@ export default function Home() {
 			<section
 				style={{ opacity: isIntersecting[8] }}
 				id="feature-eight"
-				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+				className={`flex flex-col items-center overflow-hidden transition-opacity ${
 					isIntersecting[8] > 0 ? "" : "pointer-events-none"
 				}`}
 			>
@@ -126,7 +126,7 @@ export default function Home() {
 			<section
 				style={{ opacity: isIntersecting[9] }}
 				id="feature-nine"
-				className={`flex flex-col items-center overflow-hidden bg-primary text-secondary transition-opacity duration-300 ${
+				className={`flex flex-col items-center overflow-hidden bg-primary text-secondary transition-opacity ${
 					isIntersecting[9] > 0 ? "" : "pointer-events-none"
 				}`}
 			>
@@ -135,7 +135,7 @@ export default function Home() {
 			<section
 				style={{ opacity: isIntersecting[10] }}
 				id="feature-ten"
-				className={`flex flex-col items-center overflow-hidden bg-primary text-secondary transition-opacity duration-300 ${
+				className={`flex flex-col items-center overflow-hidden bg-primary text-secondary transition-opacity ${
 					isIntersecting[10] > 0 ? "" : "pointer-events-none"
 				}`}
 			>

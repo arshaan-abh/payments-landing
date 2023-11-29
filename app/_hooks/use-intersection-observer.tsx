@@ -27,7 +27,7 @@ const useIntersectionObserver = <T,>({
 		});
 	}, [elementRefs]);
 
-	const debounceDelay = 128;
+	const debounceDelay = 64;
 	const debouncedHandleScroll = useMemo(
 		() => debounce(handleScroll, debounceDelay),
 		[handleScroll]
