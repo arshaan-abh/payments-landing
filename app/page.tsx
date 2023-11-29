@@ -12,14 +12,13 @@ import FeatureSix from "./_components/features-six";
 import FeatureSeven from "./_components/features-seven";
 import FaqSection from "./_components/faq";
 import MarketingBanner from "./_components/marquee";
-import Stack from "./_components/stack";
 import CookiesModal from "./_components/cookies-modal";
 import Menu from "./_components/menu";
 import { firstMarqueeData, secondMarqueeData } from "./staticData/marqueesData";
 import { EnquireNowIcon } from "./_components/icons";
 import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
-import { useEffect, useRef } from "react";
+import Grid from "./_components/grid";
 
 export default function Home() {
 	const sectionRefs = useRefs<HTMLDivElement | null>({
@@ -27,132 +26,118 @@ export default function Home() {
 		length: 11,
 	});
 
-	const isIntersecting = [
-		useIntersectionObserver({
-			elementRef: sectionRefs[0],
-		}),
-		useIntersectionObserver({
-			elementRef: sectionRefs[1],
-		}),
-		useIntersectionObserver({
-			elementRef: sectionRefs[2],
-		}),
-		useIntersectionObserver({
-			elementRef: sectionRefs[3],
-		}),
-		useIntersectionObserver({
-			elementRef: sectionRefs[4],
-		}),
-		useIntersectionObserver({
-			elementRef: sectionRefs[5],
-		}),
-		useIntersectionObserver({
-			elementRef: sectionRefs[6],
-		}),
-		useIntersectionObserver({
-			elementRef: sectionRefs[7],
-		}),
-		useIntersectionObserver({
-			elementRef: sectionRefs[8],
-		}),
-		useIntersectionObserver({
-			elementRef: sectionRefs[9],
-		}),
-		 useIntersectionObserver({
-			 elementRef: sectionRefs[10],
-		 }),
-	];
-
-	const intersectingClassNames = "opacity-100";
+	const isIntersecting = useIntersectionObserver<HTMLDivElement>({
+		elementRefs: sectionRefs,
+	});
 
 	return (
 		<div className="flex flex-col">
-			<Stack underLayer={<HeroBackground />}>
-				<section
-					style={{
-						opacity: isIntersecting[0] === false ? "0" : "1",
-					}}
-					id="hero"
-					className={`relative flex flex-col items-center overflow-hidden bg-gradient-to-r from-primary to-transparent ${
-						isIntersecting[0] && intersectingClassNames
-					}`}
-				>
-					<MarketingBanner data={firstMarqueeData} />
-					<Navbar />
-					<Hero />
-				</section>
-			</Stack>
+			<HeroBackground />
+			<Grid />
 			<section
-				style={{ opacity: isIntersecting[1] ? "1" : "0" }}
+				style={{
+					opacity: isIntersecting[0],
+				}}
+				id="hero"
+				className={`relative flex flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-primary to-transparent transition-opacity duration-300 ${
+					isIntersecting[0] > 0 ? "" : "pointer-events-none"
+				}`}
+			>
+				<MarketingBanner data={firstMarqueeData} />
+				<Navbar />
+				<Hero />
+			</section>
+			<section
+				style={{ opacity: isIntersecting[1] }}
 				id="feature-one"
-				className="flex flex-col items-center overflow-hidden"
+				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+					isIntersecting[1] > 0 ? "" : "pointer-events-none"
+				}`}
 			>
 				<MarketingBanner data={secondMarqueeData} white />
 				<FeatureOne />
 			</section>
 			<section
-				style={{ opacity: isIntersecting[2] ? "1" : "0" }}
+				style={{ opacity: isIntersecting[2] }}
 				id="feature-two"
-				className="flex flex-col items-center overflow-hidden"
+				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+					isIntersecting[2] > 0 ? "" : "pointer-events-none"
+				}`}
 			>
 				<FeatureTwo />
 			</section>
 			<section
-				style={{ opacity: isIntersecting[3] ? "1" : "0" }}
+				style={{ opacity: isIntersecting[3] }}
 				id="feature-three"
-				className="flex flex-col items-center overflow-hidden"
+				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+					isIntersecting[3] > 0 ? "" : "pointer-events-none"
+				}`}
 			>
 				<FeatureThree />
 			</section>
 			<section
-				style={{ opacity: isIntersecting[4] ? "1" : "0" }}
+				style={{ opacity: isIntersecting[4] }}
 				id="feature-four"
-				className="flex flex-col items-center overflow-hidden"
+				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+					isIntersecting[4] > 0 ? "" : "pointer-events-none"
+				}`}
 			>
 				<FeatureFour />
 			</section>
 			<section
-				style={{ opacity: isIntersecting[5] ? "1" : "0" }}
+				style={{ opacity: isIntersecting[5] }}
 				id="feature-five"
-				className="flex flex-col items-center overflow-hidden"
+				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+					isIntersecting[5] > 0 ? "" : "pointer-events-none"
+				}`}
 			>
 				<MarketingBanner data={secondMarqueeData} white />
 				<FeatureFive />
 			</section>
 			<section
-				style={{ opacity: isIntersecting[6] ? "1" : "0" }}
+				style={{ opacity: isIntersecting[6] }}
 				id="feature-six"
-				className="flex flex-col items-center overflow-hidden"
+				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+					isIntersecting[6] > 0 ? "" : "pointer-events-none"
+				}`}
 			>
 				<FeatureSix />
 			</section>
 
 			<section
-				style={{ opacity: isIntersecting[7] ? "1" : "0" }}
+				style={{ opacity: isIntersecting[7] }}
 				id="feature-seven"
-				className="flex flex-col items-center overflow-hidden"
+				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+					isIntersecting[7] > 0 ? "" : "pointer-events-none"
+				}`}
 			>
 				<FeatureSeven />
 			</section>
 			<section
-				style={{ opacity: isIntersecting[8] ? "1" : "0" }}
+				style={{ opacity: isIntersecting[8] }}
 				id="feature-eight"
-				className="flex flex-col items-center overflow-hidden"
+				className={`flex flex-col items-center overflow-hidden transition-opacity duration-300 ${
+					isIntersecting[8] > 0 ? "" : "pointer-events-none"
+				}`}
 			>
 				<MarketingBanner data={secondMarqueeData} white />
 				<FaqSection />
 			</section>
 			<section
-				style={{ opacity: isIntersecting[9] ? "1" : "0" }}
+				style={{ opacity: isIntersecting[9] }}
 				id="feature-nine"
-				className="flex flex-col items-center overflow-hidden bg-primary text-secondary"
+				className={`flex flex-col items-center overflow-hidden bg-primary text-secondary transition-opacity duration-300 ${
+					isIntersecting[9] > 0 ? "" : "pointer-events-none"
+				}`}
 			>
 				<Form />
 			</section>
 			<section
-				style={{ opacity: isIntersecting[10] ? "1" : "0" }}
+				style={{ opacity: isIntersecting[10] }}
 				id="feature-ten"
-				className="flex flex-col items-center overflow-hidden bg-primary text-secondary"
+				className={`flex flex-col items-center overflow-hidden bg-primary text-secondary transition-opacity duration-300 ${
+					isIntersecting[10] > 0 ? "" : "pointer-events-none"
+				}`}
 			>
 				<Footer />
 			</section>
@@ -162,7 +147,7 @@ export default function Home() {
 			{Array.from(Array(11), (_, index) => (
 				<div
 					key={index}
-					className="section-shadow"
+					className="section-shadow pointer-events-none"
 					ref={sectionRefs[index]}
 				></div>
 			))}

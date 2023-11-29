@@ -1,41 +1,33 @@
 "use client";
 import React, { FC, useCallback, useEffect, useRef } from "react";
 import Button from "../button";
-import Stack from "../stack";
-import Grid from "../grid";
 
 function Hero() {
 	return (
-		<div className="h-full w-full px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
-			<Stack
-				containerClassName="h-full flex items-center"
-				className="flex flex-col gap-10"
-				underLayer={<Grid />}
-			>
-				<h1 className="text-center text-6xl font-medium text-white md:text-left lg:w-1/2">
-					<span className="whitespace-nowrap bg-underline font-extrabold">
-						Grow Sales
-					</span>
-					&nbsp;with a better payment solution
-				</h1>
-				<div className="text-center text-base font-normal text-white md:text-left lg:w-1/2">
-					<p>
-						Selected Payments, a leading one-stop payment solution for
-						cross-border commerce, marketplaces, and platforms enables the means
-						to move money without friction.
-					</p>
-					<p className="hidden md:flex">
-						We help you grow your business locally and internationally by
-						providing services for payment collection, multiparty split
-						payments, and efficient payouts. With our multicurrency accounts,
-						this process is simpler and faster.
-					</p>
-				</div>
-				<div className="flex justify-center gap-2.5 md:justify-start lg:w-1/2">
-					<Button white>Enquire Now</Button>
-					<Button>Contact us</Button>
-				</div>
-			</Stack>
+		<div className="flex h-full w-full flex-col justify-center gap-10 px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<h1 className="text-center text-6xl font-medium text-white md:text-left lg:w-1/2">
+				<span className="whitespace-nowrap bg-underline font-extrabold">
+					Grow Sales
+				</span>
+				&nbsp;with a better payment solution
+			</h1>
+			<div className="text-center text-base font-normal text-white md:text-left lg:w-1/2">
+				<p>
+					Selected Payments, a leading one-stop payment solution for
+					cross-border commerce, marketplaces, and platforms enables the means
+					to move money without friction.
+				</p>
+				<p className="hidden md:flex">
+					We help you grow your business locally and internationally by
+					providing services for payment collection, multiparty split payments,
+					and efficient payouts. With our multicurrency accounts, this process
+					is simpler and faster.
+				</p>
+			</div>
+			<div className="flex justify-center gap-2.5 md:justify-start lg:w-1/2">
+				<Button white>Enquire Now</Button>
+				<Button>Contact us</Button>
+			</div>
 		</div>
 	);
 }
@@ -70,7 +62,7 @@ export const HeroBackground: FC<HeroBackgroundProps> = ({}) => {
 
 	return (
 		<video
-			className="h-full w-full object-cover"
+			className="fixed inset-0 h-full w-full object-cover"
 			autoPlay
 			loop
 			muted

@@ -1,25 +1,61 @@
-import { RefObject, useCallback, useEffect, useState } from "react";
+import { RefObject, useCallback, useEffect, useState, useMemo } from "react";
 
-interface useIntersectionObserverProps<T> {
-	elementRef: RefObject<T>;
+interface UseIntersectionObserverProps<T> {
+	elementRefs: RefObject<T>[];
 }
 
-export default function useIntersectionObserver<T>({
-	elementRef,
-}: useIntersectionObserverProps<T>) {
-	const [isIntersecting, setIsIntersecting] = useState<boolean>(false);
+const useIntersectionObserver = <T,>({
+	elementRefs,
+}: UseIntersectionObserverProps<T>) => {
+	const [topValues, setTopValues] = useState<number[]>(
+		Array(elementRefs.length).fill(0)
+	);
 
-	const callback = useCallback(([entries]: IntersectionObserverEntry[]) => {
-		setIsIntersecting(entries.isIntersecting);
-	}, []);
+	const handleScroll = useCallback(() => {
+		requestAnimationFrame(() => {
+			const newTopValues = elementRefs.map((elementRef) => {
+				const boundingBox = (
+					elementRef.current as HTMLElement
+				).getBoundingClientRect();
+				const top = boundingBox ? boundingBox.top : 0;
+				return Math.min(Math.max(1 - top / window.innerHeight, 0), 1);
+			});
+
+			if (elementRefs.every((ref) => ref.current)) {
+				setTopValues(newTopValues);
+			}
+		});
+	}, [elementRefs]);
+
+	const debounceDelay = 128;
+	const debouncedHandleScroll = useMemo(
+		() => debounce(handleScroll, debounceDelay),
+		[handleScroll]
+	);
 
 	useEffect(() => {
-		const observer = new IntersectionObserver(callback, {
-			threshold: 1.0,
-		});
-		observer.observe(elementRef.current as Element);
-		return () => observer.disconnect();
-	}, [callback, elementRef]);
+		debouncedHandleScroll();
+		window.addEventListener("scroll", debouncedHandleScroll);
 
-	return isIntersecting;
-}
+		return () => {
+			window.removeEventListener("scroll", debouncedHandleScroll);
+		};
+	}, [debouncedHandleScroll]);
+
+	return topValues;
+};
+
+const debounce = <T extends (...args: any[]) => void>(
+	func: T,
+	delay: number
+) => {
+	let timeoutId: number;
+	return (...args: any[]) => {
+		clearTimeout(timeoutId);
+		timeoutId = window.setTimeout(() => {
+			func(...args);
+		}, delay);
+	};
+};
+
+export default useIntersectionObserver;
