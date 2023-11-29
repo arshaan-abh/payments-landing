@@ -66,7 +66,7 @@ export const HeroBackground: FC<HeroBackgroundProps> = ({}) => {
 			autoPlay
 			loop
 			muted
-			ref={videoRef}
+			// ref={videoRef}
 			poster="hero-background.jpg"
 		>
 			<source src="hero-background.mp4" type="video/mp4" />
