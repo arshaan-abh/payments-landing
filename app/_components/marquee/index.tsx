@@ -38,11 +38,11 @@ const MarketingBanner: FC<MarketingBannerProps> = ({ white, data }) => {
 
 	useEffect(() => {
 		const marquee = marqueeRef.current;
-		addEventListener("scroll", handleScroll);
+		// addEventListener("scroll", handleScroll);
 		marquee?.addEventListener("mousemove", pause);
 		marquee?.addEventListener("mouseleave", play);
 		return () => {
-			removeEventListener("scroll", handleScroll);
+			// removeEventListener("scroll", handleScroll);
 			marquee?.removeEventListener("mousemove", pause);
 			marquee?.removeEventListener("mouseleave", play);
 		};
