@@ -10,7 +10,7 @@ body {
 	padding: 0;
 	background-color: var(--background);
 	color: var(--accent);
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizeSpeed;
 	-webkit-font-feature-settings: "kern" 1;
 	-moz-font-feature-settings: "kern" 1;
 	font-feature-settings: "kern" 1;
