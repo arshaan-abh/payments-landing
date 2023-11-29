@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { LayoutProps } from "@/.next/types/app/layout";
 
 export const metadata: Metadata = {
 	title: "Selected Payment",
@@ -9,11 +10,7 @@ export const metadata: Metadata = {
 		"Enjoy effortless and secure transactions with Selected Payments.",
 };
 
-export default function RootLayout({
-	children,
-}: {
-	children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: LayoutProps) {
 	return (
 		<html lang="en">
 			<head>
