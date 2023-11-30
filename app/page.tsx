@@ -20,10 +20,8 @@ import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
 import Grid from "./_components/grid";
 import useResponsiveState from "./_components/features-one/useResponsiveState";
-import { createContext } from "react";
+import { Context } from "./_contexts/context";
 import { motion } from "framer-motion";
-
-export const Context = createContext<number[]>([]);
 
 export default function Home() {
 	const isMobile = useResponsiveState<boolean>({
