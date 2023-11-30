@@ -8,7 +8,7 @@ import useSlider from "../features-seven/Slider";
 import useResponsiveState from "./useResponsiveState";
 import { SlideButton } from "../features-seven";
 import { ArrowLeftIcon, ArrowRightIcon } from "../icons";
-import { Context } from "@/app/page";
+import { Context } from "@/app/_contexts/context";
 import { motion } from "framer-motion";
 
 const FeatureOne: FC<CardProps> = ({}) => {
