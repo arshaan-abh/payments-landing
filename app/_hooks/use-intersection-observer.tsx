@@ -20,23 +20,25 @@ const useIntersectionObserver = <T,>({
 				const top = boundingBox ? boundingBox.top : 0;
 				return Math.min(Math.max(1 - top / window.innerHeight, 0), 1);
 			});
-
 			if (elementRefs.every((ref) => ref.current)) {
 				setTopValues(newTopValues);
 			}
 		});
 	}, [elementRefs]);
 
-	const debounceDelay = 64;
+	const debounceDelay = 128;
 	const debouncedHandleScroll = useMemo(
 		() => debounce(handleScroll, debounceDelay),
 		[handleScroll]
 	);
 
 	useEffect(() => {
-		debouncedHandleScroll();
-		window.addEventListener("scroll", debouncedHandleScroll);
+		handleScroll();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
+	useEffect(() => {
+		window.addEventListener("scroll", debouncedHandleScroll);
 		return () => {
 			window.removeEventListener("scroll", debouncedHandleScroll);
 		};

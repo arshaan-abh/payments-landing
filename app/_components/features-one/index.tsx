@@ -56,26 +56,31 @@ const FeatureOne: FC<CardProps> = ({}) => {
 		<div className="flex h-full w-full flex-col px-10 py-4 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow" />
 			<div className="flex flex-col items-center gap-x-8 gap-y-2 md:flex-row">
-				<div className="md:w-1/2">
+				<div className="relative text-center text-4xl font-extrabold leading-tight text-primary md:w-1/2 md:text-left">
+					Simplified Customer Payment Processing!
 					<motion.div
-						className="overflow-hidden text-center text-4xl font-extrabold leading-tight text-primary transition-all ease-linear md:text-left"
+						className="absolute inset-0 bg-white"
 						animate={{
-							width: `calc(${isIntersecting} * 100%)`,
+							left: `calc(${isIntersecting} * 100%)`,
 						}}
-					>
-						Simplified&nbsp;Customer Payment&nbsp;Processing!
-					</motion.div>
+					/>
 				</div>
-				<div className="text-center text-base font-medium leading-tight text-gray-200 md:w-1/2 md:text-left">
+				<div className="relative text-center text-base font-medium leading-tight text-gray-200 md:w-1/2 md:text-left">
 					<p className="inline">
 						In a rapidly evolving marketplace, staying ahead means embracing
 						efficient solutions.
 					</p>
 					<p className="hidden md:inline">
-						&nbsp;Our streamlined customer payment processing is your gateway to
-						a new era in payment convenience. We&apos;ve reimagined the payment
+						Our streamlined customer payment processing is your gateway to a new
+						era in payment convenience. We&apos;ve reimagined the payment
 						journey to be effortless and user-friendly.
 					</p>
+					<motion.div
+						className="absolute inset-0 bg-white"
+						animate={{
+							left: `calc(${isIntersecting} * 100%)`,
+						}}
+					/>
 				</div>
 			</div>
 			<div className="min-h-[1rem] grow-2" />
