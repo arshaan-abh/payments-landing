@@ -4,26 +4,29 @@ import type { FC, MouseEventHandler, ReactNode, RefObject } from "react";
 interface ButtonProps {
 	customRef?: RefObject<HTMLButtonElement>;
 	children?: ReactNode;
-	white?: boolean;
+	dark?: boolean;
 	clickHandler?: MouseEventHandler<HTMLButtonElement>;
 	className?: string;
+	long?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({
 	children,
-	white,
+	dark,
 	clickHandler,
 	customRef,
 	className = "",
+	long,
 }) => {
-	const variableClassNames = white
-		? "text-primary-950 bg-white"
-		: "text-white bg-primary-950";
+	const darkClassNames = dark
+		? "text-secondary-300 bg-primary-950"
+		: "text-primary-950 bg-secondary-300";
+	const longClassNames = long ? "px-16" : "px-8";
 	return (
 		<button
 			ref={customRef}
 			onClick={clickHandler}
-			className={`${variableClassNames} whitespace-nowrap rounded-md px-8 py-3 text-base font-bold ${className}`}
+			className={`${darkClassNames} ${longClassNames} whitespace-nowrap rounded-md py-3 text-base font-bold ${className}`}
 		>
 			{children}
 		</button>

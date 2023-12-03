@@ -6,7 +6,7 @@ function Hero() {
 		<div className="flex h-full w-full flex-col px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1.5rem] grow" />
 			<h1 className="mb-4 text-center text-6xl font-medium text-white md:text-left lg:w-1/2">
-				<span className="relative whitespace-nowrap bg-underline font-extrabold">
+				<span className="bg-underline relative whitespace-nowrap font-extrabold">
 					Grow Sales
 					<div className="absolute inset-x-0 bottom-2 top-1/2 -z-10 bg-teal-300 opacity-20" />
 				</span>
@@ -26,8 +26,10 @@ function Hero() {
 				</p>
 			</div>
 			<div className="flex justify-center gap-4 md:justify-start lg:w-1/2">
-				<Button white>Enquire Now</Button>
-				<Button>Contact us</Button>
+				<Button long>Enquire Now</Button>
+				<Button long dark>
+					Contact us
+				</Button>
 			</div>
 			<div className="min-h-[1.5rem] grow-2" />
 		</div>
