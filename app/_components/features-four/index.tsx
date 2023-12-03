@@ -1,14 +1,18 @@
-import type { FC } from "react";
+import { useContext, type FC } from "react";
 import Empowering from "public/transfer.jpg";
 import Image from "next/image";
 import Hoverable from "../hoverable";
+import { Context } from "@/app/_contexts/context";
+import { motion } from "framer-motion";
 
 interface FeatureFourProps {}
 
 const FeatureFour: FC<FeatureFourProps> = ({}) => {
+	const isIntersecting = useContext(Context)[4];
+
 	return (
 		<div className="flex h-full w-full flex-col-reverse items-center justify-center gap-10 px-10 lg:flex-row lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
-			<div className="flex flex-row flex-wrap justify-between gap-y-4 md:w-2/3 lg:w-1/2 lg:flex-col lg:gap-5">
+			<div className="relative flex flex-row flex-wrap justify-between gap-y-4 md:w-2/3 lg:w-1/2 lg:flex-col lg:gap-5">
 				<Card
 					title="245M+"
 					percent={100}
@@ -29,12 +33,24 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					percent={50}
 					supportingText="currencies and payment methods supported."
 				/>
+				<motion.div
+					className="absolute inset-0 bg-white"
+					animate={{
+						left: `calc(${isIntersecting} * 100%)`,
+					}}
+				/>
 			</div>
 			<div className="flex flex-col gap-5 md:w-2/3 lg:w-1/2">
-				<h3 className="text-center text-4xl font-extrabold text-primary lg:text-start">
+				<h3 className="relative text-center text-4xl font-extrabold text-primary lg:text-start">
 					Empowering Effortless Money Transfers
+					<motion.div
+						className="absolute inset-0 bg-white"
+						animate={{
+							left: `calc(${isIntersecting} * 100%)`,
+						}}
+					/>
 				</h3>
-				<div className="text-center text-base font-medium text-gray-200 lg:text-start">
+				<div className="relative text-center text-base font-medium text-gray-200 lg:text-start">
 					<p className="inline">
 						Our platform is your gateway to effortless financial transactions.
 					</p>
@@ -43,10 +59,22 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 						transfer solutions, so you can efficiently manage your finances.
 						Join us today and discover a new level of financial convenience.
 					</p>
+					<motion.div
+						className="absolute inset-0 bg-white"
+						animate={{
+							left: `calc(${isIntersecting} * 100%)`,
+						}}
+					/>
 				</div>
-				<Hoverable round>
-					<Image src={Empowering} alt="Empowering" />
-				</Hoverable>
+				<motion.div
+					animate={{
+						transform: `translateX(calc(${1 - isIntersecting} * 100%))`,
+					}}
+				>
+					<Hoverable round>
+						<Image src={Empowering} alt="Empowering" />
+					</Hoverable>
+				</motion.div>
 			</div>
 		</div>
 	);

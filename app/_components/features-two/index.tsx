@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import bigPicture from "public/epos.jpg";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
@@ -7,13 +7,17 @@ import smallPictureTwo from "public/pos.svg";
 import smallPictureThree from "public/pomo.svg";
 import smallPictureFour from "public/qr-code.svg";
 import Hoverable from "../hoverable";
+import { Context } from "@/app/_contexts/context";
+import { motion } from "framer-motion";
 
 function FeatureTwo() {
+	const isIntersecting = useContext(Context)[2];
+
 	return (
 		<div className="flex h-full w-full flex-col items-center px-10 py-4 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow-2" />
 			<div className="flex flex-col items-center gap-x-16 gap-y-4 sm:w-2/3 lg:w-auto xl:flex-row">
-				<div className="flex flex-col gap-2 text-center xl:w-1/2 xl:text-start">
+				<div className="relative flex flex-col gap-2 text-center xl:w-1/2 xl:text-start">
 					<div className="text-4xl font-extrabold text-primary">
 						ePOS All-In-One Solutions
 					</div>
@@ -30,8 +34,14 @@ function FeatureTwo() {
 							Innovative
 						</div>
 					</div>
+					<motion.div
+						className="absolute inset-0 bg-white"
+						animate={{
+							left: `calc(${isIntersecting} * 100%)`,
+						}}
+					/>
 				</div>
-				<div className="text-center text-base font-medium text-gray-200 xl:w-1/2 xl:text-start">
+				<div className="relative text-center text-base font-medium text-gray-200 xl:w-1/2 xl:text-start">
 					<p className="inline">
 						Unlock the potential of retail with our ePOS All-In-One Solutions.
 					</p>
@@ -40,11 +50,22 @@ function FeatureTwo() {
 						hardware, enable on-the-go mobile payments, and embrace secure,
 						contactless QR payments.
 					</p>
+					<motion.div
+						className="absolute inset-0 bg-white"
+						animate={{
+							left: `calc(${isIntersecting} * 100%)`,
+						}}
+					/>
 				</div>
 			</div>
 			<div className="min-h-[1rem] grow" />
 			<div className="flex flex-col items-center gap-x-16 gap-y-8 sm:w-2/3 lg:w-auto lg:flex-row">
-				<div className="flex w-2/3 items-center sm:w-full lg:w-1/2">
+				<motion.div
+					animate={{
+						transform: `translateX(calc(${1 - isIntersecting} * -100%))`,
+					}}
+					className="flex w-2/3 items-center sm:w-full lg:w-1/2"
+				>
 					<Hoverable className="w-full" round>
 						<Image
 							src={bigPicture}
@@ -52,8 +73,13 @@ function FeatureTwo() {
 							className="h-full object-cover"
 						/>
 					</Hoverable>
-				</div>
-				<div className="flex flex-col justify-between gap-6 lg:w-1/2">
+				</motion.div>
+				<motion.div
+					animate={{
+						transform: `translateX(calc(${1 - isIntersecting} * 100%))`,
+					}}
+					className="flex flex-col justify-between gap-6 lg:w-1/2"
+				>
 					<Card
 						image={smallPictureOne}
 						title="Flexible in-store payments"
@@ -74,7 +100,7 @@ function FeatureTwo() {
 						title="QR payment codes"
 						supportingText="Enjoy quick, secure, and contactless payments with a simple scan, providing you with a seamless and efficient way to pay."
 					/>
-				</div>
+				</motion.div>
 			</div>
 			<div className="min-h-[1rem] grow-2" />
 		</div>

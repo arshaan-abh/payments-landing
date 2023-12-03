@@ -84,7 +84,12 @@ const FeatureOne: FC<CardProps> = ({}) => {
 				</div>
 			</div>
 			<div className="min-h-[1rem] grow-2" />
-			<div className="flex flex-col gap-8">
+			<motion.div
+				className="flex flex-col gap-8"
+				animate={{
+					transform: `translateY(calc(${1 - isIntersecting} * 100%))`,
+				}}
+			>
 				{slider}
 				{visibleSlidesNumber < 3 && (
 					<div className="flex items-center justify-between">
@@ -99,7 +104,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 						</SlideButton>
 					</div>
 				)}
-			</div>
+			</motion.div>
 			<div className="min-h-[1rem] grow-2" />
 		</div>
 	);
