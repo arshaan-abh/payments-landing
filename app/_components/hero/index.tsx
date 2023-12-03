@@ -1,5 +1,4 @@
-"use client";
-import React, { FC, useCallback, useEffect, useRef } from "react";
+import React, { FC } from "react";
 import Button from "../button";
 
 function Hero() {
@@ -37,36 +36,12 @@ export default Hero;
 interface HeroBackgroundProps {}
 
 export const HeroBackground: FC<HeroBackgroundProps> = ({}) => {
-	const videoRef = useRef<HTMLVideoElement>(null);
-
-	const pause = useCallback(() => {
-		videoRef.current?.pause();
-	}, []);
-
-	const play = useCallback(() => {
-		videoRef.current?.play();
-	}, []);
-
-	const handleScroll = useCallback(() => {
-		pause();
-		const scrollY = window.scrollY || window.pageYOffset;
-		if (scrollY === 0) play();
-	}, [pause, play]);
-
-	useEffect(() => {
-		addEventListener("scroll", handleScroll);
-		return () => {
-			removeEventListener("scroll", handleScroll);
-		};
-	}, [play, pause, handleScroll]);
-
 	return (
 		<video
 			className="absolute inset-0 h-full w-full object-cover sm:fixed"
 			autoPlay
 			loop
 			muted
-			// ref={videoRef}
 			poster="hero-background.jpg"
 		>
 			<source src="hero-background.mp4" type="video/mp4" />
