@@ -50,7 +50,7 @@ export default function Home() {
 						}}
 						id="hero"
 						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-primary to-transparent ${
-							isIntersecting[0] > 0 ? "" : "pointer-events-none"
+							isMobile ? "" : isIntersecting[0] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<MarketingBanner data={firstMarqueeData} />
@@ -63,7 +63,7 @@ export default function Home() {
 						animate={{ opacity: isMobile ? 1 : isIntersecting[1] }}
 						id="feature-one"
 						className={`flex flex-col items-center overflow-hidden ${
-							isIntersecting[1] > 0 ? "" : "pointer-events-none"
+							isMobile ? "" : isIntersecting[1] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<MarketingBanner data={secondMarqueeData} white />
@@ -73,7 +73,7 @@ export default function Home() {
 						animate={{ opacity: isMobile ? 1 : isIntersecting[2] }}
 						id="feature-two"
 						className={`flex flex-col items-center overflow-hidden ${
-							isIntersecting[2] > 0 ? "" : "pointer-events-none"
+							isMobile ? "" : isIntersecting[2] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<FeatureTwo />
@@ -82,7 +82,7 @@ export default function Home() {
 						animate={{ opacity: isMobile ? 1 : isIntersecting[3] }}
 						id="feature-three"
 						className={`flex flex-col items-center overflow-hidden ${
-							isIntersecting[3] > 0 ? "" : "pointer-events-none"
+							isMobile ? "" : isIntersecting[3] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<FeatureThree />
@@ -91,7 +91,7 @@ export default function Home() {
 						animate={{ opacity: isMobile ? 1 : isIntersecting[4] }}
 						id="feature-four"
 						className={`flex flex-col items-center overflow-hidden ${
-							isIntersecting[4] > 0 ? "" : "pointer-events-none"
+							isMobile ? "" : isIntersecting[4] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<FeatureFour />
@@ -100,7 +100,7 @@ export default function Home() {
 						animate={{ opacity: isMobile ? 1 : isIntersecting[5] }}
 						id="feature-five"
 						className={`flex flex-col items-center overflow-hidden ${
-							isIntersecting[5] > 0 ? "" : "pointer-events-none"
+							isMobile ? "" : isIntersecting[5] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<MarketingBanner data={secondMarqueeData} white />
@@ -110,7 +110,7 @@ export default function Home() {
 						animate={{ opacity: isMobile ? 1 : isIntersecting[6] }}
 						id="feature-six"
 						className={`flex flex-col items-center overflow-hidden ${
-							isIntersecting[6] > 0 ? "" : "pointer-events-none"
+							isMobile ? "" : isIntersecting[6] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<FeatureSix />
@@ -120,7 +120,7 @@ export default function Home() {
 						animate={{ opacity: isMobile ? 1 : isIntersecting[7] }}
 						id="feature-seven"
 						className={`flex flex-col items-center overflow-hidden ${
-							isIntersecting[7] > 0 ? "" : "pointer-events-none"
+							isMobile ? "" : isIntersecting[7] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<FeatureSeven />
@@ -129,7 +129,7 @@ export default function Home() {
 						animate={{ opacity: isMobile ? 1 : isIntersecting[8] }}
 						id="feature-eight"
 						className={`flex flex-col items-center overflow-hidden ${
-							isIntersecting[8] > 0 ? "" : "pointer-events-none"
+							isMobile ? "" : isIntersecting[8] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<MarketingBanner data={secondMarqueeData} white />
@@ -139,7 +139,7 @@ export default function Home() {
 						animate={{ opacity: isMobile ? 1 : isIntersecting[9] }}
 						id="feature-nine"
 						className={`flex flex-col items-center overflow-hidden bg-primary text-secondary ${
-							isIntersecting[9] > 0 ? "" : "pointer-events-none"
+							isMobile ? "" : isIntersecting[9] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<Form />
@@ -148,7 +148,11 @@ export default function Home() {
 						animate={{ opacity: isMobile ? 1 : isIntersecting[10] }}
 						id="feature-ten"
 						className={`flex flex-col items-center overflow-hidden bg-primary text-secondary ${
-							isIntersecting[10] > 0 ? "" : "pointer-events-none"
+							isMobile
+								? ""
+								: isIntersecting[10] > 0
+								  ? ""
+								  : "pointer-events-none"
 						}`}
 					>
 						<Footer />
