@@ -2,7 +2,7 @@ import { useContext, type FC } from "react";
 import Empowering from "public/transfer.jpg";
 import Image from "next/image";
 import Hoverable from "../hoverable";
-import { Context } from "@/app/_contexts/intersection-context";
+import { Context } from "@/app/_contexts/contexts";
 import { motion } from "framer-motion";
 
 interface FeatureFourProps {}

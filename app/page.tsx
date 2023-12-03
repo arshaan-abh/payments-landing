@@ -20,7 +20,7 @@ import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
 import Grid from "./_components/grid";
 import useResponsiveState from "./_components/features-one/useResponsiveState";
-import { Context } from "./_contexts/intersection-context";
+import { Context } from "./_contexts/contexts";
 import { motion } from "framer-motion";
 
 export default function Home() {
