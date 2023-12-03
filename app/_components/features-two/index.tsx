@@ -40,7 +40,7 @@ function FeatureTwo() {
 					</div>
 					<motion.div
 						className="absolute inset-0 bg-white"
-						animate={{
+						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
@@ -56,7 +56,7 @@ function FeatureTwo() {
 					</p>
 					<motion.div
 						className="absolute inset-0 bg-white"
-						animate={{
+						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
@@ -65,7 +65,7 @@ function FeatureTwo() {
 			<div className="min-h-[1rem] grow" />
 			<div className="flex flex-col items-center gap-x-16 gap-y-8 sm:w-2/3 lg:w-auto lg:flex-row">
 				<motion.div
-					animate={{
+					style={{
 						transform: `translateX(calc(${
 							1 - (isMobile ? 1 : isIntersecting)
 						} * -100%))`,
@@ -81,7 +81,7 @@ function FeatureTwo() {
 					</Hoverable>
 				</motion.div>
 				<motion.div
-					animate={{
+					style={{
 						transform: `translateX(calc(${
 							1 - (isMobile ? 1 : isIntersecting)
 						} * 100%))`,

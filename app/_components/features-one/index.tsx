@@ -64,7 +64,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					Simplified Customer Payment Processing!
 					<motion.div
 						className="absolute inset-0 bg-white"
-						animate={{
+						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
@@ -81,7 +81,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					</p>
 					<motion.div
 						className="absolute inset-0 bg-white"
-						animate={{
+						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
@@ -90,7 +90,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			<div className="min-h-[1rem] grow-2" />
 			<motion.div
 				className="flex flex-col gap-8"
-				animate={{
+				style={{
 					transform: `translateY(calc(${
 						1 - (isMobile ? 1 : isIntersecting)
 					} * 100%))`,

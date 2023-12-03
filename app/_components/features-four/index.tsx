@@ -39,7 +39,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 				/>
 				<motion.div
 					className="absolute inset-0 bg-white"
-					animate={{
+					style={{
 						left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 					}}
 				/>
@@ -49,7 +49,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					Empowering Effortless Money Transfers
 					<motion.div
 						className="absolute inset-0 bg-white"
-						animate={{
+						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
@@ -65,13 +65,13 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					</p>
 					<motion.div
 						className="absolute inset-0 bg-white"
-						animate={{
+						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</div>
 				<motion.div
-					animate={{
+					style={{
 						transform: `translateX(calc(${
 							1 - (isMobile ? 1 : isIntersecting)
 						} * 100%))`,
