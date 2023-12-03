@@ -11,7 +11,6 @@ import { ThunderIcon } from "../icons";
 
 export interface marqueeItemData {
 	body: ReactNode;
-	head?: ReactNode;
 }
 
 interface MarketingBannerProps {
