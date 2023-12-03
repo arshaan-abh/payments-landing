@@ -22,7 +22,7 @@ function FeatureThree() {
 			<div className="min-h-[1rem] grow-2" />
 			<div className="flex flex-col items-center gap-x-16 gap-y-4 sm:w-2/3 lg:w-auto xl:flex-row">
 				<div className="relative flex flex-col gap-2 text-center xl:w-1/2 xl:text-start">
-					<div className="text-4xl font-extrabold text-primary">
+					<div className="text-4xl font-extrabold text-primary-950">
 						Marketplace & Platforms
 					</div>
 					<div className="hidden items-center justify-between gap-2 sm:flex">

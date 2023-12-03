@@ -71,13 +71,13 @@ function FeatureEight() {
 				style={{ cursor: "pointer" }}
 			>
 				<HoverableImage src={t.image} alt={t.title} />
-				<h4 className="text-2xl font-extrabold text-primary">{t.title}</h4>
+				<h4 className="text-2xl font-extrabold text-primary-950">{t.title}</h4>
 				<p className="text-lg font-medium text-gray-100">{t.subtitle}</p>
 				<div className="flex flex-col gap-1">
 					{t.items ? (
 						t.items.map((item, index) => (
 							<div className="flex items-center gap-2" key={index}>
-								<CheckIcon className="text-primary" />
+								<CheckIcon className="text-primary-950" />
 								<div className="text-sm font-medium text-gray-200">{item}</div>
 							</div>
 						))
@@ -99,7 +99,9 @@ function FeatureEight() {
 				<div className="min-h-[1rem] grow-2" />
 				<div className="flex items-center justify-between gap-4">
 					<div className="flex flex-col gap-2">
-						<h3 className="text-4xl font-extrabold text-primary">Terminals</h3>
+						<h3 className="text-4xl font-extrabold text-primary-950">
+							Terminals
+						</h3>
 						<p className="text-base font-normal text-gray-200">
 							Here you can see our terminals and order anyone do you want.
 						</p>
@@ -165,7 +167,7 @@ export const SlideButton: FC<SlideButtonProps> = ({ children, buttonRef }) => {
 	return (
 		<button
 			ref={buttonRef}
-			className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-primary text-primary transition-colors disabled:border-gray-400 disabled:text-gray-400"
+			className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-primary-950 text-primary-950 transition-colors disabled:border-gray-400 disabled:text-gray-400"
 		>
 			{children}
 		</button>

@@ -39,13 +39,13 @@ const CookiesModal: FC<CookiesModalProps> = ({}) => {
 						/>
 					}
 				>
-					<div className="text-2xl font-bold text-primary">Cookies</div>
-					<p className="text-sm font-normal text-primary">
+					<div className="text-2xl font-bold text-primary-950">Cookies</div>
+					<p className="text-sm font-normal text-primary-950">
 						We use cookies to make your experience better!
 					</p>
 					<div className="flex items-center justify-between gap-2">
 						<Link
-							className="text-sm font-bold text-primary underline"
+							className="text-sm font-bold text-primary-950 underline"
 							href="#privacy-policy"
 						>
 							Privacy Policy

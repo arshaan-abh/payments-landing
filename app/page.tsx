@@ -49,7 +49,7 @@ export default function Home() {
 							opacity: isMobile ? 1 : isIntersecting[0],
 						}}
 						id="hero"
-						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-primary to-transparent ${
+						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-primary-950 to-transparent ${
 							isMobile ? "" : isIntersecting[0] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
@@ -138,7 +138,7 @@ export default function Home() {
 					<motion.section
 						style={{ opacity: isMobile ? 1 : isIntersecting[9] }}
 						id="feature-nine"
-						className={`flex flex-col items-center overflow-hidden bg-primary text-secondary ${
+						className={`flex flex-col items-center overflow-hidden bg-primary-950 text-secondary-950 ${
 							isMobile ? "" : isIntersecting[9] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
@@ -147,12 +147,12 @@ export default function Home() {
 					<motion.section
 						style={{ opacity: isMobile ? 1 : isIntersecting[10] }}
 						id="feature-ten"
-						className={`flex flex-col items-center overflow-hidden bg-primary text-secondary ${
+						className={`flex flex-col items-center overflow-hidden bg-primary-950 text-secondary-950 ${
 							isMobile
 								? ""
 								: isIntersecting[10] > 0
-								  ? ""
-								  : "pointer-events-none"
+								? ""
+								: "pointer-events-none"
 						}`}
 					>
 						<Footer />

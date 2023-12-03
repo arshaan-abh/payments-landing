@@ -45,7 +45,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 				/>
 			</div>
 			<div className="flex flex-col gap-5 md:w-2/3 lg:w-1/2">
-				<h3 className="relative text-center text-4xl font-extrabold text-primary lg:text-start">
+				<h3 className="relative text-center text-4xl font-extrabold text-primary-950 lg:text-start">
 					Empowering Effortless Money Transfers
 					<motion.div
 						className="absolute inset-0 bg-white"
@@ -97,7 +97,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ title, supportingText, percent }) => {
 	return (
 		<div className="flex w-full flex-col gap-2 sm:w-[48%]">
-			<div className="text-center text-6xl font-extrabold text-primary sm:text-start lg:text-7xl">
+			<div className="text-center text-6xl font-extrabold text-primary-950 sm:text-start lg:text-7xl">
 				{title}
 			</div>
 			<div className="h-5 bg-gray-700" style={{ width: `${percent}%` }} />

@@ -12,8 +12,8 @@ interface MarketingBannerProps {
 
 const MarketingBanner: FC<MarketingBannerProps> = ({ dark, data }) => {
 	const variableClassNames = dark
-		? "bg-primary text-white"
-		: "bg-white text-primary border-b-2 border-primary";
+		? "bg-primary-950 text-white"
+		: "bg-white text-primary-950 border-b-2 border-primary-950";
 
 	return (
 		<header
@@ -24,12 +24,12 @@ const MarketingBanner: FC<MarketingBannerProps> = ({ dark, data }) => {
 					<MarqueeItems
 						data={data}
 						className="animate-marquee"
-						iconClassName={dark ? "text-secondary" : ""}
+						iconClassName={dark ? "text-secondary-950" : ""}
 					/>
 					<MarqueeItems
 						data={data}
 						className="animate-marquee-after"
-						iconClassName={dark ? "text-secondary" : ""}
+						iconClassName={dark ? "text-secondary-950" : ""}
 					/>
 				</>
 			)}

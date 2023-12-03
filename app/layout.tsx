@@ -240,7 +240,7 @@ export default function RootLayout({ children }: LayoutProps) {
 				/>
 			</head>
 			<body
-				className={`${GeistMono.variable} ${GeistSans.className} bg-secondary`}
+				className={`${GeistMono.variable} ${GeistSans.className} bg-secondary-950`}
 			>
 				{children}
 			</body>

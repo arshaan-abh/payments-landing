@@ -87,7 +87,7 @@ const Menu: FC<MenuProps> = ({}) => {
 				<MenuItem>
 					<CallUsIcon />
 				</MenuItem>
-				<MenuItem primary onClick={openDetail}>
+				<MenuItem primary-950 onClick={openDetail}>
 					<ThreeDotsIcon />
 				</MenuItem>
 				<MenuItem>
@@ -114,7 +114,7 @@ const Menu: FC<MenuProps> = ({}) => {
 				<MenuDetailItem>ePOS</MenuDetailItem>
 				<MenuDetailItem>Marketplace</MenuDetailItem>
 				<MenuDetailItem>Products</MenuDetailItem>
-				<MenuDetailItem primary>Enquire</MenuDetailItem>
+				<MenuDetailItem primary-950>Enquire</MenuDetailItem>
 			</div>
 		</>
 	);
@@ -147,11 +147,11 @@ const MenuItem: FC<MenuItemProps> = ({ primary, children, onClick }) => {
 	}, [handleScroll]);
 
 	const variableContainerClasses = darkMode
-		? "text-primary bg-primary/10"
+		? "text-primary-950 bg-primary-950/10"
 		: "text-white bg-white/10";
 	const variablePrimaryClasses = darkMode
-		? "text-white bg-primary"
-		: "text-primary bg-white";
+		? "text-white bg-primary-950"
+		: "text-primary-950 bg-white";
 	const w = primary ? "w-[64px]" : "w-[44px]";
 	return (
 		<button
@@ -180,7 +180,7 @@ const MenuDetailItem: FC<MenuDetailItemProps> = ({ children, primary }) => {
 	const variablePrimaryClasses = primary ? "bg-[#16161633]" : "";
 	return (
 		<button
-			className={`flex h-full items-center rounded-rectangle-full px-4 text-base font-bold text-primary transition-colors hover:bg-primary hover:text-secondary ${variablePrimaryClasses}`}
+			className={`flex h-full items-center rounded-rectangle-full px-4 text-base font-bold text-primary-950 transition-colors hover:bg-primary-950 hover:text-secondary-950 ${variablePrimaryClasses}`}
 		>
 			{children}
 		</button>

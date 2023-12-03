@@ -92,7 +92,7 @@ function Form() {
 	const [slider, prevButtonRef, nextButtonRef, index] = useSlider({
 		children: [
 			<div className="flex basis-1/2 flex-col" key={0}>
-				<p className="mb-4 text-center text-xl font-extrabold text-secondary">
+				<p className="mb-4 text-center text-xl font-extrabold text-secondary-950">
 					Select your favorite solutions
 				</p>
 				<div className="mb-3 flex flex-wrap gap-3">
@@ -112,7 +112,7 @@ function Form() {
 						id="message"
 						rows={3}
 						disabled={checkableList[11] ? false : true}
-						className="w-full rounded-md border-2 border-gray-100 bg-transparent p-2.5 text-base font-semibold text-secondary focus:border-secondary"
+						className="w-full rounded-md border-2 border-gray-100 bg-transparent p-2.5 text-base font-semibold text-secondary-950 focus:border-secondary-950"
 						placeholder="Others"
 						style={{ resize: "none" }}
 					></textarea>

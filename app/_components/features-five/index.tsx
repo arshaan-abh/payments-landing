@@ -103,7 +103,7 @@ interface CardProps {
 export const Card: FC<CardProps> = ({ title, children }) => {
 	return (
 		<div className="flex flex-col gap-4">
-			<h4 className="text-center text-3xl font-extrabold text-primary xl:text-start">
+			<h4 className="text-center text-3xl font-extrabold text-primary-950 xl:text-start">
 				{title}
 			</h4>
 			<div className="text-center text-base font-normal text-gray-200 xl:text-start">

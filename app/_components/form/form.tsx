@@ -12,7 +12,7 @@ interface FormSectionProps {
 const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 	return (
 		<div className="flex basis-1/2 flex-col">
-			<p className="mb-4 text-center text-xl font-extrabold text-secondary">
+			<p className="mb-4 text-center text-xl font-extrabold text-secondary-950">
 				Begin your next chapter now!
 			</p>
 			<form className="flex w-full flex-col justify-center rounded-md">

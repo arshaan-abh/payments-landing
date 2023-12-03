@@ -32,7 +32,7 @@ const ImageSlider = () => {
 								<Image src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
-								<span className="text-xl font-bold text-primary">
+								<span className="text-xl font-bold text-primary-950">
 									Marketing Banner
 								</span>
 							</div>
@@ -49,7 +49,7 @@ const ImageSlider = () => {
 								<Image src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
-								<span className="text-xl font-bold text-primary">
+								<span className="text-xl font-bold text-primary-950">
 									Marketing Banner
 								</span>
 							</div>
@@ -66,7 +66,7 @@ const ImageSlider = () => {
 								<Image src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
-								<span className="text-xl font-bold text-primary">
+								<span className="text-xl font-bold text-primary-950">
 									Marketing Banner
 								</span>
 							</div>
@@ -83,7 +83,7 @@ const ImageSlider = () => {
 								<Image src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
-								<span className="text-xl font-bold text-primary">
+								<span className="text-xl font-bold text-primary-950">
 									Marketing Banner
 								</span>
 							</div>
@@ -100,7 +100,7 @@ const ImageSlider = () => {
 								<Image src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
-								<span className="text-xl font-bold text-primary">
+								<span className="text-xl font-bold text-primary-950">
 									Marketing Banner
 								</span>
 							</div>
@@ -117,7 +117,7 @@ const ImageSlider = () => {
 								<Image src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
-								<span className="text-xl font-bold text-primary">
+								<span className="text-xl font-bold text-primary-950">
 									Marketing Banner
 								</span>
 							</div>

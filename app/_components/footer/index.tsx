@@ -41,7 +41,7 @@ const Footer: FC<FooterProps> = ({}) => {
 	return (
 		<div className="flex h-full w-full flex-col">
 			<div className="grow"></div>
-			<div className="flex justify-center bg-primary text-secondary">
+			<div className="flex justify-center bg-primary-950 text-secondary-950">
 				<div className="flex flex-col gap-11 px-10 pt-11 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 					<Image src={logo} alt="Logo" />
 					<div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap">
@@ -51,7 +51,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								<Link
 									key={index}
 									href={link.link}
-									className="text-sm font-medium text-secondary"
+									className="text-sm font-medium text-secondary-950"
 								>
 									{link.text}
 								</Link>
@@ -63,7 +63,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								<Link
 									key={index}
 									href={link.link}
-									className="text-sm font-medium text-secondary"
+									className="text-sm font-medium text-secondary-950"
 								>
 									{link.text}
 								</Link>
@@ -73,7 +73,7 @@ const Footer: FC<FooterProps> = ({}) => {
 							<h5 className="mb-1 text-base font-extrabold">
 								We&apos;re social
 							</h5>
-							<p className="text-sm font-medium text-secondary">
+							<p className="text-sm font-medium text-secondary-950">
 								Follow us on social media and scroll through the latest scoop
 								effortlessly in your feed
 							</p>
@@ -87,7 +87,7 @@ const Footer: FC<FooterProps> = ({}) => {
 							<h5 className="mb-1 text-base font-extrabold">
 								Join us and stay ahead of the curve
 							</h5>
-							<p className="mb-2 text-sm font-medium text-secondary">
+							<p className="mb-2 text-sm font-medium text-secondary-950">
 								Get the latest news and exclusive promotions conveniently in
 								your inbox.
 							</p>
@@ -95,7 +95,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								<input
 									type="email"
 									placeholder="Email"
-									className="w-full rounded-md border border-secondary bg-[#ffffff0a] px-4 py-2 text-base font-normal text-secondary outline-none"
+									className="w-full rounded-md border border-secondary-950 bg-[#ffffff0a] px-4 py-2 text-base font-normal text-secondary-950 outline-none"
 								/>
 								<Button white className="w-1/2 sm:w-full lg:w-1/2">
 									Sign up
@@ -133,9 +133,9 @@ const Footer: FC<FooterProps> = ({}) => {
 						<div className="flex flex-col items-center justify-between gap-y-4 border-t border-gray-100 py-3 pt-6 md:flex-row md:pt-3">
 							<p className="text-xs font-normal text-gray-400">
 								Copyright © 2023 Powered by{" "}
-								<span className="font-bold text-secondary">Selected</span>
+								<span className="font-bold text-secondary-950">Selected</span>
 							</p>
-							<p className="text-xs font-bold text-secondary">
+							<p className="text-xs font-bold text-secondary-950">
 								Privacy Policy | Terms of Use
 							</p>
 						</div>

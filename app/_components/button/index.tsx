@@ -17,8 +17,8 @@ const Button: FC<ButtonProps> = ({
 	className = "",
 }) => {
 	const variableClassNames = white
-		? "text-primary bg-white"
-		: "text-white bg-primary";
+		? "text-primary-950 bg-white"
+		: "text-white bg-primary-950";
 	return (
 		<button
 			ref={customRef}
