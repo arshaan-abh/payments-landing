@@ -14,7 +14,7 @@ import FaqSection from "./_components/faq";
 import MarketingBanner from "./_components/marquee";
 import CookiesModal from "./_components/cookies-modal";
 import Menu from "./_components/menu";
-import { firstMarqueeData, secondMarqueeData } from "./staticData/marqueesData";
+import { darkMarqueeData, marqueeData } from "./staticData/marqueesData";
 import { EnquireNowIcon } from "./_components/icons";
 import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
@@ -53,7 +53,7 @@ export default function Home() {
 							isMobile ? "" : isIntersecting[0] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
-						<MarketingBanner data={firstMarqueeData} />
+						<MarketingBanner data={darkMarqueeData} dark />
 						<Navbar />
 						<div className="flex min-h-[1rem] grow sm:hidden" />
 						<Hero />
@@ -66,7 +66,7 @@ export default function Home() {
 							isMobile ? "" : isIntersecting[1] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
-						<MarketingBanner data={secondMarqueeData} white />
+						<MarketingBanner data={marqueeData} />
 						<FeatureOne />
 					</motion.section>
 					<motion.section
@@ -103,7 +103,7 @@ export default function Home() {
 							isMobile ? "" : isIntersecting[5] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
-						<MarketingBanner data={secondMarqueeData} white />
+						<MarketingBanner data={marqueeData} />
 						<FeatureFive />
 					</motion.section>
 					<motion.section
@@ -132,7 +132,7 @@ export default function Home() {
 							isMobile ? "" : isIntersecting[8] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
-						<MarketingBanner data={secondMarqueeData} white />
+						<MarketingBanner data={marqueeData} />
 						<FaqSection />
 					</motion.section>
 					<motion.section

@@ -1,38 +1,21 @@
-import Image from "next/image";
-import calculator from "public/calculator.webp";
-import money from "public/money.webp";
-import coinPiles from "public/coin-piles.webp";
-import { marqueeItemData } from "../_components/marquee";
+import { marqueeItemModel } from "../_components/marquee";
 
-export const firstMarqueeData: marqueeItemData[] = [
-	{ body: "Special offer! - up to 30%" },
-	{ body: "Special offer! - up to 30%" },
-	{ body: "Special offer! - up to 30%" },
-	{ body: "Special offer! - up to 30%" },
-	{ body: "Special offer! - up to 30%" },
-	{ body: "Special offer! - up to 30%" },
-	{ body: "Special offer! - up to 30%" },
+export const darkMarqueeData: marqueeItemModel[] = [
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
 ];
 
-export const secondMarqueeData: marqueeItemData[] = [
-	{
-		body: "Marketing Banner",
-	},
-	{
-		body: "Marketing Banner",
-	},
-	{
-		body: "Marketing Banner",
-	},
-	{
-		body: "Marketing Banner",
-	},
-	{
-		body: "Marketing Banner",
-	},
-	{
-		body: "Marketing Banner",
-	},
+export const marqueeData: marqueeItemModel[] = [
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
+	{ reactNode: "Special offer! - up to 30%" },
 ];
-
-// TODO solve mozilla issue

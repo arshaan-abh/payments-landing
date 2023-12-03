@@ -93,11 +93,11 @@ html {
 	color: #fff;
 }
 
-.animation-play-state-paused {
-	-webkit-animation-play-state: paused;
-	-moz-animation-play-state: paused;
-	-o-animation-play-state: paused;
-	animation-play-state: paused;
+.animation-play-state {
+	-webkit-animation-play-state: var(--animation-play-state);
+	-moz-animation-play-state: var(--animation-play-state);
+	-o-animation-play-state: var(--animation-play-state);
+	animation-play-state: var(--animation-play-state);
 }
 
 /* Chrome, Safari, Edge, Opera */
