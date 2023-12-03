@@ -140,14 +140,13 @@ function Form() {
 						clickHandler={() => {
 							handleFormSubmit();
 						}}
-						white
 					>
 						Enquire Now
 					</Button>
 				) : (
 					<>
 						{index === 1 ? (
-							<Button white className="f-full" customRef={nextButtonRef}>
+							<Button className="f-full" customRef={nextButtonRef}>
 								Next
 							</Button>
 						) : (
@@ -158,7 +157,6 @@ function Form() {
 								clickHandler={() => {
 									handleFormSubmit();
 								}}
-								white
 							>
 								Enquire Now
 							</Button>

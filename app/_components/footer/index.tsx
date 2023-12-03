@@ -97,9 +97,7 @@ const Footer: FC<FooterProps> = ({}) => {
 									placeholder="Email"
 									className="w-full rounded-md border border-secondary-950 bg-[#ffffff0a] px-4 py-2 text-base font-normal text-secondary-950 outline-none"
 								/>
-								<Button white className="w-1/2 sm:w-full lg:w-1/2">
-									Sign up
-								</Button>
+								<Button className="w-1/2 sm:w-full lg:w-1/2">Sign up</Button>
 							</div>
 						</div>
 					</div>
