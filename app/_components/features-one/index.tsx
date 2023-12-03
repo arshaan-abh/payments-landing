@@ -8,10 +8,14 @@ import useSlider from "../features-seven/Slider";
 import useResponsiveState from "./useResponsiveState";
 import { SlideButton } from "../features-seven";
 import { ArrowLeftIcon, ArrowRightIcon } from "../icons";
-import { IsIntersectingContext } from "@/app/_contexts/contexts";
+import {
+	IsIntersectingContext,
+	IsMobileContext,
+} from "@/app/_contexts/contexts";
 import { motion } from "framer-motion";
 
 const FeatureOne: FC<CardProps> = ({}) => {
+	const isMobile = useContext(IsMobileContext);
 	const isIntersecting = useContext(IsIntersectingContext)[1];
 
 	const visibleSlidesNumber = useResponsiveState<number>({
@@ -61,7 +65,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					<motion.div
 						className="absolute inset-0 bg-white"
 						animate={{
-							left: `calc(${isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</div>
@@ -78,7 +82,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					<motion.div
 						className="absolute inset-0 bg-white"
 						animate={{
-							left: `calc(${isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</div>
@@ -87,7 +91,9 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			<motion.div
 				className="flex flex-col gap-8"
 				animate={{
-					transform: `translateY(calc(${1 - isIntersecting} * 100%))`,
+					transform: `translateY(calc(${
+						1 - (isMobile ? 1 : isIntersecting)
+					} * 100%))`,
 				}}
 			>
 				{slider}

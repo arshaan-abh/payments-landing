@@ -7,10 +7,14 @@ import smallPictureThree from "public/shaking-hands.svg";
 import smallPictureFour from "public/split.svg";
 import Hoverable from "../hoverable";
 import { Card } from "../features-two";
-import { IsIntersectingContext } from "@/app/_contexts/contexts";
+import {
+	IsIntersectingContext,
+	IsMobileContext,
+} from "@/app/_contexts/contexts";
 import { motion } from "framer-motion";
 
 function FeatureThree() {
+	const isMobile = useContext(IsMobileContext);
 	const isIntersecting = useContext(IsIntersectingContext)[3];
 
 	return (
@@ -37,7 +41,7 @@ function FeatureThree() {
 					<motion.div
 						className="absolute inset-0 bg-white"
 						animate={{
-							left: `calc(${isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</div>
@@ -53,7 +57,7 @@ function FeatureThree() {
 					<motion.div
 						className="absolute inset-0 bg-white"
 						animate={{
-							left: `calc(${isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</div>
@@ -62,7 +66,9 @@ function FeatureThree() {
 			<div className="flex flex-col-reverse items-center gap-x-16 gap-y-8 sm:w-2/3 lg:w-auto lg:flex-row">
 				<motion.div
 					animate={{
-						transform: `translateX(calc(${1 - isIntersecting} * -100%))`,
+						transform: `translateX(calc(${
+							1 - (isMobile ? 1 : isIntersecting)
+						} * -100%))`,
 					}}
 					className="flex flex-col justify-between gap-6 lg:w-1/2"
 				>
@@ -89,7 +95,9 @@ function FeatureThree() {
 				</motion.div>
 				<motion.div
 					animate={{
-						transform: `translateX(calc(${1 - isIntersecting} * 100%))`,
+						transform: `translateX(calc(${
+							1 - (isMobile ? 1 : isIntersecting)
+						} * 100%))`,
 					}}
 					className="flex w-2/3 items-center sm:w-full lg:w-1/2"
 				>

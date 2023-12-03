@@ -2,12 +2,16 @@ import { useContext, type FC } from "react";
 import Empowering from "public/transfer.jpg";
 import Image from "next/image";
 import Hoverable from "../hoverable";
-import { IsIntersectingContext } from "@/app/_contexts/contexts";
+import {
+	IsIntersectingContext,
+	IsMobileContext,
+} from "@/app/_contexts/contexts";
 import { motion } from "framer-motion";
 
 interface FeatureFourProps {}
 
 const FeatureFour: FC<FeatureFourProps> = ({}) => {
+	const isMobile = useContext(IsMobileContext);
 	const isIntersecting = useContext(IsIntersectingContext)[4];
 
 	return (
@@ -36,7 +40,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 				<motion.div
 					className="absolute inset-0 bg-white"
 					animate={{
-						left: `calc(${isIntersecting} * 100%)`,
+						left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 					}}
 				/>
 			</div>
@@ -46,7 +50,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					<motion.div
 						className="absolute inset-0 bg-white"
 						animate={{
-							left: `calc(${isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</h3>
@@ -62,13 +66,15 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					<motion.div
 						className="absolute inset-0 bg-white"
 						animate={{
-							left: `calc(${isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</div>
 				<motion.div
 					animate={{
-						transform: `translateX(calc(${1 - isIntersecting} * 100%))`,
+						transform: `translateX(calc(${
+							1 - (isMobile ? 1 : isIntersecting)
+						} * 100%))`,
 					}}
 				>
 					<Hoverable round>
