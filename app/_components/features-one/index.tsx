@@ -8,11 +8,11 @@ import useSlider from "../features-seven/Slider";
 import useResponsiveState from "./useResponsiveState";
 import { SlideButton } from "../features-seven";
 import { ArrowLeftIcon, ArrowRightIcon } from "../icons";
-import { Context } from "@/app/_contexts/contexts";
+import { IsIntersectingContext } from "@/app/_contexts/contexts";
 import { motion } from "framer-motion";
 
 const FeatureOne: FC<CardProps> = ({}) => {
-	const isIntersecting = useContext(Context)[1];
+	const isIntersecting = useContext(IsIntersectingContext)[1];
 
 	const visibleSlidesNumber = useResponsiveState<number>({
 		defaultState: 1,

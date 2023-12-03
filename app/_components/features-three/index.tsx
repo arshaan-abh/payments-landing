@@ -7,11 +7,11 @@ import smallPictureThree from "public/shaking-hands.svg";
 import smallPictureFour from "public/split.svg";
 import Hoverable from "../hoverable";
 import { Card } from "../features-two";
-import { Context } from "@/app/_contexts/contexts";
+import { IsIntersectingContext } from "@/app/_contexts/contexts";
 import { motion } from "framer-motion";
 
 function FeatureThree() {
-	const isIntersecting = useContext(Context)[3];
+	const isIntersecting = useContext(IsIntersectingContext)[3];
 
 	return (
 		<div className="flex h-full w-full flex-col items-center px-10 py-4 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">

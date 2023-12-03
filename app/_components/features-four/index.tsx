@@ -2,13 +2,13 @@ import { useContext, type FC } from "react";
 import Empowering from "public/transfer.jpg";
 import Image from "next/image";
 import Hoverable from "../hoverable";
-import { Context } from "@/app/_contexts/contexts";
+import { IsIntersectingContext } from "@/app/_contexts/contexts";
 import { motion } from "framer-motion";
 
 interface FeatureFourProps {}
 
 const FeatureFour: FC<FeatureFourProps> = ({}) => {
-	const isIntersecting = useContext(Context)[4];
+	const isIntersecting = useContext(IsIntersectingContext)[4];
 
 	return (
 		<div className="flex h-full w-full flex-col-reverse items-center justify-center gap-10 px-10 lg:flex-row lg:px-20 xl:max-w-screen-1.5xl xl:px-30">

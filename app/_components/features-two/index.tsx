@@ -7,11 +7,11 @@ import smallPictureTwo from "public/pos.svg";
 import smallPictureThree from "public/pomo.svg";
 import smallPictureFour from "public/qr-code.svg";
 import Hoverable from "../hoverable";
-import { Context } from "@/app/_contexts/contexts";
+import { IsIntersectingContext } from "@/app/_contexts/contexts";
 import { motion } from "framer-motion";
 
 function FeatureTwo() {
-	const isIntersecting = useContext(Context)[2];
+	const isIntersecting = useContext(IsIntersectingContext)[2];
 
 	return (
 		<div className="flex h-full w-full flex-col items-center px-10 py-4 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">

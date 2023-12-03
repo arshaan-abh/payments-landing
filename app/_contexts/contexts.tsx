@@ -1,3 +1,5 @@
 import { createContext } from "react";
 
-export const Context = createContext<number[]>([]);
+export const IsIntersectingContext = createContext<number[]>([]);
+
+export const IsMobileContext = createContext<boolean>(true);

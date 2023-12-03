@@ -20,7 +20,7 @@ import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
 import Grid from "./_components/grid";
 import useResponsiveState from "./_components/features-one/useResponsiveState";
-import { Context } from "./_contexts/contexts";
+import { IsIntersectingContext, IsMobileContext } from "./_contexts/contexts";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -39,131 +39,133 @@ export default function Home() {
 	});
 
 	return (
-		<Context.Provider value={isIntersecting}>
-			<div className="flex flex-col">
-				<HeroBackground />
-				<Grid />
-				<motion.section
-					animate={{
-						opacity: isMobile ? 1 : isIntersecting[0],
-					}}
-					id="hero"
-					className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-primary to-transparent ${
-						isIntersecting[0] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<MarketingBanner data={firstMarqueeData} />
-					<Navbar />
-					<div className="flex min-h-[1rem] grow sm:hidden" />
-					<Hero />
-					<div className="flex min-h-[1rem] grow-2 sm:hidden" />
-				</motion.section>
-				<motion.section
-					animate={{ opacity: isMobile ? 1 : isIntersecting[1] }}
-					id="feature-one"
-					className={`flex flex-col items-center overflow-hidden ${
-						isIntersecting[1] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<MarketingBanner data={secondMarqueeData} white />
-					<FeatureOne />
-				</motion.section>
-				<motion.section
-					animate={{ opacity: isMobile ? 1 : isIntersecting[2] }}
-					id="feature-two"
-					className={`flex flex-col items-center overflow-hidden ${
-						isIntersecting[2] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<FeatureTwo />
-				</motion.section>
-				<motion.section
-					animate={{ opacity: isMobile ? 1 : isIntersecting[3] }}
-					id="feature-three"
-					className={`flex flex-col items-center overflow-hidden ${
-						isIntersecting[3] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<FeatureThree />
-				</motion.section>
-				<motion.section
-					animate={{ opacity: isMobile ? 1 : isIntersecting[4] }}
-					id="feature-four"
-					className={`flex flex-col items-center overflow-hidden ${
-						isIntersecting[4] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<FeatureFour />
-				</motion.section>
-				<motion.section
-					animate={{ opacity: isMobile ? 1 : isIntersecting[5] }}
-					id="feature-five"
-					className={`flex flex-col items-center overflow-hidden ${
-						isIntersecting[5] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<MarketingBanner data={secondMarqueeData} white />
-					<FeatureFive />
-				</motion.section>
-				<motion.section
-					animate={{ opacity: isMobile ? 1 : isIntersecting[6] }}
-					id="feature-six"
-					className={`flex flex-col items-center overflow-hidden ${
-						isIntersecting[6] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<FeatureSix />
-				</motion.section>
+		<IsIntersectingContext.Provider value={isIntersecting}>
+			<IsMobileContext.Provider value={isMobile}>
+				<div className="flex flex-col">
+					<HeroBackground />
+					<Grid />
+					<motion.section
+						animate={{
+							opacity: isMobile ? 1 : isIntersecting[0],
+						}}
+						id="hero"
+						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-primary to-transparent ${
+							isIntersecting[0] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<MarketingBanner data={firstMarqueeData} />
+						<Navbar />
+						<div className="flex min-h-[1rem] grow sm:hidden" />
+						<Hero />
+						<div className="flex min-h-[1rem] grow-2 sm:hidden" />
+					</motion.section>
+					<motion.section
+						animate={{ opacity: isMobile ? 1 : isIntersecting[1] }}
+						id="feature-one"
+						className={`flex flex-col items-center overflow-hidden ${
+							isIntersecting[1] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<MarketingBanner data={secondMarqueeData} white />
+						<FeatureOne />
+					</motion.section>
+					<motion.section
+						animate={{ opacity: isMobile ? 1 : isIntersecting[2] }}
+						id="feature-two"
+						className={`flex flex-col items-center overflow-hidden ${
+							isIntersecting[2] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<FeatureTwo />
+					</motion.section>
+					<motion.section
+						animate={{ opacity: isMobile ? 1 : isIntersecting[3] }}
+						id="feature-three"
+						className={`flex flex-col items-center overflow-hidden ${
+							isIntersecting[3] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<FeatureThree />
+					</motion.section>
+					<motion.section
+						animate={{ opacity: isMobile ? 1 : isIntersecting[4] }}
+						id="feature-four"
+						className={`flex flex-col items-center overflow-hidden ${
+							isIntersecting[4] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<FeatureFour />
+					</motion.section>
+					<motion.section
+						animate={{ opacity: isMobile ? 1 : isIntersecting[5] }}
+						id="feature-five"
+						className={`flex flex-col items-center overflow-hidden ${
+							isIntersecting[5] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<MarketingBanner data={secondMarqueeData} white />
+						<FeatureFive />
+					</motion.section>
+					<motion.section
+						animate={{ opacity: isMobile ? 1 : isIntersecting[6] }}
+						id="feature-six"
+						className={`flex flex-col items-center overflow-hidden ${
+							isIntersecting[6] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<FeatureSix />
+					</motion.section>
 
-				<motion.section
-					animate={{ opacity: isMobile ? 1 : isIntersecting[7] }}
-					id="feature-seven"
-					className={`flex flex-col items-center overflow-hidden ${
-						isIntersecting[7] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<FeatureSeven />
-				</motion.section>
-				<motion.section
-					animate={{ opacity: isMobile ? 1 : isIntersecting[8] }}
-					id="feature-eight"
-					className={`flex flex-col items-center overflow-hidden ${
-						isIntersecting[8] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<MarketingBanner data={secondMarqueeData} white />
-					<FaqSection />
-				</motion.section>
-				<motion.section
-					animate={{ opacity: isMobile ? 1 : isIntersecting[9] }}
-					id="feature-nine"
-					className={`flex flex-col items-center overflow-hidden bg-primary text-secondary ${
-						isIntersecting[9] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<Form />
-				</motion.section>
-				<motion.section
-					animate={{ opacity: isMobile ? 1 : isIntersecting[10] }}
-					id="feature-ten"
-					className={`flex flex-col items-center overflow-hidden bg-primary text-secondary ${
-						isIntersecting[10] > 0 ? "" : "pointer-events-none"
-					}`}
-				>
-					<Footer />
-				</motion.section>
-				<Menu />
-				<CookiesModal />
-				<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />
-				{Array.from(Array(11), (_, index) => (
-					<div
-						key={index}
-						className="section-shadow pointer-events-none"
-						ref={sectionRefs[index]}
-					></div>
-				))}
-			</div>
-		</Context.Provider>
+					<motion.section
+						animate={{ opacity: isMobile ? 1 : isIntersecting[7] }}
+						id="feature-seven"
+						className={`flex flex-col items-center overflow-hidden ${
+							isIntersecting[7] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<FeatureSeven />
+					</motion.section>
+					<motion.section
+						animate={{ opacity: isMobile ? 1 : isIntersecting[8] }}
+						id="feature-eight"
+						className={`flex flex-col items-center overflow-hidden ${
+							isIntersecting[8] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<MarketingBanner data={secondMarqueeData} white />
+						<FaqSection />
+					</motion.section>
+					<motion.section
+						animate={{ opacity: isMobile ? 1 : isIntersecting[9] }}
+						id="feature-nine"
+						className={`flex flex-col items-center overflow-hidden bg-primary text-secondary ${
+							isIntersecting[9] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<Form />
+					</motion.section>
+					<motion.section
+						animate={{ opacity: isMobile ? 1 : isIntersecting[10] }}
+						id="feature-ten"
+						className={`flex flex-col items-center overflow-hidden bg-primary text-secondary ${
+							isIntersecting[10] > 0 ? "" : "pointer-events-none"
+						}`}
+					>
+						<Footer />
+					</motion.section>
+					<Menu />
+					<CookiesModal />
+					<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />
+					{Array.from(Array(11), (_, index) => (
+						<div
+							key={index}
+							className="section-shadow pointer-events-none"
+							ref={sectionRefs[index]}
+						></div>
+					))}
+				</div>
+			</IsMobileContext.Provider>
+		</IsIntersectingContext.Provider>
 	);
 }
 
