@@ -7,7 +7,7 @@ import smallPictureThree from "public/shaking-hands.svg";
 import smallPictureFour from "public/split.svg";
 import Hoverable from "../hoverable";
 import { Card } from "../features-two";
-import { Context } from "@/app/_contexts/context";
+import { Context } from "@/app/_contexts/intersection-context";
 import { motion } from "framer-motion";
 
 function FeatureThree() {

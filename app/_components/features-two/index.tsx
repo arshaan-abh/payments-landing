@@ -7,7 +7,7 @@ import smallPictureTwo from "public/pos.svg";
 import smallPictureThree from "public/pomo.svg";
 import smallPictureFour from "public/qr-code.svg";
 import Hoverable from "../hoverable";
-import { Context } from "@/app/_contexts/context";
+import { Context } from "@/app/_contexts/intersection-context";
 import { motion } from "framer-motion";
 
 function FeatureTwo() {
