@@ -8,14 +8,17 @@ import {
 	useRef,
 	MouseEventHandler,
 	CSSProperties,
+	useContext,
 } from "react";
 import {
 	CallUsIcon,
 	EnquireIcon,
 	LinkedinIcon,
-	ThreeDotsIcon,
+	HamburgerMenu,
 	TwitterIcon,
 } from "../icons";
+import { IsIntersectingContext } from "@/app/_contexts/contexts";
+import interpolateColors from "@/app/_utilities/interpolate-colors";
 
 interface MenuProps {}
 
@@ -87,8 +90,8 @@ const Menu: FC<MenuProps> = ({}) => {
 				<MenuItem>
 					<CallUsIcon />
 				</MenuItem>
-				<MenuItem primary-950 onClick={openDetail}>
-					<ThreeDotsIcon />
+				<MenuItem primary onClick={openDetail}>
+					<HamburgerMenu />
 				</MenuItem>
 				<MenuItem>
 					<LinkedinIcon />
@@ -114,7 +117,7 @@ const Menu: FC<MenuProps> = ({}) => {
 				<MenuDetailItem>ePOS</MenuDetailItem>
 				<MenuDetailItem>Marketplace</MenuDetailItem>
 				<MenuDetailItem>Products</MenuDetailItem>
-				<MenuDetailItem primary-950>Enquire</MenuDetailItem>
+				<MenuDetailItem primary>Enquire</MenuDetailItem>
 			</div>
 		</>
 	);
@@ -129,38 +132,36 @@ interface MenuItemProps {
 }
 
 const MenuItem: FC<MenuItemProps> = ({ primary, children, onClick }) => {
-	const [darkMode, setDarkMode] = useState<boolean>(false);
+	const isIntersecting = useContext(IsIntersectingContext)[1];
 
-	const handleScroll = useCallback(() => {
-		const scrollY = window.scrollY || window.pageYOffset;
-		if (scrollY === 0) setDarkMode(false);
-		else if (scrollY > window.innerHeight * 8) setDarkMode(false);
-		else setDarkMode(true);
-	}, []);
+	const bgColor = interpolateColors("#ffffff1a", "#1616161a", isIntersecting);
 
-	useEffect(() => {
-		handleScroll();
-		addEventListener("scroll", handleScroll);
-		return () => {
-			removeEventListener("scroll", handleScroll);
-		};
-	}, [handleScroll]);
+	const primaryColor = interpolateColors(
+		"#66fecbff",
+		"#013334ff",
+		isIntersecting
+	);
 
-	const variableContainerClasses = darkMode
-		? "text-primary-950 bg-primary-950/10"
-		: "text-white bg-white/10";
-	const variablePrimaryClasses = darkMode
-		? "text-white bg-primary-950"
-		: "text-primary-950 bg-white";
-	const w = primary ? "w-[64px]" : "w-[44px]";
+	const secondaryColor = interpolateColors(
+		"#013334ff",
+		"#66fecbff",
+		isIntersecting
+	);
+
+	const w = primary ? "w-[60px]" : "w-[44px]";
 	return (
 		<button
 			onClick={onClick}
-			className={`${w} flex aspect-square items-center justify-center rounded-full backdrop-blur-sm transition-colors ${variableContainerClasses}`}
+			className={`${w} flex aspect-square items-center justify-center rounded-full backdrop-blur-sm transition-colors`}
+			style={{
+				backgroundColor: bgColor,
+				color: primaryColor,
+			}}
 		>
 			{primary ? (
 				<div
-					className={`flex aspect-square w-[48px] items-center justify-center rounded-full transition-colors ${variablePrimaryClasses}`}
+					className={`flex aspect-square w-[48px] items-center justify-center rounded-full transition-colors`}
+					style={{ backgroundColor: primaryColor, color: secondaryColor }}
 				>
 					{children}
 				</div>
