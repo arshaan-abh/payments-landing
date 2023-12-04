@@ -7,10 +7,10 @@ function Hero() {
 			<div className="min-h-[1.5rem] grow" />
 			<h1 className="mb-4 text-center text-6xl font-medium text-white md:text-left lg:w-1/2">
 				<span className="bg-underline relative whitespace-nowrap font-extrabold">
-					Grow Sales
-					<div className="absolute inset-x-0 bottom-2 top-1/2 -z-10 bg-teal-300 opacity-20" />
-				</span>
-				&nbsp;with a better payment solution
+					<span className="relative z-10">Grow Sales</span>
+					<div className="absolute inset-x-0 bottom-2 top-1/2 -z-0 bg-teal-300 opacity-20 sm:-z-10" />
+				</span>{" "}
+				with a better payment solution
 			</h1>
 			<div className="mb-6 text-center text-base font-normal text-white md:text-left lg:w-1/2">
 				{/* <p>

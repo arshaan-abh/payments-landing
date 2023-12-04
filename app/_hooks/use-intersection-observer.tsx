@@ -34,3 +34,5 @@ const useIntersectionObserver = <T,>({
 };
 
 export default useIntersectionObserver;
+
+// TODO make scrolling slower
