@@ -1,4 +1,4 @@
-import React, { FC, useContext } from "react";
+import React, { FC, ReactNode, useContext } from "react";
 import bigPicture from "public/epos.jpg";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
@@ -12,6 +12,7 @@ import {
 	IsMobileContext,
 } from "@/app/_contexts/contexts";
 import { ThunderIcon } from "../icons";
+import { GridBorder } from "../features-one";
 
 function FeatureTwo() {
 	const isMobile = useContext(IsMobileContext);
@@ -21,7 +22,7 @@ function FeatureTwo() {
 		<div className="flex h-full w-full flex-col items-center px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow" />
 			<div className="flex flex-col items-center gap-x-16 gap-y-8 sm:w-2/3 lg:w-auto xl:flex-row">
-				<div className="relative flex flex-col text-center xl:w-1/2 xl:text-start">
+				<div className="relative flex flex-col text-center xl:w-2/5 xl:text-start">
 					<div className="text-3xl font-extrabold text-primary-950">
 						ePOS All-In-One Solutions
 					</div>
@@ -45,7 +46,7 @@ function FeatureTwo() {
 						}}
 					/>
 				</div>
-				<div className="relative text-center text-base font-medium leading-tight text-gray-600 xl:w-1/2 xl:text-start">
+				<div className="relative text-center text-base font-medium leading-tight text-gray-600 xl:w-3/5 xl:text-start">
 					<p className="inline">
 						Unlock the potential of retail with our ePOS All-In-One Solutions.
 					</p>
@@ -70,15 +71,15 @@ function FeatureTwo() {
 							1 - (isMobile ? 1 : isIntersecting)
 						} * -100%))`,
 					}}
-					className="flex w-2/3 items-center sm:w-full lg:w-1/2"
+					className="flex w-2/3 items-center sm:w-full lg:w-2/5"
 				>
-					<Hoverable className="w-full" round>
+					<GridBorderComponent>
 						<Image
 							src={bigPicture}
 							alt="Big picture"
 							className="h-full object-cover"
 						/>
-					</Hoverable>
+					</GridBorderComponent>
 				</div>
 				<div
 					style={{
@@ -86,7 +87,7 @@ function FeatureTwo() {
 							1 - (isMobile ? 1 : isIntersecting)
 						} * 100%))`,
 					}}
-					className="flex flex-col justify-between gap-6 lg:w-1/2"
+					className="flex flex-col justify-between gap-6 lg:w-3/5"
 				>
 					<Card
 						image={smallPictureOne}
@@ -125,18 +126,35 @@ interface CardProps {
 
 export const Card: FC<CardProps> = ({ image, title, supportingText }) => {
 	return (
-		<div className="flex flex-col items-center gap-6 sm:flex-row">
+		<div className="flex flex-col items-center gap-5 sm:flex-row">
 			<Hoverable className="h-max w-max ">
 				<Image src={image} alt="Small picture" />
 			</Hoverable>
-			<div className="flex flex-col gap-2">
+			<div className="flex flex-col gap-1">
 				<div className="text-center text-2xl font-extrabold text-primary-950 sm:text-start">
 					{title}
 				</div>
-				<div className="text-center text-base font-medium text-gray-200 sm:text-start">
+				<div className="text-center text-base font-normal leading-tight text-gray-600 sm:text-start">
 					{supportingText}
 				</div>
 			</div>
+		</div>
+	);
+};
+
+interface GridBorderComponentProps {
+	children?: ReactNode;
+}
+
+const GridBorderComponent: FC<GridBorderComponentProps> = ({ children }) => {
+	return (
+		<div className="relative w-full grow p-6 hover:[--border:50%] hover:[--transform:scale(1.1)_rotate(4deg)] xs:w-2/3 sm:w-1/2 md:w-full">
+			<div className="overflow-hidden">
+				<div className="transition-transform duration-300 [transform:var(--transform)]">
+					{children}
+				</div>
+			</div>
+			<GridBorder />
 		</div>
 	);
 };

@@ -167,7 +167,7 @@ interface GridBorderProps {
 	noBorderTop?: boolean;
 }
 
-const GridBorder: FC<GridBorderProps> = ({ noBorderTop }) => {
+export const GridBorder: FC<GridBorderProps> = ({ noBorderTop }) => {
 	return (
 		<>
 			{noBorderTop ?? (
