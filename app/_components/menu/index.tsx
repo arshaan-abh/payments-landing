@@ -17,25 +17,34 @@ import {
 	HamburgerMenu,
 	TwitterIcon,
 } from "../icons";
-import { IsIntersectingContext } from "@/app/_contexts/contexts";
+import {
+	IsIntersectingContext,
+	IsMobileContext,
+} from "@/app/_contexts/contexts";
 import interpolateColors from "@/app/_utilities/interpolate-colors";
 
 interface MenuProps {}
 
 const Menu: FC<MenuProps> = ({}) => {
+	const isMobile = useContext(IsMobileContext);
+
 	const isIntersecting = useContext(IsIntersectingContext)[1];
 
-	const bgColor = interpolateColors("#ffffff1a", "#1616161a", isIntersecting);
+	const bgColor = interpolateColors(
+		isMobile ? "#1616161a" : "#ffffff1a",
+		isMobile ? "#1616161a" : "#1616161a",
+		isIntersecting
+	);
 
 	const primaryColor = interpolateColors(
-		"#66fecbff",
-		"#013334ff",
+		isMobile ? "#013334ff" : "#66fecbff",
+		isMobile ? "#013334ff" : "#013334ff",
 		isIntersecting
 	);
 
 	const secondaryColor = interpolateColors(
-		"#013334ff",
-		"#66fecbff",
+		isMobile ? "#66fecbff" : "#013334ff",
+		isMobile ? "#66fecbff" : "#66fecbff",
 		isIntersecting
 	);
 
@@ -140,7 +149,7 @@ const Menu: FC<MenuProps> = ({}) => {
 			<div
 				ref={detailRef}
 				onTransitionEnd={transitionEndHandler}
-				className="transition-opacity-width fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit max-w-fit items-center justify-center overflow-hidden rounded-rectangle-full p-2 backdrop-blur-sm duration-300"
+				className="fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit max-w-fit items-center justify-center overflow-hidden rounded-rectangle-full p-2 backdrop-blur-sm transition-opacity-width duration-300"
 				style={{
 					backgroundColor: bgColor,
 					opacity: open ? (maxWidthRef.current ? 1 : 0) : 0,

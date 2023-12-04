@@ -72,6 +72,7 @@ export default function Home() {
 							isMobile ? "" : isIntersecting[2] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
+						<div className="h-[3.125rem]" />
 						<FeatureTwo />
 					</section>
 					<section

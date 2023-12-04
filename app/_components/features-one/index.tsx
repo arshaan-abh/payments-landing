@@ -12,7 +12,6 @@ import {
 	IsIntersectingContext,
 	IsMobileContext,
 } from "@/app/_contexts/contexts";
-import { motion } from "framer-motion";
 
 const FeatureOne: FC<CardProps> = ({}) => {
 	const isMobile = useContext(IsMobileContext);
@@ -20,10 +19,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 
 	const visibleSlidesNumber = useResponsiveState<number>({
 		defaultState: 1,
-		breakpoints: [
-			{ breakpoint: 376, state: 2 },
-			{ breakpoint: 640, state: 3 },
-		],
+		breakpoints: [{ breakpoint: 768, state: 3 }],
 	});
 
 	const [slider, prevButtonRef, nextButtonRef] = useSlider({
@@ -31,7 +27,11 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			<Card
 				key={0}
 				media={
-					<Image src={featureImageOne} alt="One-Click checkout with Pay link" />
+					<Image
+						className="h-full w-full object-cover"
+						src={featureImageOne}
+						alt="One-Click checkout with Pay link"
+					/>
 				}
 				supportingText="Your customers will love the simplicity of one-click checkout through our seamless pay link."
 			>
@@ -39,14 +39,26 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			</Card>,
 			<Card
 				key={1}
-				media={<Image src={featureImageTwo} alt="Flexible Payment Methods" />}
+				media={
+					<Image
+						className="h-full w-full object-cover"
+						src={featureImageTwo}
+						alt="Flexible Payment Methods"
+					/>
+				}
 				supportingText="Users will enjoy the convenience of flexible payout methods tailored to their needs."
 			>
 				Flexible Payment Methods
 			</Card>,
 			<Card
 				key={2}
-				media={<Image src={featureImageThree} alt="Multicurrency Payments" />}
+				media={
+					<Image
+						className="h-full w-full object-cover"
+						src={featureImageThree}
+						alt="Multicurrency Payments"
+					/>
+				}
 				supportingText="Clients will recognise the benefits of adaptable multi-currency payment options."
 			>
 				Multicurrency Payments
@@ -57,19 +69,19 @@ const FeatureOne: FC<CardProps> = ({}) => {
 	});
 
 	return (
-		<div className="flex h-full w-full flex-col px-10 py-4 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+		<div className="flex h-full w-full grow flex-col px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow" />
-			<div className="flex flex-col items-center gap-x-8 gap-y-2 md:flex-row">
-				<div className="relative text-center text-4xl font-extrabold leading-tight text-primary-950 md:w-1/2 md:text-left">
+			<div className="flex flex-col items-center gap-8 md:flex-row">
+				<div className="relative text-center text-3xl font-extrabold text-primary-950 md:w-1/2 md:text-left">
 					Simplified Customer Payment Processing!
-					<motion.div
+					<div
 						className="absolute inset-0 bg-white"
 						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</div>
-				<div className="relative text-center text-base font-medium leading-tight text-gray-200 md:w-1/2 md:text-left">
+				<div className="relative text-center text-base font-medium text-gray-600 md:w-1/2 md:text-justify">
 					<p className="inline">
 						In a rapidly evolving marketplace, staying ahead means embracing
 						efficient solutions.
@@ -79,7 +91,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 						era in payment convenience. We&apos;ve reimagined the payment
 						journey to be effortless and user-friendly.
 					</p>
-					<motion.div
+					<div
 						className="absolute inset-0 bg-white"
 						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
@@ -87,8 +99,8 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					/>
 				</div>
 			</div>
-			<div className="min-h-[1rem] grow-2" />
-			<motion.div
+			<div className="min-h-[1rem] grow" />
+			<div
 				className="flex flex-col gap-8"
 				style={{
 					transform: `translateY(calc(${
@@ -110,7 +122,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 						</SlideButton>
 					</div>
 				)}
-			</motion.div>
+			</div>
 			<div className="min-h-[1rem] grow-2" />
 		</div>
 	);
@@ -126,8 +138,8 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 	return (
-		<div className="flex basis-1/3 flex-col items-center hover:[--border:50%] hover:[--transform:scale(1.1)_rotate(4deg)]">
-			<div className="relative w-2/3 p-4 xs:w-auto lg:p-7">
+		<div className="flex flex-col items-center hover:[--border:50%] hover:[--transform:scale(1.1)_rotate(4deg)]">
+			<div className="relative w-full grow p-6 xs:w-2/3 sm:w-1/2 md:w-full">
 				<div className="overflow-hidden">
 					<div className="transition-transform duration-300 [transform:var(--transform)]">
 						{media}
@@ -135,11 +147,11 @@ const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 				</div>
 				<GridBorder />
 			</div>
-			<div className="relative p-4 lg:p-7">
-				<div className="mb-2 w-full text-center text-xl font-extrabold text-primary-950 sm:text-start">
+			<div className="relative w-full grow p-6 pb-5 pt-4 xs:w-2/3 sm:w-1/2 md:w-full">
+				<div className="mb-1 text-center text-lg font-extrabold text-primary-950 sm:text-start">
 					{children}
 				</div>
-				<div className="w-full text-center text-base font-medium text-gray-200 sm:text-start">
+				<div className="text-center text-sm font-medium text-gray-600 sm:text-start">
 					{supportingText}
 				</div>
 				<GridBorder noBorderTop />
@@ -160,37 +172,37 @@ const GridBorder: FC<GridBorderProps> = ({ noBorderTop }) => {
 			{noBorderTop ?? (
 				<>
 					<div
-						className="absolute right-0 top-0 h-0.5 bg-gray-600 transition-all duration-300"
+						className="absolute right-0 top-0 h-0.5 bg-gray-200 transition-all duration-300"
 						style={{ width: "var(--border, 0.5rem)" }}
 					/>
 					<div
-						className="absolute left-0 top-0 h-0.5 bg-gray-600 transition-all duration-300"
+						className="absolute left-0 top-0 h-0.5 bg-gray-200 transition-all duration-300"
 						style={{ width: "var(--border, 0.5rem)" }}
 					/>
 				</>
 			)}
 			<div
-				className="absolute left-0 top-0 w-0.5 bg-gray-600 transition-all duration-300"
+				className="absolute left-0 top-0 w-0.5 bg-gray-200 transition-all duration-300"
 				style={{ height: "var(--border, 0.5rem)" }}
 			/>
 			<div
-				className="absolute right-0 top-0 w-0.5 bg-gray-600 transition-all duration-300"
+				className="absolute right-0 top-0 w-0.5 bg-gray-200 transition-all duration-300"
 				style={{ height: "var(--border, 0.5rem)" }}
 			/>
 			<div
-				className="absolute bottom-0 right-0 h-0.5 bg-gray-600 transition-all duration-300"
+				className="absolute bottom-0 right-0 h-0.5 bg-gray-200 transition-all duration-300"
 				style={{ width: "var(--border, 0.5rem)" }}
 			/>
 			<div
-				className="absolute bottom-0 right-0 w-0.5 bg-gray-600 transition-all duration-300"
+				className="absolute bottom-0 right-0 w-0.5 bg-gray-200 transition-all duration-300"
 				style={{ height: "var(--border, 0.5rem)" }}
 			/>
 			<div
-				className="absolute bottom-0 left-0 h-0.5 bg-gray-600 transition-all duration-300"
+				className="absolute bottom-0 left-0 h-0.5 bg-gray-200 transition-all duration-300"
 				style={{ width: "var(--border, 0.5rem)" }}
 			/>
 			<div
-				className="absolute bottom-0 left-0 w-0.5 bg-gray-600 transition-all duration-300"
+				className="absolute bottom-0 left-0 w-0.5 bg-gray-200 transition-all duration-300"
 				style={{ height: "var(--border, 0.5rem)" }}
 			/>
 		</>
