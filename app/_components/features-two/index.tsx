@@ -21,7 +21,7 @@ function FeatureTwo() {
 	return (
 		<div className="flex h-full w-full flex-col items-center px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow" />
-			<div className="flex flex-col items-center gap-x-16 gap-y-8 sm:w-2/3 lg:w-auto xl:flex-row">
+			<div className="flex flex-col items-center gap-x-16 gap-y-4 lg:w-auto xl:flex-row">
 				<div className="relative flex flex-col text-center xl:w-2/5 xl:text-start">
 					<div className="text-3xl font-extrabold text-primary-950">
 						ePOS All-In-One Solutions
@@ -64,14 +64,14 @@ function FeatureTwo() {
 				</div>
 			</div>
 			<div className="min-h-[1rem] grow" />
-			<div className="flex flex-col items-center gap-x-16 gap-y-8 sm:w-2/3 lg:w-auto lg:flex-row">
+			<div className="flex w-auto flex-col items-center gap-16 sm:flex-row">
 				<div
 					style={{
 						transform: `translateX(calc(${
 							1 - (isMobile ? 1 : isIntersecting)
 						} * -100%))`,
 					}}
-					className="flex w-2/3 items-center sm:w-full lg:w-2/5"
+					className="flex w-full items-center xs:w-2/3 sm:hidden sm:w-2/3 lg:flex lg:w-2/5"
 				>
 					<GridBorderComponent>
 						<Image
@@ -87,7 +87,7 @@ function FeatureTwo() {
 							1 - (isMobile ? 1 : isIntersecting)
 						} * 100%))`,
 					}}
-					className="flex flex-col justify-between gap-6 lg:w-3/5"
+					className="flex w-full flex-col justify-between gap-x-6 gap-y-16 xs:w-1/2 sm:w-full lg:w-3/5"
 				>
 					<Card
 						image={smallPictureOne}
