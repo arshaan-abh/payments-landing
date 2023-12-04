@@ -18,7 +18,6 @@ import { darkMarqueeData, marqueeData } from "./staticData/marqueesData";
 import { EnquireNowIcon } from "./_components/icons";
 import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
-import Grid from "./_components/grid";
 import useResponsiveState from "./_components/features-one/useResponsiveState";
 import { IsIntersectingContext, IsMobileContext } from "./_contexts/contexts";
 import { motion } from "framer-motion";
@@ -67,7 +66,9 @@ export default function Home() {
 						}`}
 					>
 						<MarketingBanner data={marqueeData} />
+						<div className="flex min-h-[1rem] grow" />
 						<FeatureOne />
+						<div className="flex min-h-[1rem] grow-2" />
 					</motion.section>
 					<motion.section
 						style={{ opacity: isMobile ? 1 : isIntersecting[2] }}
@@ -151,8 +152,8 @@ export default function Home() {
 							isMobile
 								? ""
 								: isIntersecting[10] > 0
-								? ""
-								: "pointer-events-none"
+								  ? ""
+								  : "pointer-events-none"
 						}`}
 					>
 						<Footer />
