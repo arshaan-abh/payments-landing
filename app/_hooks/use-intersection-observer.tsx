@@ -1,4 +1,4 @@
-import { RefObject, useCallback, useEffect, useState, useMemo } from "react";
+import { RefObject, useCallback, useEffect, useState } from "react";
 
 interface UseIntersectionObserverProps<T> {
 	elementRefs: RefObject<T>[];
