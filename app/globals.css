@@ -128,12 +128,12 @@ textarea::-ms-input-placeholder {
 
 ::-moz-selection {
 	color: currentColor;
-	background: #60606080;
+	background: #66fecb40;
 }
 
 ::selection {
 	color: currentColor;
-	background: #60606080;
+	background: #66fecb40;
 }
 
 :root {
