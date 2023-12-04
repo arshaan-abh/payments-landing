@@ -11,41 +11,41 @@ import {
 	IsIntersectingContext,
 	IsMobileContext,
 } from "@/app/_contexts/contexts";
-import { motion } from "framer-motion";
+import { ThunderIcon } from "../icons";
 
 function FeatureTwo() {
 	const isMobile = useContext(IsMobileContext);
 	const isIntersecting = useContext(IsIntersectingContext)[2];
 
 	return (
-		<div className="flex h-full w-full flex-col items-center px-10 py-4 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
-			<div className="min-h-[1rem] grow-2" />
-			<div className="flex flex-col items-center gap-x-16 gap-y-4 sm:w-2/3 lg:w-auto xl:flex-row">
-				<div className="relative flex flex-col gap-2 text-center xl:w-1/2 xl:text-start">
-					<div className="text-4xl font-extrabold text-primary-950">
+		<div className="flex h-full w-full flex-col items-center px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<div className="min-h-[1rem] grow" />
+			<div className="flex flex-col items-center gap-x-16 gap-y-8 sm:w-2/3 lg:w-auto xl:flex-row">
+				<div className="relative flex flex-col text-center xl:w-1/2 xl:text-start">
+					<div className="text-3xl font-extrabold text-primary-950">
 						ePOS All-In-One Solutions
 					</div>
-					<div className="hidden items-center justify-between gap-2 sm:flex">
-						<div className="whitespace-nowrap text-lg font-semibold uppercase text-gray-100">
+					<div className="hidden items-center gap-3 sm:flex">
+						<div className="whitespace-nowrap text-lg font-medium uppercase text-gray-600">
 							Integrated
 						</div>
-						<div className="h-2 w-2 shrink-0 rounded-full border border-gray-200"></div>
-						<div className="whitespace-nowrap text-lg font-semibold uppercase text-gray-100">
+						<ThunderIcon className="scale-75 text-primary-950" />
+						<div className="whitespace-nowrap text-base font-medium uppercase text-gray-600">
 							Mobile Friendly
 						</div>
-						<div className="h-2 w-2 shrink-0 rounded-full border border-gray-200"></div>
-						<div className="whitespace-nowrap text-lg font-semibold uppercase text-gray-100">
+						<ThunderIcon className="scale-75 text-primary-950" />
+						<div className="whitespace-nowrap text-base font-medium uppercase text-gray-600">
 							Innovative
 						</div>
 					</div>
-					<motion.div
+					<div
 						className="absolute inset-0 bg-white"
 						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</div>
-				<div className="relative text-center text-base font-medium text-gray-200 xl:w-1/2 xl:text-start">
+				<div className="relative text-center text-base font-medium leading-tight text-gray-600 xl:w-1/2 xl:text-start">
 					<p className="inline">
 						Unlock the potential of retail with our ePOS All-In-One Solutions.
 					</p>
@@ -54,7 +54,7 @@ function FeatureTwo() {
 						hardware, enable on-the-go mobile payments, and embrace secure,
 						contactless QR payments.
 					</p>
-					<motion.div
+					<div
 						className="absolute inset-0 bg-white"
 						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
@@ -64,7 +64,7 @@ function FeatureTwo() {
 			</div>
 			<div className="min-h-[1rem] grow" />
 			<div className="flex flex-col items-center gap-x-16 gap-y-8 sm:w-2/3 lg:w-auto lg:flex-row">
-				<motion.div
+				<div
 					style={{
 						transform: `translateX(calc(${
 							1 - (isMobile ? 1 : isIntersecting)
@@ -79,8 +79,8 @@ function FeatureTwo() {
 							className="h-full object-cover"
 						/>
 					</Hoverable>
-				</motion.div>
-				<motion.div
+				</div>
+				<div
 					style={{
 						transform: `translateX(calc(${
 							1 - (isMobile ? 1 : isIntersecting)
@@ -108,7 +108,7 @@ function FeatureTwo() {
 						title="QR payment codes"
 						supportingText="Enjoy quick, secure, and contactless payments with a simple scan, providing you with a seamless and efficient way to pay."
 					/>
-				</motion.div>
+				</div>
 			</div>
 			<div className="min-h-[1rem] grow-2" />
 		</div>

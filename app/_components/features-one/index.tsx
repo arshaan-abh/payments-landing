@@ -71,7 +71,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 	return (
 		<div className="flex h-full w-full grow flex-col px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow" />
-			<div className="flex flex-col items-center gap-8 md:flex-row">
+			<div className="flex flex-col items-center gap-x-16 gap-y-8 md:flex-row">
 				<div className="relative text-center text-3xl font-extrabold text-primary-950 md:w-1/2 md:text-left">
 					Simplified Customer Payment Processing!
 					<div
