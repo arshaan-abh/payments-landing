@@ -124,6 +124,9 @@ const config: Config = {
 			borderRadius: {
 				"rectangle-full": "999px",
 			},
+			transitionProperty: {
+				"opacity-width": "opacity, width",
+			},
 		},
 	},
 	plugins: [],
