@@ -20,7 +20,6 @@ import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
 import useResponsiveState from "./_components/features-one/useResponsiveState";
 import { IsIntersectingContext, IsMobileContext } from "./_contexts/contexts";
-import { motion } from "framer-motion";
 
 export default function Home() {
 	const isMobile = useResponsiveState<boolean>({
@@ -43,22 +42,20 @@ export default function Home() {
 				<div className="flex flex-col">
 					<HeroBackground />
 					{/* <Grid /> */}
-					<motion.section
+					<section
 						style={{
 							opacity: isMobile ? 1 : isIntersecting[0],
 						}}
 						id="hero"
-						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent ${
+						className={`relative flex flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent ${
 							isMobile ? "" : isIntersecting[0] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
 						<MarketingBanner data={darkMarqueeData} dark />
 						<Navbar />
-						<div className="flex min-h-[1rem] grow sm:hidden" />
 						<Hero />
-						<div className="flex min-h-[1rem] grow-2 sm:hidden" />
-					</motion.section>
-					<motion.section
+					</section>
+					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[1] }}
 						id="feature-one"
 						className={`flex flex-col items-center overflow-hidden ${
@@ -66,11 +63,9 @@ export default function Home() {
 						}`}
 					>
 						<MarketingBanner data={marqueeData} />
-						<div className="flex min-h-[1rem] grow" />
 						<FeatureOne />
-						<div className="flex min-h-[1rem] grow-2" />
-					</motion.section>
-					<motion.section
+					</section>
+					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[2] }}
 						id="feature-two"
 						className={`flex flex-col items-center overflow-hidden ${
@@ -78,8 +73,8 @@ export default function Home() {
 						}`}
 					>
 						<FeatureTwo />
-					</motion.section>
-					<motion.section
+					</section>
+					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[3] }}
 						id="feature-three"
 						className={`flex flex-col items-center overflow-hidden ${
@@ -87,8 +82,8 @@ export default function Home() {
 						}`}
 					>
 						<FeatureThree />
-					</motion.section>
-					<motion.section
+					</section>
+					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[4] }}
 						id="feature-four"
 						className={`flex flex-col items-center overflow-hidden ${
@@ -96,8 +91,8 @@ export default function Home() {
 						}`}
 					>
 						<FeatureFour />
-					</motion.section>
-					<motion.section
+					</section>
+					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[5] }}
 						id="feature-five"
 						className={`flex flex-col items-center overflow-hidden ${
@@ -106,8 +101,8 @@ export default function Home() {
 					>
 						<MarketingBanner data={marqueeData} />
 						<FeatureFive />
-					</motion.section>
-					<motion.section
+					</section>
+					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[6] }}
 						id="feature-six"
 						className={`flex flex-col items-center overflow-hidden ${
@@ -115,9 +110,9 @@ export default function Home() {
 						}`}
 					>
 						<FeatureSix />
-					</motion.section>
+					</section>
 
-					<motion.section
+					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[7] }}
 						id="feature-seven"
 						className={`flex flex-col items-center overflow-hidden ${
@@ -125,8 +120,8 @@ export default function Home() {
 						}`}
 					>
 						<FeatureSeven />
-					</motion.section>
-					<motion.section
+					</section>
+					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[8] }}
 						id="feature-eight"
 						className={`flex flex-col items-center overflow-hidden ${
@@ -135,8 +130,8 @@ export default function Home() {
 					>
 						<MarketingBanner data={marqueeData} />
 						<FaqSection />
-					</motion.section>
-					<motion.section
+					</section>
+					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[9] }}
 						id="feature-nine"
 						className={`flex flex-col items-center overflow-hidden bg-primary-950 text-secondary-950 ${
@@ -144,8 +139,8 @@ export default function Home() {
 						}`}
 					>
 						<Form />
-					</motion.section>
-					<motion.section
+					</section>
+					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[10] }}
 						id="feature-ten"
 						className={`flex flex-col items-center overflow-hidden bg-primary-950 text-secondary-950 ${
@@ -157,7 +152,7 @@ export default function Home() {
 						}`}
 					>
 						<Footer />
-					</motion.section>
+					</section>
 					<Menu />
 					<CookiesModal />
 					<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />

@@ -3,7 +3,7 @@ import Button from "../button";
 
 function Hero() {
 	return (
-		<div className="flex h-full w-full flex-col px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+		<div className="flex h-full w-full grow flex-col px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1.5rem] grow" />
 			<h1 className="mb-4 text-center text-6xl font-medium text-white md:text-left lg:w-1/2">
 				<span className="bg-underline relative whitespace-nowrap font-extrabold">
