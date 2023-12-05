@@ -91,7 +91,9 @@ export default function Home() {
 							isMobile ? "" : isIntersecting[4] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
+						<div className="min-h-[1rem] grow" />
 						<FeatureFour />
+						<div className="min-h-[1rem] grow-2" />
 					</section>
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[5] }}

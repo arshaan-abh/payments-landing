@@ -14,7 +14,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 	const isIntersecting = useContext(IsIntersectingContext)[4];
 
 	return (
-		<div className="flex h-full w-full flex-col-reverse items-center justify-center gap-16 px-10 sm:flex-row lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+		<div className="flex h-fit w-full flex-col-reverse items-center justify-center gap-16 px-10 sm:flex-row lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="relative flex flex-row flex-wrap justify-between gap-16 sm:w-1/3 sm:gap-4 md:w-1/2">
 				<Card
 					title="245M+"
