@@ -146,7 +146,9 @@ interface GridBorderComponentProps {
 	children?: ReactNode;
 }
 
-const GridBorderComponent: FC<GridBorderComponentProps> = ({ children }) => {
+export const GridBorderComponent: FC<GridBorderComponentProps> = ({
+	children,
+}) => {
 	return (
 		<div className="relative w-full grow p-6 hover:[--border:50%] hover:[--transform:scale(1.1)_rotate(4deg)] xs:w-2/3 sm:w-1/2 md:w-full">
 			<div className="overflow-hidden">

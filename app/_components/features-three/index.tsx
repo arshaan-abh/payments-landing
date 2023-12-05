@@ -1,51 +1,50 @@
-import React, { FC, useContext } from "react";
-import bigPicture from "public/marketplace.jpg";
+import React, { useContext } from "react";
 import Image from "next/image";
+import bigPicture from "public/marketplace.jpg";
 import smallPictureOne from "public/handing-money.svg";
 import smallPictureTwo from "public/money.svg";
 import smallPictureThree from "public/shaking-hands.svg";
 import smallPictureFour from "public/split.svg";
-import Hoverable from "../hoverable";
-import { Card } from "../features-two";
 import {
 	IsIntersectingContext,
 	IsMobileContext,
 } from "@/app/_contexts/contexts";
-import { motion } from "framer-motion";
+import { ThunderIcon } from "../icons";
+import { Card, GridBorderComponent } from "../features-two";
 
-function FeatureThree() {
+function FeatureTwo() {
 	const isMobile = useContext(IsMobileContext);
 	const isIntersecting = useContext(IsIntersectingContext)[3];
 
 	return (
-		<div className="flex h-full w-full flex-col items-center px-10 py-4 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
-			<div className="min-h-[1rem] grow-2" />
-			<div className="flex flex-col items-center gap-x-16 gap-y-4 sm:w-2/3 lg:w-auto xl:flex-row">
-				<div className="relative flex flex-col gap-2 text-center xl:w-1/2 xl:text-start">
-					<div className="text-4xl font-extrabold text-primary-950">
+		<div className="flex h-full w-full flex-col items-center px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<div className="min-h-[1rem] grow" />
+			<div className="flex flex-col items-center gap-x-16 gap-y-4 xl:flex-row">
+				<div className="relative flex flex-col text-center xl:w-2/5 xl:text-start">
+					<div className="text-3xl font-extrabold text-primary-950">
 						Marketplace & Platforms
 					</div>
-					<div className="hidden items-center justify-between gap-2 sm:flex">
-						<div className="whitespace-nowrap text-lg font-semibold uppercase text-gray-100">
+					<div className="hidden items-center gap-3 sm:flex">
+						<div className="whitespace-nowrap text-lg font-medium uppercase text-gray-600">
 							Integrated
 						</div>
-						<div className="h-2 w-2 shrink-0 rounded-full border border-gray-200"></div>
-						<div className="whitespace-nowrap text-lg font-semibold uppercase text-gray-100">
+						<ThunderIcon className="scale-75 text-primary-950" />
+						<div className="whitespace-nowrap text-base font-medium uppercase text-gray-600">
 							Mobile Friendly
 						</div>
-						<div className="h-2 w-2 shrink-0 rounded-full border border-gray-200"></div>
-						<div className="whitespace-nowrap text-lg font-semibold uppercase text-gray-100">
+						<ThunderIcon className="scale-75 text-primary-950" />
+						<div className="whitespace-nowrap text-base font-medium uppercase text-gray-600">
 							Innovative
 						</div>
 					</div>
-					<motion.div
+					<div
 						className="absolute inset-0 bg-white"
 						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</div>
-				<div className="relative text-center text-base font-medium text-gray-200 xl:w-1/2 xl:text-start">
+				<div className="relative text-center text-base font-medium leading-tight text-gray-600 md:text-start xl:w-3/5">
 					<p className="inline">
 						Establish a thriving ecosystem for sellers on your platform.
 					</p>
@@ -54,7 +53,7 @@ function FeatureThree() {
 						Benefit from instant payouts, commission alignment, effortless
 						automation, and multi-party.
 					</p>
-					<motion.div
+					<div
 						className="absolute inset-0 bg-white"
 						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
@@ -63,14 +62,30 @@ function FeatureThree() {
 				</div>
 			</div>
 			<div className="min-h-[1rem] grow" />
-			<div className="flex flex-col-reverse items-center gap-x-16 gap-y-8 sm:w-2/3 lg:w-auto lg:flex-row">
-				<motion.div
+			<div className="flex w-auto flex-col items-center gap-16 sm:flex-row">
+				<div
+					style={{
+						transform: `translateX(calc(${
+							1 - (isMobile ? 1 : isIntersecting)
+						} * 100%))`,
+					}}
+					className="flex items-center xs:w-2/3 sm:hidden lg:flex lg:w-1/2 xl:w-2/5"
+				>
+					<GridBorderComponent>
+						<Image
+							src={bigPicture}
+							alt="Big picture"
+							className="h-full object-cover"
+						/>
+					</GridBorderComponent>
+				</div>
+				<div
 					style={{
 						transform: `translateX(calc(${
 							1 - (isMobile ? 1 : isIntersecting)
 						} * -100%))`,
 					}}
-					className="flex flex-col justify-between gap-6 lg:w-1/2"
+					className="flex flex-col justify-between gap-x-6 gap-y-16 xs:w-1/2 sm:w-full lg:w-1/2 lg:gap-y-9 xl:w-3/5"
 				>
 					<Card
 						image={smallPictureOne}
@@ -92,27 +107,11 @@ function FeatureThree() {
 						title="Multiparty Split Payments and Payouts"
 						supportingText="Effortlessly pay multiple parties in local currencies, making financial transactions more accessible and effective for everyone involved."
 					/>
-				</motion.div>
-				<motion.div
-					style={{
-						transform: `translateX(calc(${
-							1 - (isMobile ? 1 : isIntersecting)
-						} * 100%))`,
-					}}
-					className="flex w-2/3 items-center sm:w-full lg:w-1/2"
-				>
-					<Hoverable className="w-full" round>
-						<Image
-							src={bigPicture}
-							alt="Big picture"
-							className="h-full w-full object-cover"
-						/>
-					</Hoverable>
-				</motion.div>
+				</div>
 			</div>
 			<div className="min-h-[1rem] grow-2" />
 		</div>
 	);
 }
 
-export default FeatureThree;
+export default FeatureTwo;
