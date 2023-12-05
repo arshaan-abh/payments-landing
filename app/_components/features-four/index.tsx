@@ -1,12 +1,11 @@
 import { useContext, type FC } from "react";
 import Empowering from "public/transfer.jpg";
 import Image from "next/image";
-import Hoverable from "../hoverable";
 import {
 	IsIntersectingContext,
 	IsMobileContext,
 } from "@/app/_contexts/contexts";
-import { motion } from "framer-motion";
+import { GridBorderComponent } from "../features-two";
 
 interface FeatureFourProps {}
 
@@ -15,8 +14,8 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 	const isIntersecting = useContext(IsIntersectingContext)[4];
 
 	return (
-		<div className="flex h-full w-full flex-col-reverse items-center justify-center gap-10 px-10 lg:flex-row lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
-			<div className="relative flex flex-row flex-wrap justify-between gap-y-4 md:w-2/3 lg:w-1/2 lg:flex-col lg:gap-5">
+		<div className="flex h-full w-full flex-col-reverse items-center justify-center gap-16 px-10 sm:flex-row lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+			<div className="relative flex flex-row flex-wrap justify-between gap-16 sm:w-1/3 sm:gap-4 md:w-1/2">
 				<Card
 					title="245M+"
 					percent={100}
@@ -37,24 +36,24 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					percent={50}
 					supportingText="currencies and payment methods supported."
 				/>
-				<motion.div
+				<div
 					className="absolute inset-0 bg-white"
 					style={{
 						left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 					}}
 				/>
 			</div>
-			<div className="flex flex-col gap-5 md:w-2/3 lg:w-1/2">
-				<h3 className="relative text-center text-4xl font-extrabold text-primary-950 lg:text-start">
+			<div className="flex flex-col gap-4 sm:w-2/3 md:w-1/2">
+				<h3 className="relative text-center text-3xl font-extrabold text-primary-950 lg:text-start">
 					Empowering Effortless Money Transfers
-					<motion.div
+					<div
 						className="absolute inset-0 bg-white"
 						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</h3>
-				<div className="relative text-center text-base font-medium text-gray-200 lg:text-start">
+				<div className="relative text-center text-base font-normal text-gray-600 lg:text-start">
 					<p className="inline">
 						Our platform is your gateway to effortless financial transactions.
 					</p>
@@ -63,24 +62,24 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 						transfer solutions, so you can efficiently manage your finances.
 						Join us today and discover a new level of financial convenience.
 					</p>
-					<motion.div
+					<div
 						className="absolute inset-0 bg-white"
 						style={{
 							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
 						}}
 					/>
 				</div>
-				<motion.div
+				<div
 					style={{
 						transform: `translateX(calc(${
 							1 - (isMobile ? 1 : isIntersecting)
 						} * 100%))`,
 					}}
 				>
-					<Hoverable round>
+					<GridBorderComponent className="m-auto xs:w-2/3 sm:w-full">
 						<Image src={Empowering} alt="Empowering" />
-					</Hoverable>
-				</motion.div>
+					</GridBorderComponent>
+				</div>
 			</div>
 		</div>
 	);
@@ -96,12 +95,12 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ title, supportingText, percent }) => {
 	return (
-		<div className="flex w-full flex-col gap-2 sm:w-[48%]">
-			<div className="text-center text-6xl font-extrabold text-primary-950 sm:text-start lg:text-7xl">
+		<div className="m-auto flex w-full flex-col gap-1 xs:w-2/3 sm:w-full lg:w-2/3">
+			<div className="text-center text-6xl font-extrabold text-primary-950 sm:text-start">
 				{title}
 			</div>
-			<div className="h-5 bg-gray-700" style={{ width: `${percent}%` }} />
-			<p className="text-center text-base font-medium text-gray-100 sm:text-start">
+			<div className="h-5 bg-gray-100" style={{ width: `${percent}%` }} />
+			<p className="text-center text-base font-medium text-gray-600 sm:text-start">
 				{supportingText}
 			</p>
 		</div>

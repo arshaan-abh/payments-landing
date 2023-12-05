@@ -73,7 +73,7 @@ function FeatureTwo() {
 					}}
 					className="flex items-center xs:w-2/3 sm:hidden lg:flex lg:w-1/2 xl:w-2/5"
 				>
-					<GridBorderComponent>
+					<GridBorderComponent className="xs:w-2/3 sm:w-1/2 md:w-full">
 						<Image
 							src={bigPicture}
 							alt="Big picture"
@@ -144,13 +144,17 @@ export const Card: FC<CardProps> = ({ image, title, supportingText }) => {
 
 interface GridBorderComponentProps {
 	children?: ReactNode;
+	className?: string;
 }
 
 export const GridBorderComponent: FC<GridBorderComponentProps> = ({
 	children,
+	className = "",
 }) => {
 	return (
-		<div className="relative w-full grow p-6 hover:[--border:50%] hover:[--transform:scale(1.1)_rotate(4deg)] xs:w-2/3 sm:w-1/2 md:w-full">
+		<div
+			className={`relative w-full grow p-6 hover:[--border:50%] hover:[--transform:scale(1.1)_rotate(4deg)] ${className}`}
+		>
 			<div className="overflow-hidden">
 				<div className="transition-transform duration-300 [transform:var(--transform)]">
 					{children}
