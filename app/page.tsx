@@ -47,7 +47,7 @@ export default function Home() {
 							opacity: isMobile ? 1 : isIntersecting[0],
 						}}
 						id="hero"
-						className={`relative flex flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent ${
+						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent ${
 							isMobile ? "" : isIntersecting[0] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
@@ -63,6 +63,7 @@ export default function Home() {
 						}`}
 					>
 						<MarketingBanner data={marqueeData} />
+						<div className="h-32 sm:hidden" />
 						<FeatureOne />
 					</section>
 					<section
