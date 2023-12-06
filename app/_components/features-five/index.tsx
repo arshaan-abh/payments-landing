@@ -1,4 +1,3 @@
-"use client";
 import { type FC, ReactNode } from "react";
 import Image from "next/image";
 import Pre from "public/credit-card.jpg";

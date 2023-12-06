@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import React, { FC, ReactNode, useContext } from "react";
 import featureImageOne from "../../../public/one-click.jpg";

@@ -1,4 +1,3 @@
-"use client";
 import React, { FC, ReactNode, RefObject, useState } from "react";
 import Mobile1 from "public/terminal-1.jpg";
 import Mobile2 from "public/terminal-2.jpg";

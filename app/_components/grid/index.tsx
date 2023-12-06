@@ -1,4 +1,3 @@
-"use client";
 import type { FC } from "react";
 import useResponsiveState from "../features-one/useResponsiveState";
 

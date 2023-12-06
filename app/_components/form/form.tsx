@@ -1,4 +1,3 @@
-"use client";
 import { Control, Controller, FieldErrors, RefCallBack } from "react-hook-form";
 
 import { EnquireRequest } from "@/app/@types/enquireRequest";

@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { useState, type FC, useCallback, useEffect } from "react";
 import Button from "../button";

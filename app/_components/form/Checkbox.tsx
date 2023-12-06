@@ -1,4 +1,3 @@
-"use client";
 import { useId, type FC, type ReactNode, useState, useCallback } from "react";
 import { PlaneCheckIcon } from "../icons";
 

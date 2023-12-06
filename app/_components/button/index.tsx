@@ -1,4 +1,3 @@
-"use client";
 import type { FC, MouseEventHandler, ReactNode, RefObject } from "react";
 
 interface ButtonProps {
