@@ -132,6 +132,7 @@ export default function Home() {
 						}`}
 					>
 						<MarketingBanner data={marqueeData} />
+						<div className="h-32 sm:hidden" />
 						<FaqSection />
 					</section>
 					<section
