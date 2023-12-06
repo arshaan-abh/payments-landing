@@ -115,7 +115,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 						<SlideButton buttonRef={prevButtonRef}>
 							<ArrowLeftIcon />
 						</SlideButton>
-						<div className="text-2xl font-light uppercase text-gray-400">
+						<div className="text-2xl font-light uppercase text-gray-300">
 							Scroll
 						</div>
 						<SlideButton buttonRef={nextButtonRef}>
