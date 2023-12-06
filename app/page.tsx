@@ -20,6 +20,7 @@ import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
 import useResponsiveState from "./_components/features-one/useResponsiveState";
 import { IsIntersectingContext, IsMobileContext } from "./_contexts/contexts";
+import Slogan from "./_components/footer/Slogan";
 
 export default function Home() {
 	const isMobile = useResponsiveState<boolean>({
@@ -153,6 +154,7 @@ export default function Home() {
 								  : "pointer-events-none"
 						}`}
 					>
+						<Slogan />
 						<Footer />
 					</section>
 					<Menu />
