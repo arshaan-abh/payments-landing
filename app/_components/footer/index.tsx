@@ -42,7 +42,7 @@ const Footer: FC<FooterProps> = ({}) => {
 		<div className="flex h-full w-full flex-col">
 			<div className="grow"></div>
 			<div className="flex justify-center bg-primary-950 text-white">
-				<div className="flex flex-col gap-9 px-10 pt-11 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+				<div className="flex flex-col gap-8 px-10 pt-11 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 					<Image src={logo} alt="Logo" />
 					<div className="flex flex-wrap justify-center gap-4 sm:flex-nowrap">
 						<div className="flex basis-full flex-col gap-2 text-start xs:basis-2/5 xs:text-center sm:basis-1/3 sm:text-start">
@@ -102,8 +102,8 @@ const Footer: FC<FooterProps> = ({}) => {
 						</div>
 					</div>
 					<div className="flex flex-col">
-						<div className="flex flex-col items-center justify-between border-t border-gray-100 py-5 text-center md:flex-row md:text-start">
-							<div className="basis-1/2 text-sm font-medium lg:basis-1/3">
+						<div className="flex flex-col items-center justify-between border-t border-secondary-900 py-4 text-center md:flex-row md:text-start">
+							<div className="basis-1/2 text-sm font-medium">
 								At Selected Payments, We&apos;re More Than Just a Payment
 								Solution - We&apos;re Your Trustworthy Partner. Our Innovative
 								Approach Combines with Dedication to Ensure Your Payments Are
@@ -111,7 +111,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								Future.
 							</div>
 							<div className="hidden min-h-[1rem] min-w-[1rem] xs:flex" />
-							<div className="hidden basis-1/2 flex-col gap-1 xs:flex lg:basis-1/3">
+							<div className="hidden basis-1/2 flex-col gap-1 xs:flex">
 								<div className="flex items-center justify-center gap-1 text-sm font-normal md:justify-end">
 									<p className="text-right">+44 1273 705050</p>
 									<Image src={Phone} alt="Phone" />
@@ -128,7 +128,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								</div>
 							</div>
 						</div>
-						<div className="flex flex-col items-center justify-between gap-y-4 border-t border-gray-100 py-3 pt-6 md:flex-row md:pt-3">
+						<div className="flex flex-col items-center justify-between gap-y-4 border-t border-secondary-900 py-4 md:flex-row">
 							<p className="text-xs font-normal text-gray-400">
 								Copyright © 2023 Powered by{" "}
 								<span className="font-bold text-white">Selected</span>
