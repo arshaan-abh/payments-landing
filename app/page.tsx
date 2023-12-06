@@ -102,8 +102,6 @@ export default function Home() {
 							isMobile ? "" : isIntersecting[5] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
-						<MarketingBanner data={marqueeData} />
-						<div className="h-32 sm:hidden" />
 						<FeatureFive />
 					</section>
 					<section
