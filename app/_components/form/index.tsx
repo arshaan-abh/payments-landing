@@ -107,16 +107,14 @@ function Form() {
 						);
 					})}
 				</div>
-				{checkableList[11] && (
-					<textarea
-						id="message"
-						rows={3}
-						disabled={checkableList[11] ? false : true}
-						className="w-full rounded-md border-2 border-primary-800 bg-transparent p-2.5 text-sm font-medium text-white placeholder:text-primary-800 focus:border-secondary-300 focus:placeholder:text-secondary-300"
-						placeholder="Others"
-						style={{ resize: "none" }}
-					></textarea>
-				)}
+				<textarea
+					id="message"
+					rows={3}
+					disabled={checkableList[11] ? false : true}
+					className="mb-3 w-full rounded-md border-2 border-primary-800 bg-transparent p-2.5 text-sm font-medium text-white placeholder:text-primary-800 focus:border-secondary-300 focus:placeholder:text-secondary-300 disabled:opacity-50"
+					placeholder="Others"
+					style={{ resize: "none" }}
+				></textarea>
 			</div>,
 			<FormSection control={control} errors={errors} key={1} />,
 		],
@@ -133,10 +131,11 @@ function Form() {
 			<p className="mb-6 text-lg font-medium text-gray-400">
 				Elevate your business with our convenient in-app payment solutions.
 			</p>
-			<div className="flex">{slider}</div>
-			<div className="flex gap-4">
+			<div className="flex sm:w-2/3 lg:w-full">{slider}</div>
+			<div className="flex w-full gap-4 sm:w-2/3 lg:w-full">
 				{!responsiveState.isPhone ? (
 					<Button
+						className="m-auto"
 						clickHandler={() => {
 							handleFormSubmit();
 						}}
@@ -146,14 +145,17 @@ function Form() {
 				) : (
 					<>
 						{index === 1 ? (
-							<Button className="f-full" customRef={nextButtonRef}>
+							<Button className="w-full" customRef={nextButtonRef}>
 								Next
 							</Button>
 						) : (
-							<Button customRef={prevButtonRef}>Back</Button>
+							<Button dark customRef={prevButtonRef}>
+								Back
+							</Button>
 						)}
 						{index === 2 && (
 							<Button
+								className="w-full"
 								clickHandler={() => {
 									handleFormSubmit();
 								}}
