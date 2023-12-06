@@ -63,10 +63,6 @@ const config: Config = {
 					"0%": { transform: "translateX(0%)" },
 					"100%": { transform: "translateX(-100%)" },
 				},
-				"marquee-after": {
-					"0%": { transform: "translateX(0%)" },
-					"100%": { transform: "translateX(-100%)" },
-				},
 				wiggle: {
 					"0%, 50%": {
 						"-webkit-transform": "rotate(0deg)",
@@ -110,7 +106,7 @@ const config: Config = {
 			},
 			animation: {
 				marquee: "marquee 64s infinite linear",
-				"marquee-after": "marquee-after 64s infinite linear",
+				"marquee-reverse": "marquee-reverse 64s infinite reverse linear",
 				wiggle: "wiggle 2s infinite",
 				show: "showHide 8s infinite alternate linear",
 				hide: "showHide 8s infinite alternate-reverse linear",

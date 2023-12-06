@@ -28,7 +28,7 @@ const MarketingBanner: FC<MarketingBannerProps> = ({ dark, data }) => {
 					/>
 					<MarqueeItems
 						data={data}
-						className="animate-marquee-after"
+						className="animate-marquee"
 						iconClassName={dark ? "text-secondary-950" : ""}
 					/>
 				</>
