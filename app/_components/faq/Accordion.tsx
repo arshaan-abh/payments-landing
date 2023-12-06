@@ -1,31 +1,50 @@
-"use client";
-import { FC, ReactNode, useCallback, useRef, useState } from "react";
+import React, {
+	FC,
+	ReactNode,
+	useCallback,
+	useRef,
+	useState,
+	useEffect,
+	MouseEventHandler,
+} from "react";
 import { PlaneMinusIcon, PlanePlusIcon } from "../icons";
 
 interface AccordionProps {
 	title: string;
 	children: ReactNode;
+	open: boolean;
+	onClick: () => void;
 }
 
-const Accordion: FC<AccordionProps> = ({ title, children }) => {
+const Accordion: FC<AccordionProps> = ({ title, children, open, onClick }) => {
 	const buttonRef = useRef<HTMLButtonElement>(null);
 	const childrenRef = useRef<HTMLDivElement>(null);
-	let [open, setOpen] = useState<boolean>(false);
+	const [contentHeight, setContentHeight] = useState<number>(0);
 
-	const clickHandler = useCallback(() => {
-		setOpen((prev) => !prev);
-	}, []);
+	useEffect(() => {
+		if (childrenRef.current) {
+			setContentHeight(open ? childrenRef.current.scrollHeight : 0);
+		}
+	}, [open]);
 
-	const variableClassNames = open ? "pb-6 h-auto" : "pb-0 h-0";
+	const clickHandler: MouseEventHandler<HTMLButtonElement> = useCallback(
+		(event) => {
+			onClick();
+			event.stopPropagation();
+		},
+		[onClick]
+	);
 
 	return (
 		<div className="border-b-2 border-primary-950">
 			<button
-				className="flex w-full items-center justify-between gap-4 py-6"
+				className="flex w-full items-center justify-between gap-5 py-5 pr-5"
 				ref={buttonRef}
 				onClick={clickHandler}
 			>
-				<h4 className="text-3xl font-semibold text-primary-950">{title}</h4>
+				<h4 className="text-start text-xl font-semibold text-primary-950">
+					{title}
+				</h4>
 				{open ? (
 					<PlaneMinusIcon className="shrink-0 text-primary-950" />
 				) : (
@@ -33,8 +52,12 @@ const Accordion: FC<AccordionProps> = ({ title, children }) => {
 				)}
 			</button>
 			<div
+				className="overflow-hidden text-base font-normal text-gray-600 transition-all"
 				ref={childrenRef}
-				className={`overflow-hidden ${variableClassNames}`}
+				style={{
+					height: open ? `calc(${contentHeight}px + 1.25rem)` : 0,
+					...(open && { transitionDelay: "0.15s" }),
+				}}
 			>
 				{children}
 			</div>
@@ -43,5 +66,3 @@ const Accordion: FC<AccordionProps> = ({ title, children }) => {
 };
 
 export default Accordion;
-
-// TODO add animation

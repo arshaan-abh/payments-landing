@@ -125,7 +125,7 @@ function Form() {
 	});
 
 	return (
-		<div className="flex h-full w-full flex-col items-center px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
+		<div className="flex h-full w-full grow flex-col items-center px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow" />
 			<h3 className="mb-2 text-4xl font-extrabold text-white">
 				Begin Your Next Chapter Now!
