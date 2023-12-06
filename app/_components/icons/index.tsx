@@ -480,3 +480,20 @@ export const HamburgerMenu: FC<IconProps> = ({ className }) => {
 		</svg>
 	);
 };
+
+export const FullScreenIcon: FC<IconProps> = ({ className }) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="16"
+			height="16"
+			fill="none"
+			className={className}
+		>
+			<path
+				d="M15 15v-5h1v6h-6v-1h5zM10 0h6v6h-1V1h-5V0zM0 6V0h6v1H1v5H0zm1 4v5h5v1H0v-6h1z"
+				fill="currentColor"
+			/>
+		</svg>
+	);
+};

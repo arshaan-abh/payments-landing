@@ -8,7 +8,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import Modal from "react-modal";
 import ModalSection from "./modal";
-import { ArrowLeftIcon, ArrowRightIcon, CheckIcon } from "../icons";
+import {
+	ArrowLeftIcon,
+	ArrowRightIcon,
+	CheckIcon,
+	FullScreenIcon,
+} from "../icons";
 import useSlider from "./Slider";
 import useResponsiveState from "../features-one/useResponsiveState";
 import { GridBorderComponent } from "../features-two";
@@ -67,12 +72,17 @@ function FeatureEight() {
 				className="flex flex-col gap-4"
 				onClick={() => openModal(index)}
 			>
-				<GridBorderComponent
-					className="flex items-center justify-center border-gray-100"
-					overflowVisible
-				>
-					<Image src={t.image} alt={t.title} className="" />
-				</GridBorderComponent>
+				<div className="relative">
+					<GridBorderComponent
+						className="flex items-center justify-center border-gray-100"
+						overflowVisible
+					>
+						<Image src={t.image} alt={t.title} />
+					</GridBorderComponent>
+					<div className="absolute right-2 top-2 flex h-[32px] w-[32px] items-center justify-center rounded-full border border-gray-100 bg-white">
+						<FullScreenIcon />
+					</div>
+				</div>
 				<h4 className="text-2xl font-extrabold text-primary-950">{t.title}</h4>
 				<p className="text-start text-lg font-medium text-gray-600">
 					{t.subtitle}
