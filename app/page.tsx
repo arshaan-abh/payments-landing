@@ -103,6 +103,7 @@ export default function Home() {
 						}`}
 					>
 						<MarketingBanner data={marqueeData} />
+						<div className="h-32 sm:hidden" />
 						<FeatureFive />
 					</section>
 					<section
@@ -142,6 +143,7 @@ export default function Home() {
 							isMobile ? "" : isIntersecting[9] > 0 ? "" : "pointer-events-none"
 						}`}
 					>
+						<div className="h-28 sm:hidden" />
 						<Form />
 					</section>
 					<section
