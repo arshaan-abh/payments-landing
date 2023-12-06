@@ -79,7 +79,7 @@ function FeatureEight() {
 					>
 						<Image src={t.image} alt={t.title} />
 					</GridBorderComponent>
-					<div className="absolute right-2 top-2 flex h-[32px] w-[32px] items-center justify-center rounded-full border border-gray-100 bg-white">
+					<div className="pointer-events-none absolute right-2 top-2 flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-100 bg-white">
 						<FullScreenIcon />
 					</div>
 				</div>
