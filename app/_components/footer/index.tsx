@@ -39,9 +39,9 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
 	return (
-		<div className="flex h-full w-full flex-col">
+		<div className="relative flex h-full w-full flex-col">
 			<div className="grow"></div>
-			<div className="flex justify-center bg-primary-950 text-white">
+			<div className="flex justify-center text-white">
 				<div className="flex flex-col gap-8 px-10 pt-11 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 					<Image src={logo} alt="Logo" />
 					<div className="flex flex-wrap justify-center gap-16 sm:flex-nowrap">
