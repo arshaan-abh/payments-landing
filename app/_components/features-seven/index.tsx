@@ -1,9 +1,9 @@
 "use client";
 import React, { FC, ReactNode, RefObject, useState } from "react";
-import Mobile1 from "../../../public/Terminal 1.webp";
-import Mobile2 from "../../../public/Terminal 2.webp";
-import Mobile3 from "../../../public/Terminal 3.webp";
-import Mobile4 from "../../../public/Terminal 4.webp";
+import Mobile1 from "public/terminal-1.jpg";
+import Mobile2 from "public/terminal-2.jpg";
+import Mobile3 from "public/terminal-3.jpg";
+import Mobile4 from "public/terminal-4.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
@@ -11,8 +11,8 @@ import Modal from "react-modal";
 import ModalSection from "./modal";
 import { ArrowLeftIcon, ArrowRightIcon, CheckIcon } from "../icons";
 import useSlider from "./Slider";
-import { HoverableImage } from "../hoverable";
 import useResponsiveState from "../features-one/useResponsiveState";
+import { GridBorderComponent } from "../features-two";
 const terminals = [
 	{
 		image: Mobile1,
@@ -56,38 +56,43 @@ function FeatureEight() {
 	const visibleSlidesNumber = useResponsiveState<number>({
 		defaultState: 1,
 		breakpoints: [
-			{ breakpoint: 376, state: 2 },
-			{ breakpoint: 640, state: 3 },
-			{ breakpoint: 1024, state: 4 },
+			{ breakpoint: 640, state: 2 },
+			{ breakpoint: 768, state: 4 },
 		],
 	});
 
 	const [slider, previousButtonRef, nextButtonRef] = useSlider({
 		children: terminals.map((t, index) => (
-			<div
+			<button
 				key={index}
-				className="flex flex-col gap-5"
+				className="flex flex-col gap-4"
 				onClick={() => openModal(index)}
-				style={{ cursor: "pointer" }}
 			>
-				<HoverableImage src={t.image} alt={t.title} />
+				<GridBorderComponent
+					className="flex items-center justify-center border-gray-100"
+					overflowVisible
+				>
+					<Image src={t.image} alt={t.title} className="" />
+				</GridBorderComponent>
 				<h4 className="text-2xl font-extrabold text-primary-950">{t.title}</h4>
-				<p className="text-lg font-medium text-gray-100">{t.subtitle}</p>
+				<p className="text-start text-lg font-medium text-gray-600">
+					{t.subtitle}
+				</p>
 				<div className="flex flex-col gap-1">
 					{t.items ? (
 						t.items.map((item, index) => (
 							<div className="flex items-center gap-2" key={index}>
 								<CheckIcon className="text-primary-950" />
-								<div className="text-sm font-medium text-gray-200">{item}</div>
+								<div className="text-sm font-medium text-gray-600">{item}</div>
 							</div>
 						))
 					) : (
-						<p className="text-lg font-normal italic text-gray-100">
+						<p className="text-start text-lg font-normal text-gray-600">
 							* no extra terminals or hardware needed.
 						</p>
 					)}
 				</div>
-			</div>
+			</button>
 		)),
 		visibleSlidesNumber,
 		gapInRem: 2.5,
@@ -96,18 +101,18 @@ function FeatureEight() {
 	return (
 		<>
 			<div className="flex h-full w-full flex-col px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
-				<div className="min-h-[1rem] grow-2" />
-				<div className="flex items-center justify-between gap-4">
-					<div className="flex flex-col gap-2">
-						<h3 className="text-4xl font-extrabold text-primary-950">
+				<div className="min-h-[1rem] grow" />
+				<div className="mb-8 flex items-start justify-between gap-16">
+					<div className="flex flex-col gap-1">
+						<h3 className="text-3xl font-extrabold text-primary-950">
 							Terminals
 						</h3>
-						<p className="text-base font-normal text-gray-200">
+						<p className="text-base font-normal text-gray-600">
 							Here you can see our terminals and order anyone do you want.
 						</p>
 					</div>
 					<div className="flex flex-col items-end gap-1">
-						<div className="text-2xl font-light uppercase text-gray-400">
+						<div className="text-2xl font-light uppercase text-gray-300">
 							Scroll
 						</div>
 						<div className="flex gap-2.5">
@@ -120,7 +125,6 @@ function FeatureEight() {
 						</div>
 					</div>
 				</div>
-				<div className="min-h-[1rem] grow" />
 				{slider}
 				<div className="min-h-[1rem] grow-2" />
 			</div>
@@ -167,7 +171,7 @@ export const SlideButton: FC<SlideButtonProps> = ({ children, buttonRef }) => {
 	return (
 		<button
 			ref={buttonRef}
-			className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-primary-950 text-primary-950 transition-colors disabled:border-gray-400 disabled:text-gray-400"
+			className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-primary-950 text-primary-950 transition-colors disabled:border-gray-300 disabled:text-gray-300"
 		>
 			{children}
 		</button>

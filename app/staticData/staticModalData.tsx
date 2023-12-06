@@ -1,9 +1,8 @@
 import { ModalDataType } from "../@types/modal";
-import Mobile1 from "../../public/Terminal 1.webp";
-import Mobile2 from "../../public/Terminal 2.webp";
-import Mobile3 from "../../public/Terminal 3.webp";
-import Mobile4 from "../../public/Terminal 4.webp";
-import Mobile5 from "../../public/Terminal 5.webp";
+import Mobile1 from "public/terminal-1.jpg";
+import Mobile2 from "public/terminal-2.jpg";
+import Mobile3 from "public/terminal-3.jpg";
+import Mobile4 from "public/terminal-4.jpg";
 
 export const ModalData: ModalDataType[] = [
 	{
