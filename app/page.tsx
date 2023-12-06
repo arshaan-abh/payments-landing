@@ -147,7 +147,7 @@ export default function Home() {
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[10] }}
 						id="feature-ten"
-						className={`flex flex-col items-center overflow-hidden bg-primary-950 text-secondary-950 ${
+						className={`flex flex-col items-center overflow-hidden bg-primary-950 pb-0 text-secondary-950 ${
 							isMobile
 								? ""
 								: isIntersecting[10] > 0
