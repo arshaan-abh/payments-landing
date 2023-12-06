@@ -155,6 +155,7 @@ export default function Home() {
 						}`}
 					>
 						<Slogan />
+						<div className="h-28 sm:hidden" />
 						<Footer />
 					</section>
 					<Menu />

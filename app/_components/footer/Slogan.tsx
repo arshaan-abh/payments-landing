@@ -4,7 +4,7 @@ interface SloganProps {}
 
 const Slogan: FC<SloganProps> = ({}) => {
 	return (
-		<div className="absolute flex h-full w-full flex-col justify-start">
+		<div className="flex h-full w-full flex-col justify-start sm:absolute">
 			<MarqueeBase>
 				<StrokedText className="whitespace-nowrap">
 					<h2 className="text-9xl font-extrabold uppercase tracking-widest text-primary-950">
