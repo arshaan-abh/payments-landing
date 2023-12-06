@@ -72,7 +72,7 @@ function FeatureEight() {
 				className="flex flex-col gap-4"
 				onClick={() => openModal(index)}
 			>
-				<div className="relative">
+				<div className="relative w-full">
 					<GridBorderComponent
 						className="flex items-center justify-center border-gray-100"
 						overflowVisible
