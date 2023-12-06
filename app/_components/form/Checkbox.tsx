@@ -26,16 +26,18 @@ const Checkbox: FC<checkboxProps> = ({ children, checkHandler }) => {
 				onChange={handler}
 			/>
 			<div
-				className={`flex w-full items-center gap-2.5 rounded-md border-2 p-2.5 text-base font-semibold text-secondary-950 ${
-					checked ? "border-secondary-950" : "border-gray-100"
+				className={`flex w-full items-center gap-2.5 rounded-md border-2 p-2.5 text-sm font-medium ${
+					checked
+						? "border-secondary-300 bg-secondary-300 text-primary-950"
+						: "border-primary-800 text-white"
 				}`}
 			>
 				<div
-					className={`flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-full ${
-						checked ? "bg-secondary-950" : "bg-gray-500"
+					className={`flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-full ${
+						checked ? "bg-secondary-900" : "bg-primary-800"
 					}`}
 				>
-					{checked && <PlaneCheckIcon className="text-primary-950" />}
+					{checked && <PlaneCheckIcon className="text-secondary-300" />}
 				</div>
 				{children}
 			</div>

@@ -83,7 +83,7 @@ function Form() {
 		defaultState: { visibleSlidesNumber: 1, isPhone: true },
 		breakpoints: [
 			{
-				breakpoint: 768,
+				breakpoint: 1024,
 				state: { visibleSlidesNumber: 2, isPhone: false },
 			},
 		],
@@ -92,7 +92,7 @@ function Form() {
 	const [slider, prevButtonRef, nextButtonRef, index] = useSlider({
 		children: [
 			<div className="flex basis-1/2 flex-col" key={0}>
-				<p className="mb-4 text-center text-xl font-extrabold text-secondary-950">
+				<p className="mb-4 text-center text-xl font-extrabold text-white">
 					Select your favorite solutions
 				</p>
 				<div className="mb-3 flex flex-wrap gap-3">
@@ -112,7 +112,7 @@ function Form() {
 						id="message"
 						rows={3}
 						disabled={checkableList[11] ? false : true}
-						className="w-full rounded-md border-2 border-gray-100 bg-transparent p-2.5 text-base font-semibold text-secondary-950 focus:border-secondary-950"
+						className="w-full rounded-md border-2 border-primary-800 bg-transparent p-2.5 text-sm font-medium text-white placeholder:text-primary-800 focus:border-secondary-300 focus:placeholder:text-secondary-300"
 						placeholder="Others"
 						style={{ resize: "none" }}
 					></textarea>
@@ -120,20 +120,20 @@ function Form() {
 			</div>,
 			<FormSection control={control} errors={errors} key={1} />,
 		],
-		gapInRem: 2.5,
+		gapInRem: 4,
 		visibleSlidesNumber: responsiveState.visibleSlidesNumber,
 	});
 
 	return (
 		<div className="flex h-full w-full flex-col items-center px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow" />
-			<h3 className="mb-2 text-4xl font-extrabold">
+			<h3 className="mb-2 text-4xl font-extrabold text-white">
 				Begin Your Next Chapter Now!
 			</h3>
-			<p className="mb-8 text-lg font-medium text-gray-400">
+			<p className="mb-6 text-lg font-medium text-gray-400">
 				Elevate your business with our convenient in-app payment solutions.
 			</p>
-			<div className="mb-2.5 flex">{slider}</div>
+			<div className="flex">{slider}</div>
 			<div className="flex gap-4">
 				{!responsiveState.isPhone ? (
 					<Button

@@ -48,6 +48,10 @@ const useSlider = ({
 	}, []);
 
 	useEffect(() => {
+		setIndex((currentState) =>
+			Math.min(currentState, Math.ceil(children.length / visibleSlidesNumber))
+		);
+
 		heightHandler();
 
 		const prevButton = prevButtonRef.current;

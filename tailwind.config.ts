@@ -126,6 +126,7 @@ const config: Config = {
 			},
 			transitionProperty: {
 				"opacity-width": "opacity, width",
+				"opacity-height": "opacity, height",
 			},
 		},
 	},

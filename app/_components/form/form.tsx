@@ -12,7 +12,7 @@ interface FormSectionProps {
 const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 	return (
 		<div className="flex basis-1/2 flex-col">
-			<p className="mb-4 text-center text-xl font-extrabold text-secondary-950">
+			<p className="mb-4 text-center text-xl font-extrabold text-white">
 				Begin your next chapter now!
 			</p>
 			<form className="flex w-full flex-col justify-center rounded-md">
@@ -121,7 +121,7 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 						name="description"
 						control={control}
 						render={({ field: { ref, ...otherFields } }) => (
-							<div className="w-full ">
+							<div className="flex w-full flex-col">
 								<CustomTextArea
 									{...otherFields}
 									customRef={ref}
@@ -159,18 +159,20 @@ const CustomTextField: FC<CustomTextFieldProps> = (props) => {
 	const inputErrorClasses = error
 		? "border-red-500 placeholder:text-red-500"
 		: "border-white placeholder:text-[#fafafa]";
-	const helperErrorClasses = error ? "text-red-500" : "text-white";
+	const helperErrorClasses = error
+		? "text-red-500 h-8 leading-8 opacity-100"
+		: "text-white h-4 leading-4 opacity-0";
 
 	return (
 		<>
 			<input
 				ref={customRef}
-				className={`rounded-md border bg-[#ffffff0a] p-4 text-base font-normal text-[#fafafa] outline-none ${inputErrorClasses} ${className}`}
+				className={`rounded-md border-2 bg-white/10 p-4 text-base font-normal text-[#fafafa] outline-none ${inputErrorClasses} ${className}`}
 				{...otherProps}
 			/>
 			<div
 				title={helperText}
-				className={`my-1 h-6 ${helperErrorClasses} line-clamp-1`}
+				className={`${helperErrorClasses} transition-opacity-height line-clamp-1 text-base font-normal`}
 			>
 				{helperText}
 			</div>
@@ -194,18 +196,20 @@ const CustomTextArea: FC<CustomTextAreaProps> = (props) => {
 	const inputErrorClasses = error
 		? "border-red-500 placeholder:text-red-500"
 		: "border-white placeholder:text-[#fafafa]";
-	const helperErrorClasses = error ? "text-red-500" : "text-white";
+	const helperErrorClasses = error
+		? "text-red-500 h-8 leading-8 opacity-100"
+		: "text-white h-4 leading-4 opacity-0";
 
 	return (
 		<>
 			<textarea
 				ref={customRef}
-				className={`rounded-md border bg-[#ffffff0a] p-4 text-base font-normal text-[#fafafa] outline-none ${inputErrorClasses} ${className}`}
+				className={`rounded-md border-2 bg-white/10 p-4 text-base font-normal text-[#fafafa] outline-none ${inputErrorClasses} ${className}`}
 				{...otherProps}
 			/>
 			<div
 				title={helperText}
-				className={`my-1 h-6 ${helperErrorClasses} line-clamp-1`}
+				className={`${helperErrorClasses} transition-opacity-height line-clamp-1 text-base font-normal`}
 			>
 				{helperText}
 			</div>
