@@ -13,7 +13,7 @@ export const LeftSideFooter: FooterData[] = [
 			"Terminal-less Payments ( Mobile App )",
 			"ePOS All-In-One ( Terminal + eposense mobile )",
 			"Pre- Paid Debit Card with Bank Account issuing",
-			"Business’s Credit adn Bank Account Issuing",
+			"Business's Credit and Bank Account Issuing",
 		],
 	},
 ];

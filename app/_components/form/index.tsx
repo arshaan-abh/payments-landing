@@ -12,7 +12,7 @@ const schema = object({
 	name: string().required("This field is required."),
 	companyName: string().required("This field is required."),
 	email: string().email().required("This field is required."),
-	phone: number().required("This field is required."),
+	phone: string().required("This field is required."),
 	webUrl: string().required("This field is required."),
 }).required();
 
@@ -27,7 +27,7 @@ function Form() {
 			name: "",
 			companyName: "",
 			email: "",
-			phone: 0,
+			phone: "",
 			webUrl: "",
 			description: "",
 			checkedList: [],
@@ -45,7 +45,7 @@ function Form() {
 		"eCommerce",
 		"ePOS All-In-One ( Terminal + eposense mobile ) ",
 		"Pre- Paid Debit Card with Bank Account issuing ",
-		"Business's Credit adn Bank Account Issuing ",
+		"Business's Credit and Bank Account Issuing ",
 		"Others",
 	];
 	const [options] = useState<string[]>(initialLabels);
@@ -92,7 +92,7 @@ function Form() {
 		children: [
 			<div className="flex basis-1/2 flex-col" key={0}>
 				<p className="mb-4 text-center text-xl font-extrabold text-white">
-					Select your favorite solutions
+					Select your favorite solution
 				</p>
 				<div className="mb-3 flex flex-wrap gap-3">
 					{options.map((option, index) => {

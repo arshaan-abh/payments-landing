@@ -21,19 +21,15 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 
 				<Card title="Pre-Paid Debit Card Issuing with Bank Account">
 					<p className="inline">
-						By easily issuing Prepaid Debit Cards tailored to your brand, you
-						create a distinct competitive edge in the market.
+						Branded Prepaid Debit Cards optimise payments, foster loyalty, and
+						align with your brand for a unique user experience.
 					</p>
 					<p className="hidden xl:inline">
-						&nbsp;These adaptable solutions not only optimise payments but also
-						empower your business to provide a unique payment experience
-						that&apos;s both user-friendly and reflective of your brand&apos;s
-						values. This uniqueness resonates with customers, enhancing their
-						engagement and loyalty. Moreover, the introduction of these cards
-						can open up new revenue streams, as satisfied customers are more
-						likely to increase their spending and recommend your business to
-						others. As you align your payment options with your brand identity,
-						you&apos;re poised for business growth and long-term success.
+						{" "}
+						Their introduction can open new revenue streams, as satisfied
+						customers tend to increase spending and recommend your business.
+						This strategic alignment positions your business for sustained
+						growth and long-term success.
 					</p>
 				</Card>
 			</div>
@@ -41,18 +37,15 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 			<div className="m-auto flex h-2/5 w-full flex-col-reverse items-center justify-between gap-x-16 gap-y-8 xs:w-2/3 sm:w-full sm:flex-row">
 				<Card title="Business Finance Service with Bank Account">
 					<p className="inline">
-						We&apos;ve tailored our services to provide you with a seamless
-						experience in managing your business&apos;s credit lines and bank
-						accounts.
+						We ensure seamless management of your business&apos;s credit lines
+						and bank accounts, providing financial agility.
 					</p>
 					<p className="hidden xl:inline">
-						The true value lies in the financial agility and timely access to
-						capital that these services offer. Your business can remain agile
-						and responsive, ready to meet evolving financial demands. This
-						capability ensures that you can make the most of opportunities while
-						effectively mitigating risks. By entrusting us with your financial
-						management, you&apos;re better equipped to thrive in a business
-						landscape that requires adaptability and control.
+						{" "}
+						This enables your business to stay responsive, seize opportunities,
+						and mitigate risks. Entrusting us with your financial management
+						equips you to thrive in a demanding business landscape requiring
+						adaptability and control.
 					</p>
 				</Card>
 

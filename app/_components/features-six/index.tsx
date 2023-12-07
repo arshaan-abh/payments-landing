@@ -21,19 +21,14 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 
 				<Card title="Advanced Terminal Services">
 					<p className="inline">
-						For businesses in search of the pinnacle of terminal technology, our
-						solutions stand out as the optimal choice.
+						Our comprehensive array of solutions stands as the epitome for
+						businesses seeking state-of-the-art terminal technology.{" "}
 					</p>
 					<p className="hidden xl:inline">
-						It is meticulously crafted to elevate in-person transactions to the
-						highest standard of sophistication. With an unwavering commitment to
-						security, speed, and reliability, you can rest assured that your
-						payment processes are not only smooth but also held in the highest
-						regard for trustworthiness. In an era where customers prioritise a
-						secure payment experience, our solutions go above and beyond,
-						guaranteeing that your business maintains its competitive edge and
-						continues to be trusted by your valued clientele for unparalleled
-						excellence and innovation.
+						Crafted with precision for sophistication and security, they ensure
+						seamless and dependable payments. Our solutions secure your
+						business&apos;s competitive edge, earning trust for excellence and
+						innovation from valued clientele.
 					</p>
 				</Card>
 			</div>
@@ -41,21 +36,15 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 			<div className="m-auto flex h-2/5 w-full flex-col-reverse items-center justify-between gap-x-16 gap-y-8 xs:w-2/3 sm:w-full sm:flex-row">
 				<Card title="Billing & Invoicing">
 					<p className="inline">
-						One of the key features of our Automated Billing solutions is the
-						ability to craft professional invoices.
+						Our automated billing solutions excel in crafting professional
+						invoices, elevating your business image.
 					</p>
 					<p className="hidden xl:inline">
-						These invoices not only reflect positively on your business&apos;s
-						image but also ensure that your clients receive clear and detailed
-						documentation for the services or products you provide. Professional
-						invoices can enhance your credibility and professionalism,
-						potentially fostering stronger client relationships and increasing
-						your chances of getting paid promptly. Efficiency in tracking
-						payments is another critical aspect of our Automated Billing
-						solutions. By automating the payment tracking process, you gain
-						real-time insights into your receivables, allowing you to monitor
-						outstanding payments, set reminders, and take proactive measures to
-						ensure your cash flow remains healthy.
+						{" "}
+						Alongside this, automated payment tracking provides real-time
+						insights, enabling proactive cash flow management. This dual
+						functionality positions our solutions as indispensable for enhancing
+						operational efficiency.
 					</p>
 				</Card>
 

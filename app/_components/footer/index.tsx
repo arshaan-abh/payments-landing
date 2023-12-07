@@ -21,18 +21,18 @@ const solutionsLinks = [
 	{ text: "Terminal-less Payments ( Mobile App )", link: "" },
 	{ text: "ePOS All-In-One ( Terminal + eposense mobile ) ", link: "" },
 	{ text: "Pre-Paid Debit Card with Bank Account issuing ", link: "" },
-	{ text: "Business's Credit adn Bank Account Issuing ", link: "" },
+	{ text: "Business's Credit and Bank Account Issuing ", link: "" },
 ];
 const featuresLinks = [
 	{ text: "Instant Settlement", link: "" },
 	{ text: "Instant Payout", link: "" },
-	{ text: "Flexible split payments and multiparty payouts", link: "" },
+	{ text: "Flexible Split Payments and Multiparty Payouts", link: "" },
 	{ text: "Multicurrency Payout", link: "" },
 	{ text: "Flexible Payment Methods", link: "" },
 	{ text: "Multicurrency Payments", link: "" },
-	{ text: "One-Click checkout with Payment link", link: "" },
+	{ text: "One-Click Checkout with Payment Link", link: "" },
 	{ text: "Competitive Merchant Fees", link: "" },
-	{ text: "Highest industry Rate", link: "" },
+	{ text: "Highest Industry Rate", link: "" },
 ];
 
 interface FooterProps {}
@@ -117,7 +117,7 @@ const Footer: FC<FooterProps> = ({}) => {
 									<Image src={Phone} alt="Phone" />
 								</div>
 								<div className="flex items-center justify-center gap-1 text-sm font-normal md:justify-end">
-									<p className="text-right">hello@selectedpayment.com</p>
+									<p className="text-right">hello@selectedpayments.com</p>
 									<Image src={Email} alt="Email" />
 								</div>
 								<div className="flex items-center justify-center gap-1 text-sm font-normal md:justify-end">

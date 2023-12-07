@@ -25,7 +25,7 @@ function FeatureTwo() {
 						Marketplace & Platforms
 					</div>
 					<div className="hidden items-center gap-3 sm:flex">
-						<div className="whitespace-nowrap text-lg font-medium uppercase text-gray-600">
+						<div className="whitespace-nowrap text-base font-medium uppercase text-gray-600">
 							Integrated
 						</div>
 						<ThunderIcon className="scale-75 text-primary-950" />
@@ -46,7 +46,7 @@ function FeatureTwo() {
 				</div>
 				<div className="relative text-center text-base font-medium leading-tight text-gray-600 md:text-start xl:w-3/5">
 					<p className="inline">
-						Establish a thriving ecosystem for sellers on your platform.
+						Establish a thriving ecosystem for sellers on your platform.{" "}
 					</p>
 					<p className="hidden sm:inline">
 						Cultivate an environment where sellers not only succeed but prosper.

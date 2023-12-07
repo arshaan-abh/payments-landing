@@ -19,10 +19,9 @@ function Hero() {
 					to move money without friction.
 				</p> */}
 				<p className="hidden md:flex">
-					We help you grow your business locally and internationally, allow you
-					to collect payments, flexible multiparty split payments, and make
-					payouts. With our multicurrency accounts, this process is simpler and
-					faster.
+					We help you grow your business locally and internationally by
+					providing services for payment collection, multiparty split payments,
+					and efficient payouts.
 				</p>
 			</div>
 			<div className="flex justify-center gap-4 md:justify-start lg:w-1/2">
@@ -31,7 +30,7 @@ function Hero() {
 				</a>
 				<a href="#contact-us">
 					<Button long dark>
-						Contact us
+						Contact Us
 					</Button>
 				</a>
 			</div>

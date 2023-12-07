@@ -16,7 +16,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 					</a>
 				</div>
 			</div>
-			<div className="h-px w-full border-b border-gray-500" />
+			<div className="h-px w-full border-b border-gray-500/50" />
 		</nav>
 	);
 };

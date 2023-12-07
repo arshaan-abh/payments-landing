@@ -3,7 +3,7 @@ export interface EnquireRequest {
 	name: string;
 	companyName: string;
 	email: string;
-	phone: number;
+	phone: string;
 	webUrl: string;
 	description?: string;
 }

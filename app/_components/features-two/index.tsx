@@ -27,7 +27,7 @@ function FeatureTwo() {
 						ePOS All-In-One Solutions
 					</div>
 					<div className="hidden items-center gap-3 sm:flex">
-						<div className="whitespace-nowrap text-lg font-medium uppercase text-gray-600">
+						<div className="whitespace-nowrap text-base font-medium uppercase text-gray-600">
 							Integrated
 						</div>
 						<ThunderIcon className="scale-75 text-primary-950" />
@@ -91,22 +91,22 @@ function FeatureTwo() {
 				>
 					<Card
 						image={smallPictureOne}
-						title="Flexible in-store payments"
+						title="Flexible In-store payments"
 						supportingText="Customise your payment method for the ultimate convenience and experience a new level of financial flexibility."
 					/>
 					<Card
 						image={smallPictureTwo}
-						title="POS Payments without device"
+						title="POS Payments without Device"
 						supportingText="Witness optimised transactions without the need for any hardware, making your point-of-sale payments straightforward."
 					/>
 					<Card
 						image={smallPictureThree}
-						title="Phone  payments using MO/TO"
+						title="Phone Payments Using MO/TO"
 						supportingText="Empower mobile transactions for fluid flexibility and elevate your payment experience with the convenience of MO/TO payments."
 					/>
 					<Card
 						image={smallPictureFour}
-						title="QR payment codes"
+						title="QR Payment Codes"
 						supportingText="Enjoy quick, secure, and contactless payments with a simple scan, providing you with a seamless and efficient way to pay."
 					/>
 				</div>

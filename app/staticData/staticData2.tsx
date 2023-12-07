@@ -6,13 +6,13 @@ export const centerDataFooter: FooterData[] = [
 		list: [
 			"Instant Settlement",
 			"Instant Payout",
-			"Flexible split payments and multiparty payouts",
+			"Flexible Split Payments and Multiparty Payouts",
 			"Multicurrency Payout",
 			"Flexible Payment Methods",
 			"Multicurrency Payments",
 			"One-Click checkout with Payment link",
-			"Comptivie Merchant Fees",
-			"Highest industry Rate",
+			"Competitive Merchant Fees",
+			"Highest Industry Rate",
 		],
 	},
 ];
