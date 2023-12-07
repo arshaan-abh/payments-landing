@@ -10,7 +10,7 @@ function Hero() {
 					<span className="relative z-10">Grow Sales</span>
 					<div className="absolute inset-x-0 bottom-2 top-1/2 z-0 bg-teal-300 opacity-20" />
 				</span>{" "}
-				with a better payment solution
+				with better payment solutions
 			</h1>
 			<div className="mb-6 text-center text-base font-normal text-white md:text-left lg:w-1/2">
 				{/* <p>

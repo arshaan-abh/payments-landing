@@ -131,7 +131,7 @@ const Footer: FC<FooterProps> = ({}) => {
 						<div className="flex flex-col items-center justify-between gap-y-4 border-t border-secondary-900 py-4 md:flex-row">
 							<p className="text-xs font-normal text-gray-400">
 								Copyright © 2023 Powered by{" "}
-								<span className="font-bold text-white">Selected</span>
+								<span className="font-bold text-white">Selected Payments</span>
 							</p>
 							<p className="text-xs font-bold text-white">
 								Privacy Policy | Terms of Use

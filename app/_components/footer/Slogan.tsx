@@ -8,13 +8,13 @@ const Slogan: FC<SloganProps> = ({}) => {
 			<MarqueeBase>
 				<StrokedText className="whitespace-nowrap">
 					<h2 className="text-9xl font-extrabold uppercase tracking-widest text-primary-950">
-						Grow Sales with a better payments solution&nbsp;
+						Grow Sales with better payment solutions&nbsp;
 					</h2>
 				</StrokedText>
 			</MarqueeBase>
 			<MarqueeBase reverse small>
 				<h3 className="whitespace-nowrap text-5xl font-extrabold uppercase tracking-widest text-primary-900">
-					Grow Sales with a better payments solution&nbsp;
+					Grow Sales with better payment solutions&nbsp;
 				</h3>
 			</MarqueeBase>
 		</div>
