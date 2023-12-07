@@ -27,7 +27,7 @@ const useResponsiveState = <T,>({
 		if (!set) setState(defaultState);
 	}, [breakpoints, defaultState]);
 
-	const debouncedResizeHandler = useMemo(() => {
+	/* const debouncedResizeHandler = useMemo(() => {
 		const delay = 200; // Adjust the delay as needed
 		let timeoutId: NodeJS.Timeout;
 
@@ -35,16 +35,25 @@ const useResponsiveState = <T,>({
 			clearTimeout(timeoutId);
 			timeoutId = setTimeout(resizeHandler, delay);
 		};
-	}, [resizeHandler]);
+	}, [resizeHandler]); */
 
-	useEffect(() => {
+	/* useEffect(() => {
 		debouncedResizeHandler(); // Initial setup
 
 		window.addEventListener("resize", debouncedResizeHandler);
 		return () => {
 			window.removeEventListener("resize", debouncedResizeHandler);
 		};
-	}, [debouncedResizeHandler]);
+	}, [debouncedResizeHandler]); */
+
+	useEffect(() => {
+		resizeHandler();
+
+		window.addEventListener("resize", resizeHandler);
+		return () => {
+			window.removeEventListener("resize", resizeHandler);
+		};
+	}, [resizeHandler]);
 
 	return state;
 };
