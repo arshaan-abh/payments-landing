@@ -98,7 +98,6 @@ export default function Home() {
 					>
 						<FeatureSix />
 					</section>
-
 					<section
 						ref={sectionRefs[7]}
 						id="terminal"
@@ -132,7 +131,9 @@ export default function Home() {
 					</section>
 					<Menu />
 					<CookiesModal />
-					<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />
+					<a href="#enquire-form">
+						<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />
+					</a>
 				</div>
 			</IsMobileContext.Provider>
 		</IsIntersectingContext.Provider>

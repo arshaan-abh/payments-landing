@@ -191,24 +191,26 @@ const Menu: FC<MenuProps> = ({}) => {
 					...delayedStyle,
 				}}
 			>
-				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
-					Home
-				</MenuDetailItem>
-				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
-					Benefits
-				</MenuDetailItem>
-				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
-					ePOS
-				</MenuDetailItem>
-				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
-					Marketplace
-				</MenuDetailItem>
-				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
-					Products
-				</MenuDetailItem>
-				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor} primary>
-					Enquire
-				</MenuDetailItem>
+				<a href="#hero" className="h-full">
+					<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
+						Home
+					</MenuDetailItem>
+				</a>
+				<a href="#feature-two" className="h-full">
+					<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
+						ePOS
+					</MenuDetailItem>
+				</a>
+				<a href="#terminal" className="h-full">
+					<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
+						Products
+					</MenuDetailItem>
+				</a>
+				<a href="#enquire-form" className="h-full">
+					<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor} primary>
+						Enquire
+					</MenuDetailItem>
+				</a>
 			</div>
 		</>
 	);

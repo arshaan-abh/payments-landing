@@ -8,7 +8,7 @@ function Hero() {
 			<h1 className="mb-4 text-center text-6xl font-medium text-white md:text-left lg:w-1/2">
 				<span className="bg-underline relative whitespace-nowrap font-extrabold">
 					<span className="relative z-10">Grow Sales</span>
-					<div className="absolute inset-x-0 bottom-2 top-1/2 -z-0 bg-teal-300 opacity-20 sm:-z-10" />
+					<div className="absolute inset-x-0 bottom-2 top-1/2 z-0 bg-teal-300 opacity-20" />
 				</span>{" "}
 				with a better payment solution
 			</h1>
