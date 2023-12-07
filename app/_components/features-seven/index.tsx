@@ -69,7 +69,7 @@ function FeatureEight() {
 		children: terminals.map((t, index) => (
 			<button
 				key={index}
-				className="flex flex-col gap-4"
+				className="m-auto flex w-full flex-col gap-4 xs:w-2/3 sm:w-full"
 				onClick={() => openModal(index)}
 			>
 				<div className="relative w-full">
@@ -77,7 +77,11 @@ function FeatureEight() {
 						className="flex items-center justify-center border-gray-100"
 						overflowVisible
 					>
-						<Image src={t.image} alt={t.title} />
+						<Image
+							src={t.image}
+							alt={t.title}
+							className="h-64 object-contain"
+						/>
 					</GridBorderComponent>
 					<div className="pointer-events-none absolute right-2 top-2 flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-100 bg-white">
 						<FullScreenIcon />
