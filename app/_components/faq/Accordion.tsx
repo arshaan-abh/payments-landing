@@ -27,13 +27,9 @@ const Accordion: FC<AccordionProps> = ({ title, children, open, onClick }) => {
 		}
 	}, [open]);
 
-	const clickHandler: MouseEventHandler<HTMLButtonElement> = useCallback(
-		(event) => {
-			onClick();
-			event.stopPropagation();
-		},
-		[onClick]
-	);
+	const clickHandler: MouseEventHandler<HTMLButtonElement> = useCallback(() => {
+		onClick();
+	}, [onClick]);
 
 	return (
 		<div className="border-b-2 border-primary-950">
