@@ -171,7 +171,7 @@ const CustomTextField: FC<CustomTextFieldProps> = (props) => {
 			/>
 			<div
 				title={helperText}
-				className={`${helperErrorClasses} transition-opacity-height line-clamp-1 text-base font-normal`}
+				className={`${helperErrorClasses} transition-opacity-h line-clamp-1 text-base font-normal`}
 			>
 				{helperText}
 			</div>
@@ -208,7 +208,7 @@ const CustomTextArea: FC<CustomTextAreaProps> = (props) => {
 			/>
 			<div
 				title={helperText}
-				className={`${helperErrorClasses} transition-opacity-height line-clamp-1 text-base font-normal`}
+				className={`${helperErrorClasses} transition-opacity-h line-clamp-1 text-base font-normal`}
 			>
 				{helperText}
 			</div>

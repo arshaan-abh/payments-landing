@@ -29,23 +29,70 @@ const Menu: FC<MenuProps> = ({}) => {
 
 	const isIntersecting = useContext(IsIntersectingContext)[1];
 
-	const bgColor = interpolateColors(
-		isMobile ? "#1616161a" : "#ffffff1a",
-		isMobile ? "#1616161a" : "#1616161a",
+	const bgColorDesktop = interpolateColors(
+		"#ffffff1a",
+		"#1616161a",
+		isIntersecting
+	);
+	const primaryColorDesktop = interpolateColors(
+		"#66fecbff",
+		"#013334ff",
+		isIntersecting
+	);
+	const secondaryColorDesktop = interpolateColors(
+		"#013334ff",
+		"#66fecbff",
 		isIntersecting
 	);
 
-	const primaryColor = interpolateColors(
-		isMobile ? "#013334ff" : "#66fecbff",
-		isMobile ? "#013334ff" : "#013334ff",
-		isIntersecting
+	const [bgColorMobile, setBgColorMobile] = useState("#ffffff1a");
+	const [primaryColorMobile, setPrimaryColorMobile] = useState("#66fecbff");
+	const [secondaryColorMobile, setSecondaryColorMobile] = useState("#013334ff");
+
+	const [bgColor, setBgColor] = useState(
+		isMobile ? bgColorMobile : bgColorDesktop
+	);
+	const [primaryColor, setPrimaryColor] = useState(
+		isMobile ? primaryColorMobile : primaryColorDesktop
+	);
+	const [secondaryColor, setSecondaryColor] = useState(
+		isMobile ? secondaryColorMobile : secondaryColorDesktop
 	);
 
-	const secondaryColor = interpolateColors(
-		isMobile ? "#66fecbff" : "#013334ff",
-		isMobile ? "#66fecbff" : "#66fecbff",
-		isIntersecting
-	);
+	useEffect(() => {
+		setBgColor(isMobile ? bgColorMobile : bgColorDesktop);
+		setPrimaryColor(isMobile ? primaryColorMobile : primaryColorDesktop);
+		setSecondaryColor(isMobile ? secondaryColorMobile : secondaryColorDesktop);
+	}, [
+		bgColorDesktop,
+		bgColorMobile,
+		isMobile,
+		primaryColorDesktop,
+		primaryColorMobile,
+		secondaryColorDesktop,
+		secondaryColorMobile,
+	]);
+
+	const scrollHandler = useCallback(() => {
+		if (window) {
+			const scrollY = window.pageYOffset || window.screenY;
+			if (scrollY === 0) {
+				setBgColorMobile("#ffffff1a");
+				setPrimaryColorMobile("#66fecbff");
+				setSecondaryColorMobile("#013334ff");
+			} else {
+				setBgColorMobile("#1616161a");
+				setPrimaryColorMobile("#013334ff");
+				setSecondaryColorMobile("#66fecbff");
+			}
+		}
+	}, []);
+
+	useEffect(() => {
+		scrollHandler();
+		addEventListener("scroll", scrollHandler);
+		return () => removeEventListener("scroll", scrollHandler);
+	}, [scrollHandler]);
 
 	const detailRef = useRef<HTMLDivElement>(null);
 	const maxWidthRef = useRef<number | null>(null);
@@ -107,20 +154,24 @@ const Menu: FC<MenuProps> = ({}) => {
 				className="fixed inset-x-0 bottom-12 z-10 mx-auto flex w-fit items-center justify-center gap-2.5 transition-opacity duration-300"
 				style={{ opacity: open ? 0 : 1 }}
 			>
-				<MenuItem
-					primaryColor={primaryColor}
-					secondaryColor={secondaryColor}
-					bgColor={bgColor}
-				>
-					<EnquireIcon />
-				</MenuItem>
-				<MenuItem
-					primaryColor={primaryColor}
-					secondaryColor={secondaryColor}
-					bgColor={bgColor}
-				>
-					<CallUsIcon />
-				</MenuItem>
+				<a href="#enquire-form">
+					<MenuItem
+						primaryColor={primaryColor}
+						secondaryColor={secondaryColor}
+						bgColor={bgColor}
+					>
+						<EnquireIcon />
+					</MenuItem>
+				</a>
+				<a href="#contact-us">
+					<MenuItem
+						primaryColor={primaryColor}
+						secondaryColor={secondaryColor}
+						bgColor={bgColor}
+					>
+						<CallUsIcon />
+					</MenuItem>
+				</a>
 				<MenuItem
 					primaryColor={primaryColor}
 					secondaryColor={secondaryColor}
@@ -130,25 +181,29 @@ const Menu: FC<MenuProps> = ({}) => {
 				>
 					<HamburgerMenu />
 				</MenuItem>
-				<MenuItem
-					primaryColor={primaryColor}
-					secondaryColor={secondaryColor}
-					bgColor={bgColor}
-				>
-					<LinkedinIcon />
-				</MenuItem>
-				<MenuItem
-					primaryColor={primaryColor}
-					secondaryColor={secondaryColor}
-					bgColor={bgColor}
-				>
-					<TwitterIcon />
-				</MenuItem>
+				<a href="">
+					<MenuItem
+						primaryColor={primaryColor}
+						secondaryColor={secondaryColor}
+						bgColor={bgColor}
+					>
+						<LinkedinIcon />
+					</MenuItem>
+				</a>
+				<a href="">
+					<MenuItem
+						primaryColor={primaryColor}
+						secondaryColor={secondaryColor}
+						bgColor={bgColor}
+					>
+						<TwitterIcon />
+					</MenuItem>
+				</a>
 			</div>
 			<div
 				ref={detailRef}
 				onTransitionEnd={transitionEndHandler}
-				className="fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit max-w-fit items-center justify-center overflow-hidden rounded-rectangle-full p-2 backdrop-blur-sm transition-opacity-width duration-300"
+				className="transition-opacity-w-bg sm:transition-opacity-w fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit max-w-fit items-center justify-center overflow-hidden rounded-rectangle-full p-2 backdrop-blur-sm duration-300"
 				style={{
 					backgroundColor: bgColor,
 					opacity: open ? (maxWidthRef.current ? 1 : 0) : 0,
@@ -160,47 +215,22 @@ const Menu: FC<MenuProps> = ({}) => {
 					...delayedStyle,
 				}}
 			>
-				<MenuDetailItem
-					primaryColor={primaryColor}
-					secondaryColor={secondaryColor}
-					bgColor={bgColor}
-				>
+				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
 					Home
 				</MenuDetailItem>
-				<MenuDetailItem
-					primaryColor={primaryColor}
-					secondaryColor={secondaryColor}
-					bgColor={bgColor}
-				>
+				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
 					Benefits
 				</MenuDetailItem>
-				<MenuDetailItem
-					primaryColor={primaryColor}
-					secondaryColor={secondaryColor}
-					bgColor={bgColor}
-				>
+				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
 					ePOS
 				</MenuDetailItem>
-				<MenuDetailItem
-					primaryColor={primaryColor}
-					secondaryColor={secondaryColor}
-					bgColor={bgColor}
-				>
+				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
 					Marketplace
 				</MenuDetailItem>
-				<MenuDetailItem
-					primaryColor={primaryColor}
-					secondaryColor={secondaryColor}
-					bgColor={bgColor}
-				>
+				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor}>
 					Products
 				</MenuDetailItem>
-				<MenuDetailItem
-					primaryColor={primaryColor}
-					secondaryColor={secondaryColor}
-					bgColor={bgColor}
-					primary
-				>
+				<MenuDetailItem primaryColor={primaryColor} bgColor={bgColor} primary>
 					Enquire
 				</MenuDetailItem>
 			</div>
@@ -231,7 +261,7 @@ const MenuItem: FC<MenuItemProps> = ({
 	return (
 		<button
 			onClick={onClick}
-			className={`${w} flex aspect-square items-center justify-center rounded-full backdrop-blur-sm`}
+			className={`${w} flex aspect-square items-center justify-center rounded-full backdrop-blur-sm transition-all sm:transition-none`}
 			style={{
 				backgroundColor: bgColor,
 				color: primaryColor,
@@ -239,7 +269,7 @@ const MenuItem: FC<MenuItemProps> = ({
 		>
 			{primary ? (
 				<div
-					className={`flex aspect-square w-[48px] items-center justify-center rounded-full`}
+					className={`flex aspect-square w-[48px] items-center justify-center rounded-full transition-all sm:transition-none`}
 					style={{ backgroundColor: primaryColor, color: secondaryColor }}
 				>
 					{children}
@@ -256,7 +286,6 @@ interface MenuDetailItemProps {
 	primary?: boolean;
 	bgColor?: string;
 	primaryColor?: string;
-	secondaryColor?: string;
 }
 
 const MenuDetailItem: FC<MenuDetailItemProps> = ({
@@ -264,11 +293,10 @@ const MenuDetailItem: FC<MenuDetailItemProps> = ({
 	primary,
 	bgColor,
 	primaryColor,
-	secondaryColor,
 }) => {
 	return (
 		<button
-			className={`flex h-full items-center rounded-rectangle-full px-4 text-base font-bold`}
+			className={`flex h-full items-center rounded-rectangle-full px-4 text-base font-bold transition-all sm:transition-none`}
 			style={{
 				backgroundColor: primary ? bgColor : "transparent",
 				color: primaryColor,

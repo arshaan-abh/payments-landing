@@ -121,8 +121,10 @@ const config: Config = {
 				"rectangle-full": "999px",
 			},
 			transitionProperty: {
-				"opacity-width": "opacity, width",
-				"opacity-height": "opacity, height",
+				"opacity-w": "opacity, width",
+				"opacity-h": "opacity, height",
+				"opacity-w-bg": "opacity, width, background-color",
+				"opacity-h-bg": "opacity, height, background-color",
 			},
 		},
 	},
