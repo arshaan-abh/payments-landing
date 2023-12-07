@@ -26,10 +26,14 @@ function Hero() {
 				</p>
 			</div>
 			<div className="flex justify-center gap-4 md:justify-start lg:w-1/2">
-				<Button long>Enquire Now</Button>
-				<Button long dark>
-					Contact us
-				</Button>
+				<a href="#enquire-form">
+					<Button long>Enquire Now</Button>
+				</a>
+				<a href="#contact-us">
+					<Button long dark>
+						Contact us
+					</Button>
+				</a>
 			</div>
 			<div className="min-h-[1.5rem] grow-2" />
 		</div>

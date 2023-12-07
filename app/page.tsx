@@ -47,7 +47,7 @@ export default function Home() {
 						style={{
 							opacity: isMobile ? 1 : isIntersecting[0],
 						}}
-						id="hero"
+						{...(isMobile === true ? { id: "hero" } : null)}
 						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent ${
 							isMobile ? "" : isIntersecting[0] > 0 ? "" : "pointer-events-none"
 						}`}
@@ -58,7 +58,7 @@ export default function Home() {
 					</section>
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[1] }}
-						id="feature-one"
+						{...(isMobile === true ? { id: "feature-one" } : null)}
 						className={`flex flex-col items-center overflow-hidden ${
 							isMobile ? "" : isIntersecting[1] > 0 ? "" : "pointer-events-none"
 						}`}
@@ -69,7 +69,7 @@ export default function Home() {
 					</section>
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[2] }}
-						id="feature-two"
+						{...(isMobile === true ? { id: "feature-two" } : null)}
 						className={`flex flex-col items-center overflow-hidden ${
 							isMobile ? "" : isIntersecting[2] > 0 ? "" : "pointer-events-none"
 						}`}
@@ -78,7 +78,7 @@ export default function Home() {
 					</section>
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[3] }}
-						id="feature-three"
+						{...(isMobile === true ? { id: "feature-three" } : null)}
 						className={`flex flex-col items-center overflow-hidden ${
 							isMobile ? "" : isIntersecting[3] > 0 ? "" : "pointer-events-none"
 						}`}
@@ -87,7 +87,7 @@ export default function Home() {
 					</section>
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[4] }}
-						id="feature-four"
+						{...(isMobile === true ? { id: "feature-four" } : null)}
 						className={`flex flex-col items-center overflow-hidden ${
 							isMobile ? "" : isIntersecting[4] > 0 ? "" : "pointer-events-none"
 						}`}
@@ -98,7 +98,7 @@ export default function Home() {
 					</section>
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[5] }}
-						id="feature-five"
+						{...(isMobile === true ? { id: "feature-five" } : null)}
 						className={`flex flex-col items-center overflow-hidden ${
 							isMobile ? "" : isIntersecting[5] > 0 ? "" : "pointer-events-none"
 						}`}
@@ -107,7 +107,7 @@ export default function Home() {
 					</section>
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[6] }}
-						id="feature-six"
+						{...(isMobile === true ? { id: "feature-six" } : null)}
 						className={`flex flex-col items-center overflow-hidden ${
 							isMobile ? "" : isIntersecting[6] > 0 ? "" : "pointer-events-none"
 						}`}
@@ -117,7 +117,7 @@ export default function Home() {
 
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[7] }}
-						id="feature-seven"
+						{...(isMobile === true ? { id: "terminal" } : null)}
 						className={`flex flex-col items-center overflow-hidden ${
 							isMobile ? "" : isIntersecting[7] > 0 ? "" : "pointer-events-none"
 						}`}
@@ -126,7 +126,7 @@ export default function Home() {
 					</section>
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[8] }}
-						id="feature-eight"
+						{...(isMobile === true ? { id: "faq" } : null)}
 						className={`flex flex-col items-center overflow-hidden ${
 							isMobile ? "" : isIntersecting[8] > 0 ? "" : "pointer-events-none"
 						}`}
@@ -135,7 +135,7 @@ export default function Home() {
 					</section>
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[9] }}
-						id="feature-nine"
+						{...(isMobile === true ? { id: "enquire-form" } : null)}
 						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-primary-950 text-secondary-950 ${
 							isMobile ? "" : isIntersecting[9] > 0 ? "" : "pointer-events-none"
 						}`}
@@ -145,7 +145,7 @@ export default function Home() {
 					</section>
 					<section
 						style={{ opacity: isMobile ? 1 : isIntersecting[10] }}
-						id="feature-ten"
+						{...(isMobile === true ? { id: "contact-us" } : null)}
 						className={`relative flex flex-col items-center overflow-hidden bg-primary-950 pb-0 text-secondary-950 ${
 							isMobile
 								? ""
@@ -163,6 +163,32 @@ export default function Home() {
 					<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />
 					{Array.from(Array(11), (_, index) => (
 						<div
+							{...(isMobile === false
+								? {
+										id:
+											index === 0
+												? "hero"
+												: index === 1
+												  ? "feature-one"
+												  : index === 2
+												    ? "feature-two"
+												    : index === 3
+												      ? "feature-three"
+												      : index === 4
+												        ? "feature-four"
+												        : index === 5
+												          ? "feature-five"
+												          : index === 6
+												            ? "feature-six"
+												            : index === 7
+												              ? "terminal"
+												              : index === 8
+												                ? "faq"
+												                : index === 9
+												                  ? "enquire-form"
+												                  : "contact-us",
+								  }
+								: null)}
 							key={index}
 							className="section-shadow pointer-events-none"
 							ref={sectionRefs[index]}
