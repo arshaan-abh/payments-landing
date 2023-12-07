@@ -45,7 +45,7 @@ const Footer: FC<FooterProps> = ({}) => {
 				<div className="flex flex-col gap-8 px-10 pt-11 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 					<Image src={logo} alt="Logo" />
 					<div className="flex flex-wrap justify-center gap-16 sm:flex-nowrap">
-						<div className="flex basis-full flex-col gap-2 text-start xs:basis-2/5 sm:basis-1/3">
+						<div className="flex basis-full flex-col gap-2 text-start xs:basis-[calc(50%_-_2rem)] sm:basis-1/3">
 							<h5 className="mb-1 text-base font-extrabold">Solutions</h5>
 							{solutionsLinks.map((link, index) => (
 								<Link
@@ -57,7 +57,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								</Link>
 							))}
 						</div>
-						<div className="flex basis-full flex-col gap-2 text-start xs:basis-2/5 sm:basis-1/3">
+						<div className="flex basis-full flex-col gap-2 text-start xs:basis-[calc(50%_-_2rem)] sm:basis-1/3">
 							<h5 className="mb-1 text-base font-extrabold">Features</h5>
 							{featuresLinks.map((link, index) => (
 								<Link
@@ -69,7 +69,7 @@ const Footer: FC<FooterProps> = ({}) => {
 								</Link>
 							))}
 						</div>
-						<div className="flex basis-full flex-col gap-2 text-start xs:basis-[calc(80%_+_4rem)] sm:basis-1/3">
+						<div className="flex basis-full flex-col gap-2 text-start xs:basis-full sm:basis-1/3">
 							<h5 className="mb-1 text-base font-extrabold">
 								We&apos;re social
 							</h5>
