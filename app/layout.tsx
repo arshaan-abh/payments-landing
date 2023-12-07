@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { LayoutProps } from "@/.next/types/app/layout";
+import Script from "next/script";
 
 export const metadata: Metadata = {
 	title: "Selected Payment",
@@ -238,6 +239,17 @@ export default function RootLayout({ children }: LayoutProps) {
 					content="#161616"
 					media="(prefers-color-scheme: dark)"
 				/>
+				<Script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=G-71ZQDFRNBL"
+				/>
+				<Script id="google-analytics">
+					{`window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+
+					gtag('config', 'G-71ZQDFRNBL');`}
+				</Script>
 			</head>
 			<body
 				className={`${GeistMono.variable} ${GeistSans.className} bg-secondary-950`}

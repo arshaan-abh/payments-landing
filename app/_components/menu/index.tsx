@@ -39,7 +39,7 @@ const Menu: FC<MenuProps> = ({}) => {
 	}, []);
 
 	useEffect(() => {
-		scrollHandler();
+		scrollHandler;
 		addEventListener("scroll", scrollHandler);
 		return () => removeEventListener("scroll", scrollHandler);
 	}, [scrollHandler]);
