@@ -26,7 +26,6 @@ const Menu: FC<MenuProps> = ({}) => {
 	const scrollHandler = useCallback(() => {
 		if (window) {
 			const scrollY = window.pageYOffset || window.scrollY;
-			console.log(scrollY);
 			if (scrollY < 16) {
 				setBgColorMobile("#ffffff1a");
 				setPrimaryColorMobile("#66fecbff");
