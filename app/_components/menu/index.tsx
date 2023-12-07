@@ -153,7 +153,9 @@ const Menu: FC<MenuProps> = ({}) => {
 					backgroundColor: bgColor,
 					opacity: open ? (maxWidthRef.current ? 1 : 0) : 0,
 					...(maxWidthRef.current && {
-						width: `${open ? maxWidthRef.current : 0}px`,
+						width: `calc(${
+							open ? maxWidthRef.current : 0
+						}rem / var(--font-size))`,
 					}),
 					...delayedStyle,
 				}}

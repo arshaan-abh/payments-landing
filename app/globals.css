@@ -137,6 +137,7 @@ textarea::-ms-input-placeholder {
 
 :root {
 	font-size: 10px /* text-2xs */;
+	--font-size: 10;
 }
 
 section {
@@ -147,12 +148,14 @@ section {
 @media (min-width: 376px /* xs */) {
 	:root {
 		font-size: 12px /* text-xs */;
+		--font-size: 12;
 	}
 }
 
 @media (min-width: 640px /* sm */) {
 	:root {
 		font-size: 14px /* text-sm */;
+		--font-size: 14;
 	}
 
 	section {
@@ -173,5 +176,6 @@ section {
 @media (min-width: 768px /* md */) {
 	:root {
 		font-size: 16px /* text-base */;
+		--font-size: 16;
 	}
 }
