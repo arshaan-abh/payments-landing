@@ -72,7 +72,7 @@ const useSlider = ({
 			nextButton?.removeEventListener("click", nextHandler);
 		};
 	}, [
-		children,
+		children.length,
 		heightHandler,
 		index,
 		nextHandler,
