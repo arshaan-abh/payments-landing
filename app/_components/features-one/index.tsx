@@ -7,14 +7,10 @@ import useSlider from "../features-seven/Slider";
 import useResponsiveState from "./useResponsiveState";
 import { SlideButton } from "../features-seven";
 import { ArrowLeftIcon, ArrowRightIcon } from "../icons";
-import {
-	IsIntersectingContext,
-	IsMobileContext,
-} from "@/app/_contexts/contexts";
+import { IsMobileContext } from "@/app/_contexts/contexts";
 
 const FeatureOne: FC<CardProps> = ({}) => {
 	const isMobile = useContext(IsMobileContext);
-	const isIntersecting = useContext(IsIntersectingContext)[1];
 
 	const visibleSlidesNumber = useResponsiveState<number>({
 		defaultState: 1,

@@ -63,7 +63,6 @@ function Form() {
 		// Access the form data using getValues()
 		const formData = getValues();
 		formData.checkedList = checkableList;
-		console.log(formData);
 		// Validate the form data against the schema
 
 		schema
@@ -133,12 +132,7 @@ function Form() {
 			<div className="flex sm:w-2/3 lg:w-full">{slider}</div>
 			<div className="flex w-full gap-4 sm:w-2/3 lg:w-full">
 				{!responsiveState.isPhone ? (
-					<Button
-						className="m-auto"
-						clickHandler={() => {
-							handleFormSubmit();
-						}}
-					>
+					<Button className="m-auto" clickHandler={handleFormSubmit}>
 						Enquire Now
 					</Button>
 				) : (
@@ -153,12 +147,7 @@ function Form() {
 							</Button>
 						)}
 						{index === 2 && (
-							<Button
-								className="w-full"
-								clickHandler={() => {
-									handleFormSubmit();
-								}}
-							>
+							<Button className="w-full" clickHandler={handleFormSubmit}>
 								Enquire Now
 							</Button>
 						)}
