@@ -7,7 +7,6 @@ import {
 	useRef,
 	MouseEventHandler,
 	CSSProperties,
-	useContext,
 } from "react";
 import {
 	CallUsIcon,
@@ -16,43 +15,19 @@ import {
 	HamburgerMenu,
 	TwitterIcon,
 } from "../icons";
-import {
-	IsIntersectingContext,
-	IsMobileContext,
-} from "@/app/_contexts/contexts";
-import interpolateColors from "@/app/_utilities/interpolate-colors";
 
 interface MenuProps {}
 
 const Menu: FC<MenuProps> = ({}) => {
-	const isMobile = useContext(IsMobileContext);
-
-	const isIntersecting = useContext(IsIntersectingContext)[1];
-
-	const bgColorDesktop = interpolateColors(
-		"#ffffff1a",
-		"#1616161a",
-		isIntersecting
-	);
-	const primaryColorDesktop = interpolateColors(
-		"#66fecbff",
-		"#013334ff",
-		isIntersecting
-	);
-	const secondaryColorDesktop = interpolateColors(
-		"#013334ff",
-		"#66fecbff",
-		isIntersecting
-	);
-
 	const [bgColor, setBgColorMobile] = useState("#ffffff1a");
 	const [primaryColor, setPrimaryColorMobile] = useState("#66fecbff");
 	const [secondaryColor, setSecondaryColorMobile] = useState("#013334ff");
 
 	const scrollHandler = useCallback(() => {
 		if (window) {
-			const scrollY = window.pageYOffset || window.screenY;
-			if (scrollY === 0) {
+			const scrollY = window.pageYOffset || window.scrollY;
+			console.log(scrollY);
+			if (scrollY < 16) {
 				setBgColorMobile("#ffffff1a");
 				setPrimaryColorMobile("#66fecbff");
 				setSecondaryColorMobile("#013334ff");
