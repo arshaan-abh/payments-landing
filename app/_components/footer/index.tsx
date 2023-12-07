@@ -13,14 +13,14 @@ import Link from "next/link";
 import Button from "../button";
 const solutionsLinks = [
 	{ text: "Online Payment", link: "" },
-	{ text: "In-App Payments", link: "" },
+	{ text: "In-app Payments", link: "" },
 	{ text: "Marketplace & Platform", link: "" },
 	{ text: "eCommerce", link: "" },
 	{ text: "Billing and Invoicing", link: "" },
 	{ text: "In-Person Payment", link: "" },
 	{ text: "Terminal-less Payments ( Mobile App )", link: "" },
-	{ text: "ePOS All-In-One ( Terminal + eposense mobile ) ", link: "" },
-	{ text: "Pre-Paid Debit Card with Bank Account issuing ", link: "" },
+	{ text: "ePOS All-In-One ( Terminal + Eposense Mobile ) ", link: "" },
+	{ text: "Pre-Paid Debit Card with Bank Account Issuing ", link: "" },
 	{ text: "Business's Credit and Bank Account Issuing ", link: "" },
 ];
 const featuresLinks = [
@@ -71,7 +71,7 @@ const Footer: FC<FooterProps> = ({}) => {
 						</div>
 						<div className="flex basis-full flex-col gap-2 text-start xs:basis-full sm:basis-1/3">
 							<h5 className="mb-1 text-base font-extrabold">
-								We&apos;re social
+								We&apos;re Social
 							</h5>
 							<p className="text-sm font-medium text-white">
 								Follow us on social media and scroll through the latest scoop

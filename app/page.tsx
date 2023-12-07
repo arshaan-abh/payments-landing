@@ -116,7 +116,7 @@ export default function Home() {
 					<section
 						ref={sectionRefs[9]}
 						id="enquire-form"
-						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-primary-950 text-secondary-950`}
+						className={`relative z-50 flex min-h-screen flex-col items-center overflow-hidden bg-primary-950 text-secondary-950`}
 					>
 						<div className="h-28 sm:hidden" />
 						<Form />
@@ -124,7 +124,7 @@ export default function Home() {
 					<section
 						ref={sectionRefs[10]}
 						id="contact-us"
-						className={`relative flex flex-col items-center overflow-hidden bg-primary-950 pb-0 text-secondary-950`}
+						className={`relative z-50 flex flex-col items-center overflow-hidden bg-primary-950 pb-0 text-secondary-950`}
 					>
 						<Slogan />
 						<div className="h-28 sm:hidden" />

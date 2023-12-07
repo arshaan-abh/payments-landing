@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { number, object, string } from "yup";
+import { object, string } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { EnquireRequest } from "@/app/@types/enquireRequest";
 import FormSection from "./form";
@@ -36,15 +36,15 @@ function Form() {
 	});
 	const initialLabels = [
 		"Online Payment",
-		"In-App Payments ",
+		"In-app Payments ",
 		"Marketplace & Platform",
-		"In-App Payments",
+		"In-app Payments",
 		"Billing and Invoicing",
 		"In-person Payments ",
 		"Terminal-less Payments ( Mobile App )",
 		"eCommerce",
-		"ePOS All-In-One ( Terminal + eposense mobile ) ",
-		"Pre- Paid Debit Card with Bank Account issuing ",
+		"ePOS All-In-One ( Terminal + Eposense Mobile ) ",
+		"Pre- Paid Debit Card with Bank Account Issuing ",
 		"Business's Credit and Bank Account Issuing ",
 		"Others",
 	];

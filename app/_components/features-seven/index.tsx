@@ -121,7 +121,8 @@ function FeatureEight() {
 							Terminals
 						</h3>
 						<p className="text-base font-normal text-gray-600">
-							Here you can see our terminals and order anyone do you want.
+							Check out our terminals and choose your preferred one for
+							ordering.
 						</p>
 					</div>
 					<div className="flex flex-col items-end gap-1">
