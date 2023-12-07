@@ -76,7 +76,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : 1} * 100%)`,
 						}}
 					/>
 				</div>
@@ -94,7 +94,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : 1} * 100%)`,
 						}}
 					/>
 				</div>
@@ -103,9 +103,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			<div
 				className="flex flex-col gap-8"
 				style={{
-					transform: `translateY(calc(${
-						1 - (isMobile ? 1 : isIntersecting)
-					} * 100%))`,
+					transform: `translateY(calc(${1 - (isMobile ? 1 : 1)} * 100%))`,
 				}}
 			>
 				{slider}

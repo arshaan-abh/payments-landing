@@ -45,33 +45,9 @@ const Menu: FC<MenuProps> = ({}) => {
 		isIntersecting
 	);
 
-	const [bgColorMobile, setBgColorMobile] = useState("#ffffff1a");
-	const [primaryColorMobile, setPrimaryColorMobile] = useState("#66fecbff");
-	const [secondaryColorMobile, setSecondaryColorMobile] = useState("#013334ff");
-
-	const [bgColor, setBgColor] = useState(
-		isMobile ? bgColorMobile : bgColorDesktop
-	);
-	const [primaryColor, setPrimaryColor] = useState(
-		isMobile ? primaryColorMobile : primaryColorDesktop
-	);
-	const [secondaryColor, setSecondaryColor] = useState(
-		isMobile ? secondaryColorMobile : secondaryColorDesktop
-	);
-
-	useEffect(() => {
-		setBgColor(isMobile ? bgColorMobile : bgColorDesktop);
-		setPrimaryColor(isMobile ? primaryColorMobile : primaryColorDesktop);
-		setSecondaryColor(isMobile ? secondaryColorMobile : secondaryColorDesktop);
-	}, [
-		bgColorDesktop,
-		bgColorMobile,
-		isMobile,
-		primaryColorDesktop,
-		primaryColorMobile,
-		secondaryColorDesktop,
-		secondaryColorMobile,
-	]);
+	const [bgColor, setBgColorMobile] = useState("#ffffff1a");
+	const [primaryColor, setPrimaryColorMobile] = useState("#66fecbff");
+	const [secondaryColor, setSecondaryColorMobile] = useState("#013334ff");
 
 	const scrollHandler = useCallback(() => {
 		if (window) {
@@ -203,7 +179,7 @@ const Menu: FC<MenuProps> = ({}) => {
 			<div
 				ref={detailRef}
 				onTransitionEnd={transitionEndHandler}
-				className="transition-opacity-w-bg sm:transition-opacity-w fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit max-w-fit items-center justify-center overflow-hidden rounded-rectangle-full p-2 backdrop-blur-sm duration-300"
+				className="fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit max-w-fit items-center justify-center overflow-hidden rounded-rectangle-full p-2 backdrop-blur-sm transition-opacity-w-bg duration-300"
 				style={{
 					backgroundColor: bgColor,
 					opacity: open ? (maxWidthRef.current ? 1 : 0) : 0,
@@ -261,7 +237,7 @@ const MenuItem: FC<MenuItemProps> = ({
 	return (
 		<button
 			onClick={onClick}
-			className={`${w} flex aspect-square items-center justify-center rounded-full backdrop-blur-sm transition-all sm:transition-none`}
+			className={`${w} flex aspect-square items-center justify-center rounded-full backdrop-blur-sm transition-all`}
 			style={{
 				backgroundColor: bgColor,
 				color: primaryColor,
@@ -269,7 +245,7 @@ const MenuItem: FC<MenuItemProps> = ({
 		>
 			{primary ? (
 				<div
-					className={`flex aspect-square w-[48px] items-center justify-center rounded-full transition-all sm:transition-none`}
+					className={`flex aspect-square w-[48px] items-center justify-center rounded-full transition-all`}
 					style={{ backgroundColor: primaryColor, color: secondaryColor }}
 				>
 					{children}
@@ -296,7 +272,7 @@ const MenuDetailItem: FC<MenuDetailItemProps> = ({
 }) => {
 	return (
 		<button
-			className={`flex h-full items-center rounded-rectangle-full px-4 text-base font-bold transition-all sm:transition-none`}
+			className={`flex h-full items-center rounded-rectangle-full px-4 text-base font-bold transition-all`}
 			style={{
 				backgroundColor: primary ? bgColor : "transparent",
 				color: primaryColor,

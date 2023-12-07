@@ -42,7 +42,7 @@ function FeatureTwo() {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : 1} * 100%)`,
 						}}
 					/>
 				</div>
@@ -58,7 +58,7 @@ function FeatureTwo() {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : 1} * 100%)`,
 						}}
 					/>
 				</div>
@@ -67,9 +67,7 @@ function FeatureTwo() {
 			<div className="flex w-auto flex-col items-center gap-16 sm:flex-row">
 				<div
 					style={{
-						transform: `translateX(calc(${
-							1 - (isMobile ? 1 : isIntersecting)
-						} * -100%))`,
+						transform: `translateX(calc(${1 - (isMobile ? 1 : 1)} * -100%))`,
 					}}
 					className="flex items-center xs:w-2/3 sm:hidden lg:flex lg:w-1/2 xl:w-2/5"
 				>
@@ -83,9 +81,7 @@ function FeatureTwo() {
 				</div>
 				<div
 					style={{
-						transform: `translateX(calc(${
-							1 - (isMobile ? 1 : isIntersecting)
-						} * 100%))`,
+						transform: `translateX(calc(${1 - (isMobile ? 1 : 1)} * 100%))`,
 					}}
 					className="flex flex-col justify-between gap-x-6 gap-y-16 xs:w-1/2 sm:w-full lg:w-1/2 lg:gap-y-9 xl:w-3/5"
 				>

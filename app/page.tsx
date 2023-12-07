@@ -44,115 +44,87 @@ export default function Home() {
 					<HeroBackground />
 					{/* <Grid /> */}
 					<section
-						style={{
-							opacity: isMobile ? 1 : isIntersecting[0],
-						}}
-						{...(isMobile === true ? { id: "hero" } : null)}
-						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent ${
-							isMobile ? "" : isIntersecting[0] > 0 ? "" : "pointer-events-none"
-						}`}
+						ref={sectionRefs[0]}
+						id="hero"
+						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent`}
 					>
 						<MarketingBanner data={darkMarqueeData} dark />
 						<Navbar />
 						<Hero />
 					</section>
 					<section
-						style={{ opacity: isMobile ? 1 : isIntersecting[1] }}
-						{...(isMobile === true ? { id: "feature-one" } : null)}
-						className={`flex flex-col items-center overflow-hidden ${
-							isMobile ? "" : isIntersecting[1] > 0 ? "" : "pointer-events-none"
-						}`}
+						ref={sectionRefs[1]}
+						id="feature-one"
+						className={`flex flex-col items-center overflow-hidden`}
 					>
 						<MarketingBanner data={marqueeData} />
 						<div className="h-32 sm:hidden" />
 						<FeatureOne />
 					</section>
 					<section
-						style={{ opacity: isMobile ? 1 : isIntersecting[2] }}
-						{...(isMobile === true ? { id: "feature-two" } : null)}
-						className={`flex flex-col items-center overflow-hidden ${
-							isMobile ? "" : isIntersecting[2] > 0 ? "" : "pointer-events-none"
-						}`}
+						ref={sectionRefs[2]}
+						id="feature-two"
+						className={`flex flex-col items-center overflow-hidden`}
 					>
 						<FeatureTwo />
 					</section>
 					<section
-						style={{ opacity: isMobile ? 1 : isIntersecting[3] }}
-						{...(isMobile === true ? { id: "feature-three" } : null)}
-						className={`flex flex-col items-center overflow-hidden ${
-							isMobile ? "" : isIntersecting[3] > 0 ? "" : "pointer-events-none"
-						}`}
+						ref={sectionRefs[3]}
+						id="feature-three"
+						className={`flex flex-col items-center overflow-hidden`}
 					>
 						<FeatureThree />
 					</section>
 					<section
-						style={{ opacity: isMobile ? 1 : isIntersecting[4] }}
-						{...(isMobile === true ? { id: "feature-four" } : null)}
-						className={`flex flex-col items-center overflow-hidden ${
-							isMobile ? "" : isIntersecting[4] > 0 ? "" : "pointer-events-none"
-						}`}
+						ref={sectionRefs[4]}
+						id="feature-four"
+						className={`flex flex-col items-center overflow-hidden`}
 					>
 						<div className="min-h-[1rem] grow" />
 						<FeatureFour />
 						<div className="min-h-[1rem] grow-2" />
 					</section>
 					<section
-						style={{ opacity: isMobile ? 1 : isIntersecting[5] }}
-						{...(isMobile === true ? { id: "feature-five" } : null)}
-						className={`flex flex-col items-center overflow-hidden ${
-							isMobile ? "" : isIntersecting[5] > 0 ? "" : "pointer-events-none"
-						}`}
+						ref={sectionRefs[5]}
+						id="feature-five"
+						className={`flex flex-col items-center overflow-hidden`}
 					>
 						<FeatureFive />
 					</section>
 					<section
-						style={{ opacity: isMobile ? 1 : isIntersecting[6] }}
-						{...(isMobile === true ? { id: "feature-six" } : null)}
-						className={`flex flex-col items-center overflow-hidden ${
-							isMobile ? "" : isIntersecting[6] > 0 ? "" : "pointer-events-none"
-						}`}
+						ref={sectionRefs[6]}
+						id="feature-six"
+						className={`flex flex-col items-center overflow-hidden`}
 					>
 						<FeatureSix />
 					</section>
 
 					<section
-						style={{ opacity: isMobile ? 1 : isIntersecting[7] }}
-						{...(isMobile === true ? { id: "terminal" } : null)}
-						className={`flex flex-col items-center overflow-hidden ${
-							isMobile ? "" : isIntersecting[7] > 0 ? "" : "pointer-events-none"
-						}`}
+						ref={sectionRefs[7]}
+						id="terminal"
+						className={`flex flex-col items-center overflow-hidden`}
 					>
 						<FeatureSeven />
 					</section>
 					<section
-						style={{ opacity: isMobile ? 1 : isIntersecting[8] }}
-						{...(isMobile === true ? { id: "faq" } : null)}
-						className={`flex flex-col items-center overflow-hidden ${
-							isMobile ? "" : isIntersecting[8] > 0 ? "" : "pointer-events-none"
-						}`}
+						ref={sectionRefs[8]}
+						id="faq"
+						className={`flex flex-col items-center overflow-hidden`}
 					>
 						<FaqSection />
 					</section>
 					<section
-						style={{ opacity: isMobile ? 1 : isIntersecting[9] }}
-						{...(isMobile === true ? { id: "enquire-form" } : null)}
-						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-primary-950 text-secondary-950 ${
-							isMobile ? "" : isIntersecting[9] > 0 ? "" : "pointer-events-none"
-						}`}
+						ref={sectionRefs[9]}
+						id="enquire-form"
+						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-primary-950 text-secondary-950`}
 					>
 						<div className="h-28 sm:hidden" />
 						<Form />
 					</section>
 					<section
-						style={{ opacity: isMobile ? 1 : isIntersecting[10] }}
-						{...(isMobile === true ? { id: "contact-us" } : null)}
-						className={`relative flex flex-col items-center overflow-hidden bg-primary-950 pb-0 text-secondary-950 ${
-							isMobile
-								? ""
-								: isIntersecting[10] > 0
-								  ? ""
-								  : "pointer-events-none"
-						}`}
+						ref={sectionRefs[10]}
+						id="contact-us"
+						className={`relative flex flex-col items-center overflow-hidden bg-primary-950 pb-0 text-secondary-950`}
 					>
 						<Slogan />
 						<div className="h-28 sm:hidden" />
@@ -161,39 +133,6 @@ export default function Home() {
 					<Menu />
 					<CookiesModal />
 					<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />
-					{Array.from(Array(11), (_, index) => (
-						<div
-							{...(isMobile === false
-								? {
-										id:
-											index === 0
-												? "hero"
-												: index === 1
-												  ? "feature-one"
-												  : index === 2
-												    ? "feature-two"
-												    : index === 3
-												      ? "feature-three"
-												      : index === 4
-												        ? "feature-four"
-												        : index === 5
-												          ? "feature-five"
-												          : index === 6
-												            ? "feature-six"
-												            : index === 7
-												              ? "terminal"
-												              : index === 8
-												                ? "faq"
-												                : index === 9
-												                  ? "enquire-form"
-												                  : "contact-us",
-								  }
-								: null)}
-							key={index}
-							className="section-shadow pointer-events-none"
-							ref={sectionRefs[index]}
-						></div>
-					))}
 				</div>
 			</IsMobileContext.Provider>
 		</IsIntersectingContext.Provider>

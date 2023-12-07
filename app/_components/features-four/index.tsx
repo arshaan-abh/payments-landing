@@ -39,7 +39,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 				<div
 					className="absolute inset-0 bg-white"
 					style={{
-						left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
+						left: `calc(${isMobile ? 1 : 1} * 100%)`,
 					}}
 				/>
 			</div>
@@ -49,7 +49,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : 1} * 100%)`,
 						}}
 					/>
 				</h3>
@@ -65,15 +65,13 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : isIntersecting} * 100%)`,
+							left: `calc(${isMobile ? 1 : 1} * 100%)`,
 						}}
 					/>
 				</div>
 				<div
 					style={{
-						transform: `translateX(calc(${
-							1 - (isMobile ? 1 : isIntersecting)
-						} * 100%))`,
+						transform: `translateX(calc(${1 - (isMobile ? 1 : 1)} * 100%))`,
 					}}
 				>
 					<GridBorderComponent className="m-auto xs:w-2/3 sm:w-full">
