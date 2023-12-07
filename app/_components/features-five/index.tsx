@@ -21,7 +21,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 
 				<Card title="Pre-Paid Debit Card Issuing with Bank Account">
 					<p className="inline">
-						Branded Prepaid Debit Cards optimise payments, foster loyalty, and
+						Branded prepaid debit cards optimise payments, foster loyalty, and
 						align with your brand for a unique user experience.
 					</p>
 					<p className="hidden xl:inline">

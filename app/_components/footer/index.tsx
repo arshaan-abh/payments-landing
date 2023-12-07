@@ -75,7 +75,7 @@ const Footer: FC<FooterProps> = ({}) => {
 							</h5>
 							<p className="text-sm font-medium text-white">
 								Follow us on social media and scroll through the latest scoop
-								effortlessly in your feed
+								effortlessly in your feed.
 							</p>
 							<div className="my-2 flex h-11 items-center gap-4">
 								<Image src={Facebook} alt="facebook" />
