@@ -238,6 +238,14 @@ export default function RootLayout({ children }: LayoutProps) {
 					content="#161616"
 					media="(prefers-color-scheme: dark)"
 				/>
+				<!-- Google tag (gtag.js) -->
+				<script async src="https://www.googletagmanager.com/gtag/js?id=G-71ZQDFRNBL"></script>
+				<script>
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-71ZQDFRNBL');
+				</script>
 			</head>
 			<body
 				className={`${GeistMono.variable} ${GeistSans.className} bg-secondary-950`}
