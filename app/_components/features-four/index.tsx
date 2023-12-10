@@ -22,11 +22,11 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 				/>
 				<Card
 					title="90%"
-					supportingText="Of U.K. adults have bought from businesses using Selected payment"
+					supportingText="Of U.K. adults have bought from businesses using Selected payments"
 				/>
 				<Card
 					title="99.99%"
-					supportingText="historical uptime for Selected payment."
+					supportingText="historical uptime for Selected payments"
 				/>
 				<Card
 					title="130+"

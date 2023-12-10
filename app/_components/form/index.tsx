@@ -36,16 +36,15 @@ function Form() {
 	});
 	const initialLabels = [
 		"Online Payment",
-		"In-app Payments ",
-		"Marketplace & Platform",
 		"In-app Payments",
+		"Marketplace & Platform",
 		"Billing and Invoicing",
-		"In-person Payments ",
-		"Terminal-less Payments ( Mobile App )",
+		"In-person Payments",
+		"Terminal-less Payments (Mobile App)",
 		"eCommerce",
-		"ePOS All-In-One ( Terminal + Eposense Mobile ) ",
+		"ePOS All-In-One (Terminal + Eposense Mobile)",
 		"Pre- Paid Debit Card with Bank Account Issuing ",
-		"Business's Credit and Bank Account Issuing ",
+		"Business's Credit and Bank Account Issuing",
 		"Others",
 	];
 	const [options] = useState<string[]>(initialLabels);
