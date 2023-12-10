@@ -1,5 +1,6 @@
 export interface ModalDataType {
 	image: any;
+	bg: any;
 	description: {
 		title: string;
 		subTitle: string;

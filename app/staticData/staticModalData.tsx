@@ -3,10 +3,15 @@ import Mobile1 from "public/terminal-1.jpg";
 import Mobile2 from "public/terminal-2.jpg";
 import Mobile3 from "public/terminal-3.jpg";
 import Mobile4 from "public/terminal-4.jpg";
+import MobileBG1 from "public/terminal-bg-1.jpg";
+import MobileBG2 from "public/terminal-bg-2.jpg";
+import MobileBG3 from "public/terminal-bg-3.jpg";
+import MobileBG4 from "public/terminal-bg-4.jpg";
 
 export const ModalData: ModalDataType[] = [
 	{
 		image: Mobile1,
+		bg: MobileBG1,
 		description: [
 			{
 				title: "SPF2",
@@ -36,6 +41,7 @@ export const ModalData: ModalDataType[] = [
 	},
 	{
 		image: Mobile4,
+		bg: MobileBG2,
 		description: [
 			{
 				title: "SPL2",
@@ -65,6 +71,7 @@ export const ModalData: ModalDataType[] = [
 	},
 	{
 		image: Mobile2,
+		bg: MobileBG3,
 		description: [
 			{
 				title: "Tap to Pay iPhone",
@@ -95,6 +102,7 @@ export const ModalData: ModalDataType[] = [
 	},
 	{
 		image: Mobile3,
+		bg: MobileBG4,
 		description: [
 			{
 				title: "SPS1",

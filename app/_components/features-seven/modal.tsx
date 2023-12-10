@@ -35,8 +35,8 @@ function ModalSection(props: ModalProps) {
 		>
 			<div className="grid h-full grid-cols-12">
 				<div className="col-span-4 flex h-full items-center object-contain">
-					{ModalData[selectedImage]?.image && (
-						<Image src={ModalData[selectedImage]?.image} alt={selectedImage} />
+					{ModalData[selectedImage]?.bg && (
+						<Image src={ModalData[selectedImage]?.bg} alt={selectedImage} />
 					)}
 				</div>
 				<div className="col-span-7 col-end-13 flex flex-col justify-evenly">
