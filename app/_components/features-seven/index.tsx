@@ -76,6 +76,7 @@ function FeatureEight() {
 					<GridBorderComponent
 						className="flex items-center justify-center border-gray-100"
 						overflowVisible
+						noRotate
 					>
 						<Image
 							src={t.image}

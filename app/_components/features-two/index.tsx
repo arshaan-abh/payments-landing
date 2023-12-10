@@ -142,16 +142,22 @@ interface GridBorderComponentProps {
 	children?: ReactNode;
 	className?: string;
 	overflowVisible?: boolean;
+	noRotate?: boolean;
 }
 
 export const GridBorderComponent: FC<GridBorderComponentProps> = ({
 	children,
 	className = "",
 	overflowVisible,
+	noRotate,
 }) => {
 	return (
 		<div
-			className={`relative w-full grow overflow-hidden p-6 hover:[--border:50%] hover:[--transform:scale(1.1)_rotate(4deg)] ${className}`}
+			className={`relative w-full grow overflow-hidden p-6 hover:[--border:50%] ${
+				noRotate
+					? "hover:[--transform:scale(1.1)]"
+					: "hover:[--transform:scale(1.1)_rotate(4deg)]"
+			} ${className}`}
 		>
 			<div className={overflowVisible ? "overflow-visible" : "overflow-hidden"}>
 				<div className="transition-transform duration-300 [transform:var(--transform)]">
