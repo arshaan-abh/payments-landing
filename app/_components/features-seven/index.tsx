@@ -25,13 +25,13 @@ const terminals = [
 		items: ["Cellular", "Wi-Fi", "Bluetooth"],
 	},
 	{
-		image: Mobile4,
+		image: Mobile2,
 		title: "SPL2",
 		subtitle: "Sleek, durable, and mobile all-in-one Android device.",
 		items: ["Cellular", "Wi-Fi", "Bluetooth"],
 	},
 	{
-		image: Mobile2,
+		image: Mobile4,
 		title: "Tap to Pay iPhone",
 		subtitle:
 			"Accept contactless payments right on an iPhone with Tap to Pay on iPhone.",

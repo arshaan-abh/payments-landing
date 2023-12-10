@@ -18,22 +18,18 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 			<div className="relative flex flex-row flex-wrap justify-between gap-16 sm:w-1/3 sm:gap-4 md:w-1/2">
 				<Card
 					title="245M+"
-					percent={100}
 					supportingText="API request per day, peaking at 13,000 requests a second."
 				/>
 				<Card
 					title="90%"
-					percent={90}
 					supportingText="Of U.K. adults have bought from businesses using Selected payment"
 				/>
 				<Card
 					title="99.99%"
-					percent={99.99}
 					supportingText="historical uptime for Selected payment."
 				/>
 				<Card
 					title="130+"
-					percent={50}
 					supportingText="currencies and payment methods supported."
 				/>
 				<div
@@ -88,16 +84,14 @@ export default FeatureFour;
 interface CardProps {
 	title: string;
 	supportingText: string;
-	percent: number;
 }
 
-const Card: FC<CardProps> = ({ title, supportingText, percent }) => {
+const Card: FC<CardProps> = ({ title, supportingText }) => {
 	return (
 		<div className="m-auto flex w-full flex-col gap-1 xs:w-2/3 sm:m-0 sm:w-full lg:w-2/3">
-			<div className="text-center text-6xl font-extrabold text-primary-950 sm:text-start">
+			<div className="w-fit border-b-[1.25rem] border-gray-100 text-center text-6xl font-extrabold text-primary-950 sm:text-start">
 				{title}
 			</div>
-			<div className="h-5 bg-gray-100" style={{ width: `${percent}%` }} />
 			<p className="text-center text-base font-medium text-gray-600 sm:text-start">
 				{supportingText}
 			</p>
