@@ -11,10 +11,10 @@ import FeatureFive from "./_components/features-five";
 import FeatureSix from "./_components/features-six";
 import FeatureSeven from "./_components/features-seven";
 import FaqSection from "./_components/faq";
-import MarketingBanner from "./_components/marquee";
+// import MarketingBanner from "./_components/marquee";
 import CookiesModal from "./_components/cookies-modal";
 import Menu from "./_components/menu";
-import { darkMarqueeData, marqueeData } from "./staticData/marqueesData";
+// import { darkMarqueeData, marqueeData } from "./staticData/marqueesData";
 import { EnquireNowIcon } from "./_components/icons";
 import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
@@ -48,7 +48,7 @@ export default function Home() {
 						id="hero"
 						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent`}
 					>
-						<MarketingBanner data={darkMarqueeData} dark />
+						{/* <MarketingBanner data={darkMarqueeData} dark /> */}
 						<Navbar />
 						<Hero />
 					</section>
@@ -57,7 +57,7 @@ export default function Home() {
 						id="feature-one"
 						className={`flex flex-col items-center overflow-hidden`}
 					>
-						<MarketingBanner data={marqueeData} />
+						{/* <MarketingBanner data={marqueeData} /> */}
 						<div className="h-32 sm:hidden" />
 						<FeatureOne />
 					</section>
