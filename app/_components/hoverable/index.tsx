@@ -1,14 +1,4 @@
-import {
-	useRef,
-	type FC,
-	type ReactNode,
-	useEffect,
-	useState,
-	useCallback,
-	CSSProperties,
-} from "react";
-import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { type FC, type ReactNode, CSSProperties } from "react";
 
 interface HoverableProps {
 	children: ReactNode;
