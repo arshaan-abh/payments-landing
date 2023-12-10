@@ -89,7 +89,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ title, supportingText }) => {
 	return (
 		<div className="m-auto flex w-full flex-col gap-1 xs:w-2/3 sm:m-0 sm:w-full lg:w-2/3">
-			<div className="w-fit border-b-[1.25rem] border-gray-100 text-center text-6xl font-extrabold text-primary-950 sm:text-start">
+			<div className="m-auto w-fit border-b-[1.25rem] border-gray-100 text-center text-6xl font-extrabold text-primary-950 sm:m-0 sm:text-start">
 				{title}
 			</div>
 			<p className="text-center text-base font-medium text-gray-600 sm:text-start">
