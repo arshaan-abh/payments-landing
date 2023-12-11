@@ -8,8 +8,10 @@ const LoadingScreen: FC<LoadingScreenProps> = ({}) => {
 	const [loading, setLoading] = useState(true);
 
 	useLayoutEffect(() => {
+		let timeoutId: ReturnType<typeof setTimeout>;
+
 		const handleLoad = () => {
-			setTimeout(() => {
+			timeoutId = setTimeout(() => {
 				setLoading(false);
 			}, 1000);
 		};
@@ -20,10 +22,11 @@ const LoadingScreen: FC<LoadingScreenProps> = ({}) => {
 
 		return () => {
 			removeEventListener("load", handleLoad);
+			clearTimeout(timeoutId);
 		};
 	}, [loading]);
 
-	const variableClassName = loading ? "" : "pointer-event-none opacity-0";
+	const variableClassName = loading ? "" : "pointer-events-none opacity-0";
 
 	return (
 		<div
