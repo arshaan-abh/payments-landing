@@ -6,7 +6,6 @@ import Mobile4 from "public/terminal-4.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import Modal from "react-modal";
 import ModalSection from "./modal";
 import {
 	ArrowLeftIcon,
@@ -46,9 +45,9 @@ const terminals = [
 
 function FeatureEight() {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
-	const [selectedImage, setSelectedImage] = useState(null);
+	const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-	const openModal = (index: any) => {
+	const openModal = (index: number) => {
 		setSelectedImage(index);
 		setModalIsOpen(true);
 	};
@@ -65,8 +64,8 @@ function FeatureEight() {
 		responsiveContext === "xl"
 			? 4
 			: responsiveContext === "sm"
-			? 2
-			: 1;
+			  ? 2
+			  : 1;
 
 	const [slider, previousButtonRef, nextButtonRef] = useSlider({
 		children: terminals.map((t, index) => (
@@ -147,28 +146,6 @@ function FeatureEight() {
 				{slider}
 				<div className="min-h-[1rem] grow-2" />
 			</div>
-			<Modal
-				isOpen={modalIsOpen}
-				onRequestClose={closeModal}
-				contentLabel="Image Modal"
-				style={{
-					content: {
-						maxWidth: "50%",
-						maxHeight: "50%",
-						margin: "auto",
-					},
-				}}
-			>
-				{selectedImage && (
-					<Image
-						placeholder="blur"
-						src={selectedImage}
-						alt="Selected Image"
-						className="h-full object-cover"
-					/>
-				)}
-				<button onClick={closeModal}>Close Modal</button>
-			</Modal>
 			<ModalSection
 				isOpen={modalIsOpen}
 				onRequestClose={closeModal}

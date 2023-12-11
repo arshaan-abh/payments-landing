@@ -1,6 +1,8 @@
+import { StaticImageData } from "next/image";
+
 export interface ModalDataType {
-	image: any;
-	bg: any;
+	image: StaticImageData;
+	bg: StaticImageData;
 	description: {
 		title: string;
 		subTitle: string;

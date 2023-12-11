@@ -9,7 +9,7 @@ interface ModalProps {
 	onRequestClose: () => void;
 	closeModal: () => void;
 	contentLabel: string;
-	selectedImage: any;
+	selectedImage: number | null;
 }
 
 function ModalSection(props: ModalProps) {
@@ -43,11 +43,11 @@ function ModalSection(props: ModalProps) {
 		>
 			<div className="flex h-full">
 				<div className="hidden h-full w-2/5 basis-2/5 md:block">
-					{ModalData[selectedImage]?.bg && (
+					{selectedImage !== null && (
 						<Image
 							placeholder="blur"
-							src={ModalData[selectedImage]?.bg}
-							alt={selectedImage}
+							src={ModalData[selectedImage].bg}
+							alt={ModalData[selectedImage].description[0].title}
 							className="h-full w-full object-cover"
 						/>
 					)}
@@ -61,70 +61,86 @@ function ModalSection(props: ModalProps) {
 					</div>
 					<div className="mb-1">
 						<span className="text-3xl font-extrabold text-primary-950">
-							{ModalData[selectedImage]?.description[0].title}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].title}
 						</span>
 					</div>
 					<div className="mb-4">
 						<span className="text-lg font-medium text-gray-600">
-							{ModalData[selectedImage]?.description[0].subTitle}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].subTitle}
 						</span>
 					</div>
 					<div className="mb-8 h-px w-full bg-gray-200" />
 					<div className="mb-2">
 						<span className="text-2xl font-bold text-primary-950">
-							{ModalData[selectedImage]?.description[0].information.name}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.name}
 						</span>
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].information.inf1}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.inf1}
 						</span>
 						<span className="text-end text-base font-normal text-gray-400">
-							{ModalData[selectedImage]?.description[0].information.inf1des}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.inf1des}
 						</span>
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].information.inf2}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.inf2}
 						</span>
 						<span className="text-end text-base font-normal text-gray-400">
-							{ModalData[selectedImage]?.description[0].information.inf2des}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.inf2des}
 						</span>
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].information.inf3}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.inf3}
 						</span>
 						<span className="text-end text-base font-normal text-gray-400">
-							{ModalData[selectedImage]?.description[0].information.inf3des}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.inf3des}
 						</span>
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].information.inf4}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.inf4}
 						</span>
 						<span className="text-end text-base font-normal text-gray-400">
-							{ModalData[selectedImage]?.description[0].information.inf4des}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.inf4des}
 						</span>
 					</div>
 					<div className="mb-10 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].information.inf5}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.inf5}
 						</span>
 						<span className="text-end text-base font-normal text-gray-400">
-							{ModalData[selectedImage]?.description[0].information.inf5des}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].information.inf5des}
 						</span>
 					</div>
 					<div className="mb-2">
 						<span className="text-2xl font-bold text-primary-950">
-							{ModalData[selectedImage]?.description[0].connecting.name}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].connecting.name}
 						</span>
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].connecting.con1.text}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].connecting.con1.text}
 						</span>
-						{ModalData[selectedImage]?.description[0].connecting.con1.has ? (
+						{selectedImage !== null &&
+						ModalData[selectedImage].description[0].connecting.con1.has ? (
 							<CheckIcon className="text-primary-950" />
 						) : (
 							<UncheckedIcon className="text-gray-300" />
@@ -132,9 +148,11 @@ function ModalSection(props: ModalProps) {
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].connecting.con2.text}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].connecting.con2.text}
 						</span>
-						{ModalData[selectedImage]?.description[0].connecting.con2.has ? (
+						{selectedImage !== null &&
+						ModalData[selectedImage].description[0].connecting.con2.has ? (
 							<CheckIcon className="text-primary-950" />
 						) : (
 							<UncheckedIcon className="text-gray-300" />
@@ -142,9 +160,11 @@ function ModalSection(props: ModalProps) {
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].connecting.con3.text}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].connecting.con3.text}
 						</span>
-						{ModalData[selectedImage]?.description[0].connecting.con3.has ? (
+						{selectedImage !== null &&
+						ModalData[selectedImage].description[0].connecting.con3.has ? (
 							<CheckIcon className="text-primary-950" />
 						) : (
 							<UncheckedIcon className="text-gray-300" />
@@ -152,9 +172,11 @@ function ModalSection(props: ModalProps) {
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].connecting.con4.text}
+							{selectedImage !== null &&
+								ModalData[selectedImage].description[0].connecting.con4.text}
 						</span>
-						{ModalData[selectedImage]?.description[0].connecting.con4.has ? (
+						{selectedImage !== null &&
+						ModalData[selectedImage].description[0].connecting.con4.has ? (
 							<CheckIcon className="text-primary-950" />
 						) : (
 							<UncheckedIcon className="text-gray-300" />
