@@ -23,6 +23,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 				key={0}
 				media={
 					<Image
+						placeholder="blur"
 						className="h-full w-full object-cover"
 						src={featureImageOne}
 						alt="One-Click checkout with Pay link"
@@ -36,6 +37,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 				key={1}
 				media={
 					<Image
+						placeholder="blur"
 						className="h-full w-full object-cover"
 						src={featureImageTwo}
 						alt="Flexible Payment Methods"
@@ -49,6 +51,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 				key={2}
 				media={
 					<Image
+						placeholder="blur"
 						className="h-full w-full object-cover"
 						src={featureImageThree}
 						alt="Multicurrency Payments"

@@ -79,6 +79,7 @@ function FeatureEight() {
 						noRotate
 					>
 						<Image
+							placeholder="blur"
 							src={t.image}
 							alt={t.title}
 							className="h-64 object-contain"
@@ -157,6 +158,7 @@ function FeatureEight() {
 			>
 				{selectedImage && (
 					<Image
+						placeholder="blur"
 						src={selectedImage}
 						alt="Selected Image"
 						className="h-full object-cover"

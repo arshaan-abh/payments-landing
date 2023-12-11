@@ -13,6 +13,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 			<div className="m-auto flex h-2/5 w-full flex-col items-center justify-between gap-x-16 gap-y-8 xs:w-2/3 sm:w-full sm:flex-row">
 				<GridBorderComponent className="basis-1/2 md:basis-1/3">
 					<Image
+						placeholder="blur"
 						src={Advance}
 						alt="Pre"
 						className="aspect-square h-full w-full object-cover"
@@ -50,6 +51,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 
 				<GridBorderComponent className="basis-1/2 md:basis-1/3">
 					<Image
+						placeholder="blur"
 						src={Billing}
 						alt="Business"
 						className="aspect-square h-full w-full object-cover"

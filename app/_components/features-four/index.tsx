@@ -71,7 +71,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					}}
 				>
 					<GridBorderComponent className="m-auto xs:w-2/3 sm:w-full">
-						<Image src={Empowering} alt="Empowering" />
+						<Image placeholder="blur" src={Empowering} alt="Empowering" />
 					</GridBorderComponent>
 				</div>
 			</div>

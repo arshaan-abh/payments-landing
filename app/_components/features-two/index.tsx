@@ -73,6 +73,7 @@ function FeatureTwo() {
 				>
 					<GridBorderComponent className="xs:w-2/3 sm:w-1/2 md:w-full">
 						<Image
+							placeholder="blur"
 							src={bigPicture}
 							alt="Big picture"
 							className="h-full object-cover"

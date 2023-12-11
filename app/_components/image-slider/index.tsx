@@ -29,7 +29,7 @@ const ImageSlider = () => {
 					{images.map(({ id, image }) => (
 						<div className="image flex" key={id}>
 							<div>
-								<Image src={image} alt={id} />
+								<Image placeholder="blur" src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
 								<span className="text-xl font-bold text-primary-950">
@@ -46,7 +46,7 @@ const ImageSlider = () => {
 					{images2.map(({ id, image }) => (
 						<div className="image flex" key={id}>
 							<div>
-								<Image src={image} alt={id} />
+								<Image placeholder="blur" src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
 								<span className="text-xl font-bold text-primary-950">
@@ -63,7 +63,7 @@ const ImageSlider = () => {
 					{images3.map(({ id, image }) => (
 						<div className="image flex" key={id}>
 							<div>
-								<Image src={image} alt={id} />
+								<Image placeholder="blur" src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
 								<span className="text-xl font-bold text-primary-950">
@@ -80,7 +80,7 @@ const ImageSlider = () => {
 					{images.map(({ id, image }) => (
 						<div className="image flex" key={id}>
 							<div>
-								<Image src={image} alt={id} />
+								<Image placeholder="blur" src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
 								<span className="text-xl font-bold text-primary-950">
@@ -97,7 +97,7 @@ const ImageSlider = () => {
 					{images2.map(({ id, image }) => (
 						<div className="image flex" key={id}>
 							<div>
-								<Image src={image} alt={id} />
+								<Image placeholder="blur" src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
 								<span className="text-xl font-bold text-primary-950">
@@ -114,7 +114,7 @@ const ImageSlider = () => {
 					{images3.map(({ id, image }) => (
 						<div className="flex" key={id}>
 							<div>
-								<Image src={image} alt={id} />
+								<Image placeholder="blur" src={image} alt={id} />
 							</div>
 							<div className="h-full pl-3 pt-5">
 								<span className="text-xl font-bold text-primary-950">

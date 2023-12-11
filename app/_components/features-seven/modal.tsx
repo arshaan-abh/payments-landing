@@ -45,6 +45,7 @@ function ModalSection(props: ModalProps) {
 				<div className="hidden h-full w-2/5 basis-2/5 md:block">
 					{ModalData[selectedImage]?.bg && (
 						<Image
+							placeholder="blur"
 							src={ModalData[selectedImage]?.bg}
 							alt={selectedImage}
 							className="h-full w-full object-cover"
