@@ -19,10 +19,10 @@ export interface ModalDataType {
 		};
 		connecting: {
 			name: string;
-			con1: string;
-			con2: string;
-			con3: string;
-			con4: string;
+			con1: { text: string; has: boolean };
+			con2: { text: string; has: boolean };
+			con3: { text: string; has: boolean };
+			con4: { text: string; has: boolean };
 		};
 	}[];
 }

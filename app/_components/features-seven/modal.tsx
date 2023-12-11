@@ -2,7 +2,7 @@ import { ModalData } from "@/app/staticData/staticModalData";
 import Image from "next/image";
 import React, { useRef } from "react";
 import Modal from "react-modal";
-import { CloseIcon } from "../icons";
+import { CheckIcon, CloseIcon, UncheckedIcon } from "../icons";
 
 interface ModalProps {
 	isOpen: boolean;
@@ -121,23 +121,43 @@ function ModalSection(props: ModalProps) {
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].connecting.con1}
+							{ModalData[selectedImage]?.description[0].connecting.con1.text}
 						</span>
+						{ModalData[selectedImage]?.description[0].connecting.con1.has ? (
+							<CheckIcon />
+						) : (
+							<UncheckedIcon className="text-gray-300" />
+						)}
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].connecting.con2}
+							{ModalData[selectedImage]?.description[0].connecting.con2.text}
 						</span>
+						{ModalData[selectedImage]?.description[0].connecting.con2.has ? (
+							<CheckIcon />
+						) : (
+							<UncheckedIcon className="text-gray-300" />
+						)}
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].connecting.con3}
+							{ModalData[selectedImage]?.description[0].connecting.con3.text}
 						</span>
+						{ModalData[selectedImage]?.description[0].connecting.con3.has ? (
+							<CheckIcon />
+						) : (
+							<UncheckedIcon className="text-gray-300" />
+						)}
 					</div>
 					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
-							{ModalData[selectedImage]?.description[0].connecting.con4}
+							{ModalData[selectedImage]?.description[0].connecting.con4.text}
 						</span>
+						{ModalData[selectedImage]?.description[0].connecting.con4.has ? (
+							<CheckIcon />
+						) : (
+							<UncheckedIcon className="text-gray-300" />
+						)}
 					</div>
 					<div className="h-4" />
 				</div>

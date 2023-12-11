@@ -512,3 +512,33 @@ export const CloseIcon: FC<IconProps> = ({ className }) => {
 		</svg>
 	);
 };
+
+export const UncheckedIcon: FC<IconProps> = ({ className }) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="16"
+			height="16"
+			fill="none"
+			className={className}
+		>
+			<g clip-path="url(#A)" fill="currentColor">
+				<path d="M4.001 4.5l.5-.5L12 11.499l-.5.5L4.001 4.5z" />
+				<path d="M11.999 4.501l-.5-.5L4 11.5l.5.5 7.499-7.499z" />
+			</g>
+			<rect
+				x=".5"
+				y=".5"
+				width="15"
+				height="15"
+				rx="7.5"
+				stroke="currentColor"
+			/>
+			<defs>
+				<clipPath id="A">
+					<rect width="16" height="16" rx="8" fill="#fff" />
+				</clipPath>
+			</defs>
+		</svg>
+	);
+};
