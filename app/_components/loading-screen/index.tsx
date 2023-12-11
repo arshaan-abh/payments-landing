@@ -1,4 +1,4 @@
-import { useEffect, type FC, useState } from "react";
+import { type FC, useState, useLayoutEffect } from "react";
 import Lottie from "lottie-react";
 import loadingAnimation from "../../../public/loading.json";
 
@@ -7,14 +7,14 @@ interface LoadingScreenProps {}
 const LoadingScreen: FC<LoadingScreenProps> = ({}) => {
 	const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const handleLoad = () => {
-			// setTimeout(() => {
-			setLoading(false);
-			// }, 1000);
+			setTimeout(() => {
+				setLoading(false);
+			}, 1000);
 		};
 
-		// document.body.style.overflow = loading ? "hidden" : "auto";
+		document.body.style.overflow = loading ? "hidden" : "auto";
 
 		addEventListener("load", handleLoad);
 
