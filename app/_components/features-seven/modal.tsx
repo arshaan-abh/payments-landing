@@ -42,7 +42,7 @@ function ModalSection(props: ModalProps) {
 			}}
 		>
 			<div className="flex h-full">
-				<div className="h-full w-2/5 basis-2/5">
+				<div className="hidden h-full w-2/5 basis-2/5 md:block">
 					{ModalData[selectedImage]?.bg && (
 						<Image
 							src={ModalData[selectedImage]?.bg}
@@ -51,8 +51,11 @@ function ModalSection(props: ModalProps) {
 						/>
 					)}
 				</div>
-				<div className="relative h-full w-3/5 basis-3/5 p-12 pl-16">
-					<div className="absolute right-2.5 top-2.5 flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-100 bg-white text-primary-950">
+				<div className="relative h-full w-full basis-full overflow-y-auto p-6 md:w-3/5 md:basis-3/5 md:p-12 md:pl-16">
+					<div
+						onClick={onRequestClose}
+						className="absolute right-2.5 top-2.5 flex h-[40px] w-[40px] items-center justify-center rounded-full border border-gray-100 bg-white text-primary-950"
+					>
 						<CloseIcon />
 					</div>
 					<div className="mb-1">
@@ -71,43 +74,43 @@ function ModalSection(props: ModalProps) {
 							{ModalData[selectedImage]?.description[0].information.name}
 						</span>
 					</div>
-					<div className="mb-1 flex items-center justify-between">
-						<span className="text-end text-base font-medium text-primary-950">
+					<div className="mb-1 flex items-center justify-between gap-4">
+						<span className="text-base font-medium text-primary-950">
 							{ModalData[selectedImage]?.description[0].information.inf1}
 						</span>
-						<span className="text-base font-normal text-gray-400">
+						<span className="text-end text-base font-normal text-gray-400">
 							{ModalData[selectedImage]?.description[0].information.inf1des}
 						</span>
 					</div>
-					<div className="mb-1 flex items-center justify-between">
+					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
 							{ModalData[selectedImage]?.description[0].information.inf2}
 						</span>
-						<span className="text-base font-normal text-gray-400">
+						<span className="text-end text-base font-normal text-gray-400">
 							{ModalData[selectedImage]?.description[0].information.inf2des}
 						</span>
 					</div>
-					<div className="mb-1 flex items-center justify-between">
+					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
 							{ModalData[selectedImage]?.description[0].information.inf3}
 						</span>
-						<span className="text-base font-normal text-gray-400">
+						<span className="text-end text-base font-normal text-gray-400">
 							{ModalData[selectedImage]?.description[0].information.inf3des}
 						</span>
 					</div>
-					<div className="mb-1 flex items-center justify-between">
+					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
 							{ModalData[selectedImage]?.description[0].information.inf4}
 						</span>
-						<span className="text-base font-normal text-gray-400">
+						<span className="text-end text-base font-normal text-gray-400">
 							{ModalData[selectedImage]?.description[0].information.inf4des}
 						</span>
 					</div>
-					<div className="mb-10 flex items-center justify-between">
+					<div className="mb-10 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
 							{ModalData[selectedImage]?.description[0].information.inf5}
 						</span>
-						<span className="text-base font-normal text-gray-400">
+						<span className="text-end text-base font-normal text-gray-400">
 							{ModalData[selectedImage]?.description[0].information.inf5des}
 						</span>
 					</div>
@@ -116,26 +119,27 @@ function ModalSection(props: ModalProps) {
 							{ModalData[selectedImage]?.description[0].connecting.name}
 						</span>
 					</div>
-					<div className="mb-1 flex items-center justify-between">
+					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
 							{ModalData[selectedImage]?.description[0].connecting.con1}
 						</span>
 					</div>
-					<div className="mb-1 flex items-center justify-between">
+					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
 							{ModalData[selectedImage]?.description[0].connecting.con2}
 						</span>
 					</div>
-					<div className="mb-1 flex items-center justify-between">
+					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
 							{ModalData[selectedImage]?.description[0].connecting.con3}
 						</span>
 					</div>
-					<div className="mb-1 flex items-center justify-between">
+					<div className="mb-1 flex items-center justify-between gap-4">
 						<span className="text-base font-medium text-primary-950">
 							{ModalData[selectedImage]?.description[0].connecting.con4}
 						</span>
 					</div>
+					<div className="h-4" />
 				</div>
 			</div>
 		</Modal>
