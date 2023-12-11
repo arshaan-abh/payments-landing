@@ -103,7 +103,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			<div
 				className="flex flex-col gap-8"
 				style={{
-					transform: `translateY(calc(1 * 100%))`,
+					transform: `translateY(calc(0 * 100%))`,
 				}}
 			>
 				{slider}
