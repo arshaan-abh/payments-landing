@@ -18,10 +18,10 @@ const LoadingScreen: FC<LoadingScreenProps> = ({}) => {
 
 		document.body.style.overflow = loading ? "hidden" : "auto";
 
-		addEventListener("load", handleLoad);
+		window.addEventListener("load", handleLoad);
 
 		return () => {
-			removeEventListener("load", handleLoad);
+			window.removeEventListener("load", handleLoad);
 			clearTimeout(timeoutId);
 		};
 	}, [loading]);
