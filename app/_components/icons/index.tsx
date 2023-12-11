@@ -497,3 +497,18 @@ export const FullScreenIcon: FC<IconProps> = ({ className }) => {
 		</svg>
 	);
 };
+
+export const CloseIcon: FC<IconProps> = ({ className }) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			fill="currentColor"
+			className={className}
+		>
+			<path d="M5.002 5.875L5.876 5 19 18.123l-.875.875L5.002 5.875z" />
+			<path d="M18.999 5.877l-.875-.875L5 18.125l.875.875L18.999 5.877z" />
+		</svg>
+	);
+};
