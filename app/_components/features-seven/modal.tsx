@@ -124,7 +124,7 @@ function ModalSection(props: ModalProps) {
 							{ModalData[selectedImage]?.description[0].connecting.con1.text}
 						</span>
 						{ModalData[selectedImage]?.description[0].connecting.con1.has ? (
-							<CheckIcon />
+							<CheckIcon className="text-primary-950" />
 						) : (
 							<UncheckedIcon className="text-gray-300" />
 						)}
@@ -134,7 +134,7 @@ function ModalSection(props: ModalProps) {
 							{ModalData[selectedImage]?.description[0].connecting.con2.text}
 						</span>
 						{ModalData[selectedImage]?.description[0].connecting.con2.has ? (
-							<CheckIcon />
+							<CheckIcon className="text-primary-950" />
 						) : (
 							<UncheckedIcon className="text-gray-300" />
 						)}
@@ -144,7 +144,7 @@ function ModalSection(props: ModalProps) {
 							{ModalData[selectedImage]?.description[0].connecting.con3.text}
 						</span>
 						{ModalData[selectedImage]?.description[0].connecting.con3.has ? (
-							<CheckIcon />
+							<CheckIcon className="text-primary-950" />
 						) : (
 							<UncheckedIcon className="text-gray-300" />
 						)}
@@ -154,7 +154,7 @@ function ModalSection(props: ModalProps) {
 							{ModalData[selectedImage]?.description[0].connecting.con4.text}
 						</span>
 						{ModalData[selectedImage]?.description[0].connecting.con4.has ? (
-							<CheckIcon />
+							<CheckIcon className="text-primary-950" />
 						) : (
 							<UncheckedIcon className="text-gray-300" />
 						)}
