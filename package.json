@@ -17,6 +17,7 @@
 		"@types/react-transition-group": "^4.4.9",
 		"framer-motion": "^10.16.5",
 		"geist": "^1.1.0",
+		"lottie-react": "^2.4.0",
 		"next": "14.0.3",
 		"react": "^18",
 		"react-dom": "^18",
