@@ -1,19 +1,19 @@
-import type { FC } from "react";
-import useResponsiveState from "../features-one/useResponsiveState";
+import { ResponsiveContext } from "@/app/_contexts/contexts";
+import { useContext, type FC } from "react";
 
 interface GridProps {
 	black?: boolean;
 }
 
 const Grid: FC<GridProps> = ({ black }) => {
-	const x = useResponsiveState({
-		defaultState: 3,
-		breakpoints: [
-			{ breakpoint: 376, state: 5 },
-			{ breakpoint: 768, state: 8 },
-			{ breakpoint: 1024, state: 12 },
-		],
-	});
+	const responsiveContext = useContext(ResponsiveContext);
+
+	const x =
+		responsiveContext === "lg" || responsiveContext === "xl"
+			? 12
+			: responsiveContext === "md"
+			? 8
+			: 5;
 	const y = 6;
 	const variableClassNames = black ? "" : "opacity-10";
 	return (

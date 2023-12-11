@@ -4,18 +4,19 @@ import featureImageOne from "../../../public/one-click.jpg";
 import featureImageTwo from "../../../public/pay-method.jpg";
 import featureImageThree from "../../../public/currency.jpg";
 import useSlider from "../features-seven/Slider";
-import useResponsiveState from "./useResponsiveState";
 import { SlideButton } from "../features-seven";
 import { ArrowLeftIcon, ArrowRightIcon } from "../icons";
-import { IsMobileContext } from "@/app/_contexts/contexts";
+import { ResponsiveContext } from "@/app/_contexts/contexts";
 
 const FeatureOne: FC<CardProps> = ({}) => {
-	const isMobile = useContext(IsMobileContext);
+	const responsiveContext = useContext(ResponsiveContext);
 
-	const visibleSlidesNumber = useResponsiveState<number>({
-		defaultState: 1,
-		breakpoints: [{ breakpoint: 768, state: 3 }],
-	});
+	const visibleSlidesNumber =
+		responsiveContext === "md" ||
+		responsiveContext === "lg" ||
+		responsiveContext === "xl"
+			? 3
+			: 1;
 
 	const [slider, prevButtonRef, nextButtonRef] = useSlider({
 		children: [
@@ -75,7 +76,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : 1} * 100%)`,
+							left: `calc(1 * 100%)`,
 						}}
 					/>
 				</div>
@@ -93,7 +94,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : 1} * 100%)`,
+							left: `calc(1 * 100%)`,
 						}}
 					/>
 				</div>
@@ -102,7 +103,7 @@ const FeatureOne: FC<CardProps> = ({}) => {
 			<div
 				className="flex flex-col gap-8"
 				style={{
-					transform: `translateY(calc(${1 - (isMobile ? 1 : 1)} * 100%))`,
+					transform: `translateY(calc(1 * 100%))`,
 				}}
 			>
 				{slider}

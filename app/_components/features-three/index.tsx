@@ -1,21 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import Image from "next/image";
 import bigPicture from "public/marketplace.jpg";
 import smallPictureOne from "public/handing-money.svg";
 import smallPictureTwo from "public/money.svg";
 import smallPictureThree from "public/shaking-hands.svg";
 import smallPictureFour from "public/split.svg";
-import {
-	IsIntersectingContext,
-	IsMobileContext,
-} from "@/app/_contexts/contexts";
 import { ThunderIcon } from "../icons";
 import { Card, GridBorderComponent } from "../features-two";
 
 function FeatureTwo() {
-	const isMobile = useContext(IsMobileContext);
-	const isIntersecting = useContext(IsIntersectingContext)[3];
-
 	return (
 		<div className="flex h-full w-full flex-col items-center px-10 lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow" />
@@ -40,7 +33,7 @@ function FeatureTwo() {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : 1} * 100%)`,
+							left: `calc(0 * 100%)`,
 						}}
 					/>
 				</div>
@@ -56,7 +49,7 @@ function FeatureTwo() {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : 1} * 100%)`,
+							left: `calc(0 * 100%)`,
 						}}
 					/>
 				</div>
@@ -65,7 +58,7 @@ function FeatureTwo() {
 			<div className="flex w-auto flex-col items-center gap-16 sm:flex-row">
 				<div
 					style={{
-						transform: `translateX(calc(${1 - (isMobile ? 1 : 1)} * -100%))`,
+						transform: `translateX(calc(0 * -100%))`,
 					}}
 					className="flex items-center xs:w-2/3 sm:hidden lg:flex lg:w-1/2 xl:w-2/5"
 				>
@@ -80,7 +73,7 @@ function FeatureTwo() {
 				</div>
 				<div
 					style={{
-						transform: `translateX(calc(${1 - (isMobile ? 1 : 1)} * 100%))`,
+						transform: `translateX(calc(0 * 100%))`,
 					}}
 					className="flex flex-col justify-between gap-x-6 gap-y-16 xs:w-1/2 sm:w-full lg:w-1/2 lg:gap-y-9 xl:w-3/5"
 				>

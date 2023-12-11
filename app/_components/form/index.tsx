@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { object, string } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -7,7 +7,7 @@ import FormSection from "./form";
 import Checkbox from "./Checkbox";
 import Button from "../button";
 import useSlider from "../features-seven/Slider";
-import useResponsiveState from "../features-one/useResponsiveState";
+import { ResponsiveContext } from "@/app/_contexts/contexts";
 const schema = object({
 	name: string().required("This field is required."),
 	companyName: string().required("This field is required."),
@@ -76,15 +76,10 @@ function Form() {
 			});
 	};
 
-	const responsiveState = useResponsiveState({
-		defaultState: { visibleSlidesNumber: 1, isPhone: true },
-		breakpoints: [
-			{
-				breakpoint: 1024,
-				state: { visibleSlidesNumber: 2, isPhone: false },
-			},
-		],
-	});
+	const responsiveContext = useContext(ResponsiveContext);
+
+	const visibleSlidesNumber =
+		responsiveContext === "lg" || responsiveContext === "xl" ? 2 : 1;
 
 	const [slider, prevButtonRef, nextButtonRef, index] = useSlider({
 		children: [
@@ -116,7 +111,7 @@ function Form() {
 			<FormSection control={control} errors={errors} key={1} />,
 		],
 		gapInRem: 4,
-		visibleSlidesNumber: responsiveState.visibleSlidesNumber,
+		visibleSlidesNumber,
 	});
 
 	return (
@@ -130,7 +125,7 @@ function Form() {
 			</p>
 			<div className="flex sm:w-2/3 lg:w-full">{slider}</div>
 			<div className="flex w-full gap-4 sm:w-2/3 lg:w-full">
-				{!responsiveState.isPhone ? (
+				{visibleSlidesNumber === 2 ? (
 					<Button className="m-auto" clickHandler={handleFormSubmit}>
 						Enquire Now
 					</Button>

@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, RefObject, useState } from "react";
+import React, { FC, ReactNode, RefObject, useContext, useState } from "react";
 import Mobile1 from "public/terminal-1.jpg";
 import Mobile2 from "public/terminal-2.jpg";
 import Mobile3 from "public/terminal-3.jpg";
@@ -15,8 +15,8 @@ import {
 	FullScreenIcon,
 } from "../icons";
 import useSlider from "./Slider";
-import useResponsiveState from "../features-one/useResponsiveState";
 import { GridBorderComponent } from "../features-two";
+import { ResponsiveContext } from "@/app/_contexts/contexts";
 const terminals = [
 	{
 		image: Mobile1,
@@ -57,13 +57,16 @@ function FeatureEight() {
 		setModalIsOpen(false);
 	};
 
-	const visibleSlidesNumber = useResponsiveState<number>({
-		defaultState: 1,
-		breakpoints: [
-			{ breakpoint: 640, state: 2 },
-			{ breakpoint: 768, state: 4 },
-		],
-	});
+	const responsiveContext = useContext(ResponsiveContext);
+
+	const visibleSlidesNumber =
+		responsiveContext === "md" ||
+		responsiveContext === "lg" ||
+		responsiveContext === "xl"
+			? 4
+			: responsiveContext === "sm"
+			? 2
+			: 1;
 
 	const [slider, previousButtonRef, nextButtonRef] = useSlider({
 		children: terminals.map((t, index) => (

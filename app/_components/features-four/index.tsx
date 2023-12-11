@@ -1,18 +1,11 @@
-import { useContext, type FC } from "react";
+import { type FC } from "react";
 import Empowering from "public/transfer.jpg";
 import Image from "next/image";
-import {
-	IsIntersectingContext,
-	IsMobileContext,
-} from "@/app/_contexts/contexts";
 import { GridBorderComponent } from "../features-two";
 
 interface FeatureFourProps {}
 
 const FeatureFour: FC<FeatureFourProps> = ({}) => {
-	const isMobile = useContext(IsMobileContext);
-	const isIntersecting = useContext(IsIntersectingContext)[4];
-
 	return (
 		<div className="flex h-fit w-full flex-col-reverse items-center justify-center gap-16 px-10 sm:flex-row lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="relative flex flex-row flex-wrap justify-between gap-16 sm:w-1/3 sm:gap-4 md:w-1/2">
@@ -35,7 +28,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 				<div
 					className="absolute inset-0 bg-white"
 					style={{
-						left: `calc(${isMobile ? 1 : 1} * 100%)`,
+						left: `calc(1 * 100%)`,
 					}}
 				/>
 			</div>
@@ -45,7 +38,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : 1} * 100%)`,
+							left: `calc($1 * 100%)`,
 						}}
 					/>
 				</h3>
@@ -61,13 +54,13 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(${isMobile ? 1 : 1} * 100%)`,
+							left: `calc(1 * 100%)`,
 						}}
 					/>
 				</div>
 				<div
 					style={{
-						transform: `translateX(calc(${1 - (isMobile ? 1 : 1)} * 100%))`,
+						transform: `translateX(calc(0 * 100%))`,
 					}}
 				>
 					<GridBorderComponent className="m-auto xs:w-2/3 sm:w-full">

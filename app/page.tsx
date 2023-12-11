@@ -19,15 +19,22 @@ import { EnquireNowIcon } from "./_components/icons";
 import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
 import useResponsiveState from "./_components/features-one/useResponsiveState";
-import { IsIntersectingContext, IsMobileContext } from "./_contexts/contexts";
+import { IsIntersectingContext, ResponsiveContext } from "./_contexts/contexts";
 import Slogan from "./_components/footer/Slogan";
 import LoadingScreen from "./_components/loading-screen";
-import { Suspense } from "react";
 
 export default function Home() {
-	const isMobile = useResponsiveState<boolean>({
-		defaultState: true,
-		breakpoints: [{ breakpoint: 640, state: false }],
+	const responsiveState = useResponsiveState<
+		"default" | "xs" | "sm" | "md" | "lg" | "xl"
+	>({
+		defaultState: "default",
+		breakpoints: [
+			{ breakpoint: 376, state: "xs" },
+			{ breakpoint: 640, state: "sm" },
+			{ breakpoint: 768, state: "md" },
+			{ breakpoint: 1024, state: "lg" },
+			{ breakpoint: 1280, state: "xl" },
+		],
 	});
 
 	const sectionRefs = useRefs<HTMLDivElement | null>({
@@ -41,7 +48,7 @@ export default function Home() {
 
 	return (
 		<IsIntersectingContext.Provider value={isIntersecting}>
-			<IsMobileContext.Provider value={isMobile}>
+			<ResponsiveContext.Provider value={responsiveState}>
 				<div className="flex flex-col">
 					<HeroBackground />
 					{/* <Grid /> */}
@@ -138,7 +145,7 @@ export default function Home() {
 					</a>
 				</div>
 				<LoadingScreen />
-			</IsMobileContext.Provider>
+			</ResponsiveContext.Provider>
 		</IsIntersectingContext.Provider>
 	);
 }
