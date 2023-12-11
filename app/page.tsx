@@ -16,10 +16,9 @@ import CookiesModal from "./_components/cookies-modal";
 import Menu from "./_components/menu";
 // import { darkMarqueeData, marqueeData } from "./staticData/marqueesData";
 import { EnquireNowIcon } from "./_components/icons";
-import useIntersectionObserver from "./_hooks/use-intersection-observer";
 import useRefs from "./_hooks/use-refs";
 import useResponsiveState from "./_components/features-one/useResponsiveState";
-import { IsIntersectingContext, ResponsiveContext } from "./_contexts/contexts";
+import { ResponsiveContext } from "./_contexts/contexts";
 import Slogan from "./_components/footer/Slogan";
 import LoadingScreen from "./_components/loading-screen";
 
@@ -42,111 +41,105 @@ export default function Home() {
 		length: 11,
 	});
 
-	const isIntersecting = useIntersectionObserver<HTMLDivElement>({
-		elementRefs: sectionRefs,
-	});
-
 	return (
-		<IsIntersectingContext.Provider value={isIntersecting}>
-			<ResponsiveContext.Provider value={responsiveState}>
-				<div className="flex flex-col">
-					<HeroBackground />
-					{/* <Grid /> */}
-					<section
-						ref={sectionRefs[0]}
-						id="hero"
-						className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent`}
-					>
-						{/* <MarketingBanner data={darkMarqueeData} dark /> */}
-						<Navbar />
-						<Hero />
-					</section>
-					<section
-						ref={sectionRefs[1]}
-						id="feature-one"
-						className={`flex flex-col items-center overflow-hidden`}
-					>
-						{/* <MarketingBanner data={marqueeData} /> */}
-						<div className="h-32 sm:hidden" />
-						<FeatureOne />
-					</section>
-					<section
-						ref={sectionRefs[2]}
-						id="feature-two"
-						className={`flex flex-col items-center overflow-hidden`}
-					>
-						<FeatureTwo />
-					</section>
-					<section
-						ref={sectionRefs[3]}
-						id="feature-three"
-						className={`flex flex-col items-center overflow-hidden`}
-					>
-						<FeatureThree />
-					</section>
-					<section
-						ref={sectionRefs[4]}
-						id="feature-four"
-						className={`flex flex-col items-center overflow-hidden`}
-					>
-						<div className="min-h-[1rem] grow" />
-						<FeatureFour />
-						<div className="min-h-[1rem] grow-2" />
-					</section>
-					<section
-						ref={sectionRefs[5]}
-						id="feature-five"
-						className={`flex flex-col items-center overflow-hidden`}
-					>
-						<FeatureFive />
-					</section>
-					<section
-						ref={sectionRefs[6]}
-						id="feature-six"
-						className={`flex flex-col items-center overflow-hidden`}
-					>
-						<FeatureSix />
-					</section>
-					<section
-						ref={sectionRefs[7]}
-						id="terminal"
-						className={`flex flex-col items-center overflow-hidden`}
-					>
-						<FeatureSeven />
-					</section>
-					<section
-						ref={sectionRefs[8]}
-						id="faq"
-						className={`flex flex-col items-center overflow-hidden`}
-					>
-						<FaqSection />
-					</section>
-					<section
-						ref={sectionRefs[9]}
-						id="enquire-form"
-						className={`relative z-50 flex min-h-screen flex-col items-center overflow-hidden bg-primary-950 text-secondary-950`}
-					>
-						<div className="h-28 sm:hidden" />
-						<Form />
-					</section>
-					<section
-						ref={sectionRefs[10]}
-						id="contact-us"
-						className={`relative z-50 flex flex-col items-center overflow-hidden bg-primary-950 pb-0 text-secondary-950`}
-					>
-						<Slogan />
-						<div className="h-28 sm:hidden" />
-						<Footer />
-					</section>
-					<Menu />
-					<CookiesModal />
-					<a href="#enquire-form">
-						<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />
-					</a>
-				</div>
-				<LoadingScreen />
-			</ResponsiveContext.Provider>
-		</IsIntersectingContext.Provider>
+		<ResponsiveContext.Provider value={responsiveState}>
+			<div className="flex flex-col">
+				<HeroBackground />
+				{/* <Grid /> */}
+				<section
+					ref={sectionRefs[0]}
+					id="hero"
+					className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent`}
+				>
+					{/* <MarketingBanner data={darkMarqueeData} dark /> */}
+					<Navbar />
+					<Hero />
+				</section>
+				<section
+					ref={sectionRefs[1]}
+					id="feature-one"
+					className={`flex flex-col items-center overflow-hidden`}
+				>
+					{/* <MarketingBanner data={marqueeData} /> */}
+					<div className="h-32 sm:hidden" />
+					<FeatureOne />
+				</section>
+				<section
+					ref={sectionRefs[2]}
+					id="feature-two"
+					className={`flex flex-col items-center overflow-hidden`}
+				>
+					<FeatureTwo />
+				</section>
+				<section
+					ref={sectionRefs[3]}
+					id="feature-three"
+					className={`flex flex-col items-center overflow-hidden`}
+				>
+					<FeatureThree />
+				</section>
+				<section
+					ref={sectionRefs[4]}
+					id="feature-four"
+					className={`flex flex-col items-center overflow-hidden`}
+				>
+					<div className="min-h-[1rem] grow" />
+					<FeatureFour />
+					<div className="min-h-[1rem] grow-2" />
+				</section>
+				<section
+					ref={sectionRefs[5]}
+					id="feature-five"
+					className={`flex flex-col items-center overflow-hidden`}
+				>
+					<FeatureFive />
+				</section>
+				<section
+					ref={sectionRefs[6]}
+					id="feature-six"
+					className={`flex flex-col items-center overflow-hidden`}
+				>
+					<FeatureSix />
+				</section>
+				<section
+					ref={sectionRefs[7]}
+					id="terminal"
+					className={`flex flex-col items-center overflow-hidden`}
+				>
+					<FeatureSeven />
+				</section>
+				<section
+					ref={sectionRefs[8]}
+					id="faq"
+					className={`flex flex-col items-center overflow-hidden`}
+				>
+					<FaqSection />
+				</section>
+				<section
+					ref={sectionRefs[9]}
+					id="enquire-form"
+					className={`relative z-50 flex min-h-screen flex-col items-center overflow-hidden bg-primary-950 text-secondary-950`}
+				>
+					<div className="h-28 sm:hidden" />
+					<Form />
+				</section>
+				<section
+					ref={sectionRefs[10]}
+					id="contact-us"
+					className={`relative z-50 flex flex-col items-center overflow-hidden bg-primary-950 pb-0 text-secondary-950`}
+				>
+					<Slogan />
+					<div className="h-28 sm:hidden" />
+					<Footer />
+				</section>
+				<Menu />
+				<CookiesModal />
+				<a href="#enquire-form">
+					<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />
+				</a>
+			</div>
+			<LoadingScreen />
+		</ResponsiveContext.Provider>
 	);
 }
 
