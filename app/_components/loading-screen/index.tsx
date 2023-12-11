@@ -14,12 +14,12 @@ const LoadingScreen: FC<LoadingScreenProps> = ({}) => {
 			// }, 1000);
 		};
 
-		document.body.style.overflow = loading ? "hidden" : "auto";
+		// document.body.style.overflow = loading ? "hidden" : "auto";
 
-		window.addEventListener("load", handleLoad);
+		addEventListener("load", handleLoad);
 
 		return () => {
-			window.removeEventListener("load", handleLoad);
+			removeEventListener("load", handleLoad);
 		};
 	}, [loading]);
 
