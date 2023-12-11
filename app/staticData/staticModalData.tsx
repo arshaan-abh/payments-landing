@@ -71,7 +71,7 @@ export const ModalData: ModalDataType[] = [
 	},
 	{
 		image: Mobile2,
-		bg: MobileBG3,
+		bg: MobileBG4,
 		description: [
 			{
 				title: "Tap to Pay iPhone",
@@ -102,7 +102,7 @@ export const ModalData: ModalDataType[] = [
 	},
 	{
 		image: Mobile3,
-		bg: MobileBG4,
+		bg: MobileBG3,
 		description: [
 			{
 				title: "SPS1",
