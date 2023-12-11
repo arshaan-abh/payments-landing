@@ -9,21 +9,25 @@ const LoadingScreen: FC<LoadingScreenProps> = ({}) => {
 
 	useEffect(() => {
 		const handleLoad = () => {
-			setLoading(false);
+			setTimeout(() => {
+				setLoading(false);
+			}, 1000);
 		};
+
+		document.body.style.overflow = loading ? "hidden" : "auto";
 
 		window.addEventListener("load", handleLoad);
 
 		return () => {
 			window.removeEventListener("load", handleLoad);
 		};
-	}, []);
+	}, [loading]);
 
-	const variableClassName = loading ? "flex" : "hidden";
+	const variableClassName = loading ? "" : "pointer-event-none opacity-0";
 
 	return (
 		<div
-			className={`fixed inset-0 z-50 flex items-center justify-center bg-white ${variableClassName}`}
+			className={`fixed inset-0 z-50 flex items-center justify-center bg-white transition-opacity duration-300 ${variableClassName}`}
 		>
 			<Lottie className="w-32" animationData={loadingAnimation} />
 		</div>
