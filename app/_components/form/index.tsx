@@ -102,7 +102,7 @@ function Form() {
 				<textarea
 					id="message"
 					rows={3}
-					disabled={checkableList[11] ? false : true}
+					disabled={checkableList[10] ? false : true}
 					className="mb-3 w-full rounded-md border-2 border-primary-800 bg-transparent p-2.5 text-sm font-medium text-white placeholder:text-primary-800 focus:border-secondary-300 focus:placeholder:text-secondary-300 disabled:opacity-50"
 					placeholder="Others"
 					style={{ resize: "none" }}
