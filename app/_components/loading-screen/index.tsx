@@ -9,9 +9,9 @@ const LoadingScreen: FC<LoadingScreenProps> = ({}) => {
 
 	useEffect(() => {
 		const handleLoad = () => {
-			setTimeout(() => {
-				setLoading(false);
-			}, 1000);
+			// setTimeout(() => {
+			setLoading(false);
+			// }, 1000);
 		};
 
 		document.body.style.overflow = loading ? "hidden" : "auto";
