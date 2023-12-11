@@ -75,26 +75,18 @@ const Menu: FC<MenuProps> = ({}) => {
 	useEffect(() => {
 		const detailElement = detailRef.current;
 
-		addEventListener("click", closeDetail, false);
-		detailElement?.addEventListener(
-			"click",
-			function (event) {
-				event.stopPropagation();
-			},
-			false
-		);
+		addEventListener("click", closeDetail);
+		detailElement?.addEventListener("click", function (event) {
+			event.stopPropagation();
+		});
 
 		closeDetail();
 
 		return () => {
-			removeEventListener("click", closeDetail, false);
-			detailElement?.removeEventListener(
-				"click",
-				function (event) {
-					event.stopPropagation();
-				},
-				false
-			);
+			removeEventListener("click", closeDetail);
+			detailElement?.removeEventListener("click", function (event) {
+				event.stopPropagation();
+			});
 		};
 	}, [closeDetail]);
 
