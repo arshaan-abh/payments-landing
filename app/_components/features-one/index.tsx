@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { FC, ReactNode, useContext } from "react";
-import featureImageOne from "../../../public/one-click.jpg";
+import featureImageOne from "../../../public/one-click.png";
 import featureImageTwo from "../../../public/pay-method.jpg";
 import featureImageThree from "../../../public/currency.jpg";
 import useSlider from "../features-seven/Slider";

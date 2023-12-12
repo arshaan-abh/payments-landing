@@ -1,6 +1,6 @@
 import { type FC, ReactNode } from "react";
 import Image from "next/image";
-import Advance from "public/terminal.jpg";
+import Advance from "public/terminal.png";
 import Billing from "public/invoicing.jpg";
 import { GridBorderComponent } from "../features-two";
 
