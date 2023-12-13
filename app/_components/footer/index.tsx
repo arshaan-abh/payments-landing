@@ -17,7 +17,7 @@ const solutionsLinks = [
 	{ text: "Marketplace & Platform", link: "" },
 	{ text: "eCommerce", link: "" },
 	{ text: "Billing and Invoicing", link: "" },
-	{ text: "In-Person Payment", link: "" },
+	{ text: "In-person Payment", link: "" },
 	{ text: "Terminal-less Payments ( Mobile App )", link: "" },
 	{ text: "ePOS All-In-One ( Terminal + Eposense Mobile ) ", link: "" },
 	{ text: "Pre-Paid Debit Card with Bank Account Issuing ", link: "" },

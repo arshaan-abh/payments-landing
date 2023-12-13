@@ -19,11 +19,11 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 				/>
 				<Card
 					title="99.99%"
-					supportingText="historical uptime for Selected payments"
+					supportingText="Historical uptime for Selected payments"
 				/>
 				<Card
 					title="130+"
-					supportingText="currencies and payment methods supported."
+					supportingText="Currencies and payment methods supported."
 				/>
 				<div
 					className="absolute inset-0 bg-white"

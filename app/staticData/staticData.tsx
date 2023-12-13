@@ -9,7 +9,7 @@ export const LeftSideFooter: FooterData[] = [
 			"Marketplace & Platform",
 			"eCommerce",
 			"Billing and Invoicing",
-			"In-Person Payment",
+			"In-person Payment",
 			"Terminal-less Payments ( Mobile App )",
 			"ePOS All-In-One ( Terminal + Eposense Mobile )",
 			"Pre- Paid Debit Card with Bank Account Issuing",
