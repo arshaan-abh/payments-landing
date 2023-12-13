@@ -46,7 +46,7 @@ const Menu: FC<MenuProps> = ({}) => {
 
 	const detailRef = useRef<HTMLDivElement>(null);
 	const detailCloneRef = useRef<HTMLDivElement>(null);
-	const maxWidthRef = useRef<number | null>(null);
+	const [maxWidth, setMaxWidth] = useState<number | null>(null);
 	const [open, setOpen] = useState<boolean>(true); // need to get the max width at first, so it's open initially
 	const [delayedStyle, setDelayedStyle] = useState<CSSProperties>({
 		zIndex: -20,
@@ -73,8 +73,7 @@ const Menu: FC<MenuProps> = ({}) => {
 		const clonedDetailElement = detailCloneRef.current;
 
 		if (clonedDetailElement) {
-			maxWidthRef.current =
-				clonedDetailElement.getBoundingClientRect().width || 0;
+			setMaxWidth(clonedDetailElement.getBoundingClientRect().width || 0);
 		}
 	}, []);
 
@@ -169,9 +168,9 @@ const Menu: FC<MenuProps> = ({}) => {
 				className="fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit items-center justify-center overflow-hidden rounded-rectangle-full p-2 backdrop-blur-sm transition-opacity-w-bg duration-300"
 				style={{
 					backgroundColor: bgColor,
-					opacity: open ? (maxWidthRef.current ? 1 : 0) : 0,
-					...(maxWidthRef.current && {
-						width: `${open ? maxWidthRef.current : 0}px`,
+					opacity: open ? (maxWidth ? 1 : 0) : 0,
+					...(maxWidth && {
+						width: `${open ? maxWidth : 0}px`,
 					}),
 					...delayedStyle,
 				}}
