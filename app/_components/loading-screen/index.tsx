@@ -1,24 +1,20 @@
-import { type FC, useState, useLayoutEffect } from "react";
-import Lottie from "lottie-react";
-import loadingAnimation from "../../../public/loading.json";
+import { type FC, useState, useEffect } from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import loadingAnimation from "@/public/loading.json";
 
 interface LoadingScreenProps {}
 
 const LoadingScreen: FC<LoadingScreenProps> = ({}) => {
 	const [loading, setLoading] = useState(true);
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		let timeoutId: ReturnType<typeof setTimeout>;
-
-		const handleLoad = () => {
-			timeoutId = setTimeout(() => {
-				setLoading(false);
-			}, 1000);
-		};
 
 		document.body.style.overflow = loading ? "hidden" : "auto";
 
-		handleLoad();
+		timeoutId = setTimeout(() => {
+			setLoading(false);
+		}, 1000);
 
 		return () => {
 			clearTimeout(timeoutId);
@@ -31,7 +27,7 @@ const LoadingScreen: FC<LoadingScreenProps> = ({}) => {
 		<div
 			className={`fixed inset-0 z-50 flex items-center justify-center bg-white transition-opacity duration-300 ${variableClassName}`}
 		>
-			<Lottie className="w-32" animationData={loadingAnimation} />
+			<Player className="w-32" src={loadingAnimation} loop autoplay />
 		</div>
 	);
 };
