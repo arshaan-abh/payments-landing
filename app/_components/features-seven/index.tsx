@@ -43,7 +43,7 @@ const terminals = [
 	},
 ];
 
-function FeatureEight() {
+function FeatureSeven() {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 	const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
@@ -157,7 +157,7 @@ function FeatureEight() {
 	);
 }
 
-export default FeatureEight;
+export default FeatureSeven;
 
 interface SlideButtonProps {
 	children?: ReactNode;
