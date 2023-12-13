@@ -45,6 +45,7 @@ const Menu: FC<MenuProps> = ({}) => {
 	}, [scrollHandler]);
 
 	const detailRef = useRef<HTMLDivElement>(null);
+	const detailCloneRef = useRef<HTMLDivElement>(null);
 	const maxWidthRef = useRef<number | null>(null);
 	const [open, setOpen] = useState<boolean>(true); // need to get the max width at first, so it's open initially
 	const [delayedStyle, setDelayedStyle] = useState<CSSProperties>({
@@ -68,9 +69,20 @@ const Menu: FC<MenuProps> = ({}) => {
 		if (!open) setDelayedStyle({ zIndex: -20 });
 	}, [open]);
 
-	useEffect(() => {
-		maxWidthRef.current = detailRef.current?.getBoundingClientRect().width ?? 0;
+	const checkWidth = useCallback(() => {
+		const clonedDetailElement = detailCloneRef.current;
+
+		if (clonedDetailElement) {
+			maxWidthRef.current =
+				clonedDetailElement.getBoundingClientRect().width || 0;
+		}
 	}, []);
+
+	useEffect(() => {
+		checkWidth();
+		addEventListener("resize", checkWidth);
+		return () => removeEventListener("resize", checkWidth);
+	}, [checkWidth]);
 
 	useEffect(() => {
 		const detailElement = detailRef.current;
@@ -143,16 +155,23 @@ const Menu: FC<MenuProps> = ({}) => {
 				</a>
 			</div>
 			<div
+				ref={detailCloneRef}
+				className="pointer-events-none invisible fixed -bottom-full -z-50 flex w-fit items-center justify-center p-2"
+			>
+				<MenuDetailItem>Home</MenuDetailItem>
+				<MenuDetailItem>ePOS</MenuDetailItem>
+				<MenuDetailItem>Products</MenuDetailItem>
+				<MenuDetailItem>Enquire</MenuDetailItem>
+			</div>
+			<div
 				ref={detailRef}
 				onTransitionEnd={transitionEndHandler}
-				className="fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit max-w-fit items-center justify-center overflow-hidden rounded-rectangle-full p-2 backdrop-blur-sm transition-opacity-w-bg duration-300"
+				className="fixed inset-x-0 bottom-12 mx-auto flex h-16 w-fit items-center justify-center overflow-hidden rounded-rectangle-full p-2 backdrop-blur-sm transition-opacity-w-bg duration-300"
 				style={{
 					backgroundColor: bgColor,
 					opacity: open ? (maxWidthRef.current ? 1 : 0) : 0,
 					...(maxWidthRef.current && {
-						width: `calc(${
-							open ? maxWidthRef.current : 0
-						}rem / var(--font-size))`,
+						width: `${open ? maxWidthRef.current : 0}px`,
 					}),
 					...delayedStyle,
 				}}
