@@ -100,22 +100,20 @@ const useSlider = ({
 		const prevButton = prevButtonRef.current;
 		const nextButton = nextButtonRef.current;
 
-		if (prevButton)
-			if (index === 1) {
-				prevButton.disabled = true;
-				canSlideLeft.current = false;
-			} else {
-				prevButton.disabled = false;
-				canSlideLeft.current = true;
-			}
-		if (nextButton)
-			if (index === Math.ceil(children.length / visibleSlidesNumber)) {
-				nextButton.disabled = true;
-				canSlideRight.current = false;
-			} else {
-				nextButton.disabled = false;
-				canSlideRight.current = true;
-			}
+		if (index === 1) {
+			if (prevButton) prevButton.disabled = true;
+			canSlideLeft.current = false;
+		} else {
+			if (prevButton) prevButton.disabled = false;
+			canSlideLeft.current = true;
+		}
+		if (index === Math.ceil(children.length / visibleSlidesNumber)) {
+			if (nextButton) nextButton.disabled = true;
+			canSlideRight.current = false;
+		} else {
+			if (nextButton) nextButton.disabled = false;
+			canSlideRight.current = true;
+		}
 
 		prevButton?.addEventListener("click", prevHandler);
 		nextButton?.addEventListener("click", nextHandler);
