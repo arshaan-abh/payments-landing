@@ -33,6 +33,12 @@ const useSlider = ({
 		length: children.length,
 		initialValue: null,
 	});
+	const containerRef = useRef<HTMLDivElement>(null);
+	const [pointerSlide, setPointerSlide] = useState(0);
+	const latestLocationX = useRef<number | null>(null);
+	const [isDragging, setIsDragging] = useState(false);
+	const canSlideRight = useRef(false);
+	const canSlideLeft = useRef(false);
 
 	const heightHandler = useCallback(() => {
 		const heightRefElement = heightRef[index - 1].current;
@@ -47,7 +53,44 @@ const useSlider = ({
 		setIndex((prevIndex) => prevIndex + 1);
 	}, []);
 
+	const pointerHandler = useCallback(
+		(event: PointerEvent) => {
+			if (isDragging && latestLocationX.current)
+				setPointerSlide(event.clientX - latestLocationX.current);
+		},
+		[isDragging]
+	);
+
+	const pointerDownHandler = useCallback((event: PointerEvent) => {
+		latestLocationX.current = event.clientX;
+		setIsDragging(true);
+	}, []);
+
+	const pointerUpHandler = useCallback(
+		(event: PointerEvent) => {
+			setIsDragging(false);
+			if (latestLocationX.current) {
+				const value = event.clientX - latestLocationX.current;
+				latestLocationX.current = null;
+				if (value > 64 && canSlideLeft.current) {
+					prevHandler();
+				} else if (value < -64 && canSlideRight.current) {
+					nextHandler();
+				}
+				setPointerSlide(0);
+			}
+		},
+		[nextHandler, prevHandler]
+	);
+
 	useEffect(() => {
+		const containerElement = containerRef.current;
+		if (containerElement) {
+			addEventListener("pointermove", pointerHandler);
+			containerElement.addEventListener("pointerdown", pointerDownHandler);
+			addEventListener("pointerup", pointerUpHandler);
+		}
+
 		setIndex((currentState) =>
 			Math.min(currentState, Math.ceil(children.length / visibleSlidesNumber))
 		);
@@ -58,16 +101,30 @@ const useSlider = ({
 		const nextButton = nextButtonRef.current;
 
 		if (prevButton)
-			if (index === 1) prevButton.disabled = true;
-			else prevButton.disabled = false;
+			if (index === 1) {
+				prevButton.disabled = true;
+				canSlideLeft.current = false;
+			} else {
+				prevButton.disabled = false;
+				canSlideLeft.current = true;
+			}
 		if (nextButton)
-			if (index === Math.ceil(children.length / visibleSlidesNumber))
+			if (index === Math.ceil(children.length / visibleSlidesNumber)) {
 				nextButton.disabled = true;
-			else nextButton.disabled = false;
+				canSlideRight.current = false;
+			} else {
+				nextButton.disabled = false;
+				canSlideRight.current = true;
+			}
 
 		prevButton?.addEventListener("click", prevHandler);
 		nextButton?.addEventListener("click", nextHandler);
 		return () => {
+			if (containerElement) {
+				removeEventListener("pointermove", pointerHandler);
+				containerElement.removeEventListener("pointerdown", pointerDownHandler);
+				removeEventListener("pointerup", pointerUpHandler);
+			}
 			prevButton?.removeEventListener("click", prevHandler);
 			nextButton?.removeEventListener("click", nextHandler);
 		};
@@ -76,17 +133,26 @@ const useSlider = ({
 		heightHandler,
 		index,
 		nextHandler,
+		pointerDownHandler,
+		pointerHandler,
+		pointerUpHandler,
 		prevHandler,
 		visibleSlidesNumber,
 	]);
 
 	return [
-		<div className="overflow-hidden" key="slider">
+		<div
+			className="slider select-none overflow-hidden"
+			key="slider"
+			ref={containerRef}
+		>
 			<div
-				className="flex flex-nowrap transition-all"
+				className={`flex flex-nowrap ${!isDragging && "transition-all"}`}
 				style={{
 					height: `${height}px`,
-					transform: `translateX(calc(-100% * ${index - 1}))`,
+					transform: `translateX(calc(-100% * ${
+						index - 1
+					} + ${pointerSlide}px))`,
 				}}
 			>
 				{Array.from(

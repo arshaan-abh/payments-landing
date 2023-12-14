@@ -178,3 +178,10 @@ section {
 		--font-size: 16;
 	}
 }
+
+.slider,
+.slider * {
+	user-drag: none;
+	-webkit-user-drag: none;
+	touch-action: none;
+}
