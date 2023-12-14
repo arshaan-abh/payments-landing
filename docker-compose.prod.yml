@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: frontend-payments-landing
+    restart: always
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - payments-landing-net
+
+  nginx:
+    image: nginx:latest
+    container_name: webserver-payments-landing
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik-web
+      - traefik.http.routers.payments-landing.rule=Host(`selectedpayments.com`, `www.selectedpayements.com`)
+      - traefik.http.routers.payments-landing.service=nginx-payments-landing
+      - treafik.http.routers.payments-landing.priority=10
+      - traefik.http.routers.payments-landing.entrypoints=https
+      - traefik.http.middlewares.payments-landing.redirectscheme.scheme=https
+      - traefik.http.middlewares.payments-landing.redirectscheme.permanent=true
+      - traefik.http.routers.payments-landing.tls.certresolver=myresolver
+    restart: unless-stopped
+    depends_on:
+      - frontend
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - traefik-web
+      - payments-landing-net
+
+networks:
+  payments-landing-net:
+  traefik-web:
+    external: true
