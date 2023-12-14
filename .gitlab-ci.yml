@@ -11,6 +11,6 @@ develop:
   only:
     - develop
   script:
-    - cp .env.staging .env
+    #- cp .env.staging .env
     - docker-compose -f docker-compose.stage.yml down
     - docker-compose -f docker-compose.stage.yml up -d --build
