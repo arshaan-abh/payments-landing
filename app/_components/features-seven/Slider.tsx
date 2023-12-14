@@ -41,6 +41,7 @@ const useSlider = ({
 	const canSlideLeft = useRef(false);
 
 	const heightHandler = useCallback(() => {
+		// TODO observe height
 		const heightRefElement = heightRef[index - 1].current;
 		setHeight(heightRefElement?.clientHeight ?? 0);
 	}, [heightRef, index]);
