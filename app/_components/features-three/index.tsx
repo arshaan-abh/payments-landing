@@ -33,7 +33,7 @@ function FeatureTwo() {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(0 * 100%)`,
+							left: `calc(100%)`,
 						}}
 					/>
 				</div>
@@ -49,13 +49,13 @@ function FeatureTwo() {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc(0 * 100%)`,
+							left: `calc(100%)`,
 						}}
 					/>
 				</div>
 			</div>
 			<div className="min-h-[1rem] grow" />
-			<div className="flex w-auto flex-col items-center gap-16 sm:flex-row">
+			<div className="flex w-auto flex-col items-center gap-16 sm:flex-row-reverse">
 				<div
 					style={{
 						transform: `translateX(calc(0 * -100%))`,
