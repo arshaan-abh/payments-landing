@@ -38,7 +38,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 					<div
 						className="absolute inset-0 bg-white"
 						style={{
-							left: `calc($1 * 100%)`,
+							left: `calc(1 * 100%)`,
 						}}
 					/>
 				</h3>

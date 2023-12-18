@@ -13,6 +13,7 @@ const config: Config = {
 			},
 			screens: {
 				xs: "376px",
+				ms: "480px",
 			},
 			colors: {
 				gray: {

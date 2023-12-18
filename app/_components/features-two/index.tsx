@@ -62,9 +62,9 @@ function FeatureTwo() {
 					style={{
 						transform: `translateX(calc(0 * -100%))`,
 					}}
-					className="flex items-center xs:w-2/3 sm:hidden lg:flex lg:w-1/2 xl:w-2/5"
+					className="ms:w-2/3 flex items-center sm:hidden lg:flex lg:w-1/2 xl:w-2/5"
 				>
-					<GridBorderComponent className="xs:w-2/3 sm:w-1/2 md:w-full">
+					<GridBorderComponent>
 						<Image
 							placeholder="blur"
 							src={bigPicture}
@@ -77,7 +77,7 @@ function FeatureTwo() {
 					style={{
 						transform: `translateX(calc(0 * 100%))`,
 					}}
-					className="flex flex-col justify-between gap-x-6 gap-y-16 xs:w-1/2 sm:w-full lg:w-1/2 lg:gap-y-9 xl:w-3/5"
+					className="flex flex-col justify-between gap-x-6 gap-y-16 xs:w-2/3 sm:w-full lg:w-1/2 lg:gap-y-9 xl:w-3/5"
 				>
 					<Card
 						image={smallPictureOne}
@@ -117,7 +117,7 @@ interface CardProps {
 export const Card: FC<CardProps> = ({ image, title, supportingText }) => {
 	return (
 		<div className="flex flex-col items-center gap-5 sm:flex-row">
-			<Hoverable className="h-max w-max ">
+			<Hoverable className="h-max w-max">
 				<Image src={image} alt="Small picture" />
 			</Hoverable>
 			<div className="flex flex-col gap-1">

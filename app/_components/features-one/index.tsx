@@ -137,7 +137,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 	return (
 		<div className="flex flex-col items-center hover:[--border:50%] hover:[--transform:scale(1.1)_rotate(4deg)]">
-			<div className="relative w-full grow p-6 xs:w-2/3 sm:w-1/2 md:w-full">
+			<div className="ms:w-2/3 relative w-full grow p-6 sm:w-1/2 md:w-full">
 				<div className="overflow-hidden">
 					<div className="transition-transform duration-300 [transform:var(--transform)]">
 						{media}
@@ -145,7 +145,7 @@ const Card: FC<CardProps> = ({ media, children, supportingText }) => {
 				</div>
 				<GridBorder />
 			</div>
-			<div className="relative w-full grow p-6 pb-5 pt-4 xs:w-2/3 sm:w-1/2 md:w-full">
+			<div className="ms:w-2/3 relative w-full grow p-6 pb-5 pt-4 sm:w-1/2 md:w-full">
 				<div className="mb-1 text-center text-lg font-extrabold text-primary-950 sm:text-start">
 					{children}
 				</div>
