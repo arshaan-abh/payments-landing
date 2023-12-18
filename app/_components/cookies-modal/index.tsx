@@ -13,7 +13,8 @@ const CookiesModal: FC<CookiesModalProps> = ({}) => {
 
 	const close = useCallback(() => {
 		setOpened(false);
-		document.cookie = "consent=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+		document.cookie =
+			"consent_cookie=consent=true; SameSite=Lax; Path=/; Expires=Fri, 31 Dec 9999 23:59:59 GMT";
 	}, []);
 
 	useEffect(() => {

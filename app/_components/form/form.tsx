@@ -14,7 +14,11 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 			<p className="mb-4 text-center text-xl font-extrabold text-white">
 				Begin your next chapter now!
 			</p>
-			<form className="flex w-full flex-col justify-center rounded-md">
+			<form
+				name="enquire"
+				id="enquire"
+				className="flex w-full flex-col justify-center rounded-md"
+			>
 				<div>
 					<Controller
 						name="name"
@@ -26,6 +30,8 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 									{...otherFields}
 									type="text"
 									id="name"
+									name="name"
+									autoComplete="on"
 									placeholder="Full name"
 									error={!!errors.name}
 									helperText={errors.name?.message ?? " "}
@@ -46,6 +52,8 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 									customRef={ref}
 									type="text"
 									id="companyName"
+									name="companyName"
+									autoComplete="on"
 									placeholder="Company name"
 									error={!!errors.companyName}
 									helperText={errors.companyName?.message ?? " "}
@@ -66,6 +74,8 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 									customRef={ref}
 									type="email"
 									id="email"
+									name="email"
+									autoComplete="on"
 									placeholder="Email"
 									error={!!errors.email}
 									helperText={errors.email?.message ?? " "}
@@ -86,6 +96,8 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 									customRef={ref}
 									type="number"
 									id="phone"
+									name="phone"
+									autoComplete="on"
 									placeholder="Phone"
 									error={!!errors.phone}
 									helperText={errors.phone?.message ?? " "}
@@ -106,6 +118,8 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 									customRef={ref}
 									type="text"
 									id="webUrl"
+									name="webUrl"
+									autoComplete="on"
 									placeholder="Website url"
 									error={!!errors.webUrl}
 									helperText={errors.webUrl?.message ?? " "}
@@ -125,6 +139,8 @@ const FormSection: FC<FormSectionProps> = ({ control, errors }) => {
 									{...otherFields}
 									customRef={ref}
 									id="description"
+									name="description"
+									autoComplete="on"
 									placeholder="Description"
 									error={!!errors.description}
 									helperText={errors.description?.message ?? " "}

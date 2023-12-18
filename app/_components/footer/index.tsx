@@ -92,12 +92,16 @@ const Footer: FC<FooterProps> = ({}) => {
 								your inbox.
 							</p>
 							<div className="flex flex-row gap-3 sm:flex-col lg:flex-row">
-								<input
-									type="email"
-									placeholder="Email"
-									className="w-full rounded-md border border-white bg-white/10 px-4 py-2 text-base font-normal text-white outline-none placeholder:text-white"
-								/>
-								<Button className="w-1/2 sm:w-full lg:w-1/2">Sign up</Button>
+								<form id="newsletter" name="newsletter">
+									<input
+										type="email"
+										placeholder="Email"
+										id="newsletter"
+										name="newsletter"
+										className="w-full rounded-md border border-white bg-white/10 px-4 py-2 text-base font-normal text-white outline-none placeholder:text-white"
+									/>
+									<Button className="w-1/2 sm:w-full lg:w-1/2">Sign up</Button>
+								</form>
 							</div>
 						</div>
 					</div>
