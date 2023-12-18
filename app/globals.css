@@ -183,5 +183,5 @@ section {
 .slider * {
 	user-drag: none;
 	-webkit-user-drag: none;
-	touch-action: none;
+	touch-action: pan-y;
 }
