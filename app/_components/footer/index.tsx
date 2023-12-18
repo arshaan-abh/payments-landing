@@ -91,18 +91,20 @@ const Footer: FC<FooterProps> = ({}) => {
 								Get the latest news and exclusive promotions conveniently in
 								your inbox.
 							</p>
-							<div className="flex flex-row gap-3 sm:flex-col lg:flex-row">
-								<form id="newsletter" name="newsletter">
-									<input
-										type="email"
-										placeholder="Email"
-										id="newsletter"
-										name="newsletter"
-										className="w-full rounded-md border border-white bg-white/10 px-4 py-2 text-base font-normal text-white outline-none placeholder:text-white"
-									/>
-									<Button className="w-1/2 sm:w-full lg:w-1/2">Sign up</Button>
-								</form>
-							</div>
+							<form
+								className="flex flex-row gap-3 sm:flex-col lg:flex-row"
+								id="newsletter"
+								name="newsletter"
+							>
+								<input
+									type="email"
+									placeholder="Email"
+									id="newsletter"
+									name="newsletter"
+									className="w-full rounded-md border border-white bg-white/10 px-4 py-2 text-base font-normal text-white outline-none placeholder:text-white"
+								/>
+								<Button className="w-1/2 sm:w-full lg:w-1/2">Sign up</Button>
+							</form>
 						</div>
 					</div>
 					<div className="flex flex-col">
