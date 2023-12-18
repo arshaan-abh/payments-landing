@@ -49,7 +49,7 @@ export default function Home() {
 				<section
 					ref={sectionRefs[0]}
 					id="hero"
-					className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent`}
+					className={`relative flex min-h-screen flex-col items-center overflow-hidden bg-transparent bg-gradient-to-r from-[#00191a] to-transparent pb-0`}
 				>
 					{/* <MarketingBanner data={darkMarqueeData} dark /> */}
 					<Navbar />
@@ -61,7 +61,7 @@ export default function Home() {
 					className={`flex flex-col items-center overflow-hidden`}
 				>
 					{/* <MarketingBanner data={marqueeData} /> */}
-					<div className="h-32 sm:hidden" />
+					<div className="h-32" />
 					<FeatureOne />
 				</section>
 				<section
@@ -118,9 +118,9 @@ export default function Home() {
 				<section
 					ref={sectionRefs[9]}
 					id="enquire-form"
-					className={`relative z-50 flex min-h-screen flex-col items-center overflow-hidden bg-primary-950 text-secondary-950`}
+					className={`relative z-50 flex flex-col items-center overflow-hidden bg-primary-950 text-secondary-950`}
 				>
-					<div className="h-28 sm:hidden" />
+					<div className="h-28" />
 					<Form />
 				</section>
 				<section
@@ -129,7 +129,7 @@ export default function Home() {
 					className={`relative z-50 flex flex-col items-center overflow-hidden bg-primary-950 pb-0 text-secondary-950`}
 				>
 					<Slogan />
-					<div className="h-28 sm:hidden" />
+					<div className="h-28" />
 					<Footer />
 				</section>
 				<Menu />

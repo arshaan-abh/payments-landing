@@ -151,7 +151,8 @@ const useSlider = ({
 					height: `${height}px`,
 					transform: `translateX(calc(-100% * ${
 						index - 1
-					} + ${pointerSlide}px))`,
+					} + ${pointerSlide}px - (${gapInRem}rem * ${index - 1})))`,
+					gap: `${gapInRem}rem`,
 				}}
 			>
 				{Array.from(
