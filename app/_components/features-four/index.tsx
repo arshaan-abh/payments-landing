@@ -63,7 +63,7 @@ const FeatureFour: FC<FeatureFourProps> = ({}) => {
 						transform: `translateX(calc(0 * 100%))`,
 					}}
 				>
-					<GridBorderComponent className="m-auto xs:w-2/3 sm:w-full">
+					<GridBorderComponent className="m-auto ms:w-2/3 sm:w-full">
 						<Image placeholder="blur" src={Empowering} alt="Empowering" />
 					</GridBorderComponent>
 				</div>
