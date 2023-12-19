@@ -10,7 +10,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 	return (
 		<div className="flex w-full flex-col px-10 sm:h-screen lg:px-20 xl:max-w-screen-1.5xl xl:px-30">
 			<div className="min-h-[1rem] grow" />
-			<div className="m-auto flex h-2/5 w-full flex-col items-center justify-between gap-x-16 gap-y-8 xs:w-2/3 sm:w-full sm:flex-row">
+			<div className="m-auto flex h-2/5 w-full flex-col items-center justify-between gap-x-16 gap-y-8 ms:w-2/3 sm:w-full sm:flex-row">
 				<GridBorderComponent className="basis-1/2 md:basis-1/3">
 					<Image
 						placeholder="blur"
@@ -35,7 +35,7 @@ const FeatureFive: FC<FeatureFiveProps> = ({}) => {
 				</Card>
 			</div>
 			<div className="h-16 sm:h-8" />
-			<div className="m-auto flex h-2/5 w-full flex-col-reverse items-center justify-between gap-x-16 gap-y-8 xs:w-2/3 sm:w-full sm:flex-row">
+			<div className="m-auto flex h-2/5 w-full flex-col-reverse items-center justify-between gap-x-16 gap-y-8 ms:w-2/3 sm:w-full sm:flex-row">
 				<Card title="Business Finance Service with Bank Account">
 					<p className="inline">
 						We ensure seamless management of your business&apos;s credit lines

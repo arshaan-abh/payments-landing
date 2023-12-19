@@ -138,7 +138,7 @@ export default function Home() {
 					<EnquireNowIcon className="fixed bottom-12 right-10 z-10 hidden sm:flex" />
 				</a>
 			</div>
-			<LoadingScreen />
+			{/* <LoadingScreen /> */}
 		</ResponsiveContext.Provider>
 	);
 }

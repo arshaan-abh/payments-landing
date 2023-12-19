@@ -71,7 +71,7 @@ function FeatureSeven() {
 		children: terminals.map((t, index) => (
 			<button
 				key={index}
-				className="m-auto flex w-full flex-col gap-4 xs:w-2/3 sm:w-full"
+				className="m-auto flex w-full flex-col gap-4 ms:w-2/3 sm:w-full"
 				onClick={() => openModal(index)}
 			>
 				<div className="relative w-full">
